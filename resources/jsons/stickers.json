@@ -1,0 +1,302 @@
+{
+    "stickers":{
+        "evenements":{
+            "blast_paris_2023": [
+                {
+                    "nom": "Bad News Eagles (Gold) | Paris 2023",
+                    "id":"bad_new_eagles_paris_2023_gold",
+                    "equipe": "bad_new_eagles",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_bne_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Fnatic (Gold) | Paris 2023",
+                    "id":"fnatic_paris_2023_gold",
+                    "equipe": "fnatic",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_fntc_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "FURIA (Gold) | Paris 2023",
+                    "id":"furia_paris_2023_gold",
+                    "equipe": "furia",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_furi_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Heroic (Gold) | Paris 2023",
+                    "id":"heroic_paris_2023_gold",
+                    "equipe": "heroic",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_hero_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Into The Breach (Gold) | Paris 2023",
+                    "id":"itb_paris_2023_gold",
+                    "equipe": "itb",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_itb_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Natus Vincere (Gold) | Paris 2023",
+                    "id":"navi_paris_2023_gold",
+                    "equipe": "navi",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_navi_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "9INE (Gold) | Paris 2023",
+                    "id":"9ine_paris_2023_gold",
+                    "equipe": "9ine",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_nein_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Vitality (Gold) | Paris 2023",
+                    "id":"vitality_paris_2023_gold",
+                    "equipe": "vitality",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_vita_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Apeks (Gold) | Paris 2023",
+                    "id":"apeks_paris_2023_gold",
+                    "equipe": "apeks",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_apex_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "forZe eSports (Gold) | Paris 2023",
+                    "id":"forze_paris_2023_gold",
+                    "equipe": "forze",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_forz_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "G2 Esports (Gold) | Paris 2023",
+                    "id":"g2_paris_2023_gold",
+                    "equipe": "g2",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_g2_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "GamerLegion (Gold) | Paris 2023",
+                    "id":"gl_paris_2023_gold",
+                    "equipe": "gl",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_gl_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Monte (Gold) | Paris 2023",
+                    "id":"monte_paris_2023_gold",
+                    "equipe": "monte",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_mont_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Ninjas in Pyjamas (Gold) | Paris 2023",
+                    "id":"nip_paris_2023_gold",
+                    "equipe": "nip",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_nip_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "OG (Gold) | Paris 2023",
+                    "id":"og_paris_2023_gold",
+                    "equipe": "og",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_og_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "paiN Gaming (Gold) | Paris 2023",
+                    "id":"pain_paris_2023_gold",
+                    "equipe": "pain",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_pain_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Complexity Gaming (Gold) | Paris 2023",
+                    "id":"complexity_paris_2023_gold",
+                    "equipe": "complexity",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_cplx_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "ENCE (Gold) | Paris 2023",
+                    "id":"ence_paris_2023_gold",
+                    "equipe": "ence",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_ence_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "FaZe Clan (Gold) | Paris 2023",
+                    "id":"faze_paris_2023_gold",
+                    "equipe": "ence",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_faze_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Fluxo (Gold) | Paris 2023",
+                    "id":"fluxo_paris_2023_gold",
+                    "equipe": "fluxo",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_flux_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Grayhound Gaming (Gold) | Paris 2023",
+                    "id":"grayhound_paris_2023_gold",
+                    "equipe": "grayhound",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_gray_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Team Liquid (Gold) | Paris 2023",
+                    "id":"liquid_paris_2023_gold",
+                    "equipe": "liquid",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_liq_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "The MongolZ (Gold) | Paris 2023",
+                    "id":"mongolz_paris_2023_gold",
+                    "equipe": "mongolz",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_mngz_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "MOUZ (Gold) | Paris 2023",
+                    "id":"mouz_paris_2023_gold",
+                    "equipe": "mouz",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_23_mouz_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                }
+                
+            ],
+            "maps": [
+                {
+                    "nom": "Ancient (Gold)",
+                    "id": "ancient_gold",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/blast_paris_2023/Pgl_21_sticker_ancient_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Anubis (Gold)",
+                    "id": "anubis_gold",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/blast_paris_2023/BLAST_sticker_anubis_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Inferno (Gold)",
+                    "id": "inferno_gold",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/blast_paris_2023/Pgl_21_sticker_inferno_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Mirage (Gold)",
+                    "id": "mirage_gold",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/blast_paris_2023/Pgl_21_sticker_mirage_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Nuke (Gold)",
+                    "id": "nuke_gold",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/blast_paris_2023/Pgl_21_sticker_nuke_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Overpass (Gold)",
+                    "id": "overpass_gold",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/blast_paris_2023/Pgl_21_sticker_overpass_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Vertigo (Gold)",
+                    "id": "vertigo_gold",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/blast_paris_2023/Pgl_21_sticker_vertigo_gold.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                }
+
+            ],
+            "oraganisateur": [
+                {
+                    "nom": "BLAST.tv (Gold) | Paris 2023",
+                    "id":"blast_paris_2023_orga_gold",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/blast_paris_2023/Blst_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                }
+            ]
+        }
+    }
+}

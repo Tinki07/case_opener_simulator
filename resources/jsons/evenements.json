@@ -1,0 +1,67 @@
+{
+    "evenements_no_signature" : {
+        "blast_paris_2023" : {
+            "nom": "BLAST Paris 2023",
+            "sticker_event" : "blast_paris_2023_orga_gold",
+            "maps":{
+                "Ancient": {
+                    "collection": "collection_ancient",
+                    "gold_sticker_map": "ancient_gold"
+                    
+                },
+                "Anubis": {
+                    "collection": "collection_anubis",
+                    "gold_sticker_map": "anubis_gold"
+                },
+                "Inferno": {
+                    "collection": "collection_inferno_2018",
+                    "gold_sticker_map": "inferno_gold"
+                },
+                "Mirage": {
+                    "collection": "collection_mirage_2021",
+                    "gold_sticker_map": "mirage_gold"
+                },
+                "Nuke": {
+                    "collection": "collection_nuke_2018",
+                    "gold_sticker_map": "nuke_gold"
+                },
+                "Overpass": {
+                    "collection": "collection_overpass",
+                    "gold_sticker_map": "overpass_gold"
+                },
+                "Vertigo":{
+                    "collection": "collection_vertigo_2021",
+                    "gold_sticker_map": "vertigo_gold"
+                }
+            },
+            "teams": [
+                ["bad_new_eagles_paris_2023_gold"],
+                ["fnatic_paris_2023_gold"],
+                ["furia_paris_2023_gold"],
+                ["heroic_paris_2023_gold"],
+                ["itb_paris_2023_gold"],
+                ["navi_paris_2023_gold"],
+                ["9ine_paris_2023_gold"],
+                ["vitality_paris_2023_gold"],
+                ["apeks_paris_2023_gold"],
+                ["forze_paris_2023_gold"],
+                ["g2_paris_2023_gold"],
+                ["gl_paris_2023_gold"],
+                ["monte_paris_2023_gold"],
+                ["nip_paris_2023_gold"],
+                ["og_paris_2023_gold"],
+                ["pain_paris_2023_gold"],
+                ["complexity_paris_2023_gold"],
+                ["ence_paris_2023_gold"],
+                ["faze_paris_2023_gold"],
+                ["fluxo_paris_2023_gold"],
+                ["grayhound_paris_2023_gold"],
+                ["liquid_paris_2023_gold"],
+                ["mongolz_paris_2023_gold"],
+                ["mouz_paris_2023_gold"]
+            ]
+
+        }
+    }
+    
+}

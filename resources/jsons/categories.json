@@ -1,0 +1,73 @@
+{
+    "categories": {
+        "skins_normal": {
+            "consumer_grade": {
+                "nom": "Consumer Grade",
+                "id" : "consumer_grade",
+                "color": "b0c3d9"
+            },
+            "industrial_grade": {
+                "nom": "Industrial Grade",
+                "id" : "industrial_grade",
+                "color": "5e98d9"
+            },
+            "mil_spec": {
+                "nom": "Mil-Spec",
+                "id" : "mil_spec",
+                "color": "4b69ff"
+            },
+            "restricted": {
+                "nom": "Restricted",
+                "id" : "restricted",
+                "color": "8847ff"
+            },
+            "classified": {
+                "nom": "Classified",
+                "id" : "classified",
+                "color": "d32ee6"
+            },
+            "Covert": {
+                "nom": "Covert",
+                "id" : "covert",
+                "color": "eb4b4b"
+            },
+            "Knives": {
+                "nom": "★ Rare Special Item",
+                "id" : "knive",
+                "color": "eb4b4b"
+            },
+            "Contraband": {
+                "nom": "Contraband",
+                "id" : "contraband",
+                "color": "eb4b4b"
+            }
+        },
+        "stickers": {
+            "high_grade": {
+                "nom": "High Grade",
+                "id": "high_grade",
+                "color": "4b69ff"
+            },
+            "remarkable": {
+                "nom": "Remarkable",
+                "id": "remarkable",
+                "color": "8847ff"
+            },
+            "exotic": {
+                "nom": "Exotic",
+                "id": "exotic",
+                "color": "8847ff"
+            },
+            "extraordinary": {
+                "nom": "Extraordinary",
+                "id": "extraordinary",
+                "color": "eb4b4b"
+            },
+            "contraband": {
+                "nom": "Contraband",
+                "id": "contraband",
+                "color": "eb4b4b"
+            }
+        }
+    }
+}

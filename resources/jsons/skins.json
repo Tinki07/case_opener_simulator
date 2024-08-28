@@ -1,0 +1,3204 @@
+{
+	"skins": {
+		"pistols": {
+			"usp_s": [
+				{
+					"nom": "Jawbreaker",
+					"id": "Jawbreaker_usp_s",
+					"arme": "usp_s",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						21.26,
+						11.07,
+						7.29,
+						6.30,
+						5.83,
+						64.92,
+						32.15,
+						17.36,
+						13.99,
+						11.90
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-usp.png"
+				},
+				{
+					"nom": "Ticket to Hell",
+					"id": "Ticket to Hell_usp_s",
+					"arme": "usp_s",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.58,
+						0.73,
+						0.34,
+						0.57,
+						0.27,
+						6.53,
+						2.83,
+						1.44,
+						2.18,
+						1.16
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_usps.png"
+				},
+				{
+					"nom": "Orange Anolis",
+					"id": "Orange Anolis_usp_s",
+					"arme": "usp_s",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"prix": [
+						102.36,
+						82.77,
+						103.50,
+						0.00,
+						0.00,
+						16.15,
+						11.62,
+						8.08,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/usp.png"
+				},
+				{
+					"nom": "Purple DDPAT",
+					"id": "Purple DDPAT_usp_s",
+					"arme": "usp_s",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						22.12,
+						19.58,
+						20.72,
+						20.85,
+						19.51,
+						10.00,
+						7.31,
+						3.48,
+						3.34,
+						2.21
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_usp_purpleddpat.png"
+				}
+			],
+			"glock18": [
+				{
+					"nom": "Block-18",
+					"id": "Block-18_glock18",
+					"arme": "glock18",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2.60,
+						1.71,
+						0.99,
+						1.13,
+						0.82,
+						7.87,
+						5.18,
+						2.63,
+						2.99,
+						2.29
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-block18.png"
+				},
+				{
+					"nom": "Pink DDPAT",
+					"id": "Pink DDPAT_glock18",
+					"arme": "glock18",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						94.82,
+						77.66,
+						73.71,
+						72.42,
+						74.90,
+						83.43,
+						8.90,
+						2.47,
+						2.25,
+						1.69	
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_glock_pinkddpat.png"
+				}
+			],
+			"fiveseven": [
+				{
+					"nom": "Hybrid",
+					"id": "Hybrid_fiveseven",
+					"arme": "fiveseven",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2.69,
+						1.42,
+						0.96,
+						0.82,
+						0.84,
+						6.37,
+						3.86,
+						2.12,
+						1.96,
+						1.85
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-fiveseven.png"
+				},
+				{
+					"nom": "Scrawl",
+					"id": "Scrawl_fiveseven",
+					"arme": "fiveseven",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.28,
+						0.09,
+						0.06,
+						0.06,
+						0.06,
+						1.44,
+						0.32,
+						0.12,
+						0.12,
+						0.13
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_fiveseven.png"
+				},
+				{
+					"nom": "Withered Vine",
+					"id": "Withered Vine_fiveseven",
+					"arme": "fiveseven",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						6.21,
+						6.07,
+						5.82,
+						6.32,
+						6.33,
+						0.34,
+						0.16,
+						0.07,
+						0.12,
+						0.10
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/fiveseven.png"
+				}
+			],
+			"tec9": [
+				{
+					"nom": "Slag",
+					"id": "Slag_tec9",
+					"arme": "tec9",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.31,
+						0.15,
+						0.10,
+						0.09,
+						0.08,
+						1.18,
+						0.52,
+						0.25,
+						0.23,
+						0.18
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-tec9.png"
+				}
+			],
+			"dual_berettas": [
+				{
+					"nom": "Hideout",
+					"id": "Hideout_dual_berettas",
+					"arme": "dual_berettas",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.25,
+						0.15,
+						0.10,
+						0.10,
+						0.08,
+						0.81,
+						0.47,
+						0.24,
+						0.22,
+						0.21
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-duals.png"
+				},
+				{
+					"nom": "Melondrama",
+					"id": "Melondrama_dual_berettas",
+					"arme": "dual_berettas",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						7.70,
+						3.15,
+						1.52,
+						1.24,
+						1.34,
+						18.95,
+						5.12,
+						2.60,
+						1.93,
+						1.87
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_dualberettas.png"
+				},
+				{
+					"nom": "Drift Wood",
+					"id": "Drift Wood_dual_berettas",
+					"arme": "dual_berettas",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						4.77,
+						4.64,
+						4.45,
+						4.41,
+						5.55,
+						0.08,
+						0.04,
+						0.04,
+						0.05,
+						0.04
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_elite_driftwood.png"
+				}
+			],
+			"p2000": [
+				{
+					"nom": "Lifted Spirits",
+					"id": "Lifted Spirits_p2000",
+					"arme": "p2000",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.24,
+						0.09,
+						0.06,
+						0.06,
+						0.06,
+						0.80,
+						0.27,
+						0.12,
+						0.12,
+						0.13
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_p2000.png"
+				}
+			],
+			"p250": [
+				{
+					"nom": "Black & Tan",
+					"id": "Black & Tan_p250",
+					"arme": "p250",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						28.67,
+						27.18,
+						26.92,
+						30.09,
+						27.80,
+						0.49,
+						0.19,
+						0.11,
+						0.36,
+						0.27
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/db.png"
+				},
+				{
+					"nom": "Drought",
+					"id": "Drought_p250",
+					"arme": "p250",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"prix": [
+						0.75,
+						0.74,
+						0.62,
+						0.75,
+						0.00,
+						0.04,
+						0.03,
+						0.03,
+						0.03,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_p250_drought.png"
+				}
+			],
+			"r8": [
+				{
+					"nom": "Desert Brush",
+					"id": "Desert Brush_r8",
+					"arme": "r8",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.94,
+						0.93,
+						0.92,
+						0.87,
+						0.92,
+						0.06,
+						0.03,
+						0.03,
+						0.04,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/db.png"
+				}
+			],
+			"deagle": [
+				{
+					"nom": "Fennec Fox",
+					"id": "Fennec Fox_deagle",
+					"arme": "deagle",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						364.58,
+						285.00,
+						248.98,
+						633.22,
+						244.59,
+						381.50,
+						226.75,
+						153.21,
+						140.01,
+						116.08
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_deagle_fennecfox.png"
+				}
+			],
+			"cz75_auto": [
+				{
+					"nom": "Midnight Palm",
+					"id": "Midnight Palm_cz75_auto",
+					"arme": "cz75_auto",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						4.64,
+						4.53,
+						4.48,
+						4.57,
+						5.38,
+						0.05,
+						0.04,
+						0.04,
+						0.04,
+						0.04
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_cz75a_midnightpalm.png"
+				}
+			]
+		},
+		"smg": {
+			"mp7": [
+				{
+					"nom": "Just Smile",
+					"id": "Just Smile_mp7",
+					"arme": "mp7",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2.54,
+						1.41,
+						0.95,
+						0.78,
+						0.78,
+						6.77,
+						3.99,
+						2.17,
+						1.83,
+						1.82
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-mp7.png"
+				},
+				{
+					"nom": "Abyssal Apparition",
+					"id": "Abyssal Apparition_mp7",
+					"arme": "mp7",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						8.47,
+						3.23,
+						1.45,
+						1.28,
+						1.23,
+						17.10,
+						6.33,
+						2.20,
+						1.90,
+						1.92
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_mp7.png"
+				},
+				{
+					"nom": "Prey",
+					"id": "Prey_mp7",
+					"arme": "mp7",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.92,
+						0.89,
+						0.92,
+						0.93,
+						0.92,
+						0.03,
+						0.03,
+						0.03,
+						0.03,
+						0.09
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/mp7.png"
+				}
+			],
+			"mac10": [
+				{
+					"nom": "Light Box",
+					"id": "Light Box_mac10",
+					"arme": "mac10",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.73,
+						0.18,
+						0.10,
+						0.09,
+						0.08,
+						3.57,
+						0.72,
+						0.29,
+						0.21,
+						0.18
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-mac10.png"
+				},
+				{
+					"nom": "Ensnared",
+					"id": "Ensnared_mac10",
+					"arme": "mac10",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.24,
+						0.10,
+						0.06,
+						0.06,
+						0.06,
+						1.24,
+						0.27,
+						0.12,
+						0.11,
+						0.13
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_mac10.png"
+				},
+				{
+					"nom": "Case Hardened",
+					"id": "Case Hardened_mac10",
+					"arme": "mac10",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						108.56,
+						95.92,
+						92.63,
+						112.32,
+						109.94,
+						79.55,
+						20.30,
+						17.02,
+						10.40,
+						9.98
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/mac10.png"
+				},
+				{
+					"nom": "Case Hardened [Blue Gem]",
+					"id": "Case Hardened [Blue Gem]_mac10",
+					"arme": "mac10",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						217.12,
+						191.84,
+						185.26,
+						224.64,
+						219.88,
+						159.10,
+						40.60,
+						34.04,
+						20.80,
+						19.96
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/mac10.png"
+				},
+				{
+					"nom": "Sienna Damask",
+					"id": "Sienna Damask_mac10",
+					"arme": "mac10",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.72,
+						0.75,
+						0.71,
+						0.62,
+						0.70,
+						0.04,
+						0.03,
+						0.03,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_mac10_siennadamask.png"
+				}
+			],
+			"ump45": [
+				{
+					"nom": "Motorized",
+					"id": "Motorized_ump45",
+					"arme": "ump45",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.25,
+						0.15,
+						0.10,
+						0.10,
+						0.09,
+						0.92,
+						0.50,
+						0.25,
+						0.32,
+						0.21
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-ump45.png"
+				},
+				{
+					"nom": "Fade",
+					"id": "Fade_ump45",
+					"arme": "ump45",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						386.90,
+						445.16,
+						0.00,
+						0.00,
+						0.00,
+						51.65,
+						60.12,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/ump.png"
+				}
+			],
+			"mp9": [
+				{
+					"nom": "Starlight Protector",
+					"id": "Starlight Protector_mp9",
+					"arme": "mp9",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						19.24,
+						8.13,
+						3.40,
+						3.19,
+						2.38,
+						71.34,
+						19.02,
+						7.93,
+						10.00,
+						5.58
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_mp9.png"
+				},
+				{
+					"nom": "Old Roots",
+					"id": "Old Roots_mp9",
+					"arme": "mp9",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						6.28,
+						6.14,
+						5.92,
+						5.99,
+						5.90,
+						0.30,
+						0.15,
+						0.09,
+						0.14,
+						0.11
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/ump.png"
+				},
+				{
+					"nom": "Music Box",
+					"id": "Music Box_mp9",
+					"arme": "mp9",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						21.00,
+						20.90,
+						20.98,
+						25.15,
+						20.58,
+						1.17,
+						0.49,
+						0.11,
+						0.28,
+						0.12
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_mp9_musicbox.png"
+				}
+			],
+			"bizon": [
+				{
+					"nom": "Space Cat",
+					"id": "Space Cat_bizon",
+					"arme": "bizon",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.24,
+						0.57,
+						0.28,
+						0.29,
+						0.26,
+						3.05,
+						1.39,
+						0.48,
+						0.49,
+						0.42
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_bizon.png"
+				},
+				{
+					"nom": "Anolis",
+					"id": "Anolis_bizon",
+					"arme": "bizon",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.77,
+						0.78,
+						0.61,
+						0.72,
+						0.71,
+						0.03,
+						0.03,
+						0.03,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_bizon_anolis.png"
+				}
+			],
+			"mp5_sd": [
+				{
+					"nom": "Necro Jr.",
+					"id": "Necro Jr._mp5_sd",
+					"arme": "mp5_sd",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.24,
+						0.09,
+						0.07,
+						0.06,
+						0.07,
+						1.28,
+						0.25,
+						0.12,
+						0.11,
+						0.13
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_mp5.png"
+				},
+				{
+					"nom": "Oxide Oasis",
+					"id": "Oxide Oasis_mp5_sd",
+					"arme": "mp5_sd",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						328.30,
+						292.78,
+						279.05,
+						294.47,
+						231.37,
+						21.82,
+						10.80,
+						5.31,
+						6.17,
+						5.09
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_mp5sd_oxideoasis.png"
+				}
+			],
+			"p90": [
+				{
+					"nom": "Desert DDPAT",
+					"id": "Desert DDPAT_p90",
+					"arme": "p90",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.93,
+						0.89,
+						0.94,
+						0.88,
+						0.96,
+						0.05,
+						0.03,
+						0.03,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/ump.png"
+				},
+				{
+					"nom": "Verdant Growth",
+					"id": "Verdant Growth_p90",
+					"arme": "p90",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						4.77,
+						4.50,
+						4.05,
+						4.60,
+						4.83,
+						0.06,
+						0.04,
+						0.04,
+						0.05,
+						0.05
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_p90_verdantgrowth.png"
+				}
+			]
+		},
+		"rifle": {
+			"ak47": [
+				{
+					"nom": "Inheritance",
+					"id": "Inheritance_ak47",
+					"arme": "ak47",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						184.74,
+						108.85,
+						67.91,
+						68.90,
+						52.34,
+						449.40,
+						256.23,
+						125.16,
+						113.17,
+						94.87
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-ak.png"
+				},
+				{
+					"nom": "Nightwish",
+					"id": "Nightwish_ak47",
+					"arme": "ak47",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						71.01,
+						21.25,
+						10.24,
+						7.47,
+						5.59,
+						147.43,
+						49.05,
+						24.79,
+						17.43,
+						14.04
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_ak47.png"
+				},
+				{
+					"nom": "Gold Arabesque",
+					"id": "Gold Arabesque_ak47",
+					"arme": "ak47",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2885.16,
+						2300.00,
+						1819.42,
+						1530.00,
+						1377.72,
+						5039.12,
+						2360.90,
+						1777.72,
+						1651.76,
+						1366.20
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/ak.png"
+				}
+			],
+			"m4a1_s": [
+				{
+					"nom": "Black Lotus",
+					"id": "Black Lotus_m4a1_s",
+					"arme": "m4a1_s",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						27.25,
+						15.10,
+						11.74,
+						12.56,
+						12.33,
+						77.13,
+						42.09,
+						28.96,
+						28.96,
+						30.99
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-m4a1s.png"
+				},
+				{
+					"nom": "Night Terror",
+					"id": "Night Terror_m4a1_s",
+					"arme": "m4a1_s",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.45,
+						0.63,
+						0.40,
+						1.18,
+						1.58,
+						6.90,
+						3.15,
+						2.27,
+						4.06,
+						4.99
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_m4a1s.png"
+				}
+			],
+			"m4a4": [
+				{
+					"nom": "Etch Lord",
+					"id": "Etch Lord_m4a4",
+					"arme": "m4a4",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2.70,
+						1.44,
+						0.96,
+						0.85,
+						0.86,
+						8.60,
+						4.33,
+						2.26,
+						1.86,
+						2.20
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-m4a4.png"
+				},
+				{
+					"nom": "Red DDPAT",
+					"id": "Red DDPAT_m4a4",
+					"arme": "m4a4",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						94.37,
+						94.21,
+						97.20,
+						91.78,
+						90.00,
+						26.41,
+						10.90,
+						6.60,
+						8.92,
+						15.64
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+				}
+			],
+			"famas": [
+				{
+					"nom": "Rapid Eye Movement",
+					"id": "Rapid Eye Movement_famas",
+					"arme": "famas",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						8.00,
+						3.35,
+						1.14,
+						1.24,
+						1.26,
+						17.44,
+						6.57,
+						2.61,
+						2.01,
+						1.98
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_famas.png"
+				},
+				{
+					"nom": "CaliCamo",
+					"id": "CaliCamo_famas",
+					"arme": "famas",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						4.96,
+						4.60,
+						4.49,
+						4.97,
+						4.53,
+						0.10,
+						0.05,
+						0.04,
+						0.06,
+						0.04
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_famas_calicamo.png"
+				}
+			],
+			"galil_ar": [
+				{
+					"nom": "Amber Fade",
+					"id": "Amber Fade_galil_ar",
+					"arme": "galil_ar",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"prix": [
+						29.56,
+						27.50,
+						27.60,
+						31.60,
+						0.00,
+						6.01,
+						3.75,
+						2.48,
+						3.70,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+				}
+			],
+			"aug": [
+				{
+					"nom": "Spalted Wood",
+					"id": "Spalted Wood_aug",
+					"arme": "aug",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						6.75,
+						7.40,
+						5.80,
+						4.40,
+						2.10,
+						0.10,
+						0.05,
+						0.04,
+						0.07,
+						0.16
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+				},
+				{
+					"nom": "Sand Storm",
+					"id": "Sand Storm_aug",
+					"arme": "aug",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						82.71,
+						83.04,
+						72.69,
+						80.65,
+						75.62,
+						7.14,
+						4.37,
+						2.64,
+						2.2	,
+						2.47
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_aug_sandstorm.png"
+				}
+			],
+			"sg553": [
+				{
+					"nom": "Bleached",
+					"id": "Bleached_sg553",
+					"arme": "sg553",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.93,
+						0.92,
+						0.87,
+						0.89,
+						0.92,
+						0.08,
+						0.04,
+						0.04,
+						0.04,
+						0.04
+
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+				},
+				{
+					"nom": "Desert Blossom",
+					"id": "Desert Blossom_sg553",
+					"arme": "sg553",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						19.29,
+						21.75,
+						21.00,
+						25.03,
+						22.35,
+						1.05,
+						0.41,
+						0.21,
+						0.55,
+						0.24
+
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_sg556_desertblossom.png"
+				}
+			]
+		},
+		"sniper": {
+			"awp": [
+				{
+					"nom": "Chrome Canon",
+					"id": "Chrome Canon_awp",
+					"arme": "awp",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						145.12,
+						75.02,
+						45.84,
+						29.25,
+						24.24,
+						327.81,
+						156.81,
+						83.83,
+						57.64,
+						48.28
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-awp.png"
+				},
+				{
+					"nom": "Desert Hydra",
+					"id": "Desert Hydra_awp",
+					"arme": "awp",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2379.00,
+						1850.00,
+						1550.00,
+						1309.63,
+						1286.57,
+						2840.00,
+						1799.00,
+						1437.25,
+						1212.86,
+						1101.99
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_awp_deserthydra.png"
+				}
+			],
+			"scout": [
+				{
+					"nom": "Dezastre",
+					"id": "Dezastre_scout",
+					"arme": "scout",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.36,
+						0.15,
+						0.10,
+						0.09,
+						0.08,
+						2.65,
+						0.58,
+						0.27,
+						0.21,
+						0.22
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-ssg08.png"
+				},
+				{
+					"nom": "Death Strike",
+					"id": "Death Strike_scout",
+					"arme": "scout",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						771.42,
+						544.90,
+						427.06,
+						850.00,
+						446.28,
+						391.00,
+						163.46,
+						111.48,
+						107.89,
+						152.03
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/scout.png"
+				},
+				{
+					"nom": "Prey",
+					"id": "Prey_scout",
+					"arme": "scout",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.78,
+						0.73,
+						0.73,
+						0.75,
+						0.75,
+						0.04,
+						0.03,
+						0.03,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_ssg08_prey.png"
+				}
+			],
+			"g3sg1": [
+				{
+					"nom": "Dream Glade",
+					"id": "Dream Glade_g3sg1",
+					"arme": "g3sg1",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.31,
+						0.52,
+						0.27,
+						0.23,
+						0.25,
+						3.10,
+						1.00,
+						0.48,
+						0.41,
+						0.40
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_g3sg1.png"
+				},
+				{
+					"nom": "New Roots",
+					"id": "New Roots_g3sg1",
+					"arme": "g3sg1",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						28.65,
+						27.44,
+						29.92,
+						43.86,
+						31.07,
+						0.36,
+						0.17,
+						0.10,
+						0.23,
+						0.13
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/scout.png"
+				}
+			],
+			"scar20": [
+				{
+					"nom": "Poultrygeist",
+					"id": "Poultrygeist_scar20",
+					"arme": "scar20",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.19,
+						0.10,
+						0.06,
+						0.06,
+						0.06,
+						0.73,
+						0.27,
+						0.12,
+						0.14,
+						0.13
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_scar20.png"
+				}
+			]
+		},
+		"shootgun": {
+			"sawed_off": [
+				{
+					"nom": "Analog Input",
+					"id": "Analog Input_sawed_off",
+					"arme": "sawed_off",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2.39,
+						1.42,
+						0.95,
+						0.85,
+						0.79,
+						5.79,
+						4.13,
+						2.18,
+						1.80,
+						1.84
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-sawedoff.png"
+				},
+				{
+					"nom": "Spirit Board",
+					"id": "Spirit Board_sawed_off",
+					"arme": "sawed_off",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.23,
+						0.09,
+						0.06,
+						0.06,
+						0.06,
+						0.88,
+						0.25,
+						0.13,
+						0.12,
+						0.13
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_sawedoff.png"
+				},
+				{
+					"nom": "Parched",
+					"id": "Parched_sawed_off",
+					"arme": "sawed_off",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.96,
+						0.95,
+						0.94,
+						0.81,
+						0.93,
+						0.04,
+						0.03,
+						0.03,
+						0.03,
+						0.03                        
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/sawed.png"
+				}
+			],
+			"xm1014": [
+				{
+					"nom": "Irezumi",
+					"id": "Irezumi_xm1014",
+					"arme": "xm1014",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.25,
+						0.15,
+						0.10,
+						0.10,
+						0.08,
+						1.10,
+						0.48,
+						0.24,
+						0.24,
+						0.21
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-xm1014.png"
+				},
+				{
+					"nom": "Zombie Offensive",
+					"id": "Zombie Offensive_xm1014",
+					"arme": "xm1014",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.20,
+						0.54,
+						0.21,
+						0.28,
+						0.28,
+						2.93,
+						1.16,
+						0.47,
+						0.46,
+						0.46
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_xm1014.png"
+				},
+				{
+					"nom": "Elegant Vines",
+					"id": "Elegant Vines_xm1014",
+					"arme": "xm1014",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"prix": [
+						84.11,
+						87.76,
+						80.81,
+						0.00,
+						0.00,
+						2.23,
+						0.87,
+						0.49,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_xm1014_elegantvines.png"
+				}
+			],
+			"nova": [
+				{
+					"nom": "Dark Sigil",
+					"id": "Dark Sigil_nova",
+					"arme": "nova",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.25,
+						0.15,
+						0.10,
+						0.09,
+						0.08,
+						0.95,
+						0.52,
+						0.24,
+						0.22,
+						0.21
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-nova.png"
+				},
+				{
+					"nom": "Quick Sand",
+					"id": "Quick Sand_nova",
+					"arme": "nova",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						29.99,
+						27.03,
+						27.11,
+						29.44,
+						86.67,
+						0.99,
+						0.48,
+						0.15,
+						0.29,
+						0.17                        
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/nova.png"
+				}
+			],
+			"mag7": [
+				{
+					"nom": "Foresight",
+					"id": "Foresight_mag7",
+					"arme": "mag7",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.19,
+						0.10,
+						0.06,
+						0.06,
+						0.06,
+						0.65,
+						0.27,
+						0.11,
+						0.13,
+						0.14
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_mag7.png"
+				},
+				{
+					"nom": "Navy Sheen",
+					"id": "Navy Sheen_mag7",
+					"arme": "mag7",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.76,
+						0.74,
+						0.71,
+						0.72,
+						0.71,
+						0.04,
+						0.03,
+						0.03,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_mag7_navysheen.png"
+				}
+			]
+		},
+		"lmg": {
+			"m249": [
+				{
+					"nom": "Midnight Palm",
+					"id": "Midnight Palm_m249",
+					"arme": "m249",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						6.29,
+						6.22,
+						6.00,
+						5.84,
+						5.59,
+						0.05,
+						0.04,
+						0.04,
+						0.05,
+						0.05
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/ump.png"
+				},
+				{
+					"nom": "Humidor",
+					"id": "Humidor_m249",
+					"arme": "m249",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						20.72,
+						21.27,
+						21.04,
+						22.80,
+						33.03,
+						0.16,
+						0.09,
+						0.07,
+						0.08,
+						0.08
+					],
+					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_m249_humidor.png"
+				}
+			]
+		},
+		"equipment": {
+			"zeus": [
+				{
+					"nom": "Olympus",
+					"id": "Olympus_zeus",
+					"arme": "zeus",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						17.05,
+						11.27,
+						7.02,
+						6.18,
+						5.97,
+						55.15,
+						31.3,
+						18.54,
+						18.45,
+						16.09
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-zeus.png"
+				}
+			]
+		},
+		"knives": {
+			"kukri": [
+				{
+					"nom": "Fade",
+					"id": "Fade_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						988.44,
+						1199.98,
+						0,
+						0,
+						0,
+						1010.41,
+						1264.26,
+						0,
+						0,
+						0
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-fade.png"
+				},
+				{
+					"nom": "Slaughter",
+					"id": "Slaughter_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"prix": [
+						944.37,
+						643.43,
+						562.99,
+						0,
+						0,
+						944.37,
+						643.43,
+						612.38,
+						0,
+						0
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-slaughter.png"
+				},
+				{
+					"nom": "Case Hardened",
+					"id": "Case Hardened_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1486.81,
+						444.50,
+						397.07,
+						391.00,
+						372.91,
+						1752.32,
+						625.00,
+						650.58,
+						412.60,
+						386.45
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-caseh.png"
+				},
+				{
+					"nom": "Case Hardened [Blue Gem]",
+					"id": "Case Hardened [Blue Gem]_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						5000.00,
+						4000.00,
+						3000.00,
+						2500.00,
+						2000.00,
+						7000.00,
+						6000.00,
+						5000.00,
+						4000.00,
+						3000.00
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-caseh.png"
+				},
+				{
+					"nom": "Crimson Web",
+					"id": "Crimson Web_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1052.30,
+						789.53,
+						426.61,
+						548.64,
+						308.98,
+						1169.74,
+						816.36,
+						789.53,
+						426.61,
+						308.98
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-crimson.png"
+				},
+				{
+					"nom": "Blue Steel",
+					"id": "Blue Steel_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						588.73,
+						468.60,
+						380.00,
+						369.44,
+						375.32,
+						647.16,
+						555.65,
+						465.00,
+						450.65,
+						359.64
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-blue.png"
+				},
+				{
+					"nom": "Stained",
+					"id": "Stained_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						672.75,
+						370.99,
+						332.38,
+						314.81,
+						292.81,
+						798.61,
+						525.79,
+						347.30,
+						318.00,
+						351.12
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-stained.png"
+				},
+				{
+					"nom": "Urban Masked",
+					"id": "Urban Masked_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						420.00,
+						294.24,
+						198.35,
+						240.00,
+						234.08,
+						586.23,
+						369.69,
+						212.75,
+						341.58,
+						287.43
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-urban.png"
+				},
+				{
+					"nom": "Safari Mesh",
+					"id": "Safari Mesh_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						289.03,
+						241.75,
+						189.75,
+						195.45,
+						198.69,
+						341.95,
+						304.48,
+						213.13,
+						194.25,
+						220.00
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-safari.png"
+				},
+				{
+					"nom": "Scorched",
+					"id": "Scorched_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						501.29,
+						269.30,
+						218.50,
+						185.00,
+						212.75,
+						469.65,
+						378.20,
+						195.50,
+						212.30,
+						208.71
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-scorched.png"
+				},
+				{
+					"nom": "Night Stripe",
+					"id": "Night Stripe_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						550.27,
+						319.51,
+						239.89,
+						235.54,
+						268.69,
+						592.34,
+						304.31,
+						232.34,
+						250.64,
+						261.20
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-night.png"
+				},
+				{
+					"nom": "Forest DDPAT",
+					"id": "Forest DDPAT_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						577.84,
+						264.50,
+						199.98,
+						191.72,
+						195.45,
+						618.32,
+						312.12,
+						224.25,
+						213.30,
+						204.54
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-forest.png"
+				},
+				{
+					"nom": "Boreal Forest",
+					"id": "Boreal Forest_kukri",
+					"arme": "kukri",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						426.87,
+						250.64,
+						194.00,
+						200.00,
+						186.09,
+						432.30,
+						325.28,
+						197.47,
+						269.18,
+						234.08
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-boreal.png"
+				}
+			],
+			"bowie": [
+				{
+					"nom": "Gamma Doppler",
+					"id": "Gamma Doppler_bowie",
+					"arme": "bowie",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						363.92,
+						438.69,
+						0.00,
+						0.00,
+						0.00,
+						385.58,
+						385.22,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Bowie_gamma_doppler_phase1.png"
+				},
+				{
+					"nom": "Gamma Doppler [Emerald]",
+					"id": "Gamma Doppler [Emerald]_bowie",
+					"arme": "bowie",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						1173.97,
+						1051.57,
+						0.00,
+						0.00,
+						0.00,
+						1134.01,
+						1114.99,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Bowie_emerald_marbleized.png"
+				},
+				{
+					"nom": "Lore",
+					"id": "Lore_bowie",
+					"arme": "bowie",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						631.83,
+						278.23,
+						233.82,
+						209.66,
+						157.53,
+						1489.89,
+						302.78,
+						266.45,
+						262.04,
+						223.59
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Bowie_bowie_lore.png"
+				},
+				{
+					"nom": "Autotronic",
+					"id": "Autotronic_bowie",
+					"arme": "bowie",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						339.30,
+						247.23,
+						212.34,
+						210.02,
+						184.87,
+						459.03,
+						325.07,
+						240.49,
+						224.54,
+						209.56
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Bowie_bowie_autotronic.png"
+				},
+				{
+					"nom": "Freehand",
+					"id": "Freehand_bowie",
+					"arme": "bowie",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						187.29,
+						172.14,
+						166.51,
+						155.67,
+						158.35,
+						264.44,
+						202.19,
+						183.26,
+						193.21,
+						179.68
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Bowie_marked_up_90.png"
+				},
+				{
+					"nom": "Bright Water",
+					"id": "Bright Water_bowie",
+					"arme": "bowie",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						159.68,
+						153.68,
+						136.99,
+						160.75,
+						197.79,
+						212.65,
+						173.68,
+						200.08,
+						263.02,
+						236.90
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Bowie_ocean_knife_90.png"
+				},
+				{
+					"nom": "Black Laminate",
+					"id": "Black Laminate_bowie",
+					"arme": "bowie",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						221.14,
+						150.19,
+						139.70,
+						147.42,
+						130.16,
+						249.47,
+						182.22,
+						159.68,
+						150.26,
+						265.55
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Bowie_bowie_black_laminate.png"
+				}
+			],
+			"butterfly": [
+				{
+					"nom": "Autotronic",
+					"id": "Autotronic_butterfly",
+					"arme": "butterfly",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2095.00,
+						1524.99,
+						1225.22,
+						1124.41,
+						967.79,
+						1948.63,
+						1363.16,
+						1154.55,
+						1093.49,
+						939.40
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Butterfly_autotronic.png"
+				},
+				{
+					"nom": "Lore",
+					"id": "Lore_butterfly",
+					"arme": "butterfly",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						3958.53,
+						1850.00,
+						1150.00,
+						892.86,
+						755.22,
+						3603.24,
+						1744.76,
+						1076.02,
+						883.32,
+						741.12
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Butterfly_lore.png"
+				},
+				{
+					"nom": "Black Laminate",
+					"id": "Black Laminate_butterfly",
+					"arme": "butterfly",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1212.32,
+						1010.00,
+						930.00,
+						868.43,
+						847.00,
+						1169.45,
+						934.36,
+						861.14,
+						860.88,
+						848.27
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Butterfly_black_laminate.png"
+				},
+				{
+					"nom": "Bright Water",
+					"id": "Bright Water_butterfly",
+					"arme": "butterfly",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						938.54,
+						850.00,
+						789.00,
+						717.74,
+						699.99,
+						918.30,
+						836.64,
+						799.05,
+						743.11,
+						703.71
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Butterfly_ocean_knife_90.png"
+				},
+				{
+					"nom": "Freehand",
+					"id": "Freehand_butterfly",
+					"arme": "butterfly",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						967.36,
+						908.00,
+						834.95,
+						750.12,
+						725.00,
+						1030.54,
+						904.62,
+						846.51,
+						821.63,
+						750.12
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Butterfly_marked_up_90.png"
+				},
+				{
+					"nom": "Gamma Doppler",
+					"id": "Gamma Doppler_butterfly",
+					"arme": "butterfly",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						2631.64,
+						2649.95,
+						0.00,
+						0.00,
+						0.00,
+						2523.56,
+						2663.97,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Butterfly_gamma_doppler_phase1.png"
+				},
+				{
+					"nom": "Gamma Doppler [Emerald]",
+					"id": "Gamma Doppler [Emerald]_butterfly",
+					"arme": "butterfly",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						15408.85,
+						11847.68,
+						0.00,
+						0.00,
+						0.00,
+						12520.68,
+						11114.69,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Butterfly_emerald_marbleized.png"
+				}
+			],
+			"falchion": [
+				{
+					"nom": "Gamma Doppler",
+					"id": "Gamma Doppler_falchion",
+					"arme": "falchion",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						364.08,
+						404.92,
+						0.00,
+						0.00,
+						0.00,
+						392.59,
+						389.62,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Falchion_gamma_doppler_phase1.png"
+				},
+				{
+					"nom": "Gamma Doppler [Emerald]",
+					"id": "Gamma Doppler [Emerald]_falchion",
+					"arme": "falchion",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						1009.51,
+						918.37,
+						0.00,
+						0.00,
+						0.00,
+						995.20,
+						946.87,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Falchion_emerald_marbleized.png"
+				},
+				{
+					"nom": "Autotronic",
+					"id": "Autotronic_falchion",
+					"arme": "falchion",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						399.80,
+						282.13,
+						218.43,
+						228.88,
+						187.77,
+						373.75,
+						319.84,
+						288.24,
+						479.75,
+						222.27
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Falchion_falchion_autotronic.png"
+				},
+				{
+					"nom": "Lore",
+					"id": "Lore_falchion",
+					"arme": "falchion",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						363.44,
+						242.51,
+						227.31,
+						248.95,
+						175.90,
+						452.00,
+						375.97,
+						244.11,
+						298.45,
+						216.49
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Falchion_falchion_lore.png"
+				},
+				{
+					"nom": "Freehand",
+					"id": "Freehand_falchion",
+					"arme": "falchion",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						213.99,
+						189.00,
+						174.38,
+						164.87,
+						189.09,
+						259.00,
+						230.31,
+						202.79,
+						190.85,
+						180.61
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Falchion_marked_up_90.png"
+				},
+				{
+					"nom": "Bright Water",
+					"id": "Bright Water_falchion",
+					"arme": "falchion",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						198.95,
+						165.18,
+						158.05,
+						174.27,
+						175.33,
+						210.68,
+						189.11,
+						170.27,
+						195.50,
+						187.98
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Falchion_ocean_knife_90.png"
+				},
+				{
+					"nom": "Black Laminate",
+					"id": "Black Laminate_falchion",
+					"arme": "falchion",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						193.98,
+						152.03,
+						144.99,
+						146.30,
+						142.16,
+						339.40,
+						172.76,
+						168.93,
+						175.44,
+						160.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Falchion_falchion_black_laminate.png"
+				}
+			],
+			"huntsman": [
+				{
+					"nom": "Gamma Doppler",
+					"id": "Gamma Doppler_huntsman",
+					"arme": "huntsman",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						393.39,
+						419.37,
+						0.00,
+						0.00,
+						0.00,
+						434.65,
+						427.64,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Huntsman_gamma_doppler_phase1.png"
+				},
+				{
+					"nom": "Gamma Doppler [Emerald]",
+					"id": "Gamma Doppler [Emerald]_huntsman",
+					"arme": "huntsman",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						1386.96,
+						1297.64,
+						0.00,
+						0.00,
+						0.00,
+						1261.60,
+						1346.01,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Huntsman_emerald_marbleized.png"
+				},
+				{
+					"nom": "Autotronic",
+					"id": "Autotronic_huntsman",
+					"arme": "huntsman",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						544.90,
+						294.95,
+						250.35,
+						251.64,
+						216.29,
+						494.57,
+						330.00,
+						278.47,
+						336.50,
+						247.54
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Huntsman_huntsman_autotronic.png"
+				},
+				{
+					"nom": "Lore",
+					"id": "Lore_huntsman",
+					"arme": "huntsman",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						378.23,
+						300.00,
+						239.75,
+						229.23,
+						175.32,
+						512.94,
+						415.89,
+						267.30,
+						231.74,
+						196.80
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Huntsman_huntsman_lore.png"
+				},
+				{
+					"nom": "Black Laminate",
+					"id": "Black Laminate_huntsman",
+					"arme": "huntsman",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						280.00,
+						186.09,
+						176.41,
+						163.46,
+						150.00,
+						409.97,
+						228.86,
+						195.47,
+						174.15,
+						201.62
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Huntsman_huntsman_black_laminate.png"
+				},
+				{
+					"nom": "Freehand",
+					"id": "Freehand_huntsman",
+					"arme": "huntsman",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						211.43,
+						195.50,
+						172.78,
+						154.81,
+						152.15,
+						225.41,
+						209.95,
+						179.12,
+						150.00,
+						109.77
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Huntsman_marked_up_90.png"
+				},
+				{
+					"nom": "Bright Water",
+					"id": "Bright Water_huntsman",
+					"arme": "huntsman",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						193.11,
+						170.57,
+						144.45,
+						152.15,
+						185.27,
+						222.37,
+						185.27,
+						160.02,
+						171.83,
+						159.27
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Huntsman_ocean_knife_90.png"
+				}
+			],
+			"shadow_daggers": [
+				{
+					"nom": "Gamma Doppler",
+					"id": "Gamma Doppler_shadow_daggers",
+					"arme": "shadow_daggers",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						168.96,
+						176.02,
+						0.00,
+						0.00,
+						0.00,
+						183.67,
+						217.32,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Shadow_daggers_gamma_doppler_phase1.png"
+				},
+				{
+					"nom": "Gamma Doppler [Emerald]",
+					"id": "Gamma Doppler [Emerald]_shadow_daggers",
+					"arme": "shadow_daggers",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						440.46,
+						448.67,
+						0.00,
+						0.00,
+						0.00,
+						438.85,
+						441.49,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Shadow_daggers_emerald_marbleized.png"
+				},
+				{
+					"nom": "Autotronic",
+					"id": "Autotronic_shadow_daggers",
+					"arme": "shadow_daggers",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						180.40,
+						138.32,
+						132.41,
+						140.71,
+						126.30,
+						280.66,
+						171.00,
+						143.93,
+						207.00,
+						144.11
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Shadow_daggers_push_autotronic.png"
+				},
+				{
+					"nom": "Lore",
+					"id": "Lore_shadow_daggers",
+					"arme": "shadow_daggers",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						310.50,
+						172.18,
+						148.94,
+						137.16,
+						132.21,
+						400.28,
+						196.33,
+						162.40,
+						185.00,
+						164.23
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Shadow_daggers_push_lore.png"
+				},
+				{
+					"nom": "Black Laminate",
+					"id": "Black Laminate_shadow_daggers",
+					"arme": "shadow_daggers",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						151.02,
+						120.56,
+						114.02,
+						113.42,
+						108.59,
+						247.25,
+						132.25,
+						119.88,
+						113.79,
+						148.89
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Shadow_daggers_push_black_laminate.png"
+				},
+				{
+					"nom": "Freehand",
+					"id": "Freehand_shadow_daggers",
+					"arme": "shadow_daggers",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						155.61,
+						133.54,
+						120.18,
+						127.61,
+						134.60,
+						200.86,
+						144.98,
+						124.06,
+						122.00,
+						110.45
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Shadow_daggers_marked_up_90.png"
+				},
+				{
+					"nom": "Bright Water",
+					"id": "Bright Water_shadow_daggers",
+					"arme": "shadow_daggers",
+					"categorie": "knive",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						119.23,
+						115.00,
+						113.20,
+						121.86,
+						106.42,
+						133.82,
+						121.17,
+						127.61,
+						123.28,
+						119.88
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/Shadow_daggers_ocean_knife_90.png"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+    "etats_skins": {
+        "skins_normaux": [
+            {
+                "nom": "Battle-Scarred",
+                "id": "bs"
+            },
+            {
+                "nom": "Well-Worn",
+                "id": "ww"
+            },
+            {
+                "nom": "Field-Tested",
+                "id": "ft"
+            },
+            {
+                "nom": "Minimal Wear",
+                "id": "mw"
+            },
+            {
+                "nom": "Factory New",
+                "id": "fn"
+            }
+
+        ]
+        
+    }
+}

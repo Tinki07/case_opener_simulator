@@ -1,0 +1,35 @@
+{
+    "types_stickers": [
+        {
+            "nom": "Paper",
+            "id": "sticker_paper",
+            "appellation" : ""
+
+        },
+        {
+            "nom": "Glitter",
+            "id": "sticker_glitter",
+            "appellation" : "(Glitter)"
+        },
+        {
+            "nom": "Holo",
+            "id": "sticker_holo",
+            "appellation" : "(Holo)"
+        },
+        {
+            "nom": "Foil",
+            "id": "sticker_foil",
+            "appellation" : "(Foil)"
+        },
+        {
+            "nom": "Gold",
+            "id": "sticker_gold",
+            "appellation" : "(Gold)"
+        },
+        {
+            "nom": "Lenticular",
+            "id": "sticker_lenticular",
+            "appellation" : "(Lenticular)"
+        }
+    ]
+}
