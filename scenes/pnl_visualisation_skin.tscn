@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://b7b8trd2ae7x0" path="res://resources/images/kindpng_3155574.png" id="1_1f1d8"]
 [ext_resource type="Texture2D" uid="uid://co1scyjum5bi" path="res://resources/images/pngfind.com-vignette-png-1920x1080-2550838.png" id="2_lp7jk"]
 [ext_resource type="Texture2D" uid="uid://wa83py6jqx3x" path="res://resources/images/kindpng_4298060.png" id="4_xfy2y"]
-[ext_resource type="FontFile" uid="uid://cyy4gibc1fnxt" path="res://TT Lakes Neue Trial Medium.ttf" id="5_ivgtc"]
-[ext_resource type="FontFile" uid="uid://0mp1cwbuy8bw" path="res://TT Lakes Neue Trial Regular.ttf" id="6_j7gqe"]
+[ext_resource type="FontFile" uid="uid://cyy4gibc1fnxt" path="res://resources/fonts/TT Lakes Neue Trial Medium.ttf" id="5_ivgtc"]
+[ext_resource type="FontFile" uid="uid://0mp1cwbuy8bw" path="res://resources/fonts/TT Lakes Neue Trial Regular.ttf" id="6_j7gqe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vt8i"]
 shadow_color = Color(0, 0, 0, 0.321569)
