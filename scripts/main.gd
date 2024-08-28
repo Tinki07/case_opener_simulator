@@ -3,22 +3,6 @@ extends Node2D
 
 @onready var line_edit_console = $/root/Node2D/LineEdit # référence la console
 
-@onready var leJoueur = Joueur.new() #créer le joueu
-
-@onready var armes = {} # Stocke toutes les armes
-@onready var stickers = {} # Stocke tous les stickers
-@onready var categories = {} # Stocke toutes les catégories de skins
-@onready var categories_stickers = {} # Stocke toutes les catégories de stickers
-@onready var skins = {} # Stocke tous les skins
-@onready var etats_skins_normaux = {} # Stocke tous les états de skins
-@onready var caisses_normales = {} # Stocke toutes les caisses normales
-@onready var caisses_collections = {} # Stocke toutes les caisses de collections
-@onready var conteneurs = {} # Stocke tous le conteneurs, peut importe le type
-@onready var caisses_souvenirs = {} # Stocke toutes les caisses souvenirs
-@onready var default_drop_rates = {} # Stocke les drops rates des catégories pour les caisses normales
-@onready var types_stickers = {} # Stocke tous les types de stickers
-@onready var keys_conteneurs = {} # Stocke toutes les clés pour les conteneurs en nécéssitant
-
 @onready var index_skin_a_charger_debut = 0  # Index du premier skin à afficher dans la grille inventaire
 @onready var skins_par_page = 24  # Nombre de skins par page à afficher
 @onready var page_actuelle = 1
@@ -26,37 +10,28 @@ extends Node2D
 var pnl_prefab_skin_arme = preload("res://scenes/pnl_visualisation_skin.tscn") # référence le préfab pour les visualisations de skins
 
 func _process(delta):
-	$pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont/lbl_argent_joueur.text = str(leJoueur.money)
+	$pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont/lbl_argent_joueur.text = str(Global.leJoueur.money)
 
 func _ready():
+	
 	Engine.max_fps = 60
 	line_edit_console.grab_focus() # Permet de faire le focus sur la zone de text
-	
 	line_edit_console.text_submitted.connect(self._on_line_edit_text_submitted) # Connecte le signal text_submitted du LineEdit à la méthode _on_line_edit_text_submitted
 	
-	# Définis les taux de drops des caisses normales
-	default_drop_rates = {
-		"mil_spec": 71.40,
-		"restricted": 21.20,
-		"classified": 6.00,
-		"covert": 1.1,
-		"knive": 0.30
-	}
-	
 	# Charge les différents objets
-	charger_armes_depuis_json()
-	charger_categories_skins_depuis_json()
-	charger_skins_depuis_json()
-	charger_caisses_normales_depuis_json()
-	charger_caisses_collections_depuis_json()
-	charger_etats_skins_depuis_json()
-	charger_types_sticker_depuis_json()
-	charger_categories_stickers_depuis_json()
-	charger_stickers_depuis_json()
-	charger_caisses_souvenirs_depuis_json()
-	charger_keys_conteneurs_depuis_json()
+	Global.charger_armes_depuis_json()
+	Global.charger_categories_skins_depuis_json()
+	Global.charger_skins_depuis_json()
+	Global.charger_caisses_normales_depuis_json()
+	Global.charger_caisses_collections_depuis_json()
+	Global.charger_etats_skins_depuis_json()
+	Global.charger_types_sticker_depuis_json()
+	Global.charger_categories_stickers_depuis_json()
+	Global.charger_stickers_depuis_json()
+	Global.charger_caisses_souvenirs_depuis_json()
+	Global.charger_keys_conteneurs_depuis_json()
 	
-	leJoueur.money = 1000.00
+	Global.leJoueur.money = 1000.00
 
 
 
@@ -71,480 +46,6 @@ func _on_line_edit_text_submitted(new_text: String):
 	else:
 		print("La fonction '%s' n'existe pas." % new_text)
 
-
-
-
-
-# -----------------------------------------------------------------------
-
-
-
-
-
-func charger_armes_depuis_json():
-	var fichier = "res://resources/jsons/armes.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if armes == {}:
-		if file:
-			var json_as_text = FileAccess.get_file_as_string(fichier)
-			var json_as_dict = JSON.parse_string(json_as_text)
-			
-			if json_as_dict:
-				print("----------------------------------------------------")
-				print("-- Chargement des armes --")
-				var data = json_as_dict["armes"]
-				for arme_data in data: 
-					var arme = Arme.new(
-						arme_data["nom"]
-						)
-					armes[arme_data["id"]] = arme
-					print("Arme créée : %s" % arme.nom)
-			else:
-				print("Erreur de parsing JSON")
-			file.close()
-			print("-- armes chargées avec succés --")
-			print("----------------------------------------------------")
-			print(" ")
-		else:
-			print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-	else:
-		print("----------------------------------------------------")
-		print("Les armes sont déjà chargées")
-		print("----------------------------------------------------")
-
-
-func charger_skins_depuis_json(): 
-	
-	var fichier = "res://resources/jsons/skins.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des skins --")
-			var data = json_as_dict["skins"]
-			for categorie in data.keys():
-				for sous_categorie in data[categorie].keys():
-					var skins_dans_sous_categorie = data[categorie][sous_categorie]
-					for skins_data in skins_dans_sous_categorie:
-						var skin = SkinArme.new(
-							skins_data["nom"],
-							armes[skins_data["arme"]],
-							categories[skins_data["categorie"]],
-							skins_data["etats_possible"],
-							skins_data["prix"],
-							skins_data["image_path"]
-						)
-						skins[skins_data["id"]] = skin
-						print("Skin créée : " , skin.toTstring(), " ", skin.etats_possible.size())
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- skins chargés avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-func charger_stickers_depuis_json(): 
-	
-	var fichier = "res://resources/jsons/stickers.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des skins --")
-			var data = json_as_dict["stickers"]
-			for categorie in data.keys():
-				for sous_categorie in data[categorie].keys():
-					var sticker_dans_sous_categorie = data[categorie][sous_categorie]
-					for sticker_data in sticker_dans_sous_categorie:
-						var sticker = Sticker.new(
-							sticker_data["nom"],
-							sticker_data["equipe"],
-							categories_stickers[sticker_data["categorie"]],
-							types_stickers[sticker_data["type"]],
-							sticker_data["image"],
-							sticker_data["prix"]
-						)
-						stickers[sticker_data["id"]] = sticker
-						print("Sticker créé : " , sticker_data["id"])
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- skins chargés avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-
-func charger_categories_skins_depuis_json():
-	
-	var fichier = "res://resources/jsons/categories.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des catégories --")
-			var data = json_as_dict["categories"]["skins_normal"]
-			for key in data.keys():
-				var category_data = data[key]
-				var category = CategorieSkin.new(
-					category_data["nom"],
-					category_data["color"]
-				)
-				categories[category_data["id"]] = category
-				print("Catégorie créée : %s" % category.nom)
-				
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- catégories chargées avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-func charger_categories_stickers_depuis_json():
-	
-	var fichier = "res://resources/jsons/categories.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des catégories stickers --")
-			var data = json_as_dict["categories"]["stickers"]
-			for key in data.keys():
-				var category_data = data[key]
-				var category = CategorieSticker.new(
-					category_data["nom"],
-					category_data["color"]
-				)
-				categories_stickers[category_data["id"]] = category
-				print("Categorie sticker créée : %s" % category.nom)
-				
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- catégories stickers chargées avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-
-func charger_caisses_normales_depuis_json(): 
-	
-	var fichier = "res://resources/jsons/conteneurs.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des caisses --")
-			var data = json_as_dict["caisses"]
-			for caisse in data.keys():
-				var caisse_data = data[caisse]
-				var newCaisse = Conteneur.new(
-					caisse_data["nom"],
-					caisse_data["id"],
-					caisse_data["image"],
-					caisse_data["type_caisse"],
-					caisse_data["prix"],
-					caisse_data["need_key"],
-					caisse_data["skins"]
-				)
-				conteneurs[caisse_data["id"]] = newCaisse
-				print("Caisse créée : ", newCaisse.nom)
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- caisses chargées avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-func charger_caisses_collections_depuis_json(): 
-	
-	var fichier = "res://resources/jsons/conteneurs.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des caisses --")
-			var data = json_as_dict["collections"]
-			for caisse in data.keys():
-				var caisse_data = data[caisse]
-				var newCaisse = Conteneur.new(
-					caisse_data["nom"],
-					caisse_data["id"],
-					caisse_data["image"],
-					caisse_data["type_caisse"],
-					caisse_data["prix"],
-					caisse_data["need_key"],
-					caisse_data["skins"],
-					caisse_data.get("drop_rates", {})
-				)
-				conteneurs[caisse_data["id"]] = newCaisse
-				print("Caisse créée : ", newCaisse.nom)
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- caisses chargées avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-func charger_caisses_souvenirs_depuis_json(): 
-	
-	var fichier = "res://resources/jsons/conteneurs.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des caisses souvenirs--")
-			var data = json_as_dict["souvenirs"]
-			for caisse in data.keys():
-				var caisse_data = data[caisse]
-				var newCaisse = Conteneur.new(
-					caisse_data["nom"],
-					caisse_data["id"],
-					caisse_data["image"],
-					caisse_data["type_caisse"],
-					caisse_data["prix"],
-					caisse_data["need_key"],
-					caisse_data["skins"],
-					caisse_data.get("drop_rates", {})
-				)
-				newCaisse.souvenir_stickers = caisse_data["stickers"]
-				conteneurs[caisse_data["id"]] = newCaisse
-				print("Caisse souvenir créée : ", newCaisse.nom, newCaisse.type_caisse)
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- caisses souvenirs chargées avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-func charger_etats_skins_depuis_json(): 
-	
-	var fichier = "res://resources/jsons/etats_skins.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des états --")
-			var data = json_as_dict["etats_skins"]["skins_normaux"]
-			for etat_data in data:
-				var newEtat = EtatSkin.new(
-					etat_data["nom"],
-				)
-				etats_skins_normaux[etat_data["id"]] = newEtat
-				print("Etat créée : %s" % newEtat.nom)
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- etats chargés avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-func charger_types_sticker_depuis_json():
-	
-	var fichier = "res://resources/jsons/stickers_types.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des types de stickers --")
-			var data = json_as_dict["types_stickers"]
-			for type_data in data:
-				var newType = TypeSticker.new(
-					type_data['nom'],
-					type_data['id'],
-					type_data['appellation']
-				)
-				types_stickers[type_data['id']] = newType
-				print("Type créée : %s" % newType.nom)
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- etats chargés avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-
-func charger_keys_conteneurs_depuis_json():
-	
-	var fichier = "res://resources/jsons/KeyConteneur.json"
-	var file = FileAccess.open(fichier, FileAccess.READ)
-	
-	if file:
-		
-		var json_as_text = FileAccess.get_file_as_string(fichier)
-		var json_as_dict = JSON.parse_string(json_as_text)
-		
-		if json_as_dict:
-			print("----------------------------------------------------")
-			print("-- Chargement des keys des conteneurs --")
-			var data = json_as_dict["keys"]
-			for key_data in data:
-				var newKey = KeyConteneur.new(
-					key_data['nom'],
-					key_data['image_path'],
-					conteneurs[key_data['conteneur_unlocker']] ,
-					key_data['prix']
-				)
-				keys_conteneurs[key_data['id']] = newKey
-				print("Key créée : %s" % newKey.nom)
-		else:
-			print("Erreur de parsing JSON")
-		file.close()
-		print("-- Keys chargées avec succés --")
-		print("----------------------------------------------------")
-		print(" ")
-	else:
-		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
-
-
-
-# -----------------------------------------------------------------------
-
-
-
-
-# Ancienne facon de drop les skins
-func ouvrir_caisse_normale(caisse: Conteneur):
-	
-	# Parcours toutes les caisses
-	for uneCaisse in conteneurs.values():
-		
-		# Si la caisse en paramètre correspond a "uneCaisse", c'est bon
-		if caisse == uneCaisse:
-			
-			# Variable permettant de choisir une catégorie aléatoirement (entre 0 et 100)
-			var randomNum = randf() * 100
-			# 
-			var etat
-			var stattrack: bool
-			var skins_cat_choisi = []
-			var etat_final
-			var skin_choisi_string: String
-			var skin_choisi: SkinArme
-			
-			# Permet de trouver la catégorie du skin
-			if randomNum >= categories["covert"].drop_rate: # knife
-				
-				etat_final = "knive"
-				
-				#skins_cat_choisi = get_skins_by_categories(caisse,"knive")
-				#etats = trouver_wear_skin()
-				#stattrack = is_the_skin_stattrack()
-				#print(categories["knive"].nom, " ", etats, " - ", stattrack)
-				
-			elif randomNum >= categories["classified"].drop_rate: # rouge
-				
-				etat_final = "covert"
-				
-				#etats = trouver_wear_skin()
-				#stattrack = is_the_skin_stattrack()
-				#print(categories["covert"].nom, " ", etats, " - ", stattrack)
-				
-			elif randomNum >= categories["restricted"].drop_rate: # rose
-				
-				etat_final = "classified"
-				
-				#etats = trouver_wear_skin()
-				#stattrack = is_the_skin_stattrack()
-				#print(categories["classified"].nom, " ", etats, " - ", stattrack)
-				
-			elif randomNum >= categories["mil_spec"].drop_rate: # violet
-				
-				etat_final = "restricted"
-				
-				#etats = trouver_wear_skin()
-				#stattrack = is_the_skin_stattrack()
-				#print(categories["restricted"].nom, " ", etats, " - ", stattrack)
-				
-			else: # bleu
-				
-				etat_final = "mil_spec"
-				
-				#etats = trouver_wear_skin()
-				#stattrack = is_the_skin_stattrack()
-				#print(categories["mil_spec"].nom, " ", etats, " - ", stattrack)
-			
-			# met dans une liste tout les skins de la catégorie qui a été choisie
-			skins_cat_choisi = get_skins_by_categories(caisse,etat_final)
-			
-			# Choisi un skin aléatoire parmis la liste des skins en string
-			skin_choisi_string = skins_cat_choisi[randi_range(0,skins_cat_choisi.size() - 1)]
-			
-			# Grace au string de l'arme choisi, je parcours la liste de tout les objets skins et pour le string
-			# correspondant, skin_choisi devient l'objet skin
-			skin_choisi = skins[skin_choisi_string]
-			
-			# Trouve l'état de l'arme et son float
-			etat = trouver_wear_skin(skin_choisi)
-			
-			# Trouve si le skin est StatTrack ou pas
-			stattrack = is_the_skin_stattrack()
-			
-			
-			
-			var leSkinObtenu = SkinArmeObtenu.new(skin_choisi,etat,stattrack,0)
-			
-			leSkinObtenu.prix = trouver_prix_skin_etat(leSkinObtenu)
-			
-			print(leSkinObtenu._to_string())
 
 
 # Peermet d'ouvrir des caisses
@@ -563,7 +64,7 @@ func ouvrir_caisse_v2(caisse: Conteneur, type_caisse: String):
 	
 	# Regarde si le type de la caisse est normal ou pas, choisi les taux de drops
 	if caisse.type_caisse == "normal":
-		drop_rates = default_drop_rates
+		drop_rates = Global.default_drop_rates
 	else:
 		drop_rates = caisse.drop_rates
 	
@@ -586,7 +87,7 @@ func ouvrir_caisse_v2(caisse: Conteneur, type_caisse: String):
 	
 	# Grace au string de l'arme choisi, je parcours la liste de tout les objets skins et pour le string
 	# correspondant, skin_choisi devient l'objet skin
-	skin_choisi = skins[skin_choisi_string]
+	skin_choisi = Global.skins[skin_choisi_string]
 	
 	# Trouve l'état de l'arme et son float
 	etat = trouver_wear_skin(skin_choisi)
@@ -635,7 +136,7 @@ func trouver_wear_skin(leSkin: SkinArme):
 	var etat_nom = leSkin.etats_possible[random_index]
 	
 	# Récupère les informations détaillées sur l'état sélectionné
-	var etat = etats_skins_normaux[etat_nom]
+	var etat = Global.etats_skins_normaux[etat_nom]
 	
 	# Retourne l'état sélectionné
 	return etat
@@ -684,15 +185,15 @@ func trouver_prix_skin_etat(leSkin: SkinArmeObtenu):
 	var prix: float
 	var index
 	
-	if leSkin.etat == etats_skins_normaux["fn"]:
+	if leSkin.etat == Global.etats_skins_normaux["fn"]:
 		index = 0
-	elif leSkin.etat == etats_skins_normaux["mw"]:
+	elif leSkin.etat == Global.etats_skins_normaux["mw"]:
 		index = 1
-	elif leSkin.etat == etats_skins_normaux["ft"]:
+	elif leSkin.etat == Global.etats_skins_normaux["ft"]:
 		index = 2
-	elif leSkin.etat == etats_skins_normaux["ww"]:
+	elif leSkin.etat == Global.etats_skins_normaux["ww"]:
 		index = 3
-	elif leSkin.etat == etats_skins_normaux["bs"]:
+	elif leSkin.etat == Global.etats_skins_normaux["bs"]:
 		index = 4
 	
 	# Si StatTrack, on ajoute 5 à l'index
@@ -752,7 +253,7 @@ func _add_stickers_to_souvenir_package(caisse: Conteneur,skin: SkinArmeObtenu):
 		les_stickers_selectiones.append(sticker_map)
 	
 	#print(les_stickers_selectiones)
-	skin._add_array_sticker(les_stickers_selectiones,stickers)
+	skin._add_array_sticker(les_stickers_selectiones,Global.stickers)
 	
 	
 
@@ -760,50 +261,50 @@ func _add_stickers_to_souvenir_package(caisse: Conteneur,skin: SkinArmeObtenu):
 # -----------------------------------------------------------------------
 
 func kil_caisse():
-	leJoueur.inventaire.insert(0,conteneurs["caisse_kilowatt"])
+	Global.leJoueur.inventaire.insert(0,Global.conteneurs["caisse_kilowatt"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func dream_caisse():
-	leJoueur.inventaire.insert(0,conteneurs["caisse_dreams_&_nightmares"])
+	Global.leJoueur.inventaire.insert(0,Global.conteneurs["caisse_dreams_&_nightmares"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func mir_caisse():
-	leJoueur.inventaire.insert(0,conteneurs["collection_mirage_2021"])
+	Global.leJoueur.inventaire.insert(0,Global.conteneurs["collection_mirage_2021"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func kilo():
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(conteneurs["caisse_kilowatt"], conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func dream():
-	ouvrir_caisse_v2(conteneurs["caisse_dreams_&_nightmares"], conteneurs["caisse_dreams_&_nightmares"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_dreams_&_nightmares"], Global.conteneurs["caisse_dreams_&_nightmares"].type_caisse)
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func colec():
-	ouvrir_caisse_v2(conteneurs["collection_mirage_2021"], conteneurs["collection_mirage_2021"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["collection_mirage_2021"], Global.conteneurs["collection_mirage_2021"].type_caisse)
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func key():
-	leJoueur.inventaire.insert(0,keys_conteneurs["caisse_kilowatt_key"])
+	Global.leJoueur.inventaire.insert(0,Global.keys_conteneurs["caisse_kilowatt_key"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func souv():
-	ouvrir_caisse_v2(conteneurs["souvenir_blast_paris_2023_mirage_2021"], conteneurs["souvenir_blast_paris_2023_mirage_2021"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["souvenir_blast_paris_2023_mirage_2021"], Global.conteneurs["souvenir_blast_paris_2023_mirage_2021"].type_caisse)
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func colec_caisse():
-	leJoueur.inventaire.insert(0,conteneurs["souvenir_blast_paris_2023_mirage_2021"])
+	Global.leJoueur.inventaire.insert(0,Global.conteneurs["souvenir_blast_paris_2023_mirage_2021"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func test():
@@ -832,10 +333,10 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 	var skins_loaded = 0  # Compteur pour les skins chargés
 	
 	# On parcourt l'inventaire du joueur et on crée un élément pour chaque skin
-	for i in range(skin_index_debut, min(skin_index_fin + 1, leJoueur.inventaire.size())):
+	for i in range(skin_index_debut, min(skin_index_fin + 1, Global.leJoueur.inventaire.size())):
 
 		# Met en variable l'objet qui sera attribué au pannel
-		var objet = leJoueur.inventaire[i]
+		var objet = Global.leJoueur.inventaire[i]
 		
 		# Récupère les infos du nouveau panel
 		var new_panel_objet = pnl_prefab_skin_arme.instantiate() # On crée un bouton
@@ -888,7 +389,7 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 		
 	# On met à jour la visibilité des boutons de navigation (Suivant/Précédent)
 	# Activer/Désactiver le bouton suivant
-	if skin_index_fin < leJoueur.inventaire.size() - 1:
+	if skin_index_fin < Global.leJoueur.inventaire.size() - 1:
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant.visible = true
 	else:
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant.visible = false
@@ -903,7 +404,7 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 # Affiche la page suivante de skins dans l'inventaire
 func afficher_skins_suivant():
 	# Vérifie s'il y a encore des skins à afficher
-	if index_skin_a_charger_debut + skins_par_page < leJoueur.inventaire.size():
+	if index_skin_a_charger_debut + skins_par_page < Global.leJoueur.inventaire.size():
 		
 		# Met à jour l'index de départ pour la prochaine page
 		index_skin_a_charger_debut += skins_par_page
@@ -930,8 +431,8 @@ func afficher_skins_precedent():
 		populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, index_skin_a_charger_debut)
 
 func calculer_nombre_page():
-	var nbr_pages = leJoueur.inventaire.size() / skins_par_page
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire2/lbl_nbr_page.text = "/" + str( ceil((leJoueur.inventaire.size() - 1)/ skins_par_page) + 1)
+	var nbr_pages = Global.leJoueur.inventaire.size() / skins_par_page
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire2/lbl_nbr_page.text = "/" + str( ceil((Global.leJoueur.inventaire.size() - 1)/ skins_par_page) + 1)
 
 
 # Elle gère l'affichage et la mise à jour de l'inventaire du joueur.
@@ -947,10 +448,10 @@ func _on_btn_inventaire_pressed():
 	index_skin_a_charger_debut = 0
 	
 	# Met à jour le nombre d'items dans l'inventaire
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(leJoueur.inventaire.size())
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(Global.leJoueur.inventaire.size())
 	
 	# Met à jour la valeur totale de l'inventaire
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(leJoueur.get_value_inventory(),0.01))
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
 
 # Permet l'affichage des skins suivants dans l'inventaire.
 func _on_btn_page_storage_suivant_pressed():
@@ -1005,8 +506,8 @@ func _on_objet_inventory_button_pressed(button):
 
 func _on_delete_objet_button_pressed(objet):
 	
-	leJoueur.money += objet.prix
-	leJoueur.inventaire.erase(objet)
+	Global.leJoueur.money += objet.prix
+	Global.leJoueur.inventaire.erase(objet)
 	$pnl_objet_cliked.visible = false
 	
 	repopulation_grille_inventaire_sans_retoruner_page_1()
@@ -1034,21 +535,21 @@ func _on_ouvrir_objet_button_pressed(objet):
 			var item = item_caisse[0]
 			
 			# Met les infos de l'objet en rapport avec le type - ici dans le cas ou c'est un SkinArme
-			if skins[item] != null:
+			if Global.skins[item] != null:
 				
-				if skins[item].categorie == categories["knive"] :
+				if Global.skins[item].categorie == Global.categories["knive"] :
 					special_item_found = true
 				else:
 					var new_panel_objet = pnl_prefab_skin_arme.instantiate() # On crée un bouton
-					new_panel_objet.get_node("pnl_infos_skin/lbl_nom_arme").text = skins[item].arme.nom
-					new_panel_objet.get_node("pnl_infos_skin/lbl_nom_skin").text = skins[item].nom
-					new_panel_objet.get_node("pnl_skin/txtr_skin").texture = load(skins[item].image_path)
-					new_panel_objet.get_node("pnl_infos_skin/color_rect_etat_skin").color = skins[item].categorie.color
+					new_panel_objet.get_node("pnl_infos_skin/lbl_nom_arme").text = Global.skins[item].arme.nom
+					new_panel_objet.get_node("pnl_infos_skin/lbl_nom_skin").text = Global.skins[item].nom
+					new_panel_objet.get_node("pnl_skin/txtr_skin").texture = load(Global.skins[item].image_path)
+					new_panel_objet.get_node("pnl_infos_skin/color_rect_etat_skin").color = Global.skins[item].categorie.color
 					grille_items_conteneur.add_child(new_panel_objet) # On ajoute le panneau à la grille
 				
 		if special_item_found:
 			var special_panel = pnl_prefab_skin_arme.instantiate() # On crée un bouton
-			special_panel.get_node("pnl_infos_skin/lbl_nom_arme").text = categories['knive'].nom
+			special_panel.get_node("pnl_infos_skin/lbl_nom_arme").text = Global.categories['knive'].nom
 			special_panel.get_node("pnl_infos_skin/lbl_nom_arme").autowrap_mode = TextServer.AUTOWRAP_WORD
 			special_panel.get_node("pnl_infos_skin/lbl_nom_skin").text = ""
 			special_panel.get_node("pnl_skin/txtr_skin").texture = load("res://resources/images/Csgo-default_rare_item.png")
@@ -1058,7 +559,7 @@ func _on_ouvrir_objet_button_pressed(objet):
 		
 		if objet.need_key == true:
 			
-			var key = keys_conteneurs[objet.id + "_key"]
+			var key = Global.keys_conteneurs[objet.id + "_key"]
 			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.set_meta("key_data", key)
 			var panel_key = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key/pnl_infos_conteneurs/pnl_visualisation_key")# On crée un bouton
 			var label_principal_key = panel_key.get_node("pnl_infos_skin/lbl_nom_arme") # On récupère son label
@@ -1082,7 +583,7 @@ func _on_ouvrir_objet_button_pressed(objet):
 			image_key.texture = load(key.image_path) # On modifie l'image
 			
 			var item_found = false  # Variable pour suivre si l'item KEY est trouvé ou non
-			for item in leJoueur.inventaire:
+			for item in Global.leJoueur.inventaire:
 				if item == key:
 					item_found = true
 					break
@@ -1124,14 +625,14 @@ func repopulation_grille_inventaire_sans_retoruner_page_1():
 	
 	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, index_skin_a_charger_debut)
 	
-	if index_skin_a_charger_debut >= leJoueur.inventaire.size():
+	if index_skin_a_charger_debut >= Global.leJoueur.inventaire.size():
 		afficher_skins_precedent()
 	
 	# Met à jour le nombre d'items dans l'inventaire
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(leJoueur.inventaire.size())
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(Global.leJoueur.inventaire.size())
 	
 	# Met à jour la valeur totale de l'inventaire
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(leJoueur.get_value_inventory(),0.01))
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
 
 func changer_valeur_page_actuelle_storage():
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire2/lbl_page_actuelle.text = str(page_actuelle)
@@ -1171,10 +672,10 @@ func _on_btn_ouverture_conteneur_pressed():
 	
 	if $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.get_meta("container_data") != null:
 		var key = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.get_meta("key_data")
-		leJoueur.inventaire.erase(objet)
-		leJoueur.inventaire.erase(key)
+		Global.leJoueur.inventaire.erase(objet)
+		Global.leJoueur.inventaire.erase(key)
 	else:
-		leJoueur.inventaire.erase(objet)
+		Global.leJoueur.inventaire.erase(objet)
 	
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur.visible = true
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.visible = false
@@ -1185,7 +686,7 @@ func _on_btn_ouverture_conteneur_pressed():
 	
 		# Regarde si le type de la caisse est normal ou pas, choisi les taux de drops
 	if objet.type_caisse == "normal":
-		drop_rates = default_drop_rates
+		drop_rates = Global.default_drop_rates
 	else:
 		drop_rates = objet.drop_rates
 	
@@ -1215,13 +716,13 @@ func _on_btn_ouverture_conteneur_pressed():
 			print(str(randomNum), " ", str(category_finale))
 			# Choisi un skin aléatoire parmis la liste des skins en string
 			skin_choisi_string = skins_cat_choisi[randi_range(0,skins_cat_choisi.size() - 1)]
-			skin_choisi = skins[skin_choisi_string]
+			skin_choisi = Global.skins[skin_choisi_string]
 			
 			if child.name == "pnl_visualisation_skin24":
 				skin_choisi = ouvrir_caisse_v2(objet,objet.type_caisse)
 				child.get_node("pnl_skin/txtr_skin").texture = load(skin_choisi.skin.image_path)
 				child.get_node("pnl_infos_skin/color_rect_etat_skin").color = skin_choisi.skin.categorie.color
-				leJoueur.inventaire.insert(0,skin_choisi)
+				Global.leJoueur.inventaire.insert(0,skin_choisi)
 				
 				child.get_node("pnl_infos_skin/lbl_nom_arme").text = skin_choisi.skin.arme.nom
 				child.get_node("pnl_infos_skin/lbl_nom_skin").text = skin_choisi.skin.nom
@@ -1242,15 +743,15 @@ func _on_btn_ouverture_conteneur_pressed():
 	await timer.timeout
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_ombre_panneau_principal.visible = true
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand.visible = true
-	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/lbl_nom_item.text = leJoueur.inventaire[0]._to_string()
-	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin.texture = load(leJoueur.inventaire[0].skin.image_path)
-	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/color_objet.color = leJoueur.inventaire[0].skin.categorie.color
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/lbl_nom_item.text = Global.leJoueur.inventaire[0]._to_string()
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin.texture = load(Global.leJoueur.inventaire[0].skin.image_path)
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/color_objet.color = Global.leJoueur.inventaire[0].skin.categorie.color
 	get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/AnimationPlayer").play("skin_animation")
 	
 # Gère les stickers si présents pour l'objet/skin
-	for j in range(leJoueur.inventaire[0].stickers5.size()):
+	for j in range(Global.leJoueur.inventaire[0].stickers5.size()):
 		var sticker_node = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
-		sticker_node.texture = load(leJoueur.inventaire[0].stickers5[j].image_path)
+		sticker_node.texture = load(Global.leJoueur.inventaire[0].stickers5[j].image_path)
 		get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
 
 

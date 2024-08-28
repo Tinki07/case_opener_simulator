@@ -22,6 +22,7 @@ config/icon="res://resources/images/icon.svg"
 [autoload]
 
 DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
+Global="*res://scripts/Global.gd"
 
 [display]
 
