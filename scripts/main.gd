@@ -82,7 +82,7 @@ func _on_line_edit_text_submitted(new_text: String):
 
 
 func charger_armes_depuis_json():
-	var fichier = "user://resources/armes.json"
+	var fichier = "res://resources/jsons/armes.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if armes == {}:
@@ -116,7 +116,7 @@ func charger_armes_depuis_json():
 
 func charger_skins_depuis_json(): 
 	
-	var fichier = "user://resources/skins.json"
+	var fichier = "res://resources/jsons/skins.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
@@ -152,7 +152,7 @@ func charger_skins_depuis_json():
 
 func charger_stickers_depuis_json(): 
 	
-	var fichier = "user://resources/stickers.json"
+	var fichier = "res://resources/jsons/stickers.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
@@ -189,7 +189,7 @@ func charger_stickers_depuis_json():
 
 func charger_categories_skins_depuis_json():
 	
-	var fichier = "user://resources/categories.json"
+	var fichier = "res://resources/jsons/categories.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
@@ -220,7 +220,7 @@ func charger_categories_skins_depuis_json():
 
 func charger_categories_stickers_depuis_json():
 	
-	var fichier = "user://resources/categories.json"
+	var fichier = "res://resources/jsons/categories.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
@@ -252,7 +252,7 @@ func charger_categories_stickers_depuis_json():
 
 func charger_caisses_normales_depuis_json(): 
 	
-	var fichier = "user://resources/conteneurs.json"
+	var fichier = "res://resources/jsons/conteneurs.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
@@ -288,7 +288,7 @@ func charger_caisses_normales_depuis_json():
 
 func charger_caisses_collections_depuis_json(): 
 	
-	var fichier = "user://resources/conteneurs.json"
+	var fichier = "res://resources/jsons/conteneurs.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
@@ -325,7 +325,7 @@ func charger_caisses_collections_depuis_json():
 
 func charger_caisses_souvenirs_depuis_json(): 
 	
-	var fichier = "user://resources/conteneurs.json"
+	var fichier = "res://resources/jsons/conteneurs.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
@@ -363,7 +363,7 @@ func charger_caisses_souvenirs_depuis_json():
 
 func charger_etats_skins_depuis_json(): 
 	
-	var fichier = "user://resources/etats_skins.json"
+	var fichier = "res://resources/jsons/etats_skins.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
@@ -392,7 +392,7 @@ func charger_etats_skins_depuis_json():
 
 func charger_types_sticker_depuis_json():
 	
-	var fichier = "user://resources/stickers_types.json"
+	var fichier = "res://resources/jsons/stickers_types.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
@@ -424,7 +424,7 @@ func charger_types_sticker_depuis_json():
 
 func charger_keys_conteneurs_depuis_json():
 	
-	var fichier = "user://resources/KeyConteneur.json"
+	var fichier = "res://resources/jsons/KeyConteneur.json"
 	var file = FileAccess.open(fichier, FileAccess.READ)
 	
 	if file:
