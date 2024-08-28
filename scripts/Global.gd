@@ -18,11 +18,11 @@ extends Node
 
 func _ready():
 	default_drop_rates = {
-		"mil_spec": 71.40,
-		"restricted": 21.20,
-		"classified": 6.00,
-		"covert": 1.1,
-		"knive": 0.30
+		"mil_spec": 71.0,
+		"restricted": 21.00,
+		"classified": 6.40,
+		"covert": 1.2,
+		"knive": 0.40
 	}
 
 

@@ -32,6 +32,8 @@ func _ready():
 	Global.charger_keys_conteneurs_depuis_json()
 	
 	Global.leJoueur.money = 1000.00
+	
+	
 
 
 
@@ -48,85 +50,86 @@ func _on_line_edit_text_submitted(new_text: String):
 
 
 
-# Peermet d'ouvrir des caisses
-func ouvrir_caisse_v2(caisse: Conteneur, type_caisse: String):
+# Peermet de retourner un objet SkinArmeObtenu, d'une caisse donnéee
+func ouvrir_caisse_v2(caisse: Conteneur):
 	
-	var randomNum = randf() * 100 # Permet de donner une valeur float entre 0 et 100 en rapport avec le taux de drop
-	var cumulative_drop_rate = 0.0 #permet de cumuler les taux de drops afin de voir quand, randomNum est > 
-	var qualite_finale = "" # Permet de stocker la qualité du skin qui est choisi
-	var drop_rates # Déterminer les taux de drop à utiliser en fonction du type de caisse
-	var skins_cat_choisi = [] # Stocke les skins de la catégorie choisi
-	var skin_choisi_string: String # Nom du skin en valeur string qui est choisi
-	var skin_choisi: SkinArme # Skin choisi
-	var etat
+	var etat_objet
 	var stattrack: bool
 	var souvenir: bool = 0
 	
+	var item_choosed_object =  return_objet_dropable_from_container(caisse)
+	
+	# On
+	if item_choosed_object is SkinArme:
+		
+		# Trouve l'état de l'arme et son float
+		etat_objet = trouver_wear_skin(item_choosed_object)
+		
+		# Permet de savoir si un skin doit etre noté souvenir ou stattrack ou rien
+		if caisse.type_caisse == "collection":
+			# Si le skin provient d'une collection, il ne peut être ni souvenir ni stattrack.
+			stattrack = 0
+			souvenir = 0
+		elif caisse.type_caisse == "souvenir":
+			# Si le skin provient d'une caisse à souvenirs, il est forcément un souvenir.
+			stattrack = 0
+			souvenir = 1
+		else:
+			# Pour tous les autres types de caisse, on détermine si le skin est un stattrack
+			# en appelant la fonction is_the_skin_stattrack().
+			stattrack = is_the_skin_stattrack()
+		
+		# Créer l'objet SkinArmeObtenu avec toutes les infos nécéssaire
+		var skin_arme_obtenu_final = SkinArmeObtenu.new(item_choosed_object,etat_objet,stattrack,souvenir)
+		
+		# Trouve le prix du skin
+		skin_arme_obtenu_final.prix = trouver_prix_skin_etat(skin_arme_obtenu_final)
+		
+		# Vérifie si le skin obtenu est un souvenir
+		if skin_arme_obtenu_final.souvenir:
+			# Si c'est un souvenir, ajoute des stickers au package associé
+			_add_stickers_to_souvenir_package(caisse,skin_arme_obtenu_final)
+
+		return skin_arme_obtenu_final
+
+func return_objet_dropable_from_container(container: Conteneur):
+	
+	var random_num = randf() * 100 # Permet de donner une valeur float entre 0 et 100 en rapport avec le taux de drop
+	var drop_rates # Déterminer les taux de drop à utiliser en fonction du type de caisse
+	var cumulative_drop_rate = 0.0 # permet de cumuler les taux de drops afin de voir quand, randomNum est > 
+	var final_quality = "" # Permet de stocker la qualité du skin qui est choisi
+	var selected_category_items = [] # Stocke les skins de la catégorie choisi
+	var item_choosed_string: String # Nom du skin en valeur string qui est choisi
+	var item_choosed_object # Skin choisi
+	
 	# Regarde si le type de la caisse est normal ou pas, choisi les taux de drops
-	if caisse.type_caisse == "normal":
+	if container.type_caisse == "normal":
 		drop_rates = Global.default_drop_rates
 	else:
-		drop_rates = caisse.drop_rates
+		drop_rates = container.drop_rates
 	
 	# Utilisation des taux de drop pour déterminer la catégorie
 	for category in drop_rates.keys():
 		cumulative_drop_rate += drop_rates[category]
-		if randomNum <= cumulative_drop_rate:
-			qualite_finale = category
+		if random_num <= cumulative_drop_rate:
+			final_quality = category
 			break
-	
 	# Choisir la première catégorie si aucune n'est sélectionnée
-	if qualite_finale == "":
-		qualite_finale = drop_rates.keys()[0]
+	if final_quality == "":
+		final_quality = drop_rates.keys()[0]
 	
 	# Stocke les skins de la qualitée choisie dans une liste
-	skins_cat_choisi = get_skins_by_categories(caisse,qualite_finale)
+	selected_category_items = get_skins_by_categories(container,final_quality)
 	
 	# Choisi un skin aléatoire parmis la liste des skins en string
-	skin_choisi_string = skins_cat_choisi[randi_range(0,skins_cat_choisi.size() - 1)]
+	item_choosed_string = selected_category_items[randi_range(0,selected_category_items.size() - 1)]
 	
 	# Grace au string de l'arme choisi, je parcours la liste de tout les objets skins et pour le string
 	# correspondant, skin_choisi devient l'objet skin
-	skin_choisi = Global.skins[skin_choisi_string]
+	item_choosed_object = Global.skins[item_choosed_string]
 	
-	# Trouve l'état de l'arme et son float
-	etat = trouver_wear_skin(skin_choisi)
-	
-	# Permet de savoir si un skin doit etre noté souvenir ou stattrack ou rien
-	if type_caisse == "collection":
-		# Si le skin provient d'une collection, il ne peut être ni souvenir ni stattrack.
-		stattrack = 0
-		souvenir = 0
-	elif type_caisse == "souvenir":
-		# Si le skin provient d'une caisse à souvenirs, il est forcément un souvenir.
-		stattrack = 0
-		souvenir = 1
-	else:
-		# Pour tous les autres types de caisse, on détermine si le skin est un stattrack
-		# en appelant la fonction is_the_skin_stattrack().
-		stattrack = is_the_skin_stattrack()
-	
-	# Créer l'objet SkinArmeObtenu avec toutes les infos nécéssaire
-	var leSkinObtenu = SkinArmeObtenu.new(skin_choisi,etat,stattrack,souvenir)
-	
-	# Trouve le prix du skin
-	leSkinObtenu.prix = trouver_prix_skin_etat(leSkinObtenu)
-	
-	# Vérifie si le skin obtenu est un souvenir
-	if leSkinObtenu.souvenir:
-		# Si c'est un souvenir, ajoute des stickers au package associé
-		_add_stickers_to_souvenir_package(caisse,leSkinObtenu)
-		
-		print(leSkinObtenu._to_string())
-		leSkinObtenu._stickers_to_string()
-	else:
-		print(leSkinObtenu._to_string(), "         ", randomNum, "         ", cumulative_drop_rate, "         ", qualite_finale, "           ", skin_choisi_string)
-	
-	# Ajoute le skin à l'inventaire du joueur
-	#leJoueur.inventaire.insert(0,leSkinObtenu)
-	
-	#repopulation_grille_inventaire_sans_retoruner_page_1()
-	return leSkinObtenu
+	return item_choosed_object
+
 
 # Trouve l'état de l'arme
 func trouver_wear_skin(leSkin: SkinArme):
@@ -273,34 +276,38 @@ func mir_caisse():
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func kilo():
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
-	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"], Global.conteneurs["caisse_kilowatt"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
+	ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func dream():
-	ouvrir_caisse_v2(Global.conteneurs["caisse_dreams_&_nightmares"], Global.conteneurs["caisse_dreams_&_nightmares"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["caisse_dreams_&_nightmares"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func colec():
-	ouvrir_caisse_v2(Global.conteneurs["collection_mirage_2021"], Global.conteneurs["collection_mirage_2021"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["collection_mirage_2021"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
-func key():
+func kil_key():
 	Global.leJoueur.inventaire.insert(0,Global.keys_conteneurs["caisse_kilowatt_key"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
+func dream_key():
+	Global.leJoueur.inventaire.insert(0,Global.keys_conteneurs["caisse_dreams_&_nightmares_key"])
+	repopulation_grille_inventaire_sans_retoruner_page_1()
+
 func souv():
-	ouvrir_caisse_v2(Global.conteneurs["souvenir_blast_paris_2023_mirage_2021"], Global.conteneurs["souvenir_blast_paris_2023_mirage_2021"].type_caisse)
+	ouvrir_caisse_v2(Global.conteneurs["souvenir_blast_paris_2023_mirage_2021"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func colec_caisse():
@@ -462,48 +469,60 @@ func _on_btn_page_storage_precedent_pressed():
 	afficher_skins_precedent()
 
 
+## Une fois un item clické dans l'inventaire, ca nous ouvre un petit panel qui contient des boutons
+## qui permettend de faire des actions différentes.
+## C'est ici qu'est la première étape.
 func _on_objet_inventory_button_pressed(button):
 	
-	# Récupérer les informations supplémentaires sur l'objet à partir du metadata
-	var objet = button.get_meta("skin_data")
+	## Récupérer les informations sur l'objet clické à partir du metadata
+	var item_clicked = button.get_meta("skin_data")
 	
-	# On vérifie quel est le type de l'objet associé au panneau
-	if objet is SkinArmeObtenu:
-		$pnl_objet_cliked/VBoxContainer/btn_inspect.visible = true
-		$pnl_objet_cliked/VBoxContainer/btn_delete_objet.visible = true
-		$pnl_objet_cliked/VBoxContainer/btn_ouvrir.visible = false
-	elif objet is Conteneur:
-		$pnl_objet_cliked/VBoxContainer/btn_inspect.visible = false
-		$pnl_objet_cliked/VBoxContainer/btn_delete_objet.visible = true
-		$pnl_objet_cliked/VBoxContainer/btn_ouvrir.visible = true
+	## On met le pannel et les boutons dans des variables
+	var panel_item_cliked = $pnl_objet_cliked
+	var btn_inspect: Button = $pnl_objet_cliked/VBoxContainer/btn_inspect
+	var btn_delete: Button = $pnl_objet_cliked/VBoxContainer/btn_delete_objet
+	var btn_open: Button = $pnl_objet_cliked/VBoxContainer/btn_ouvrir
+	
+	## On vérifie quel est le type de l'objet associé au panneau et on vois quels boutons on active ou non
+	if item_clicked is SkinArmeObtenu:
+		btn_inspect.visible = true
+		btn_delete.visible = true
+		btn_open.visible = false
+	elif item_clicked is Conteneur:
+		btn_inspect.visible = false
+		btn_delete.visible = true
+		btn_open.visible = true
 	else:
-		$pnl_objet_cliked/VBoxContainer/btn_inspect.visible = false
-		$pnl_objet_cliked/VBoxContainer/btn_delete_objet.visible = true
-		$pnl_objet_cliked/VBoxContainer/btn_ouvrir.visible = false
+		btn_inspect.visible = false
+		btn_delete.visible = true
+		btn_open.visible = false
 	
-	$pnl_objet_cliked.visible = !$pnl_objet_cliked.visible
-	$pnl_objet_cliked.position = get_global_mouse_position()
+	## Après avoir déterminé quels boutons seront visible, on rend le panel visible
+	panel_item_cliked.visible = !panel_item_cliked.visible
+	panel_item_cliked.position = get_global_mouse_position()
 	
-	var panel =  $pnl_objet_cliked
-	var btn_inspect = panel.get_node("VBoxContainer/btn_inspect")
-	var btn_supprimer = panel.get_node("VBoxContainer/btn_delete_objet")
-	var btn_ouvrir = panel.get_node("VBoxContainer/btn_ouvrir")
 	
-	# Gestion du bouton inspect de l'objet
+	## On gère les boutons -------------------------------------------------------------------------
+	
+	## Gestion du bouton inspect de l'objet
 	if btn_inspect.pressed.is_connected(self._on_inspect_objet_button_pressed):
 		btn_inspect.pressed.disconnect(self._on_inspect_objet_button_pressed)
 	# Connecter le signal "pressed" du bouton inspect à une fonction de gestion
-	btn_inspect.pressed.connect(self._on_inspect_objet_button_pressed.bind(objet))
+	btn_inspect.pressed.connect(self._on_inspect_objet_button_pressed.bind(item_clicked))
 	
-	# Gestion du bouton delete de l'objet
-	if btn_supprimer.pressed.is_connected(self._on_delete_objet_button_pressed):
-		btn_supprimer.pressed.disconnect(self._on_delete_objet_button_pressed)
-	btn_supprimer.pressed.connect(self._on_delete_objet_button_pressed.bind(objet))
+	## Gestion du bouton delete de l'objet
+	if btn_delete.pressed.is_connected(self._on_delete_objet_button_pressed):
+		btn_delete.pressed.disconnect(self._on_delete_objet_button_pressed)
+	btn_delete.pressed.connect(self._on_delete_objet_button_pressed.bind(item_clicked))
 	
-	if btn_ouvrir.pressed.is_connected(self._on_ouvrir_objet_button_pressed):
-		btn_ouvrir.pressed.disconnect(self._on_ouvrir_objet_button_pressed)
-	btn_ouvrir.pressed.connect(self._on_ouvrir_objet_button_pressed.bind(objet))
+	## Gestion du bouton open de l'objet
+	if btn_open.pressed.is_connected(self._on_ouvrir_objet_button_pressed):
+		btn_open.pressed.disconnect(self._on_ouvrir_objet_button_pressed)
+	btn_open.pressed.connect(self._on_ouvrir_objet_button_pressed.bind(item_clicked))
+	
+	## ---------------------------------------------------------------------------------------------
 
+## Actions faites quand le bouton delete d'un item est clické
 func _on_delete_objet_button_pressed(objet):
 	
 	Global.leJoueur.money += objet.prix
@@ -512,170 +531,238 @@ func _on_delete_objet_button_pressed(objet):
 	
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
+## Actions faites quand le bouton inspect d'un item est clické
 func _on_inspect_objet_button_pressed(objet):
 	if objet is SkinArmeObtenu:
 		print(objet.skin.nom)
 	else:
 		print(objet.nom)
 
-func _on_ouvrir_objet_button_pressed(objet):
-	$pnl_objet_cliked.visible = false
-	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = true
-	if objet is Conteneur:
-		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/hbox_nom_caisse/lbl_nom_caisse.text = objet.nom
-		var grille_items_conteneur = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_items_in_caisse/scroll/margin/grid_items")
-		clear_grid(grille_items_conteneur)
+## Actions faites quand le bouton ouvrir d'un item est clické
+func _on_ouvrir_objet_button_pressed(item_clicked):
+	
+	var panel_item_cliked = $pnl_objet_cliked
+	var btn_exit = $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel
+	var lbl_container_name_top = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/hbox_nom_caisse/lbl_nom_caisse
+	var items_grid_container = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_items_in_caisse/scroll/margin/grid_items")
+	var btn_open_container = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur
+	var lbl_info_key = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/lbl_info_key
+	var pnl_inventaire_storage = $pnl_principal/pnl_inventaire/pnl_inventaire_storage
+	var pnl_ouverture_caisse = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse
+	var pnl_conteneur_no_key =  $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key
+	var pnl_conteneur_with_key =  $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key
+	
+	
+	panel_item_cliked.visible = false ## Cache le panel contenant tout les boutons (inspect,ouvrir etc..)
+	btn_exit.visible = true ## Rend la croix en haut a droite visible
+	
+	## On vérifie si l'objet est un conteneur ou pas
+	if item_clicked is Conteneur:
 		
-		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.set_meta("container_data", objet)
+		lbl_container_name_top.text = item_clicked.nom ## Affiche le nom du container cliké en haut du panel
+		clear_grid(items_grid_container) ## On clear la grille de visualisation des objets du conteneur
 		
-		var special_item_found = false  # Drapeau pour indiquer si un couteau a été trouvé
-		for item_caisse in objet.objets_dropable:
-			
+		## On transmet le container afin que quand on aura appuyé sur le bouton "open" container,
+		## les skins dans l'animation puisses avoir les infos des objets du container
+		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.set_meta("container_data", item_clicked)
+		
+		
+		var special_item_found = false  ## Drapeau pour indiquer si un couteau a été trouvé
+		
+		for item_caisse in item_clicked.objets_dropable:
 			
 			var item = item_caisse[0]
 			
-			# Met les infos de l'objet en rapport avec le type - ici dans le cas ou c'est un SkinArme
+			## Met les infos de l'objet en rapport avec le type - ici dans le cas ou c'est un SkinArme
 			if Global.skins[item] != null:
 				
+				## On regarde si l'item est un couteau, si oui le drapeau devient true
 				if Global.skins[item].categorie == Global.categories["knive"] :
 					special_item_found = true
-				else:
-					var new_panel_objet = pnl_prefab_skin_arme.instantiate() # On crée un bouton
-					new_panel_objet.get_node("pnl_infos_skin/lbl_nom_arme").text = Global.skins[item].arme.nom
-					new_panel_objet.get_node("pnl_infos_skin/lbl_nom_skin").text = Global.skins[item].nom
-					new_panel_objet.get_node("pnl_skin/txtr_skin").texture = load(Global.skins[item].image_path)
-					new_panel_objet.get_node("pnl_infos_skin/color_rect_etat_skin").color = Global.skins[item].categorie.color
-					grille_items_conteneur.add_child(new_panel_objet) # On ajoute le panneau à la grille
-				
+				else: ## Sinon on créer juste un panel pour chaque skin
+					var new_panel_objet = return_new_pnl_prefab_skin_arme_configurated(
+						Global.skins[item].arme.nom,
+						Global.skins[item].nom,
+						Global.skins[item].image_path,
+						Global.skins[item].categorie.color
+					)
+					items_grid_container.add_child(new_panel_objet) ## On ajoute le panneau à la grille
+		
+		## Si le drapeau special_item_found est égal à true alors cela veus dire qu'il y a au moins un objet rare
+		## dans la caisse, alors on créer le pannel des objets rares
 		if special_item_found:
-			var special_panel = pnl_prefab_skin_arme.instantiate() # On crée un bouton
-			special_panel.get_node("pnl_infos_skin/lbl_nom_arme").text = Global.categories['knive'].nom
-			special_panel.get_node("pnl_infos_skin/lbl_nom_arme").autowrap_mode = TextServer.AUTOWRAP_WORD
-			special_panel.get_node("pnl_infos_skin/lbl_nom_skin").text = ""
-			special_panel.get_node("pnl_skin/txtr_skin").texture = load("res://resources/images/Csgo-default_rare_item.png")
-			special_panel.get_node("pnl_infos_skin/color_rect_etat_skin").color = "ffd700"
-			grille_items_conteneur.add_child(special_panel) # On ajoute le panneau à la grille
-		
-		
-		if objet.need_key == true:
 			
-			var key = Global.keys_conteneurs[objet.id + "_key"]
-			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.set_meta("key_data", key)
+			## Création du pannel des objets rares
+			var special_panel = return_new_pnl_prefab_skin_arme_configurated(
+				Global.categories['knive'].nom,
+				"",
+				"res://resources/images/Csgo-default_rare_item.png",
+				"ffd700"
+			)
+			items_grid_container.add_child(special_panel) ## On ajoute le panneau à la grille des skins
+		
+		## On regarde si le conteneur a besoin d'une clé ou pas
+		if item_clicked.need_key == true:
+			
+			## On stocke la clé nécéssaire à l'ouverture du conatianer
+			## Ensuite on l'envoi comme le container plus haut,
+			var key_container = Global.keys_conteneurs[item_clicked.id + "_key"]
+			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.set_meta("key_data", key_container)
+			
+			## On récupère les infos du pnneau du container
 			var panel_key = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key/pnl_infos_conteneurs/pnl_visualisation_key")# On crée un bouton
 			var label_principal_key = panel_key.get_node("pnl_infos_skin/lbl_nom_arme") # On récupère son label
 			var label_secondaire_key = panel_key.get_node("pnl_infos_skin/lbl_nom_skin") # On récupère son label
 			var image_key = panel_key.get_node("pnl_skin/txtr_skin") # On récupère son image
 			
+			## On récupère les infos du pnneau de la clé
 			var panel_conteneur = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key/pnl_infos_conteneurs/pnl_visualisation_conteneur")
 			var label_principal_conteneur = panel_conteneur.get_node("pnl_infos_skin/lbl_nom_arme") # On récupère son label
 			var label_secondaire_conteneur = panel_conteneur.get_node("pnl_infos_skin/lbl_nom_skin") # On récupère son label
 			var image_conteneur = panel_conteneur.get_node("pnl_skin/txtr_skin") # On récupère son image
-			var color_categorie_conteneur = panel_conteneur.get_node("pnl_infos_skin/color_rect_etat_skin")
 			
-			label_principal_conteneur.text = objet.nom # On modifie le label
+			## On modifie les infos du panneau du container
+			label_principal_conteneur.text = item_clicked.nom # On modifie le label
 			label_secondaire_conteneur.text = "" # On modifie le label
 			label_principal_conteneur.autowrap_mode  = TextServer.AUTOWRAP_WORD # Permet au label de pouvoir prendre 2 lignes au lieu de 1
-			image_conteneur.texture = load(objet.image_path) # On modifie l'image
+			image_conteneur.texture = load(item_clicked.image_path) # On modifie l'image
 			
-			label_principal_key.text = key.nom # On modifie le label
+			## On modifie les infos du panneau de la clé
+			label_principal_key.text = key_container.nom # On modifie le label
 			label_secondaire_key.text = "" # On modifie le label
 			label_principal_key.autowrap_mode  = TextServer.AUTOWRAP_WORD # Permet au label de pouvoir prendre 2 lignes au lieu de 1
-			image_key.texture = load(key.image_path) # On modifie l'image
+			image_key.texture = load(key_container.image_path) # On modifie l'image
 			
+			## Ici ca nous permet de voir si il y a une clé correspondate au conteneur ou non
+			## Dans l'inventaire du joueur pour savoir si on affiche le bouton ouverture ou pas 
 			var item_found = false  # Variable pour suivre si l'item KEY est trouvé ou non
 			for item in Global.leJoueur.inventaire:
-				if item == key:
+				if item == key_container:
 					item_found = true
 					break
-			
-			# Si aucun item correspondant n'est trouvé
+					
+			## Si il y a une clé dans l'inventaire du joueur correspondant au conteneur cliké alors :
 			if not item_found:
-				$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.visible = false
-				$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/lbl_info_key.text = "you need a " + key.nom + " to open this container"
-			else:
-				$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/lbl_info_key.text = "Key can be only use once"
-				$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.text = "Use Key"
-				$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.visible = true
+				btn_open_container.visible = false
+				lbl_info_key.text = "you need a " + key_container.nom + " to open this container"
+			else: ## Sinon :
+				btn_open_container.visible = true
+				btn_open_container.text = "Use Key"
+				lbl_info_key.text = "Key can be only use once"
 			
+			## On affiche le panel qui correspond au conteneur nécessitant une clé
+			pnl_conteneur_with_key.visible = true
 			
-			$pnl_principal/pnl_inventaire/pnl_inventaire_storage.visible = false
-			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse.visible = true
-			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key.visible = true
+		elif  item_clicked.need_key == false: # Sinon :
 			
-			
-			
-		if  objet.need_key == false:
-			
+			## On récupère les infos du pnneau du container
 			var panel_conteneur = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key/pnl_infos_conteneurs/pnl_visualisation_conteneur")	
-			panel_conteneur.get_node("pnl_infos_skin/lbl_nom_arme").text = objet.nom # On modifie le label
-			panel_conteneur.get_node("pnl_infos_skin/lbl_nom_arme").autowrap_mode  = TextServer.AUTOWRAP_WORD # Permet au label de pouvoir prendre 2 lignes au lieu de 1
-			panel_conteneur.get_node("pnl_infos_skin/lbl_nom_skin").text = "" # On modifie le label
-			panel_conteneur.get_node("pnl_skin/txtr_skin").texture = load(objet.image_path) # On modifie l'image
+			var label_principal_conteneur = panel_conteneur.get_node("pnl_infos_skin/lbl_nom_arme") # On récupère son label
+			var label_secondaire_conteneur = panel_conteneur.get_node("pnl_infos_skin/lbl_nom_skin") # On récupère son label
+			var image_conteneur = panel_conteneur.get_node("pnl_skin/txtr_skin") # On récupère son image
 			
-			$pnl_principal/pnl_inventaire/pnl_inventaire_storage.visible = false
-			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse.visible = true
-			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key.visible = true
-			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.text = "Open Container"
-			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/lbl_info_key.text = "This container can only be opened once"
-			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.visible = true
+			## On modifie les infos du panneau du container
+			label_principal_conteneur.text = item_clicked.nom # On modifie le label
+			label_principal_conteneur.autowrap_mode  = TextServer.AUTOWRAP_WORD # Permet au label de pouvoir prendre 2 lignes au lieu de 1
+			label_secondaire_conteneur.text = "" # On modifie le label
+			image_conteneur.texture = load(item_clicked.image_path) # On modifie l'image
 			
-	
+			## On modifie des infos UI
+			pnl_conteneur_no_key.visible = true ## Affichage du panneau pour les coneneurs sans clés
+			btn_open_container.text = "Open Container"
+			btn_open_container.visible = true
+			lbl_info_key.text = "This container can only be opened once"
+			
+		## On cache le panel de l'inventaire et on rend visible le panel concernant l'ouverture des conteneurs
+		pnl_inventaire_storage.visible = false
+		pnl_ouverture_caisse.visible = true
 
+## Permet de créer et de configurer un panel pour la visualisation d'un objet
+func return_new_pnl_prefab_skin_arme_configurated(infos_lbl_1_item: String, infos_lbl_2_item: String, 
+	infos_image_path_item: String, infos_color_item: String):
+	
+	var new_panel_item = pnl_prefab_skin_arme.instantiate() # On crée un bouton
+	var lbl_1_new_panel = new_panel_item.get_node("pnl_infos_skin/lbl_nom_arme")
+	var lbl_2_new_panel = new_panel_item.get_node("pnl_infos_skin/lbl_nom_skin")
+	var txtr_new_panel = new_panel_item.get_node("pnl_skin/txtr_skin")
+	var clr_rec_new_panel = new_panel_item.get_node("pnl_infos_skin/color_rect_etat_skin")
+	
+	lbl_1_new_panel.text = infos_lbl_1_item
+	
+	if infos_lbl_2_item == "":
+		lbl_2_new_panel.text = ""
+		lbl_1_new_panel.autowrap_mode  = TextServer.AUTOWRAP_WORD
+	else:
+		lbl_2_new_panel.text = infos_lbl_2_item
+	
+	txtr_new_panel.texture = load(infos_image_path_item)
+	clr_rec_new_panel.color = infos_color_item
+	
+	return new_panel_item
+
+## Permet de mettre a jouer l'inventaire du joueur mais aussi la grill de l'inventaire sans revenir à la page 1
 func repopulation_grille_inventaire_sans_retoruner_page_1():
 	
-	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, index_skin_a_charger_debut)
+	var inventory_grid = $pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer
+	var lbl_nbr_items_inventory = $pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items
+	var lbl_price_inventory = $pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix
 	
+	## On repopue la grille a partir de index_skin_a_charger_debut
+	populate_grid_skin(inventory_grid, index_skin_a_charger_debut)
+	
+	## Ca permet de faire en sorte que si on est sur la page 2 et que qu'il reste qu'un objet et que je viens a le
+	## delete, le jeu comprendra qu'il faudra revenir a la page d'avant au lieu que ca me laisse sur une page vide
 	if index_skin_a_charger_debut >= Global.leJoueur.inventaire.size():
 		afficher_skins_precedent()
 	
 	# Met à jour le nombre d'items dans l'inventaire
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(Global.leJoueur.inventaire.size())
+	lbl_nbr_items_inventory.text = str(Global.leJoueur.inventaire.size())
 	
 	# Met à jour la valeur totale de l'inventaire
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
+	lbl_price_inventory.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
 
+## Permet de changer le value de la page actuelle dans la page inventaire
 func changer_valeur_page_actuelle_storage():
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire2/lbl_page_actuelle.text = str(page_actuelle)
 
 
- # Cette fonction est appelée à chaque fois qu'un événement d'entrée (clavier, souris, etc.) est détecté.
- # Ici, nous nous intéressons uniquement aux événements de clic de souris.
+ ## Cette fonction est appelée à chaque fois qu'un événement d'entrée (clavier, souris, etc.) est détecté.
+ ## Ici, nous nous intéressons uniquement aux événements de clic de souris.
 func _input(event):
-	# Si l'événement est bien un clic de souris et que le bouton est pressé :
+	## Si l'événement est bien un clic de souris et que le bouton est pressé :
 	if event is InputEventMouseButton and event.pressed:
 		
-		# Vérifiez si le clic est à l'intérieur des limites du panneau, on regarde le vbox container
+		## Vérifiez si le clic est à l'intérieur des limites du panneau, on regarde le vbox container
 		var rect = Rect2(Vector2.ZERO, $pnl_objet_cliked/VBoxContainer.size)
 		var mouse_position = $pnl_objet_cliked/VBoxContainer.get_local_mouse_position()
 		
 		if rect.has_point(mouse_position):
-			# Si le clic est à l'intérieur du panneau, on ne fait rien et on sort de la fonction.
+			## Si le clic est à l'intérieur du panneau, on ne fait rien et on sort de la fonction.
 			return
-		# Si le clic est en dehors du panneau, on rend le panneau invisible.
+		## Si le clic est en dehors du panneau, on rend le panneau invisible.
 		$pnl_objet_cliked.visible = false
 
-
-
-
+## Action appelée quand on appuis sur la croix en haut a droite
 func _on_btn_quitter_caisse_panel_pressed():
+	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage.visible = true
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse.visible = false
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key.visible = false
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key.visible = false
-	pass # Replace with function body.
 
-
+## Action appelée quand on appuis sur le bouton "ouvrir" d'un conteneur
 func _on_btn_ouverture_conteneur_pressed():
 	
-	var objet = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.get_meta("container_data")
+	var item_container = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.get_meta("container_data")
 	var panel = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_animation_principal/pnl_principal/hbox")
 	
-	if $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.get_meta("container_data") != null:
+	## Ici on regarde si la caisse a besoin d'une clé ou pas
+	if item_container.need_key == true:
 		var key = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.get_meta("key_data")
-		Global.leJoueur.inventaire.erase(objet)
+		Global.leJoueur.inventaire.erase(item_container)
 		Global.leJoueur.inventaire.erase(key)
 	else:
-		Global.leJoueur.inventaire.erase(objet)
+		Global.leJoueur.inventaire.erase(item_container)
 	
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur.visible = true
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.visible = false
@@ -684,11 +771,11 @@ func _on_btn_ouverture_conteneur_pressed():
 	
 	var drop_rates # Déterminer les taux de drop à utiliser en fonction du type de caisse
 	
-		# Regarde si le type de la caisse est normal ou pas, choisi les taux de drops
-	if objet.type_caisse == "normal":
+	# Regarde si le type de la caisse est normal ou pas, choisi les taux de drops
+	if item_container.type_caisse == "normal":
 		drop_rates = Global.default_drop_rates
 	else:
-		drop_rates = objet.drop_rates
+		drop_rates = item_container.drop_rates
 	
 	for child in panel.get_children():
 		
@@ -712,20 +799,34 @@ func _on_btn_ouverture_conteneur_pressed():
 			
 			
 			# Stocke les skins de la qualitée choisie dans une liste
-			skins_cat_choisi = get_skins_by_categories(objet,category_finale)
+			skins_cat_choisi = get_skins_by_categories(item_container,category_finale)
 			print(str(randomNum), " ", str(category_finale))
 			# Choisi un skin aléatoire parmis la liste des skins en string
 			skin_choisi_string = skins_cat_choisi[randi_range(0,skins_cat_choisi.size() - 1)]
 			skin_choisi = Global.skins[skin_choisi_string]
 			
 			if child.name == "pnl_visualisation_skin24":
-				skin_choisi = ouvrir_caisse_v2(objet,objet.type_caisse)
-				child.get_node("pnl_skin/txtr_skin").texture = load(skin_choisi.skin.image_path)
-				child.get_node("pnl_infos_skin/color_rect_etat_skin").color = skin_choisi.skin.categorie.color
+				skin_choisi = ouvrir_caisse_v2(item_container)
 				Global.leJoueur.inventaire.insert(0,skin_choisi)
 				
+				child.get_node("pnl_skin/txtr_skin").texture = load(skin_choisi.skin.image_path)
+				child.get_node("pnl_infos_skin/color_rect_etat_skin").color = skin_choisi.skin.categorie.color
+								
 				child.get_node("pnl_infos_skin/lbl_nom_arme").text = skin_choisi.skin.arme.nom
 				child.get_node("pnl_infos_skin/lbl_nom_skin").text = skin_choisi.skin.nom
+				
+				
+				if skin_choisi.skin.categorie.nom == Global.categories['knive'].nom:
+					child.get_node("pnl_infos_skin/lbl_nom_arme").text = Global.categories['knive'].nom
+					child.get_node("pnl_infos_skin/lbl_nom_arme").autowrap_mode  = TextServer.AUTOWRAP_WORD
+					child.get_node("pnl_infos_skin/lbl_nom_skin").text  = ""
+					child.get_node("pnl_skin/txtr_skin").texture = load("res://resources/images/Csgo-default_rare_item.png")
+					child.get_node("pnl_infos_skin/color_rect_etat_skin").color = "ffd700"
+				else:
+					child.get_node("pnl_skin/txtr_skin").texture = load(skin_choisi.skin.image_path)
+					child.get_node("pnl_infos_skin/color_rect_etat_skin").color = skin_choisi.skin.categorie.color
+					child.get_node("pnl_infos_skin/lbl_nom_arme").text = skin_choisi.skin.arme.nom
+					child.get_node("pnl_infos_skin/lbl_nom_skin").text = skin_choisi.skin.nom
 				
 				print(skin_choisi.skin.nom)
 			else:
@@ -733,6 +834,7 @@ func _on_btn_ouverture_conteneur_pressed():
 				child.get_node("pnl_infos_skin/color_rect_etat_skin").color = skin_choisi.categorie.color
 				child.get_node("pnl_infos_skin/lbl_nom_arme").text = skin_choisi.arme.nom
 				child.get_node("pnl_infos_skin/lbl_nom_skin").text = skin_choisi.nom
+			
 	
 	var timer = Timer.new()
 	timer.wait_time = 6 # 2 secondes
@@ -748,11 +850,16 @@ func _on_btn_ouverture_conteneur_pressed():
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/color_objet.color = Global.leJoueur.inventaire[0].skin.categorie.color
 	get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/AnimationPlayer").play("skin_animation")
 	
-# Gère les stickers si présents pour l'objet/skin
-	for j in range(Global.leJoueur.inventaire[0].stickers5.size()):
-		var sticker_node = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
-		sticker_node.texture = load(Global.leJoueur.inventaire[0].stickers5[j].image_path)
-		get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
+	# Gère les stickers si présents pour l'objet/skin
+	if Global.leJoueur.inventaire[0].stickers5.size() == 0:
+		for child in get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers").get_children():
+			child.visible = false
+	else:
+		for j in range(Global.leJoueur.inventaire[0].stickers5.size()):
+			var sticker_node = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
+			sticker_node.texture = load(Global.leJoueur.inventaire[0].stickers5[j].image_path)
+			get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
+
 
 
 func _on_btn_continuer_pressed():

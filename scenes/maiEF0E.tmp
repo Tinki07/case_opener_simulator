@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cqckho3b1h1no"]
+[gd_scene load_steps=41 format=3 uid="uid://cqckho3b1h1no"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
 [ext_resource type="Texture2D" uid="uid://bwb2ekoix1sfo" path="res://resources/images/wallpaperflare.com_wallpaper.jpg" id="2_jylf6"]
@@ -17,7 +17,6 @@
 [ext_resource type="StyleBox" uid="uid://bqeufb16tw6py" path="res://resources/themes/theme_panel_secondaire.tres" id="14_1y6j7"]
 [ext_resource type="FontFile" uid="uid://cmrght1dguc6e" path="res://resources/fonts/TT Lakes Neue Trial Bold.ttf" id="14_nx57u"]
 [ext_resource type="StyleBox" uid="uid://bj6y228sqvrp8" path="res://resources/themes/theme_panel_secondaire++.tres" id="15_dseq4"]
-[ext_resource type="Texture2D" uid="uid://dul6fnitmqdpo" path="res://resources/images/Information_grey.svg.png" id="17_x166t"]
 [ext_resource type="Texture2D" uid="uid://cfgok8bfbcu6s" path="res://resources/images/conteneurs/dreams_nightmares/D%26n_scar20.png" id="18_avuge"]
 [ext_resource type="Texture2D" uid="uid://co1scyjum5bi" path="res://resources/images/pngfind.com-vignette-png-1920x1080-2550838.png" id="19_hvh4j"]
 [ext_resource type="Texture2D" uid="uid://b7b8trd2ae7x0" path="res://resources/images/kindpng_3155574.png" id="20_bfrwq"]
@@ -76,7 +75,7 @@ border_color = Color(0.0862745, 0.109804, 0.141176, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bcw75"]
 bg_color = Color(0.105882, 0.133333, 0.156863, 1)
 border_width_left = 2
-border_color = Color(0.14902, 0.164706, 0.180392, 1)
+border_color = Color(0.0862745, 0.109804, 0.141176, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_36rik"]
 
@@ -992,9 +991,10 @@ theme_override_styles/panel = ExtResource("15_dseq4")
 
 [node name="lbl_info" type="Label" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_info_unlocking_container"]
 layout_mode = 0
-offset_left = 40.0
+offset_left = 22.0
+offset_top = 12.0
 offset_right = 638.0
-offset_bottom = 44.0
+offset_bottom = 35.0
 theme_override_colors/font_color = Color(0.658824, 0.72549, 0.803922, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
 theme_override_fonts/font = ExtResource("6_vv063")
@@ -1005,16 +1005,6 @@ vertical_alignment = 1
 libraries = {
 "": SubResource("AnimationLibrary_jyl36")
 }
-
-[node name="TextureRect" type="TextureRect" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_info_unlocking_container"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 12.0
-offset_right = 33.0
-offset_bottom = 32.0
-texture = ExtResource("17_x166t")
-expand_mode = 1
-stretch_mode = 6
 
 [node name="pnl_animation_principal" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur"]
 layout_mode = 0
@@ -1033,9 +1023,9 @@ offset_bottom = 208.0
 
 [node name="hbox" type="HBoxContainer" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_animation_principal/pnl_principal"]
 layout_mode = 0
-offset_left = 4.0
+offset_left = -3052.0
 offset_top = 32.0
-offset_right = 3640.0
+offset_right = 584.0
 offset_bottom = 168.0
 
 [node name="pnl_visualisation_skin" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_animation_principal/pnl_principal/hbox" instance=ExtResource("8_tl2mx")]
@@ -1173,9 +1163,9 @@ modulate = Color(0.858824, 0.858824, 0.858824, 1)
 texture_filter = 6
 layout_mode = 1
 offset_left = 112.0
-offset_top = 52.0
+offset_top = 31.616
 offset_right = 498.0
-offset_bottom = 388.0
+offset_bottom = 367.616
 pivot_offset = Vector2(-0.0184326, 0.0367279)
 texture = ExtResource("18_avuge")
 expand_mode = 2
