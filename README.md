@@ -3,3 +3,5 @@ Ce dépôt contient les fichiers et ressources associés à ce projet, ainsi que
 -
 Welcome to the repository for my first game project! This project marks the beginning of my journey into game development.
 This repository contains the files and resources associated with this project, as well as notes on my learning process and progress made. Feel free to explore and follow the development of the game. Your feedback and suggestions are welcome!
+
+![test](1.png)
