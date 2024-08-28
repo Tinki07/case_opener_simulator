@@ -5,3 +5,5 @@ Welcome to the repository for my first game project! This project marks the begi
 This repository contains the files and resources associated with this project, as well as notes on my learning process and progress made. Feel free to explore and follow the development of the game. Your feedback and suggestions are welcome!
 
 ![test](1.png)
+![test](2.png)
+
