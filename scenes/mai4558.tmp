@@ -1,0 +1,1145 @@
+[gd_scene load_steps=33 format=3 uid="uid://cqckho3b1h1no"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
+[ext_resource type="Texture2D" uid="uid://bwb2ekoix1sfo" path="res://resources/images/wallpaperflare.com_wallpaper.jpg" id="2_jylf6"]
+[ext_resource type="StyleBox" uid="uid://cen4iu82xlype" path="res://theme_panel_principal.tres" id="3_j236n"]
+[ext_resource type="Texture2D" uid="uid://7jnjvqegvgh7" path="res://resources/images/81UohWY3LZL.png" id="4_t08hi"]
+[ext_resource type="FontFile" uid="uid://0mp1cwbuy8bw" path="res://TT Lakes Neue Trial Regular.ttf" id="5_jfgsi"]
+[ext_resource type="Theme" uid="uid://brto2txftglw6" path="res://theme_bouton_normal.tres" id="6_i0jf0"]
+[ext_resource type="FontFile" uid="uid://cyy4gibc1fnxt" path="res://TT Lakes Neue Trial Medium.ttf" id="6_vv063"]
+[ext_resource type="Texture2D" uid="uid://buapdirvd6o7v" path="res://resources/settings.png" id="7_vacqq"]
+[ext_resource type="Texture2D" uid="uid://wa83py6jqx3x" path="res://resources/images/kindpng_4298060.png" id="8_nx3p8"]
+[ext_resource type="PackedScene" uid="uid://ct7awgkfavfmc" path="res://scenes/pnl_visualisation_skin.tscn" id="8_tl2mx"]
+[ext_resource type="Theme" uid="uid://djf20mcq8cebv" path="res://theme_bouton_normal_vert.tres" id="9_g145b"]
+[ext_resource type="Texture2D" uid="uid://cuqgnrhf36wjb" path="res://resources/images/arrow-24-128.png" id="10_uvvjj"]
+[ext_resource type="Texture2D" uid="uid://c7kgqr3mdy8lg" path="res://resources/images/arrow-88-128.png" id="11_sy4nc"]
+[ext_resource type="Theme" uid="uid://c5acnnylhcw6q" path="res://theme_bouton_normal_noir.tres" id="13_eml8t"]
+[ext_resource type="StyleBox" uid="uid://bqeufb16tw6py" path="res://theme_panel_secondaire.tres" id="14_1y6j7"]
+[ext_resource type="FontFile" uid="uid://cmrght1dguc6e" path="res://TT Lakes Neue Trial Bold.ttf" id="14_nx57u"]
+[ext_resource type="StyleBox" uid="uid://bj6y228sqvrp8" path="res://theme_panel_secondaire++.tres" id="15_dseq4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mwkwp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2a1b2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0, 0, 0, 0.243137)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52vmd"]
+bg_color = Color(0.0901961, 0.0901961, 0.0901961, 0.443137)
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.137255, 0.164706, 0.207843, 1)
+shadow_color = Color(0, 0, 0, 0.235294)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lsoi"]
+bg_color = Color(0.14902, 0.176471, 0.223529, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.137255, 0.164706, 0.207843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce0qb"]
+bg_color = Color(0.152941, 0.152941, 0.152941, 0.682353)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4jid"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.14902, 0.176471, 0.223529, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.419608)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca05l"]
+bg_color = Color(0.196078, 0.235294, 0.278431, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0862745, 0.109804, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bcw75"]
+bg_color = Color(0.105882, 0.133333, 0.156863, 1)
+border_width_left = 2
+border_color = Color(0.0862745, 0.109804, 0.141176, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_36rik"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i56do"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55c2m"]
+
+[sub_resource type="Animation" id="Animation_l73i3"]
+resource_name = "anim_bouton_spawn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jyl36"]
+_data = {
+"anim_bouton_spawn": SubResource("Animation_l73i3")
+}
+
+[sub_resource type="Animation" id="Animation_kc6bi"]
+resource_name = "anim_ouverture_conteneur"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/HBoxContainer:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1.27456),
+"update": 0,
+"values": [Vector2(4, 32), Vector2(-1524, 32), Vector2(-2606.33, 32), Vector2(-3052, 32)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bsmh6"]
+_data = {
+"anim_ouverture_conteneur": SubResource("Animation_kc6bi")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jd32n")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1600.0
+offset_bottom = 904.0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+offset_left = -120.0
+offset_top = -128.0
+offset_right = 1720.0
+offset_bottom = 912.0
+expand_mode = 2
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1600.0
+offset_bottom = 904.0
+texture = ExtResource("2_jylf6")
+expand_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 176.0
+offset_top = 16.0
+offset_right = 1424.0
+offset_bottom = 888.0
+color = Color(0, 0, 0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/ColorRect"]
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 160.0
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/ColorRect"]
+layout_mode = 0
+offset_top = 168.0
+offset_right = 360.0
+offset_bottom = 872.0
+
+[node name="ColorRect3" type="ColorRect" parent="TextureRect/ColorRect"]
+layout_mode = 0
+offset_left = 376.0
+offset_right = 1248.0
+offset_bottom = 872.0
+
+[node name="pnl_principal" type="Panel" parent="."]
+offset_right = 1600.0
+offset_bottom = 904.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mwkwp")
+
+[node name="pnl_infos_joueur" type="Panel" parent="pnl_principal"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 24.0
+offset_right = 528.0
+offset_bottom = 192.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2a1b2")
+
+[node name="pnl_infos_1" type="Panel" parent="pnl_principal/pnl_infos_joueur"]
+clip_contents = true
+layout_mode = 0
+offset_right = 376.0
+offset_bottom = 112.0
+theme_override_styles/panel = ExtResource("3_j236n")
+
+[node name="Kindpng4298060" type="Sprite2D" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1"]
+position = Vector2(200, 200)
+scale = Vector2(0.520822, 0.475028)
+texture = ExtResource("8_nx3p8")
+
+[node name="txtr_profile_picture" type="TextureRect" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 72.0
+texture = ExtResource("4_t08hi")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="pnl_border_picture" type="Panel" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1/txtr_profile_picture"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_52vmd")
+
+[node name="Label" type="Label" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 8.0
+offset_right = 328.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 20
+text = "TinkiCS"
+
+[node name="Button" type="Button" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1"]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 8.0
+offset_right = 368.0
+offset_bottom = 40.0
+theme = ExtResource("6_i0jf0")
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 24
+icon = ExtResource("7_vacqq")
+expand_icon = true
+
+[node name="pnl_money_joueur" type="Panel" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 360.0
+offset_bottom = 104.0
+
+[node name="hcont" type="HBoxContainer" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 24.0
+theme_override_constants/separation = 7
+
+[node name="lbl_principal" type="Label" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 15
+text = "Argent  :"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="lbl_argent_joueur" type="Label" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 15
+text = "100"
+vertical_alignment = 1
+
+[node name="lbl_dollar" type="Label" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 15
+text = "$"
+vertical_alignment = 1
+
+[node name="pnl_infos_2" type="Panel" parent="pnl_principal/pnl_infos_joueur"]
+layout_mode = 0
+offset_top = 112.0
+offset_right = 376.0
+offset_bottom = 168.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsoi")
+
+[node name="pnl_menu_principal" type="Panel" parent="pnl_principal"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 216.0
+offset_right = 528.0
+offset_bottom = 872.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2a1b2")
+
+[node name="pnl_menu_principal" type="Panel" parent="pnl_principal/pnl_menu_principal"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 376.0
+offset_bottom = 656.0
+theme_override_styles/panel = ExtResource("3_j236n")
+
+[node name="btn_inventaire" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 368.0
+offset_bottom = 96.0
+theme = ExtResource("6_i0jf0")
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 24
+text = "Inventaire"
+
+[node name="Button2" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 104.0
+offset_right = 368.0
+offset_bottom = 184.0
+theme = ExtResource("6_i0jf0")
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 24
+text = "XXXXXX"
+
+[node name="Button3" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 192.0
+offset_right = 368.0
+offset_bottom = 272.0
+theme = ExtResource("6_i0jf0")
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 24
+text = "XXXXXX"
+
+[node name="Button4" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 280.0
+offset_right = 368.0
+offset_bottom = 360.0
+theme = ExtResource("6_i0jf0")
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 24
+text = "XXXXXX"
+
+[node name="Button5" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 368.0
+offset_right = 368.0
+offset_bottom = 448.0
+theme = ExtResource("6_i0jf0")
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 24
+text = "XXXXXX"
+
+[node name="Button6" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 456.0
+offset_right = 368.0
+offset_bottom = 536.0
+theme = ExtResource("6_i0jf0")
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 24
+text = "XXXXXX"
+
+[node name="Button7" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 544.0
+offset_right = 368.0
+offset_bottom = 624.0
+theme = ExtResource("6_i0jf0")
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 24
+text = "XXXXXX"
+
+[node name="Panel" type="Panel" parent="pnl_principal/pnl_menu_principal"]
+layout_mode = 0
+offset_right = 376.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsoi")
+
+[node name="Label" type="Label" parent="pnl_principal/pnl_menu_principal/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 88.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 20
+text = "Menu"
+vertical_alignment = 1
+
+[node name="pnl_inventaire" type="Panel" parent="pnl_principal"]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 24.0
+offset_right = 1448.0
+offset_bottom = 872.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2a1b2")
+
+[node name="pnl_inventaire_storage" type="Panel" parent="pnl_principal/pnl_inventaire"]
+clip_contents = true
+layout_mode = 0
+offset_top = 24.0
+offset_right = 896.0
+offset_bottom = 848.0
+theme_override_styles/panel = ExtResource("3_j236n")
+
+[node name="Kindpng4298060" type="Sprite2D" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+position = Vector2(448, 636)
+scale = Vector2(1, 1.74917)
+texture = ExtResource("8_nx3p8")
+
+[node name="Button" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+visible = false
+layout_mode = 0
+offset_left = 304.0
+offset_top = 768.0
+offset_right = 592.0
+offset_bottom = 816.0
+theme = ExtResource("6_i0jf0")
+text = " "
+
+[node name="btn_page_storage_suivant" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+visible = false
+layout_mode = 0
+offset_left = 600.0
+offset_top = 768.0
+offset_right = 640.0
+offset_bottom = 816.0
+theme = ExtResource("9_g145b")
+theme_override_constants/icon_max_width = 25
+text = " "
+icon = ExtResource("10_uvvjj")
+icon_alignment = 1
+expand_icon = true
+
+[node name="btn_page_storage_precedent" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+visible = false
+layout_mode = 0
+offset_left = 256.0
+offset_top = 768.0
+offset_right = 296.0
+offset_bottom = 816.0
+theme = ExtResource("9_g145b")
+theme_override_constants/icon_max_width = 25
+text = " "
+icon = ExtResource("11_sy4nc")
+icon_alignment = 1
+expand_icon = true
+
+[node name="pnl_prix_inventaire" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+layout_mode = 0
+offset_top = 776.0
+offset_right = 160.0
+offset_bottom = 808.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ce0qb")
+
+[node name="lbl_infos" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 58.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 16
+text = "Value"
+vertical_alignment = 1
+
+[node name="lbl_prix" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire"]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 184.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 16
+text = "0"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="lbl_items_inventaire_joueur" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 776.0
+offset_right = 896.0
+offset_bottom = 808.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ce0qb")
+
+[node name="lbl_infos" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur"]
+layout_mode = 0
+offset_left = 62.0
+offset_right = 112.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 16
+text = " Items"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="lbl_nombre_items" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur"]
+layout_mode = 0
+offset_right = 58.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 80.0
+offset_right = 864.0
+offset_bottom = 752.0
+
+[node name="ColorRect2" type="ColorRect" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 864.0
+offset_bottom = 72.0
+
+[node name="Panel3" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+visible = false
+layout_mode = 0
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 880.0
+offset_bottom = 712.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4jid")
+
+[node name="MarginContainer" type="MarginContainer" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 112.0
+offset_right = 863.0
+offset_bottom = 736.0
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 8
+
+[node name="GridContainer" type="GridContainer" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 8
+columns = 6
+
+[node name="lbl_infos" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+layout_mode = 0
+offset_left = 62.0
+offset_right = 112.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 16
+text = " Items"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="lbl_nombre_items" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+layout_mode = 0
+offset_right = 58.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="pnl_prix_inventaire2" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 768.0
+offset_right = 600.0
+offset_bottom = 816.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ce0qb")
+
+[node name="lbl_nbr_page" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire2"]
+layout_mode = 0
+offset_left = 176.0
+offset_right = 216.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.741176, 0.741176, 0.741176, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.443137)
+theme_override_fonts/font = ExtResource("14_nx57u")
+text = "/1"
+vertical_alignment = 1
+
+[node name="lbl_page_actuelle" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire2"]
+layout_mode = 0
+offset_left = 124.0
+offset_right = 172.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.741176, 0.741176, 0.741176, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.443137)
+theme_override_fonts/font = ExtResource("14_nx57u")
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire2"]
+layout_mode = 0
+offset_left = 96.0
+offset_right = 144.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.741176, 0.741176, 0.741176, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.443137)
+theme_override_fonts/font = ExtResource("14_nx57u")
+text = "Page:"
+vertical_alignment = 1
+
+[node name="pnl_inventaire_loadout" type="Panel" parent="pnl_principal/pnl_inventaire"]
+visible = false
+layout_mode = 0
+offset_top = 24.0
+offset_right = 896.0
+offset_bottom = 848.0
+theme_override_styles/panel = ExtResource("3_j236n")
+
+[node name="pnl_ouverture_caisse" type="Panel" parent="pnl_principal/pnl_inventaire"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 896.0
+offset_bottom = 848.0
+theme_override_styles/panel = ExtResource("3_j236n")
+
+[node name="pnl_conteneur_with_key" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse"]
+clip_contents = true
+layout_mode = 0
+offset_top = 32.0
+offset_right = 896.0
+offset_bottom = 432.0
+theme_override_styles/panel = ExtResource("14_1y6j7")
+
+[node name="Kindpng4298060" type="Sprite2D" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key"]
+position = Vector2(436, 336)
+scale = Vector2(0.535516, 0.535516)
+texture = ExtResource("8_nx3p8")
+
+[node name="pnl_infos_conteneurs" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key"]
+clip_contents = true
+layout_mode = 0
+offset_left = 180.0
+offset_top = 57.0
+offset_right = 716.0
+offset_bottom = 257.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ca05l")
+
+[node name="pnl_visualisation_key" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key/pnl_infos_conteneurs" instance=ExtResource("8_tl2mx")]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 176.0
+offset_bottom = 168.0
+
+[node name="pnl_visualisation_conteneur" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key/pnl_infos_conteneurs" instance=ExtResource("8_tl2mx")]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 32.0
+offset_right = 496.0
+offset_bottom = 168.0
+
+[node name="pnl_balec1" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key/pnl_infos_conteneurs"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = -135.0
+offset_right = 461.0
+offset_bottom = -79.0
+rotation = 1.0472
+theme_override_styles/panel = ExtResource("14_1y6j7")
+
+[node name="pnl_balec2" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key/pnl_infos_conteneurs"]
+layout_mode = 0
+offset_left = 326.598
+offset_top = 99.0
+offset_right = 597.598
+offset_bottom = 155.0
+rotation = 2.09439
+theme_override_styles/panel = ExtResource("14_1y6j7")
+
+[node name="pnl_balec3" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key/pnl_infos_conteneurs"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 98.0
+offset_right = 378.0
+offset_bottom = 157.0
+rotation = 2.61799
+theme_override_styles/panel = SubResource("StyleBoxFlat_bcw75")
+
+[node name="img_balec" type="Sprite2D" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key/pnl_infos_conteneurs"]
+position = Vector2(288, 287)
+scale = Vector2(0.535516, 0.535516)
+texture = ExtResource("8_nx3p8")
+
+[node name="lbl_info_key" type="Label" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 273.0
+offset_right = 712.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0.827451, 0.705882, 0.196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.384314)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 13
+text = "Key can be only use once"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_ouverture_conteneur" type="Button" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key"]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 305.0
+offset_right = 552.0
+offset_bottom = 345.0
+theme = ExtResource("9_g145b")
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 23
+text = "Use Key"
+
+[node name="Label2" type="Label" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 361.0
+offset_right = 712.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0.658824, 0.72549, 0.803922, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.384314)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 16
+text = "Items that might be in this case :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pnl_conteneur_no_key" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse"]
+visible = false
+clip_contents = true
+layout_mode = 0
+offset_top = 32.0
+offset_right = 896.0
+offset_bottom = 432.0
+theme_override_styles/panel = ExtResource("14_1y6j7")
+
+[node name="Kindpng4298060" type="Sprite2D" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key"]
+position = Vector2(436, 336)
+scale = Vector2(0.535516, 0.535516)
+texture = ExtResource("8_nx3p8")
+
+[node name="pnl_infos_conteneurs" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key"]
+clip_contents = true
+layout_mode = 0
+offset_left = 224.0
+offset_top = 58.0
+offset_right = 672.0
+offset_bottom = 258.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ca05l")
+
+[node name="pnl_visualisation_conteneur" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key/pnl_infos_conteneurs" instance=ExtResource("8_tl2mx")]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 32.0
+offset_right = 296.0
+offset_bottom = 168.0
+
+[node name="Label" type="Label" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 273.0
+offset_right = 576.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0.827451, 0.705882, 0.196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.580392)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 13
+text = "This container can only be opened once"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key"]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 305.0
+offset_right = 552.0
+offset_bottom = 345.0
+theme = ExtResource("9_g145b")
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 18
+text = "Open Container"
+
+[node name="Label2" type="Label" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 361.0
+offset_right = 600.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0.658824, 0.72549, 0.803922, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.384314)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 16
+text = "Items that might be in this container :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hbox_nom_caisse" type="HBoxContainer" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 40.0
+offset_right = 736.0
+offset_bottom = 84.0
+alignment = 1
+
+[node name="lbl_info" type="Label" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/hbox_nom_caisse"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.658824, 0.72549, 0.803922, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.556863)
+theme_override_fonts/font = ExtResource("6_vv063")
+text = "Inspecting the"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_nom_caisse" type="Label" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/hbox_nom_caisse"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.760784, 0.760784, 0.760784, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.521569)
+theme_override_fonts/font = ExtResource("14_nx57u")
+text = "EMS KATOWICE HVBHUJJHQSVJKKHJKBH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pnl_items_in_caisse" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse"]
+layout_mode = 0
+offset_top = 432.0
+offset_right = 896.0
+offset_bottom = 824.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_36rik")
+
+[node name="scroll" type="ScrollContainer" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_items_in_caisse"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 888.0
+offset_bottom = 384.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_i56do")
+vertical_scroll_mode = 3
+
+[node name="margin" type="MarginContainer" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_items_in_caisse/scroll"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="grid_items" type="GridContainer" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_items_in_caisse/scroll/margin"]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 9
+columns = 6
+
+[node name="pnl_titre" type="Panel" parent="pnl_principal/pnl_inventaire"]
+layout_mode = 0
+offset_right = 896.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsoi")
+
+[node name="Label" type="Label" parent="pnl_principal/pnl_inventaire/pnl_titre"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 152.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 20
+text = "Inventory"
+vertical_alignment = 1
+
+[node name="btn_quitter_caisse_panel" type="Button" parent="pnl_principal/pnl_inventaire/pnl_titre"]
+visible = false
+layout_mode = 0
+offset_left = 840.0
+offset_right = 896.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 31
+text = "X"
+flat = true
+
+[node name="pnl_shop" type="Panel" parent="pnl_principal"]
+visible = false
+layout_mode = 0
+offset_left = 552.0
+offset_top = 24.0
+offset_right = 1448.0
+offset_bottom = 872.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2a1b2")
+
+[node name="pnl_inventaire_loadout" type="Panel" parent="pnl_principal/pnl_shop"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 896.0
+offset_bottom = 848.0
+theme_override_styles/panel = ExtResource("3_j236n")
+
+[node name="Panel" type="Panel" parent="pnl_principal/pnl_shop"]
+layout_mode = 0
+offset_right = 896.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsoi")
+
+[node name="Label" type="Label" parent="pnl_principal/pnl_shop/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 152.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 20
+text = "Shop"
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+visible = false
+offset_left = -96.0
+offset_top = 928.0
+offset_right = 1744.0
+offset_bottom = 1968.0
+expand_mode = 2
+stretch_mode = 4
+
+[node name="pnl_visualisation_skin" parent="." instance=ExtResource("8_tl2mx")]
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 1088.0
+offset_right = 1600.0
+offset_bottom = 31.0
+clear_button_enabled = true
+
+[node name="pnl_objet_cliked" type="Panel" parent="."]
+offset_left = 2232.0
+offset_top = 488.0
+offset_right = 2360.0
+offset_bottom = 512.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_55c2m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pnl_objet_cliked"]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 69.0
+theme_override_constants/separation = 0
+
+[node name="btn_inspect" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("13_eml8t")
+theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 13
+text = "Inspecter"
+
+[node name="btn_ouvrir" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("13_eml8t")
+theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 13
+text = "Ouvrir"
+
+[node name="btn_delete_objet" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("13_eml8t")
+theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 13
+text = "Vendre"
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_left = 552.0
+offset_top = 96.0
+offset_right = 1448.0
+offset_bottom = 380.0
+theme_override_styles/panel = ExtResource("14_1y6j7")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 128.0
+offset_top = 284.0
+offset_right = 768.0
+offset_bottom = 328.0
+theme_override_styles/panel = ExtResource("15_dseq4")
+
+[node name="lbl_info" type="Label" parent="Panel/Panel2"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 12.0
+offset_right = 638.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.658824, 0.72549, 0.803922, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_fonts/font = ExtResource("6_vv063")
+text = "Unlocking the container..."
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/Panel2"]
+libraries = {
+"": SubResource("AnimationLibrary_jyl36")
+}
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 32.0
+offset_right = 696.0
+offset_bottom = 248.0
+
+[node name="Panel" type="Panel" parent="Panel/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 488.0
+offset_bottom = 208.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Panel/Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 32.0
+offset_right = 3640.0
+offset_bottom = 168.0
+
+[node name="pnl_visualisation_skin" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin2" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin3" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin4" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin5" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin6" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin7" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin8" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin9" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin10" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin11" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin12" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin13" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin14" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin15" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin16" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin17" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin18" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin19" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin20" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin21" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin22" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin23" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin24" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin25" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="pnl_visualisation_skin26" parent="Panel/Panel/Panel/HBoxContainer" instance=ExtResource("8_tl2mx")]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Panel/Panel/Panel"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = -16.0
+offset_right = 237.0
+offset_bottom = 224.0
+scale = Vector2(0.777196, 1.1512)
+color = Color(0.827451, 0.705882, 0.196078, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/Panel"]
+libraries = {
+"": SubResource("AnimationLibrary_bsmh6")
+}
+
+[connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire" to="." method="_on_btn_inventaire_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant" to="." method="_on_btn_page_storage_suivant_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_precedent" to="." method="_on_btn_page_storage_precedent_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel" to="." method="_on_btn_quitter_caisse_panel_pressed"]

@@ -1,0 +1,166 @@
+[gd_scene load_steps=10 format=3 uid="uid://ct7awgkfavfmc"]
+
+[ext_resource type="Texture2D" uid="uid://b7b8trd2ae7x0" path="res://resources/images/kindpng_3155574.png" id="1_1f1d8"]
+[ext_resource type="Texture2D" uid="uid://co1scyjum5bi" path="res://resources/images/pngfind.com-vignette-png-1920x1080-2550838.png" id="2_lp7jk"]
+[ext_resource type="Texture2D" uid="uid://wa83py6jqx3x" path="res://resources/images/kindpng_4298060.png" id="4_xfy2y"]
+[ext_resource type="FontFile" uid="uid://cyy4gibc1fnxt" path="res://TT Lakes Neue Trial Medium.ttf" id="5_ivgtc"]
+[ext_resource type="FontFile" uid="uid://0mp1cwbuy8bw" path="res://TT Lakes Neue Trial Regular.ttf" id="6_j7gqe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vt8i"]
+shadow_color = Color(0, 0, 0, 0.321569)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6ers"]
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npy6x"]
+bg_color = Color(0.541176, 0.14902, 0.14902, 1)
+shadow_color = Color(0, 0, 0, 0.517647)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogvff"]
+
+[node name="pnl_visualisation_skin" type="Panel"]
+custom_minimum_size = Vector2(136, 136)
+offset_left = 1760.0
+offset_top = 272.0
+offset_right = 1896.0
+offset_bottom = 408.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8vt8i")
+
+[node name="pnl_skin" type="Panel" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 96.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6ers")
+
+[node name="Kindpng4298060" type="Sprite2D" parent="pnl_skin"]
+position = Vector2(70.0068, 20.0045)
+rotation = -3.14159
+scale = Vector2(0.085736, 0.127866)
+
+[node name="ombre" type="Sprite2D" parent="pnl_skin"]
+position = Vector2(68, 86.5)
+scale = Vector2(0.174672, 0.106145)
+texture = ExtResource("1_1f1d8")
+
+[node name="Pngfind_com-vignette-png-1920x1080-2550838" type="Sprite2D" parent="pnl_skin"]
+position = Vector2(68.0001, 130)
+scale = Vector2(0.06875, 0.142593)
+texture = ExtResource("2_lp7jk")
+
+[node name="txtr_skin" type="TextureRect" parent="pnl_skin"]
+modulate = Color(0.858824, 0.858824, 0.858824, 1)
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 96.0
+expand_mode = 2
+stretch_mode = 6
+
+[node name="txtr_sticker1" type="TextureRect" parent="pnl_skin"]
+custom_minimum_size = Vector2(24, 18)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 77.0
+offset_right = 28.0
+offset_bottom = 95.0
+expand_mode = 2
+
+[node name="txtr_sticker2" type="TextureRect" parent="pnl_skin"]
+custom_minimum_size = Vector2(24, 18)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 77.0
+offset_right = 48.0
+offset_bottom = 95.0
+expand_mode = 2
+
+[node name="txtr_sticker3" type="TextureRect" parent="pnl_skin"]
+custom_minimum_size = Vector2(24, 18)
+layout_mode = 0
+offset_left = 44.0
+offset_top = 77.0
+offset_right = 68.0
+offset_bottom = 95.0
+expand_mode = 2
+
+[node name="txtr_sticker4" type="TextureRect" parent="pnl_skin"]
+custom_minimum_size = Vector2(24, 18)
+layout_mode = 0
+offset_left = 64.0
+offset_top = 77.0
+offset_right = 88.0
+offset_bottom = 95.0
+expand_mode = 2
+
+[node name="txtr_sticker5" type="TextureRect" parent="pnl_skin"]
+custom_minimum_size = Vector2(24, 18)
+layout_mode = 0
+offset_left = 84.0
+offset_top = 77.0
+offset_right = 108.0
+offset_bottom = 95.0
+expand_mode = 2
+
+[node name="pnl_infos_skin" type="Panel" parent="."]
+clip_children = 2
+layout_mode = 0
+offset_top = 96.0
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_npy6x")
+
+[node name="color_rect_etat_skin" type="ColorRect" parent="pnl_infos_skin"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -4.0
+offset_right = 152.0
+offset_bottom = 43.0
+color = Color(0.952941, 0.952941, 0.952941, 1)
+
+[node name="ombre" type="Sprite2D" parent="pnl_infos_skin"]
+position = Vector2(67.6258, 76.0563)
+rotation = -2.87979
+scale = Vector2(0.111966, 0.368503)
+texture = ExtResource("4_xfy2y")
+
+[node name="ombre2" type="Sprite2D" parent="pnl_infos_skin"]
+position = Vector2(82.0936, 49.957)
+rotation = -0.261799
+scale = Vector2(0.111966, 0.14056)
+texture = ExtResource("4_xfy2y")
+
+[node name="lbl_nom_arme" type="Label" parent="pnl_infos_skin"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 132.0
+offset_bottom = 42.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.254902)
+theme_override_constants/shadow_outline_size = 2
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = ExtResource("5_ivgtc")
+theme_override_font_sizes/font_size = 12
+text = "StatTrack Dual Berretas"
+text_overrun_behavior = 4
+
+[node name="lbl_nom_skin" type="Label" parent="pnl_infos_skin"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 19.0
+offset_right = 132.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.929412, 0.929412, 0.929412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.254902)
+theme_override_fonts/font = ExtResource("6_j7gqe")
+theme_override_font_sizes/font_size = 11
+text = "Stone Colddfg dfgdfgdfgdfg"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="btn_skin" type="Button" parent="."]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ogvff")
+flat = true
