@@ -20,9 +20,9 @@ func _ready():
 	default_drop_rates = {
 		"mil_spec": 71.0,
 		"restricted": 21.00,
-		"classified": 6.40,
-		"covert": 1.2,
-		"knive": 0.40
+		"classified": 6.20,
+		"covert": 1.35,
+		"knive": 0.45
 	}
 
 
@@ -149,7 +149,8 @@ func charger_categories_skins_depuis_json():
 				var category_data = data[key]
 				var category = CategorieSkin.new(
 					category_data["nom"],
-					category_data["color"]
+					category_data["color"],
+					category_data["drop_anim_sound"]
 				)
 				categories[category_data["id"]] = category
 				print("Catégorie créée : %s" % category.nom)
@@ -180,7 +181,8 @@ func charger_categories_stickers_depuis_json():
 				var category_data = data[key]
 				var category = CategorieSticker.new(
 					category_data["nom"],
-					category_data["color"]
+					category_data["color"],
+					category_data["drop_anim_sound"]
 				)
 				categories_stickers[category_data["id"]] = category
 				print("Categorie sticker créée : %s" % category.nom)

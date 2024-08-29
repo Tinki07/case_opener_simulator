@@ -157,6 +157,1027 @@
 						1.69	
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_glock_pinkddpat.png"
+				},
+				{
+					"nom": "Bullet Queen",
+					"id": "_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "covert",
+					"prix": [
+						48.88,
+						14.57,
+						6.68,
+						4.76,
+						3.48,
+						214.3,
+						59.39,
+						25.61,
+						14.35,
+						3.48
+					]
+				},
+				{
+					"nom": "Neo-Noir",
+					"id": "Neo-Noir_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "covert",
+					"prix": [
+						68.16,
+						25.3,
+						11.96,
+						8.05,
+						7.26,
+						259.99,
+						94.27,
+						39.33,
+						26.85,
+						26.92
+					]
+				},
+				{
+					"nom": "Wasteland Rebel",
+					"id": "Wasteland Rebel_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "covert",
+					"prix": [
+						6.07,
+						4.09,
+						3.26,
+						5.24,
+						3.51,
+						35.08,
+						20.99,
+						16.65,
+						20.6,
+						19.9
+					]
+				},
+				{
+					"nom": "Gamma Doppler",
+					"id": "Gamma Doppler_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "covert",
+					"prix": [
+						67.38,
+						51.82,
+						43.5,
+						47.73,
+						43.51,
+						0,
+						0,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Gamma Doppler [Emerald]",
+					"id": "_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "covert",
+					"prix": [
+						595.46,
+						224.31,
+						160.65,
+						142.86,
+						154.41,
+						0,
+						0,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Snack Attack",
+					"id": "Snack Attack_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						20.72,
+						7.65,
+						4.25,
+						3.46,
+						3.36,
+						98.32,
+						36.86,
+						11.97,
+						9.14,
+						8.51
+					]
+				},
+				{
+					"nom": "Vogue",
+					"id": "Vogue_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						9.81,
+						5.8,
+						3.25,
+						3.1,
+						2.38,
+						23.81,
+						12.99,
+						5.72,
+						6.92,
+						0
+					]
+				},
+				{
+					"nom": "Water Elemental",
+					"id": "Water Elemental_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						15.7,
+						7.6,
+						4.55,
+						7.6,
+						3.51,
+						58.51,
+						29.73,
+						15.45,
+						21.91,
+						14.8
+					]
+				},
+				{
+					"nom": "Twilight Galaxy",
+					"id": "Twilight Galaxy_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						271.35,
+						230.16,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Umbral Rabbit",
+					"id": "Umbral Rabbit_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						1.85,
+						0.87,
+						0.36,
+						0.35,
+						0.3,
+						6.07,
+						2.64,
+						1.01,
+						1.52,
+						0.8
+					]
+				},
+				{
+					"nom": "Moonrise",
+					"id": "Moonrise_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						1.75,
+						0.81,
+						0.41,
+						0.47,
+						0.36,
+						6.53,
+						2.49,
+						1.03,
+						2.13,
+						0
+					]
+				},
+				{
+					"nom": "Weasel",
+					"id": "Weasel_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						2.53,
+						0.76,
+						0.35,
+						0.35,
+						0.31,
+						10.75,
+						2.48,
+						1.04,
+						0.83,
+						0
+					]
+				},
+				{
+					"nom": "Royal Legion",
+					"id": "Royal Legion_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						7.38,
+						3.59,
+						2.66,
+						2.45,
+						2.22,
+						38.82,
+						9.33,
+						4.79,
+						4.55,
+						4.04
+					]
+				},
+				{
+					"nom": "Grinder",
+					"id": "Grinder_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						2.32,
+						1.61,
+						1.88,
+						0,
+						0,
+						9.08,
+						6.26,
+						6.49,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Steel Disruption",
+					"id": "Steel Disruption_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						4.06,
+						3.31,
+						3.51,
+						0,
+						0,
+						11.99,
+						9.14,
+						8.66,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Dragon Tattoo",
+					"id": "Dragon Tattoo_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						115,
+						139.28,
+						0,
+						0,
+						0,
+						523.09,
+						460,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Ramese's Reach",
+					"id": "Ramese's Reach_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						16.47,
+						11.4,
+						6.87,
+						6.01,
+						4.94,
+						156.66,
+						30.43,
+						12.28,
+						9.81,
+						8.19
+					]
+				},
+				{
+					"nom": "Franklin",
+					"id": "Franklin_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						55.01,
+						51.47,
+						46.15,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Synth Leaf",
+					"id": "Synth Leaf_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						507.32,
+						471.09,
+						435,
+						422,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Nuclear Garden",
+					"id": "Nuclear Garden_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						6.61,
+						3.02,
+						1.38,
+						2.04,
+						1.17,
+						75,
+						26.92,
+						14.05,
+						31.22,
+						13.45
+					]
+				},
+				{
+					"nom": "Brass",
+					"id": "Brass_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						117.03,
+						39,
+						23,
+						17.59,
+						18,
+						0,
+						0,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Fade",
+					"id": "Fade_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						1448,
+						1443.83,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Winterized",
+					"id": "Winterized_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						0.28,
+						0.11,
+						0.07,
+						0.07,
+						0.07,
+						1.91,
+						0.36,
+						0.16,
+						0.13,
+						0.13
+					]
+				},
+				{
+					"nom": "Clear Polymer",
+					"id": "Clear Polymer_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						1.15,
+						0.34,
+						0.17,
+						0.14,
+						0.14,
+						5.72,
+						1.28,
+						0.62,
+						0.38,
+						0.37
+					]
+				},
+				{
+					"nom": "Sacrifice",
+					"id": "Sacrifice_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						1.27,
+						0.23,
+						0.17,
+						0.13,
+						0.12,
+						7.13,
+						1.12,
+						0.46,
+						0.29,
+						0
+					]
+				},
+				{
+					"nom": "Oxide Blaze",
+					"id": "Oxide Blaze_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						0.39,
+						0.14,
+						0.1,
+						0.1,
+						0.08,
+						2.12,
+						0.43,
+						0.17,
+						0.38,
+						0
+					]
+				},
+				{
+					"nom": "Warhawk",
+					"id": "_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						0.89,
+						0.29,
+						0.25,
+						0.21,
+						0.2,
+						4.34,
+						0.93,
+						0.41,
+						0.32,
+						0.31
+					]
+				},
+				{
+					"nom": "Off World",
+					"id": "Off World_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						0.72,
+						0.17,
+						0.12,
+						0.1,
+						0.1,
+						5.14,
+						0.76,
+						0.31,
+						0.27,
+						0.27
+					]
+				},
+				{
+					"nom": "Ironwork",
+					"id": "Ironwork_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						1.55,
+						0.24,
+						0.13,
+						0.12,
+						0.12,
+						7.65,
+						1.4,
+						0.43,
+						0.28,
+						0.29
+					]
+				},
+				{
+					"nom": "Wraiths",
+					"id": "Wraiths_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						1.2,
+						0.47,
+						0.23,
+						0.62,
+						0.18,
+						6.32,
+						1.69,
+						0.69,
+						2.7,
+						0
+					]
+				},
+				{
+					"nom": "Bunsen Burner",
+					"id": "Bunsen Burner_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						1.7,
+						0.49,
+						0.32,
+						0.55,
+						0.28,
+						7.42,
+						2.13,
+						0.82,
+						2.93,
+						0
+					]
+				},
+				{
+					"nom": "Catacombs",
+					"id": "Catacombs_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						0.54,
+						0.37,
+						0.28,
+						0.38,
+						0.8,
+						2.01,
+						1.15,
+						0.74,
+						1.74,
+						0
+					]
+				},
+				{
+					"nom": "Blue Fissure",
+					"id": "Blue Fissure_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						16.99,
+						2.22,
+						1.77,
+						1.77,
+						1.58,
+						100.94,
+						9.56,
+						4.4,
+						4.55,
+						0
+					]
+				},
+				{
+					"nom": "Reactor",
+					"id": "Reactor_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						13.24,
+						8.79,
+						7.89,
+						7.76,
+						8.89,
+						146.64,
+						33.59,
+						15.75,
+						10.02,
+						9.75
+					]
+				},
+				{
+					"nom": "",
+					"id": "_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						0.71,
+						0.39,
+						0.3,
+						0,
+						0,
+						370,
+						345,
+						368,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Red Tire",
+					"id": "Red Tire_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "industrial_grade",
+					"prix": [
+						4.54,
+						4.3,
+						4.32,
+						4.84,
+						4.85,
+						1.88,
+						0.89,
+						0.31,
+						1.55,
+						0
+					]
+				},
+				{
+					"nom": "High Beam",
+					"id": "High Beam_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"image_path": "",
+					"categorie": "industrial_grade",
+					"prix": [
+						0.12,
+						0.12,
+						0,
+						0,
+						0,
+						1.88,
+						4.2,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Night",
+					"id": "Night_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "industrial_grade",
+					"prix": [
+						54.51,
+						4.32,
+						2.55,
+						2.99,
+						2.82,
+						28.75,
+						2.64,
+						0.3,
+						0.36,
+						0
+					]
+				},
+				{
+					"nom": "Death Rattle",
+					"id": "Death Rattle_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "Death Rattle",
+					"categorie": "industrial_grade",
+					"prix": [
+						0,
+						0.12,
+						0.08,
+						0.08,
+						0.09,
+						0,
+						0,
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"nom": "Sand Dune",
+					"id": "Sand Dune_glock18",
+					"arme": "glock18",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "industrial_grade",
+					"prix": [
+						242.27,
+						31.07,
+						6.01,
+						5.14,
+						5.78,
+						0,
+						0,
+						0,
+						0,
+						0
+					]
 				}
 			],
 			"fiveseven": [

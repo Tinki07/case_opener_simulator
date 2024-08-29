@@ -753,6 +753,9 @@ func _on_btn_quitter_caisse_panel_pressed():
 ## Action appelée quand on appuis sur le bouton "ouvrir" d'un conteneur
 func _on_btn_ouverture_conteneur_pressed():
 	
+	var audio_anim = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_animation_principal/audio_player
+	audio_anim.play()
+	
 	## On récupère le conteneur
 	var item_container = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur.get_meta("container_data")
 	
@@ -785,6 +788,10 @@ func _on_btn_ouverture_conteneur_pressed():
 	else:
 		drop_rates = item_container.drop_rates
 	
+	
+	var item_choisi_final = null
+	
+	
 	## Pour tout les panels de l'animation qui défile :
 	for child in panel.get_children():
 		
@@ -811,11 +818,14 @@ func _on_btn_ouverture_conteneur_pressed():
 		## Grace au string on peut retrouver l'objet
 		skin_choisi = Global.skins[skin_choisi_string]
 		
+		## Permet de garder l'objet du skin qu'on a obtenu
+		
 		## On regarde si le panneau actuel est egal à "pnl_visualisation_skin24" afin de déterminer le SkinArmeObtenu
 		if child.name == "pnl_visualisation_skin24":
 			
 			## On met en variable le SkinArmeObtenu
 			skin_choisi = ouvrir_caisse_v2(item_container)
+			item_choisi_final = skin_choisi
 			## On insert l'item à l'index 0 de l'inventaire du joueur
 			Global.leJoueur.inventaire.insert(0,skin_choisi)
 			print("boom")
@@ -842,12 +852,21 @@ func _on_btn_ouverture_conteneur_pressed():
 	
 	## On créer un timer, on lui donne un delta et ensuite on l'active. et on attend
 	var timer = Timer.new()
-	timer.wait_time = 6 # 2 secondes
+	timer.wait_time = 5 # 2 secondes
 	timer.one_shot = true
 	add_child(timer)
 	timer.start()
 	# Attendre 2 secondes de manière asynchrone
 	await timer.timeout
+	
+	if item_choisi_final is SkinArmeObtenu:
+		var anim_sound = load(item_choisi_final.skin.categorie.anim_drop_sound)
+		
+		# Vérifier que anim_sound n'est pas nul et est bien un AudioStream
+		if anim_sound and anim_sound is AudioStreamMP3:
+			var audio_player = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/drop_anim_sound
+			audio_player.stream = anim_sound
+			audio_player.play()
 	
 	## Une fois le timer finis, on affiche le panel qui montre le skin obtenu
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_ombre_panneau_principal.visible = true

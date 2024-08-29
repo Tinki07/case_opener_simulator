@@ -4,69 +4,82 @@
             "consumer_grade": {
                 "nom": "Consumer Grade",
                 "id" : "consumer_grade",
-                "color": "b0c3d9"
+                "color": "b0c3d9",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_rare_01.mp3"
             },
             "industrial_grade": {
                 "nom": "Industrial Grade",
                 "id" : "industrial_grade",
-                "color": "5e98d9"
+                "color": "5e98d9",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_rare_01.mp3"
             },
             "mil_spec": {
                 "nom": "Mil-Spec",
                 "id" : "mil_spec",
-                "color": "4b69ff"
+                "color": "4b69ff",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_rare_01.mp3"
             },
             "restricted": {
                 "nom": "Restricted",
                 "id" : "restricted",
-                "color": "8847ff"
+                "color": "8847ff",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_mythical_01.mp3"
             },
             "classified": {
                 "nom": "Classified",
                 "id" : "classified",
-                "color": "d32ee6"
+                "color": "d32ee6",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_legendary_01.mp3"
             },
             "Covert": {
                 "nom": "Covert",
                 "id" : "covert",
-                "color": "eb4b4b"
+                "color": "eb4b4b",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_ancient_01.mp3"
             },
             "Knives": {
                 "nom": "★ Rare Special Item",
                 "id" : "knive",
-                "color": "eb4b4b"
+                "color": "eb4b4b",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_ancient_01.mp3"
             },
             "Contraband": {
                 "nom": "Contraband",
                 "id" : "contraband",
-                "color": "eb4b4b"
+                "color": "eb4b4b",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_ancient_01.mp3"
             }
         },
         "stickers": {
             "high_grade": {
                 "nom": "High Grade",
                 "id": "high_grade",
-                "color": "4b69ff"
+                "color": "4b69ff",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_rare_01.mp3"
             },
             "remarkable": {
                 "nom": "Remarkable",
                 "id": "remarkable",
-                "color": "8847ff"
+                "color": "8847ff",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_mythical_01.mp3"
             },
             "exotic": {
                 "nom": "Exotic",
                 "id": "exotic",
-                "color": "8847ff"
+                "color": "8847ff",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_legendary_01.mp3"
             },
             "extraordinary": {
                 "nom": "Extraordinary",
                 "id": "extraordinary",
-                "color": "eb4b4b"
+                "color": "eb4b4b",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_ancient_01.mp3"
             },
             "contraband": {
                 "nom": "Contraband",
                 "id": "contraband",
-                "color": "eb4b4b"
+                "color": "eb4b4b",
+                "drop_anim_sound" : "res://resources/mp3/Case_reveal_ancient_01.mp3"
             }
         }
     }
