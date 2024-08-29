@@ -818,7 +818,7 @@ func _on_btn_ouverture_conteneur_pressed():
 			skin_choisi = ouvrir_caisse_v2(item_container)
 			## On insert l'item à l'index 0 de l'inventaire du joueur
 			Global.leJoueur.inventaire.insert(0,skin_choisi)
-			
+			print("boom")
 			## On regarde si le skin est un couteau ou pas, car si c'est un couteau il faut que le pannel soit de couleur
 			## jaune avec l'image des items rare - tu connais
 			## Sinon, on affiche juste les infos du skin quoi.
@@ -882,3 +882,11 @@ func _on_btn_continuer_pressed():
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage.visible = true
 	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false
 	repopulation_grille_inventaire_sans_retoruner_page_1()
+
+
+
+
+
+
+
+
