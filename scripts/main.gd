@@ -271,6 +271,10 @@ func dream_caisse():
 	Global.leJoueur.inventaire.insert(0,Global.conteneurs["caisse_dreams_&_nightmares"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
+func frac_caisse():
+	Global.leJoueur.inventaire.insert(0,Global.conteneurs["caisse_fracture"])
+	repopulation_grille_inventaire_sans_retoruner_page_1()
+
 func mir_caisse():
 	Global.leJoueur.inventaire.insert(0,Global.conteneurs["collection_mirage_2021"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
@@ -304,6 +308,10 @@ func kil_key():
 
 func dream_key():
 	Global.leJoueur.inventaire.insert(0,Global.keys_conteneurs["caisse_dreams_&_nightmares_key"])
+	repopulation_grille_inventaire_sans_retoruner_page_1()
+
+func frac_key():
+	Global.leJoueur.inventaire.insert(0,Global.keys_conteneurs["caisse_fracture_key"])
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func souv():

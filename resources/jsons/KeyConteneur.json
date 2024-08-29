@@ -13,6 +13,13 @@
 			"image_path": "res://resources/images/conteneurs/dreams_nightmares/Crate_key_community_30.png",
 			"conteneur_unlocker": "caisse_kilowatt",
 			"prix": 2.49
+		},
+		{
+			"nom": "Fracture Case Key",
+			"id": "caisse_fracture_key",
+			"image_path": "res://resources/images/conteneurs/fracture/Fracture_Case_Key.png",
+			"conteneur_unlocker": "caisse_fracture",
+			"prix": 2.49
 		}
 	]
 }

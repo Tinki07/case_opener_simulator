@@ -325,7 +325,7 @@
 						"ww",
 						"bs"
 					],
-					"image_path": "",
+					"image_path": "res://resources/images/conteneurs/fracture/Glock18vogue.png",
 					"categorie": "classified",
 					"prix": [
 						9.81,
@@ -1286,6 +1286,32 @@
 						0.18
 					],
 					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-tec9.png"
+				},
+				{
+					"nom": "Brother",
+					"id": "Brother_tec9",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Tec9brother.png",
+					"categorie": "restricted",
+					"prix": [
+						1.58,
+						0.73,
+						0.48,
+						0.35,
+						0.3,
+						4.3,
+						1.63,
+						0.74,
+						0.53,
+						0
+					],
+					"arme": "tec9"
 				}
 			],
 			"dual_berettas": [
@@ -1394,6 +1420,32 @@
 						0.13
 					],
 					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_p2000.png"
+				},
+				{
+					"nom": "Gnarled",
+					"id": "Gnarled_p2000",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/P2000gnarled.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.24,
+						0.09,
+						0.06,
+						0.07,
+						0.06,
+						1.06,
+						0.24,
+						0.12,
+						0.11,
+						0.11
+					],
+					"arme": "p2000"
 				}
 			],
 			"p250": [
@@ -1447,6 +1499,32 @@
 						0.00
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_p250_drought.png"
+				},
+				{
+					"nom": "Cassette",
+					"id": "Cassette_p250",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/P250cassette.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.21,
+						0.1,
+						0.06,
+						0.06,
+						0.06,
+						0,
+						0.3,
+						0.12,
+						0.12,
+						0.11
+					],
+					"arme": "p250"
 				}
 			],
 			"r8": [
@@ -1503,6 +1581,32 @@
 						116.08
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_deagle_fennecfox.png"
+				},
+				{
+					"nom": "Printstream",
+					"id": "Printstream_deagle",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Deserteagleprintstream.png",
+					"categorie": "covert",
+					"prix": [
+						119.94,
+						61.19,
+						40.75,
+						38.57,
+						29.9,
+						207.71,
+						126.57,
+						67.1,
+						74.99,
+						58
+					],
+					"arme": "deagle"
 				}
 			],
 			"cz75_auto": [
@@ -1745,6 +1849,32 @@
 						0.03
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_mac10_siennadamask.png"
+				},
+				{
+					"nom": "Allure",
+					"id": "Allure_mac10",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Mac10allure.png",
+					"categorie": "restricted",
+					"prix": [
+						1.75,
+						0.73,
+						0.39,
+						0.39,
+						0.32,
+						5.17,
+						1.63,
+						0.74,
+						0.58,
+						0.57
+					],
+					"arme": "mac10"
 				}
 			],
 			"ump45": [
@@ -1930,6 +2060,32 @@
 						0.03
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_bizon_anolis.png"
+				},
+				{
+					"nom": "Runic",
+					"id": "Runic_bizon",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Ppbizonrunic.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.24,
+						0.09,
+						0.06,
+						0.06,
+						0.06,
+						1.44,
+						0.27,
+						0.11,
+						0.1,
+						0.11
+					],
+					"arme": "bizon"
 				}
 			],
 			"mp5_sd": [
@@ -1984,6 +2140,32 @@
 						5.09
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_mp5sd_oxideoasis.png"
+				},
+				{
+					"nom": "Kitbash",
+					"id": "Kitbash_mp5_sd",
+					"arme": "mp5_sd",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.43,
+						0.73,
+						0.40,
+						0.34,
+						0.31,
+						3.76,
+						1.57,
+						0.72,
+						0.82,
+						0.60	
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Mp5kitbash.png"
 				}
 			],
 			"p90": [
@@ -2038,6 +2220,32 @@
 						0.05
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_p90_verdantgrowth.png"
+				},
+				{
+					"nom": "Freight",
+					"id": "Freight_p90",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/P90freight.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.23,
+						0.09,
+						0.06,
+						0.06,
+						0.06,
+						0.93,
+						0.26,
+						0.11,
+						0.12,
+						0.11
+					],
+					"arme": "p90"
 				}
 			]
 		},
@@ -2120,6 +2328,32 @@
 						1366.20
 					],
 					"image_path": "res://resources/images/conteneurs/kilo/ak.png"
+				},
+				{
+					"nom": "Legion of Anubis",
+					"id": "Legion of Anubis_ak47",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Aklegionofanubis.png",
+					"categorie": "covert",
+					"prix": [
+						18.35,
+						10.01,
+						6.28,
+						7.37,
+						5.2,
+						59.75,
+						29.37,
+						19.89,
+						23.86,
+						0
+					],
+					"arme": "ak47"
 				}
 			],
 			"m4a1_s": [
@@ -2228,6 +2462,32 @@
 						15.64
 					],
 					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+				},
+				{
+					"nom": "Tooth Fairy",
+					"id": "Tooth Fairy_m4a4",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/M4a4toothfairy.png",
+					"categorie": "classified",
+					"prix": [
+						9.35,
+						5.4,
+						3.19,
+						3.3,
+						2.45,
+						19.18,
+						9.37,
+						5.1,
+						5.54,
+						5
+					],
+					"arme": "m4a4"
 				}
 			],
 			"famas": [
@@ -2309,6 +2569,32 @@
 						0.00
 					],
 					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+				},
+				{
+					"nom": "Connexion",
+					"id": "Connexion_galil_ar",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Galilarconnexion.png",
+					"categorie": "restricted",
+					"prix": [
+						1.46,
+						0.77,
+						0.39,
+						0.36,
+						0.32,
+						3.82,
+						1.87,
+						0.72,
+						1.05,
+						0.65
+					],
+					"arme": "galil_ar"
 				}
 			],
 			"aug": [
@@ -2419,6 +2705,32 @@
 
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_sg556_desertblossom.png"
+				},
+				{
+					"nom": "Ol' Rusty",
+					"id": "Ol' Rusty_sg553",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Sg553olrusty.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.2,
+						0.1,
+						0.06,
+						0.06,
+						0.06,
+						0.73,
+						0.24,
+						0.11,
+						0.13,
+						0.11
+					],
+					"arme": "sg553"
 				}
 			]
 		},
@@ -2555,6 +2867,32 @@
 						0.03
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_ssg08_prey.png"
+				},
+				{
+					"nom": "Mainframe 001",
+					"id": "Mainframe 001_scout",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Ssg08mainframe.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.26,
+						0.1,
+						0.06,
+						0.06,
+						0.06,
+						1.68,
+						0.3,
+						0.12,
+						0.11,
+						0
+					],
+					"arme": "scout"
 				}
 			],
 			"g3sg1": [
@@ -2797,6 +3135,32 @@
 						0.00
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_xm1014_elegantvines.png"
+				},
+				{
+					"nom": "Entombed",
+					"id": "Entombed_xm101",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Xm1014entombed.png",
+					"categorie": "classified",
+					"prix": [
+						9.14,
+						5.18,
+						3.12,
+						2.87,
+						2.68,
+						18.69,
+						9.06,
+						5.25,
+						4.51,
+						4.55
+					],
+					"arme": "xm1014"
 				}
 			],
 			"nova": [
@@ -2905,6 +3269,32 @@
 						0.03
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_mag7_navysheen.png"
+				},
+				{
+					"nom": "Monster Call",
+					"id": "Monster Call_mag7",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Mag7monstercall.png",
+					"categorie": "restricted",
+					"prix": [
+						1.89,
+						0.74,
+						0.41,
+						0.34,
+						0.32,
+						5.65,
+						1.73,
+						0.75,
+						0.58,
+						0
+					],
+					"arme": "mag7"
 				}
 			]
 		},
@@ -2961,6 +3351,34 @@
 						0.08
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_m249_humidor.png"
+				}
+			],
+			"negev" : [
+				{
+					"nom": "Ultralight",
+					"id": "Ultralight_negev",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/Negevultralight.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.2,
+						0.1,
+						0.06,
+						0.06,
+						0.06,
+						0,
+						0.26,
+						0.11,
+						0.12,
+						0.11
+					],
+					"arme": "negev"
 				}
 			]
 		},

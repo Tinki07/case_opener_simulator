@@ -94,6 +94,34 @@
 				["Bright Water_shadow_daggers","knive",[""]],
 				["Black Laminate_shadow_daggers","knive",[""]]
 			]
+		},
+		"fracture": {
+			"nom": "Fracture Case",
+			"image": "res://resources/images/conteneurs/fracture/Fracture_Case.png",
+			"id": "caisse_fracture",
+			"type_caisse": "normal",
+			"need_key": true,
+			"prix": 2.00,
+			"skins": [
+				["Ol' Rusty_sg553","mil_spec",[""]],
+				["Ultralight_negev","mil_spec",[""]],
+				["Cassette_p250","mil_spec",[""]],
+				["Freight_p90","mil_spec",[""]],
+				["Gnarled_p2000","mil_spec",[""]],
+				["Runic_bizon","mil_spec",[""]],
+				["Mainframe 001_scout","mil_spec",[""]],
+				["Kitbash_mp5_sd","restricted",[""]],
+				["Brother_tec9","restricted",[""]],
+				["Connexion_galil_ar","restricted",[""]],
+				["Allure_mac10","restricted",[""]],  
+				["Monster Call_mag7","restricted",[""]],
+				["Entombed_xm101","classified",[""]],
+				["Tooth Fairy_m4a4","classified",[""]],
+				["Vogue_glock18","classified",[""]],
+				["Legion of Anubis_ak47","covert",[""]],
+				["Printstream_deagle","covert",[""]],
+				["Fade_kukri","knive",[""]]
+			]
 		}
 	},
 	"souvenirs": {
