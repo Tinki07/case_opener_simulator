@@ -16,6 +16,9 @@ extends Node
 
 @onready var leJoueur = Joueur.new() #créer le joueu
 
+var pnl_prefab_skin_arme = preload("res://scenes/pnl_visualisation_skin.tscn") # référence le préfab pour les visualisations de skins
+var prefab_container_buy_scene = preload("res://scenes/container_buy_scene.tscn")
+
 func _ready():
 	default_drop_rates = {
 		"mil_spec": 71.0,
@@ -217,6 +220,7 @@ func charger_caisses_normales_depuis_json():
 					caisse_data["nom"],
 					caisse_data["id"],
 					caisse_data["image"],
+					caisse_data["image_collection"],
 					caisse_data["type_caisse"],
 					caisse_data["prix"],
 					caisse_data["need_key"],
@@ -253,6 +257,7 @@ func charger_caisses_collections_depuis_json():
 					caisse_data["nom"],
 					caisse_data["id"],
 					caisse_data["image"],
+					caisse_data["image_collection"],
 					caisse_data["type_caisse"],
 					caisse_data["prix"],
 					caisse_data["need_key"],
@@ -290,6 +295,7 @@ func charger_caisses_souvenirs_depuis_json():
 					caisse_data["nom"],
 					caisse_data["id"],
 					caisse_data["image"],
+					caisse_data["image_collection"],
 					caisse_data["type_caisse"],
 					caisse_data["prix"],
 					caisse_data["need_key"],

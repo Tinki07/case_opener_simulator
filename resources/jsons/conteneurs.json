@@ -3,10 +3,11 @@
 		"kilowatt": {
 			"nom": "Kilowatt Case",
 			"image": "res://resources/images/conteneurs/kilo/Kilowatt-case.png",
+			"image_collection": "res://resources/images/conteneurs/kilo/Set_community_33_png.png",
 			"id": "caisse_kilowatt",
 			"type_caisse": "normal",
 			"need_key": true,
-			"prix": 2.00,
+			"prix": 2.01,
 			"skins": [
 				["Dark Sigil_nova","mil_spec",[""]],
 				["Hideout_dual_berettas","mil_spec",[""]],
@@ -41,6 +42,7 @@
 		"dreams_&_nightmares": {
 			"nom": "Dreams & Nightmares Case",
 			"image": "res://resources/images/conteneurs/dreams_nightmares/Dreams_nighmares_case.png",
+			"image_collection": "res://resources/images/conteneurs/dreams_nightmares/Dream_nightmares_logo.png",
 			"id": "caisse_dreams_&_nightmares",
 			"type_caisse": "normal",
 			"need_key": true,
@@ -98,6 +100,7 @@
 		"fracture": {
 			"nom": "Fracture Case",
 			"image": "res://resources/images/conteneurs/fracture/Fracture_Case.png",
+			"image_collection": "res://resources/images/conteneurs/fracture/Fracture_Case_Logo.png",
 			"id": "caisse_fracture",
 			"type_caisse": "normal",
 			"need_key": true,
@@ -128,6 +131,7 @@
 		"souvenir_blast_paris_2023_mirage_2021": {
 			"nom": "Paris 2023 Mirage Souvenir Package",
 			"image": "res://resources/images/stickers/blast_paris_2023/Crate_paris2023_promo_de_mirage.png",
+			"image_collection": "res://resources/images/conteneurs/mirage_2021/Set_mirage_2021.png",
 			"id": "souvenir_blast_paris_2023_mirage_2021",
 			"type_caisse": "souvenir",
 			"need_key": false,
@@ -196,6 +200,7 @@
 		"collection_mirage_2021": {
 			"nom": "Mirage Collection Package",
 			"image": "res://resources/images/conteneurs/mirage_2021/Set_mirage_2021.png",
+			"image_collection": "res://resources/images/default_package.png",
 			"id": "collection_mirage_2021",
 			"type_caisse": "collection",
 			"need_key": false,

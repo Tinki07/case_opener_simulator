@@ -1,0 +1,234 @@
+[gd_scene load_steps=10 format=3 uid="uid://b54ot33v8nvwl"]
+
+[ext_resource type="Texture2D" uid="uid://d0j342iorkii2" path="res://resources/images/default_package.png" id="1_g0ke3"]
+[ext_resource type="Texture2D" uid="uid://dy5p6muyrsxbj" path="res://resources/images/conteneurs/mirage_2021/Set_mirage_2021.png" id="1_xu7ey"]
+[ext_resource type="Theme" uid="uid://djf20mcq8cebv" path="res://resources/themes/theme_bouton_normal_vert.tres" id="2_cpp6d"]
+[ext_resource type="FontFile" uid="uid://cmrght1dguc6e" path="res://resources/fonts/TT Lakes Neue Trial Bold.ttf" id="4_dxg6l"]
+[ext_resource type="FontFile" uid="uid://0mp1cwbuy8bw" path="res://resources/fonts/TT Lakes Neue Trial Regular.ttf" id="5_d7j0d"]
+[ext_resource type="Theme" uid="uid://brto2txftglw6" path="res://resources/themes/theme_bouton_normal.tres" id="6_tjccg"]
+[ext_resource type="Texture2D" uid="uid://bl6nsbl4wo52e" path="res://resources/images/conteneurs/fracture/Fracture_Case_Key.png" id="7_hrc7f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lyxpf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2k3ti"]
+bg_color = Color(0.431373, 0.431373, 0.431373, 0.513726)
+draw_center = false
+shadow_color = Color(0, 0, 0, 0.278431)
+shadow_size = 5
+
+[node name="pnl_principal" type="Panel"]
+custom_minimum_size = Vector2(0, 184)
+offset_left = 576.0
+offset_top = 160.0
+offset_right = 1040.0
+offset_bottom = 344.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lyxpf")
+
+[node name="pnl_shadow" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 464.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2k3ti")
+
+[node name="clr_rect_background" type="ColorRect" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_right = 464.0
+offset_bottom = 184.0
+color = Color(0.164706, 0.196078, 0.235294, 0.607843)
+
+[node name="txtr_collection_image" type="TextureRect" parent="clr_rect_background"]
+modulate = Color(1, 1, 1, 0.278431)
+layout_mode = 0
+offset_left = -70.0
+offset_right = 530.0
+offset_bottom = 184.0
+texture = ExtResource("1_g0ke3")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="txtr_container_image" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 184.0
+texture = ExtResource("1_xu7ey")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="lbl_name_container" type="Label" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 8.0
+offset_right = 460.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.901961, 0.901961, 0.901961, 1)
+theme_override_colors/font_shadow_color = Color(0.121569, 0.121569, 0.121569, 1)
+theme_override_fonts/font = ExtResource("4_dxg6l")
+theme_override_font_sizes/font_size = 16
+text = "Kilowatt Casedsdfsdfsdfsdf"
+vertical_alignment = 1
+
+[node name="lbl_infos_container" type="Label" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 39.0
+offset_right = 464.0
+offset_bottom = 123.0
+theme_override_colors/font_color = Color(0.862745, 0.862745, 0.862745, 1)
+theme_override_colors/font_shadow_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+theme_override_fonts/font = ExtResource("5_d7j0d")
+text = "You opened 0 items from this container"
+autowrap_mode = 2
+
+[node name="btn_buy_container" type="Button" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 141.0
+offset_right = 448.0
+offset_bottom = 176.0
+theme = ExtResource("2_cpp6d")
+text = "$2.49"
+
+[node name="pnl_quantity_container" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 101.0
+offset_right = 448.0
+offset_bottom = 136.0
+
+[node name="btn_minus" type="Button" parent="pnl_quantity_container"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 35.0
+theme = ExtResource("6_tjccg")
+theme_override_font_sizes/font_size = 21
+text = "-"
+
+[node name="btn_plusus" type="Button" parent="pnl_quantity_container"]
+layout_mode = 0
+offset_left = 112.0
+offset_right = 152.0
+offset_bottom = 35.0
+theme = ExtResource("6_tjccg")
+theme_override_font_sizes/font_size = 21
+text = "+"
+
+[node name="lbl_quantity" type="Label" parent="pnl_quantity_container"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 112.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.741176, 0.741176, 0.741176, 1)
+theme_override_colors/font_shadow_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_fonts/font = ExtResource("5_d7j0d")
+theme_override_font_sizes/font_size = 17
+text = "QTY 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pnl_key_container" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_right = 832.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2k3ti")
+
+[node name="clr_rect_background" type="ColorRect" parent="pnl_key_container"]
+layout_mode = 0
+offset_right = 352.0
+offset_bottom = 184.0
+color = Color(0.164706, 0.196078, 0.235294, 0.607843)
+
+[node name="txtr_key_image" type="TextureRect" parent="pnl_key_container"]
+layout_mode = 0
+offset_left = 172.0
+offset_right = 356.0
+offset_bottom = 184.0
+texture = ExtResource("7_hrc7f")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="lbl_name_key" type="Label" parent="pnl_key_container"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 48.0
+theme_override_colors/font_shadow_color = Color(0.121569, 0.121569, 0.121569, 1)
+theme_override_fonts/font = ExtResource("4_dxg6l")
+theme_override_font_sizes/font_size = 16
+text = "Kilowatt Case keydfgdfgdfgdfg"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="lbl_infos_key" type="Label" parent="pnl_key_container"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 39.0
+offset_right = 176.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.862745, 0.862745, 0.862745, 1)
+theme_override_colors/font_shadow_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+theme_override_fonts/font = ExtResource("5_d7j0d")
+text = "Key can be use once only"
+autowrap_mode = 2
+
+[node name="lbl_infos_no_key" type="Label" parent="pnl_key_container"]
+visible = false
+offset_left = 8.0
+offset_top = 80.0
+offset_right = 352.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(1, 0.839216, 0.494118, 1)
+theme_override_colors/font_shadow_color = Color(0.0901961, 0.0901961, 0.0901961, 1)
+theme_override_fonts/font = ExtResource("5_d7j0d")
+text = "This container don't need key to be open."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="btn_buy_key" type="Button" parent="pnl_key_container"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 141.0
+offset_right = 168.0
+offset_bottom = 176.0
+theme = ExtResource("2_cpp6d")
+text = "$2.49"
+
+[node name="pnl_quantity_key" type="Panel" parent="pnl_key_container"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 101.0
+offset_right = 168.0
+offset_bottom = 136.0
+
+[node name="btn_minus_key" type="Button" parent="pnl_key_container/pnl_quantity_key"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 35.0
+theme = ExtResource("6_tjccg")
+theme_override_font_sizes/font_size = 21
+text = "-"
+
+[node name="btn_plusus_key" type="Button" parent="pnl_key_container/pnl_quantity_key"]
+layout_mode = 0
+offset_left = 112.0
+offset_right = 152.0
+offset_bottom = 35.0
+theme = ExtResource("6_tjccg")
+theme_override_font_sizes/font_size = 21
+text = "+"
+
+[node name="lbl_quantity" type="Label" parent="pnl_key_container/pnl_quantity_key"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 112.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.741176, 0.741176, 0.741176, 1)
+theme_override_colors/font_shadow_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_fonts/font = ExtResource("5_d7j0d")
+theme_override_font_sizes/font_size = 17
+text = "QTY 1"
+horizontal_alignment = 1
+vertical_alignment = 1
