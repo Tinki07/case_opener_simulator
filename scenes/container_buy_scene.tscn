@@ -49,7 +49,8 @@ stretch_mode = 6
 
 [node name="txtr_container_image" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 208.0
+offset_left = 4.0
+offset_right = 212.0
 offset_bottom = 184.0
 texture = ExtResource("1_xu7ey")
 expand_mode = 2
@@ -176,6 +177,7 @@ autowrap_mode = 2
 
 [node name="lbl_infos_no_key" type="Label" parent="pnl_key_container"]
 visible = false
+layout_mode = 0
 offset_left = 8.0
 offset_top = 80.0
 offset_right = 352.0

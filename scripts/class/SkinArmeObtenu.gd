@@ -26,7 +26,7 @@ func _to_string():
 	else:
 		string_stattrack_souvenir = " "
 	
-	string_final = skin.arme.nom + string_stattrack_souvenir + "| " + skin.nom + " - " + etat.nom + " - " + str(self.prix) + "$"  
+	string_final = skin.arme.nom + string_stattrack_souvenir + "| " + skin.nom
 	return string_final
 
 func _to_string_arme():
@@ -63,3 +63,15 @@ func _stickers_to_string():
 		if sticker != null:
 			print(sticker.nom, " ", str(stickers5.size()))
 	print("---------------")
+
+func get_color():
+	return self.skin.categorie.color
+
+func get_image():
+	return self.skin.image_path
+
+func get_price():
+	return self.prix
+
+func get_quality():
+	return self.skin.categorie.nom

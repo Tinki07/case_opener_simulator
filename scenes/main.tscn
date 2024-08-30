@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://cqckho3b1h1no"]
+[gd_scene load_steps=63 format=3 uid="uid://cqckho3b1h1no"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
 [ext_resource type="Texture2D" uid="uid://bwb2ekoix1sfo" path="res://resources/images/wallpaperflare.com_wallpaper.jpg" id="2_jylf6"]
@@ -222,6 +222,11 @@ bg_color = Color(0.164706, 0.196078, 0.235294, 0.607843)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ougoo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2vr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_410gj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33urv"]
+bg_color = Color(0.188235, 0.227451, 0.266667, 0.886275)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_jd32n")
@@ -1430,9 +1435,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
 theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
-text = "Capsules"
+text = "Souvenirs"
 
 [node name="btn_capsule_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
@@ -1447,6 +1453,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 text = "Capsules"
 
 [node name="btn_custom_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
@@ -1574,15 +1581,23 @@ theme_override_fonts/font = ExtResource("14_nx57u")
 theme_override_font_sizes/font_size = 13
 text = "Vendre"
 
-[node name="pnl_visualisation_new_skin_grand" type="Panel" parent="."]
+[node name="pnl_ombre_panneau_principal" type="Panel" parent="."]
+visible = false
+offset_left = 552.0
+offset_top = 80.0
+offset_right = 1448.0
+offset_bottom = 872.0
+
+[node name="pnl_inspect_skin_grand" type="Panel" parent="."]
+visible = false
 clip_contents = true
-offset_left = 680.0
-offset_top = 105.0
-offset_right = 1360.0
-offset_bottom = 624.0
+offset_left = 660.0
+offset_top = 138.0
+offset_right = 1340.0
+offset_bottom = 657.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0j1df")
 
-[node name="color_objet" type="ColorRect" parent="pnl_visualisation_new_skin_grand"]
+[node name="color_objet" type="ColorRect" parent="pnl_inspect_skin_grand"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
@@ -1590,12 +1605,12 @@ offset_right = 678.0
 offset_bottom = 517.0
 color = Color(0.745098, 0.298039, 0.298039, 1)
 
-[node name="Kindpng4298060" type="Sprite2D" parent="pnl_visualisation_new_skin_grand"]
+[node name="Kindpng4298060" type="Sprite2D" parent="pnl_inspect_skin_grand"]
 position = Vector2(344, -162)
 scale = Vector2(0.450056, 1.58047)
 texture = ExtResource("8_nx3p8")
 
-[node name="pnl_principal" type="Panel" parent="pnl_visualisation_new_skin_grand"]
+[node name="pnl_principal" type="Panel" parent="pnl_inspect_skin_grand"]
 clip_contents = true
 layout_mode = 0
 offset_left = 20.0
@@ -1604,7 +1619,7 @@ offset_right = 658.0
 offset_bottom = 496.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_daxyu")
 
-[node name="txtr_skin" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+[node name="txtr_skin" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal"]
 modulate = Color(0.858824, 0.858824, 0.858824, 1)
 texture_filter = 6
 layout_mode = 1
@@ -1617,59 +1632,59 @@ texture = ExtResource("18_avuge")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Pngfind_com-vignette-png-1920x1080-2550838" type="Sprite2D" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+[node name="Pngfind_com-vignette-png-1920x1080-2550838" type="Sprite2D" parent="pnl_inspect_skin_grand/pnl_principal"]
 position = Vector2(317, 206)
 scale = Vector2(0.272009, 0.342593)
 texture = ExtResource("19_hvh4j")
 
-[node name="Kindpng3155574" type="Sprite2D" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+[node name="Kindpng3155574" type="Sprite2D" parent="pnl_inspect_skin_grand/pnl_principal"]
 position = Vector2(320, 396)
 scale = Vector2(0.872635, 0.544693)
 texture = ExtResource("20_bfrwq")
 
-[node name="hbox_stickers" type="HBoxContainer" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+[node name="hbox_stickers" type="HBoxContainer" parent="pnl_inspect_skin_grand/pnl_principal"]
 layout_mode = 0
 offset_top = 356.0
 offset_right = 638.0
 offset_bottom = 452.0
 alignment = 1
 
-[node name="txtr_sticker1" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+[node name="txtr_sticker1" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 visible = false
 custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="txtr_sticker2" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+[node name="txtr_sticker2" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 visible = false
 custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="txtr_sticker3" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+[node name="txtr_sticker3" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 visible = false
 custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="txtr_sticker4" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+[node name="txtr_sticker4" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 visible = false
 custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="txtr_sticker5" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+[node name="txtr_sticker5" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 visible = false
 custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+[node name="TextureRect" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal"]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 411.0
@@ -1678,7 +1693,7 @@ offset_bottom = 443.0
 texture = ExtResource("17_x166t")
 expand_mode = 1
 
-[node name="lbl_nom_item" type="Label" parent="pnl_visualisation_new_skin_grand"]
+[node name="lbl_nom_item" type="Label" parent="pnl_inspect_skin_grand"]
 layout_mode = 0
 offset_top = 8.0
 offset_right = 680.0
@@ -1691,7 +1706,7 @@ text = "StatTrack MP7 | Armor Core"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="pnl_visualisation_new_skin_grand"]
+[node name="btn_close_panel" type="Button" parent="pnl_inspect_skin_grand"]
 layout_mode = 0
 offset_left = 638.0
 offset_top = 6.0
@@ -1708,6 +1723,145 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_6l2vr")
 icon = ExtResource("25_v8k33")
 icon_alignment = 1
 
+[node name="Panel" type="Panel" parent="pnl_inspect_skin_grand"]
+visible = false
+layout_mode = 2
+offset_left = 406.0
+offset_top = 184.0
+offset_right = 646.0
+offset_bottom = 448.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_410gj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pnl_inspect_skin_grand/Panel"]
+layout_mode = 0
+offset_top = 144.0
+offset_right = 240.0
+offset_bottom = 264.0
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="pnl_wear" type="Panel" parent="pnl_inspect_skin_grand/Panel/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(240, 30)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_33urv")
+
+[node name="Label" type="Label" parent="pnl_inspect_skin_grand/Panel/VBoxContainer/pnl_wear"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 60.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 14
+text = "Wear :"
+vertical_alignment = 1
+
+[node name="lbl_info" type="Label" parent="pnl_inspect_skin_grand/Panel/VBoxContainer/pnl_wear"]
+layout_mode = 0
+offset_left = 72.0
+offset_right = 240.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.827451, 0.827451, 0.827451, 1)
+theme_override_colors/font_shadow_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 13
+text = "Minimal Wear"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pnl_price" type="Panel" parent="pnl_inspect_skin_grand/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(240, 30)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_33urv")
+
+[node name="Label" type="Label" parent="pnl_inspect_skin_grand/Panel/VBoxContainer/pnl_price"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 60.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 14
+text = "Price :"
+vertical_alignment = 1
+
+[node name="lbl_info" type="Label" parent="pnl_inspect_skin_grand/Panel/VBoxContainer/pnl_price"]
+layout_mode = 0
+offset_left = 72.0
+offset_right = 240.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.827451, 0.827451, 0.827451, 1)
+theme_override_colors/font_shadow_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 13
+text = "$2.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pnl_quality" type="Panel" parent="pnl_inspect_skin_grand/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(240, 30)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_33urv")
+
+[node name="Label" type="Label" parent="pnl_inspect_skin_grand/Panel/VBoxContainer/pnl_quality"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 69.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 14
+text = "Quality  :"
+vertical_alignment = 1
+
+[node name="lbl_info" type="Label" parent="pnl_inspect_skin_grand/Panel/VBoxContainer/pnl_quality"]
+layout_mode = 0
+offset_left = 72.0
+offset_right = 240.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.827451, 0.827451, 0.827451, 1)
+theme_override_colors/font_shadow_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 13
+text = "Legendary"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pnl_date" type="Panel" parent="pnl_inspect_skin_grand/Panel/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(240, 30)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_33urv")
+
+[node name="Label" type="Label" parent="pnl_inspect_skin_grand/Panel/VBoxContainer/pnl_date"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 69.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 14
+text = "Date  :"
+vertical_alignment = 1
+
+[node name="lbl_info" type="Label" parent="pnl_inspect_skin_grand/Panel/VBoxContainer/pnl_date"]
+layout_mode = 0
+offset_left = 72.0
+offset_right = 240.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.827451, 0.827451, 0.827451, 1)
+theme_override_colors/font_shadow_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 13
+text = "20/12/2024"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire" to="." method="_on_btn_inventaire_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop" to="pnl_principal/pnl_shop" method="_on_btn_shop_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant" to="." method="_on_btn_page_storage_suivant_pressed"]
@@ -1718,3 +1872,6 @@ icon_alignment = 1
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_normal_container" to="pnl_principal/pnl_shop" method="_on_btn_shop_normal_container_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_collection_container" to="pnl_principal/pnl_shop" method="_on_btn_shop_collection_container_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_souvenir_container2" to="pnl_principal/pnl_shop" method="_on_btn_shop_souvenir_container_2_pressed"]
+[connection signal="mouse_entered" from="pnl_inspect_skin_grand/pnl_principal/TextureRect" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="mouse_exited" from="pnl_inspect_skin_grand/pnl_principal/TextureRect" to="." method="_on_texture_rect_mouse_exited"]
+[connection signal="pressed" from="pnl_inspect_skin_grand/btn_close_panel" to="." method="_on_btn_close_panel_pressed"]

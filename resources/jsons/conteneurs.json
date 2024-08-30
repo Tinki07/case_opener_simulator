@@ -7,7 +7,7 @@
 			"id": "caisse_kilowatt",
 			"type_caisse": "normal",
 			"need_key": true,
-			"prix": 2.01,
+			"prix": 1.20,
 			"skins": [
 				["Dark Sigil_nova","mil_spec",[""]],
 				["Hideout_dual_berettas","mil_spec",[""]],
@@ -46,7 +46,7 @@
 			"id": "caisse_dreams_&_nightmares",
 			"type_caisse": "normal",
 			"need_key": true,
-			"prix": 2.00,
+			"prix": 1.70,
 			"skins": [
 				["Foresight_mag7","mil_spec",[""]],
 				["Poultrygeist_scar20","mil_spec",[""]],
@@ -104,7 +104,7 @@
 			"id": "caisse_fracture",
 			"type_caisse": "normal",
 			"need_key": true,
-			"prix": 2.00,
+			"prix": 0.40,
 			"skins": [
 				["Ol' Rusty_sg553","mil_spec",[""]],
 				["Ultralight_negev","mil_spec",[""]],
@@ -131,18 +131,18 @@
 		"souvenir_blast_paris_2023_mirage_2021": {
 			"nom": "Paris 2023 Mirage Souvenir Package",
 			"image": "res://resources/images/stickers/blast_paris_2023/Crate_paris2023_promo_de_mirage.png",
-			"image_collection": "res://resources/images/conteneurs/mirage_2021/Set_mirage_2021.png",
+			"image_collection": "res://resources/images/Blst_large.png",
 			"id": "souvenir_blast_paris_2023_mirage_2021",
 			"type_caisse": "souvenir",
 			"need_key": false,
-			"prix": 2.00,
+			"prix": 2.80,
 			"drop_rates": {
-					"consumer_grade": 60.0,
-					"industrial_grade": 18.0,
-					"mil_spec": 11.0,
-					"restricted": 5.0,
-					"classified": 3.0,
-					"covert": 3.0
+				"consumer_grade": 60.0,
+				"industrial_grade": 19.5,
+				"mil_spec": 11.3,
+				"restricted": 6.5,
+				"classified": 2.2,
+				"covert": 0.5
 			},
 			"skins": [
 				["Sienna Damask_mac10","consumer_grade",[""]],
@@ -204,14 +204,14 @@
 			"id": "collection_mirage_2021",
 			"type_caisse": "collection",
 			"need_key": false,
-			"prix": 2.00,
+			"prix": 3.2,
 			"drop_rates": {
-					"consumer_grade": 60.0,
-					"industrial_grade": 18.0,
-					"mil_spec": 11.0,
-					"restricted": 5.0,
-					"classified": 3.0,
-					"covert": 3.0
+				"consumer_grade": 60.0,
+				"industrial_grade": 19.5,
+				"mil_spec": 11.3,
+				"restricted": 6.5,
+				"classified": 2.2,
+				"covert": 0.5
 			},
 			"skins": [
 				["Sienna Damask_mac10","consumer_grade",[""]],

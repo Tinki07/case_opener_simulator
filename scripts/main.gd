@@ -550,10 +550,21 @@ func _on_delete_objet_button_pressed(objet):
 
 ## Actions faites quand le bouton inspect d'un item est clické
 func _on_inspect_objet_button_pressed(objet):
+	
+	$pnl_objet_cliked.visible = false
+	$pnl_ombre_panneau_principal.visible = true
+	$pnl_inspect_skin_grand.visible = true
+	
+	var panel = $pnl_inspect_skin_grand
+	panel.get_node("color_objet").color = objet.get_color()
+	panel.get_node("lbl_nom_item").text = objet._to_string()
+	panel.get_node("Panel/VBoxContainer/pnl_quality/lbl_info").text = objet.get_quality()
+	panel.get_node("pnl_principal/txtr_skin").texture = load(objet.get_image())
+	panel.get_node("Panel/VBoxContainer/pnl_price/lbl_info").text = "$" + str(objet.get_price())
+	
 	if objet is SkinArmeObtenu:
-		print(objet.skin.nom)
-	else:
-		print(objet.nom)
+		panel.get_node("Panel/VBoxContainer/pnl_wear").visible = true
+		panel.get_node("Panel/VBoxContainer/pnl_wear/lbl_info").text = objet.etat.nom
 
 ## Actions faites quand le bouton ouvrir d'un item est clické
 func _on_ouvrir_objet_button_pressed(item_clicked):
@@ -917,3 +928,17 @@ func _on_btn_continuer_pressed():
 	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
+
+
+func _on_btn_close_panel_pressed():
+	$pnl_inspect_skin_grand.visible = false
+	$pnl_ombre_panneau_principal.visible = false
+
+
+func _on_texture_rect_mouse_entered():
+	get_node("pnl_inspect_skin_grand/Panel").visible = true
+
+
+func _on_texture_rect_mouse_exited():
+	get_node("pnl_inspect_skin_grand/Panel").visible = false
+	pass # Replace with function body.
