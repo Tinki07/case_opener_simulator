@@ -65,8 +65,9 @@ theme_override_colors/font_color = Color(0.901961, 0.901961, 0.901961, 1)
 theme_override_colors/font_shadow_color = Color(0.121569, 0.121569, 0.121569, 1)
 theme_override_fonts/font = ExtResource("4_dxg6l")
 theme_override_font_sizes/font_size = 16
-text = "Kilowatt Casedsdfsdfsdfsdf"
+text = "Kilowatt Casedsdfsdfsdfsdffghfgh"
 vertical_alignment = 1
+text_overrun_behavior = 3
 
 [node name="lbl_infos_container" type="Label" parent="."]
 layout_mode = 0

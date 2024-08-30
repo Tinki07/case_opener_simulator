@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cqckho3b1h1no"]
+[gd_scene load_steps=61 format=3 uid="uid://cqckho3b1h1no"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
 [ext_resource type="Texture2D" uid="uid://bwb2ekoix1sfo" path="res://resources/images/wallpaperflare.com_wallpaper.jpg" id="2_jylf6"]
@@ -22,7 +22,9 @@
 [ext_resource type="AudioStream" uid="uid://clgjpajrprg1h" path="res://resources/mp3/ouverture_conteneur.mp3" id="18_caokh"]
 [ext_resource type="Texture2D" uid="uid://co1scyjum5bi" path="res://resources/images/pngfind.com-vignette-png-1920x1080-2550838.png" id="19_hvh4j"]
 [ext_resource type="Texture2D" uid="uid://b7b8trd2ae7x0" path="res://resources/images/kindpng_3155574.png" id="20_bfrwq"]
+[ext_resource type="Script" path="res://scripts/shop.gd" id="22_bkr7p"]
 [ext_resource type="Texture2D" uid="uid://dees710advhxo" path="res://resources/images/search-13-32.png" id="22_wopff"]
+[ext_resource type="Texture2D" uid="uid://cilanrjw7np6a" path="res://resources/images/Close-296.png" id="25_v8k33"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mwkwp"]
 
@@ -211,6 +213,16 @@ bg_color = Color(0.164706, 0.196078, 0.235294, 0.607843)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55c2m"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dli0b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0x8we"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70osj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ougoo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2vr"]
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_jd32n")
 
@@ -261,6 +273,7 @@ offset_right = 1248.0
 offset_bottom = 872.0
 
 [node name="pnl_principal" type="Panel" parent="."]
+unique_name_in_owner = true
 offset_right = 1600.0
 offset_bottom = 904.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mwkwp")
@@ -1350,6 +1363,7 @@ offset_top = 24.0
 offset_right = 1448.0
 offset_bottom = 872.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2a1b2")
+script = ExtResource("22_bkr7p")
 
 [node name="pnl_principal" type="Panel" parent="pnl_principal/pnl_shop"]
 layout_mode = 0
@@ -1403,6 +1417,20 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
 theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 text = "Collections"
+
+[node name="btn_souvenir_container2" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
+theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_hover_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_focus_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
+text = "Capsules"
 
 [node name="btn_capsule_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(150, 20)
@@ -1546,12 +1574,147 @@ theme_override_fonts/font = ExtResource("14_nx57u")
 theme_override_font_sizes/font_size = 13
 text = "Vendre"
 
+[node name="pnl_visualisation_new_skin_grand" type="Panel" parent="."]
+clip_contents = true
+offset_left = 680.0
+offset_top = 105.0
+offset_right = 1360.0
+offset_bottom = 624.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0j1df")
+
+[node name="color_objet" type="ColorRect" parent="pnl_visualisation_new_skin_grand"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 678.0
+offset_bottom = 517.0
+color = Color(0.745098, 0.298039, 0.298039, 1)
+
+[node name="Kindpng4298060" type="Sprite2D" parent="pnl_visualisation_new_skin_grand"]
+position = Vector2(344, -162)
+scale = Vector2(0.450056, 1.58047)
+texture = ExtResource("8_nx3p8")
+
+[node name="pnl_principal" type="Panel" parent="pnl_visualisation_new_skin_grand"]
+clip_contents = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 44.0
+offset_right = 658.0
+offset_bottom = 496.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_daxyu")
+
+[node name="txtr_skin" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+modulate = Color(0.858824, 0.858824, 0.858824, 1)
+texture_filter = 6
+layout_mode = 1
+offset_left = 112.0
+offset_top = 52.0
+offset_right = 498.0
+offset_bottom = 388.0
+pivot_offset = Vector2(-0.0184326, 0.0367279)
+texture = ExtResource("18_avuge")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Pngfind_com-vignette-png-1920x1080-2550838" type="Sprite2D" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+position = Vector2(317, 206)
+scale = Vector2(0.272009, 0.342593)
+texture = ExtResource("19_hvh4j")
+
+[node name="Kindpng3155574" type="Sprite2D" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+position = Vector2(320, 396)
+scale = Vector2(0.872635, 0.544693)
+texture = ExtResource("20_bfrwq")
+
+[node name="hbox_stickers" type="HBoxContainer" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+layout_mode = 0
+offset_top = 356.0
+offset_right = 638.0
+offset_bottom = 452.0
+alignment = 1
+
+[node name="txtr_sticker1" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+visible = false
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="txtr_sticker2" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+visible = false
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="txtr_sticker3" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+visible = false
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="txtr_sticker4" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+visible = false
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="txtr_sticker5" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers"]
+visible = false
+custom_minimum_size = Vector2(88, 88)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="pnl_visualisation_new_skin_grand/pnl_principal"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 411.0
+offset_right = 628.0
+offset_bottom = 443.0
+texture = ExtResource("17_x166t")
+expand_mode = 1
+
+[node name="lbl_nom_item" type="Label" parent="pnl_visualisation_new_skin_grand"]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 680.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.858824, 0.858824, 0.858824, 1)
+theme_override_colors/font_shadow_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 22
+text = "StatTrack MP7 | Armor Core"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="pnl_visualisation_new_skin_grand"]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 6.0
+offset_right = 672.0
+offset_bottom = 40.0
+theme_override_constants/icon_max_width = 28
+theme_override_fonts/font = ExtResource("5_jfgsi")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dli0b")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0x8we")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_70osj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ougoo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6l2vr")
+icon = ExtResource("25_v8k33")
+icon_alignment = 1
+
 [connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire" to="." method="_on_btn_inventaire_pressed"]
-[connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop" to="." method="_on_btn_shop_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop" to="pnl_principal/pnl_shop" method="_on_btn_shop_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant" to="." method="_on_btn_page_storage_suivant_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_precedent" to="." method="_on_btn_page_storage_precedent_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur" to="." method="_on_btn_ouverture_conteneur_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_informations/btn_continuer" to="." method="_on_btn_continuer_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel" to="." method="_on_btn_quitter_caisse_panel_pressed"]
-[connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_normal_container" to="." method="_on_btn_shop_normal_container_pressed"]
-[connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_collection_container" to="." method="_on_btn_shop_collection_container_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_normal_container" to="pnl_principal/pnl_shop" method="_on_btn_shop_normal_container_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_collection_container" to="pnl_principal/pnl_shop" method="_on_btn_shop_collection_container_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_souvenir_container2" to="pnl_principal/pnl_shop" method="_on_btn_shop_souvenir_container_2_pressed"]
