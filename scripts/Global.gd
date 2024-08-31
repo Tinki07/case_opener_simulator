@@ -81,6 +81,7 @@ func charger_skins_depuis_json():
 					for skins_data in skins_dans_sous_categorie:
 						var skin = SkinArme.new(
 							skins_data["nom"],
+							skins_data["id"],
 							armes[skins_data["arme"]],
 							categories[skins_data["categorie"]],
 							skins_data["etats_possible"],
@@ -331,6 +332,7 @@ func charger_etats_skins_depuis_json():
 			for etat_data in data:
 				var newEtat = EtatSkin.new(
 					etat_data["nom"],
+					etat_data["id"],
 				)
 				etats_skins_normaux[etat_data["id"]] = newEtat
 				print("Etat créée : %s" % newEtat.nom)

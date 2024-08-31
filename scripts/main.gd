@@ -38,6 +38,7 @@ func _ready():
 	
 	print(get_node("pnl_principal/pnl_inventaire"))
 	
+	JsonDataInventory.load_all()
 
 
 
@@ -93,7 +94,7 @@ func ouvrir_caisse_v2(caisse: Conteneur):
 		if skin_arme_obtenu_final.souvenir:
 			# Si c'est un souvenir, ajoute des stickers au package associé
 			_add_stickers_to_souvenir_package(caisse,skin_arme_obtenu_final)
-
+		
 		return skin_arme_obtenu_final
 
 func return_objet_dropable_from_container(container: Conteneur):
@@ -266,6 +267,9 @@ func _add_stickers_to_souvenir_package(caisse: Conteneur,skin: SkinArmeObtenu):
 
 
 # -----------------------------------------------------------------------
+func inv():
+	print(JsonDataInventory.set_player_inventory_string())
+
 
 func kil_caisse():
 	Global.leJoueur.inventaire.insert(0,Global.conteneurs["caisse_kilowatt"])
@@ -951,3 +955,12 @@ func _on_texture_rect_mouse_entered():
 func _on_texture_rect_mouse_exited():
 	get_node("pnl_inspect_skin_grand/Panel").visible = false
 	pass # Replace with function body.
+
+func _notification(what):
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		_on_quit()
+
+func _on_quit():
+	print("Le jeu est sur le point de se fermer. Sauvegarde des données...")
+	JsonDataInventory.save_all()
+	get_tree().quit()

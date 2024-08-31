@@ -571,6 +571,7 @@ text = "Menu"
 vertical_alignment = 1
 
 [node name="pnl_inventaire" type="Panel" parent="pnl_principal"]
+visible = false
 layout_mode = 0
 offset_left = 552.0
 offset_top = 24.0
@@ -1607,7 +1608,6 @@ offset_right = 2232.0
 offset_bottom = 344.0
 
 [node name="LineEdit" type="LineEdit" parent="."]
-visible = false
 offset_left = 1088.0
 offset_right = 1600.0
 offset_bottom = 31.0
