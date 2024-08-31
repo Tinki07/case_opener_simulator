@@ -103,7 +103,9 @@ func _on_buy_container_scroll_button_pressed(panel):
 	
 	if value <=  Global.leJoueur.money:
 		Global.leJoueur.money -= value
-		Global.leJoueur.inventaire.insert(0,container)
+		
+		for i in range(nbr_container):
+			Global.leJoueur.inventaire.insert(0,container)
 		
 		get_node("%pnl_notification_buy/AnimationPlayer").stop()
 		get_node("%pnl_notification_buy/lbl_infos").text = "$" + str(value) + " was withdrawn from your wallet."
@@ -147,7 +149,9 @@ func _on_buy_key_container_scroll_button_pressed(panel):
 	
 	if value <=  Global.leJoueur.money:
 		Global.leJoueur.money -= value
-		Global.leJoueur.inventaire.insert(0,key)
+		
+		for i in range(nbr_key):
+			Global.leJoueur.inventaire.insert(0,key)
 		
 		get_node("%pnl_notification_buy/AnimationPlayer").stop()
 		get_node("%pnl_notification_buy/lbl_infos").text = "$" + str(value) + " was withdrawn from your wallet."
