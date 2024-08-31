@@ -565,6 +565,15 @@ func _on_inspect_objet_button_pressed(objet):
 	if objet is SkinArmeObtenu:
 		panel.get_node("Panel/VBoxContainer/pnl_wear").visible = true
 		panel.get_node("Panel/VBoxContainer/pnl_wear/lbl_info").text = objet.etat.nom
+		
+	if objet.stickers5.size() == 0:
+		for child in get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers").get_children():
+			child.visible = false
+	else:
+		for j in range(objet.stickers5.size()):
+			var sticker_node = get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
+			sticker_node.texture = load(objet.stickers5[j].image_path)
+			get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
 
 ## Actions faites quand le bouton ouvrir d'un item est clické
 func _on_ouvrir_objet_button_pressed(item_clicked):
