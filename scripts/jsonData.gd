@@ -3,6 +3,12 @@ extends Node
 var json_inventoy_data = {}
 var json_file_path = "user://inventaire.json"
 
+var inventory_data = {
+		"inventaire": {
+			"items": []
+		}
+	}
+
 func load_player_inventory(file_path: String):
 	if FileAccess.file_exists(file_path):
 		var data_file = FileAccess.open(file_path,FileAccess.READ)
@@ -25,8 +31,13 @@ func load_player_inventory(file_path: String):
 						
 						for sticker_id in skin_data['stickers']:
 							new_skin.stickers5.append(Global.stickers[sticker_id])
-						
 						Global.leJoueur.inventaire.append(new_skin)
+						
+					elif skin_data['type_item'] == "container":
+						Global.leJoueur.inventaire.append(Global.conteneurs[skin_data['container_id']])
+					
+					elif skin_data['type_item'] == "key":
+						Global.leJoueur.inventaire.append(Global.keys_conteneurs[skin_data['key_id']])
 					
 			else:
 				print("Error: Missing data fields in JSON.")
@@ -51,13 +62,8 @@ func save_player_inventory(file_path: String):
 
 func set_player_inventory_string():
 	
-	var inventory_data = {
-		"inventaire": {
-			"items": []
-		}
-	}
-	
 	for item in Global.leJoueur.inventaire:
+		
 		if item is SkinArmeObtenu:
 			var item_string = {
 				"type_item": "skin",
@@ -68,14 +74,24 @@ func set_player_inventory_string():
 				"prix": item.prix,
 				"stickers" : []
 			}
-			
 			for sticker in item.stickers5:
 				item_string["stickers"].append(sticker.id)
-			
+			inventory_data["inventaire"]["items"].append(item_string)
+		elif item is Conteneur:
+			var item_string = {
+				"type_item": "container",
+				"container_id": item.id
+			}
+			inventory_data["inventaire"]["items"].append(item_string)
+		elif item is KeyConteneur:
+			var item_string = {
+				"type_item": "key",
+				"key_id": item.id
+			}
 			inventory_data["inventaire"]["items"].append(item_string)
 		else:
 			print("Error: Item in inventory is not of type SkinArmeObtenu.")
-	
+			
 	return inventory_data
 
 

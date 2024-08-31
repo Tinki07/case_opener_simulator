@@ -395,6 +395,7 @@ func charger_keys_conteneurs_depuis_json():
 			for key_data in data:
 				var newKey = KeyConteneur.new(
 					key_data['nom'],
+					key_data['id'],
 					key_data['image_path'],
 					conteneurs[key_data['conteneur_unlocker']] ,
 					key_data['prix']
