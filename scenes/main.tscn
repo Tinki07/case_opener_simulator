@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://cqckho3b1h1no"]
+[gd_scene load_steps=68 format=3 uid="uid://cqckho3b1h1no"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
 [ext_resource type="Texture2D" uid="uid://bwb2ekoix1sfo" path="res://resources/images/wallpaperflare.com_wallpaper.jpg" id="2_jylf6"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" path="res://scripts/shop.gd" id="22_bkr7p"]
 [ext_resource type="Texture2D" uid="uid://dees710advhxo" path="res://resources/images/search-13-32.png" id="22_wopff"]
 [ext_resource type="Texture2D" uid="uid://cilanrjw7np6a" path="res://resources/images/Close-296.png" id="25_v8k33"]
+[ext_resource type="Texture2D" uid="uid://bw0qrqnqkw72r" path="res://resources/images/Cash-134.png" id="26_quf0d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mwkwp"]
 
@@ -227,6 +228,73 @@ bg_color = Color(0.164706, 0.196078, 0.235294, 0.607843)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33urv"]
 bg_color = Color(0.188235, 0.227451, 0.266667, 0.886275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbdp7"]
+bg_color = Color(0.6, 0.6, 0.6, 0.321569)
+border_width_bottom = 4
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_kccsc"]
+resource_name = "notification_anim"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1604, 144), Vector2(1243, 144)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1243, 144)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.9, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1239, 144), Vector2(1604, 144)]
+}
+
+[sub_resource type="Animation" id="Animation_w60ho"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1241, 144)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bjabv"]
+_data = {
+"RESET": SubResource("Animation_w60ho"),
+"notification_anim": SubResource("Animation_kccsc")
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_jd32n")
@@ -1862,6 +1930,40 @@ theme_override_font_sizes/font_size = 13
 text = "20/12/2024"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="pnl_notification_buy" type="Panel" parent="."]
+unique_name_in_owner = true
+offset_left = 1604.0
+offset_top = 144.0
+offset_right = 1965.0
+offset_bottom = 239.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hbdp7")
+
+[node name="txtr_dollar" type="TextureRect" parent="pnl_notification_buy"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 96.0
+offset_bottom = 95.0
+texture = ExtResource("26_quf0d")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="lbl_infos" type="Label" parent="pnl_notification_buy"]
+layout_mode = 0
+offset_left = 112.0
+offset_right = 353.0
+offset_bottom = 95.0
+theme_override_colors/font_shadow_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+text = "$500.4 was withdrawn from your wallet."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="pnl_notification_buy"]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_bjabv")
+}
 
 [connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire" to="." method="_on_btn_inventaire_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop" to="pnl_principal/pnl_shop" method="_on_btn_shop_pressed"]

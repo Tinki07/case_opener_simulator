@@ -13,7 +13,7 @@ var nbr_container_to_buy = 1
 
 
 func _process(delta):
-	$pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont/lbl_argent_joueur.text = str(Global.leJoueur.money)
+	$pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont/lbl_argent_joueur.text = str(snapped(Global.leJoueur.money,0.01))
 
 func _ready():
 	

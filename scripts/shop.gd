@@ -96,10 +96,23 @@ func _on_buy_container_scroll_button_pressed(panel):
 	
 	var container = panel.get_meta("container")
 	var nbr_container = panel.get_meta("nbr_container")
+	var value  = 0
 	
 	for i in range(nbr_container):
-		Global.leJoueur.money -= container.prix
+		value += container.prix
+	
+	if value <=  Global.leJoueur.money:
+		Global.leJoueur.money -= value
 		Global.leJoueur.inventaire.insert(0,container)
+		
+		get_node("%pnl_notification_buy/AnimationPlayer").stop()
+		get_node("%pnl_notification_buy/lbl_infos").text = "$" + str(value) + " was withdrawn from your wallet."
+		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
+	else:
+		get_node("%pnl_notification_buy/AnimationPlayer").stop()
+		get_node("%pnl_notification_buy/lbl_infos").text = "You don't have enough to buy this!"
+		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
+
 
 func _on_minus_container_scroll_button_pressed(panel):
 	var container = panel.get_meta("container")
@@ -127,10 +140,22 @@ func _on_buy_key_container_scroll_button_pressed(panel):
 	
 	var key = panel.get_meta("key")
 	var nbr_key = panel.get_meta("nbr_key")
+	var value  = 0
 	
 	for i in range(nbr_key):
-		Global.leJoueur.money -= key.prix
+		value += key.prix
+	
+	if value <=  Global.leJoueur.money:
+		Global.leJoueur.money -= value
 		Global.leJoueur.inventaire.insert(0,key)
+		
+		get_node("%pnl_notification_buy/AnimationPlayer").stop()
+		get_node("%pnl_notification_buy/lbl_infos").text = "$" + str(value) + " was withdrawn from your wallet."
+		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
+	else:
+		get_node("%pnl_notification_buy/AnimationPlayer").stop()
+		get_node("%pnl_notification_buy/lbl_infos").text = "You don't have enough to buy this!"
+		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
 
 
 func _on_minus_key_container_scroll_button_pressed(panel):
