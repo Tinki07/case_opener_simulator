@@ -36,8 +36,6 @@ func _ready():
 	
 	Global.leJoueur.money = 1000.00
 	
-	print(get_node("pnl_principal/pnl_inventaire"))
-	
 	JsonDataInventory.load_all()
 
 
@@ -331,7 +329,8 @@ func colec_caisse():
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 
 func test():
-	print("")
+	Global.leJoueur.inventaire.insert(0,ouvrir_caisse_v2(Global.conteneurs["caisse_kilowatt"]))
+	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer,index_skin_a_charger_debut)
 # -----------------------------------------------------------------------
 
 

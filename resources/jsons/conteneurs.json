@@ -140,9 +140,9 @@
 				"consumer_grade": 60.0,
 				"industrial_grade": 19.5,
 				"mil_spec": 11.3,
-				"restricted": 6.5,
-				"classified": 2.2,
-				"covert": 0.5
+				"restricted": 7.05,
+				"classified": 1.7,
+				"covert": 0.45
 			},
 			"skins": [
 				["Sienna Damask_mac10","consumer_grade",[""]],

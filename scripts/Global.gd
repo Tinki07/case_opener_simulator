@@ -23,8 +23,8 @@ func _ready():
 	default_drop_rates = {
 		"mil_spec": 71.0,
 		"restricted": 21.00,
-		"classified": 6.20,
-		"covert": 1.35,
+		"classified": 6.0,
+		"covert": 1.55,
 		"knive": 0.45
 	}
 
@@ -118,6 +118,7 @@ func charger_stickers_depuis_json():
 					for sticker_data in sticker_dans_sous_categorie:
 						var sticker = Sticker.new(
 							sticker_data["nom"],
+							sticker_data["id"],
 							sticker_data["equipe"],
 							categories_stickers[sticker_data["categorie"]],
 							types_stickers[sticker_data["type"]],
