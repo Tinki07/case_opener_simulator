@@ -881,14 +881,34 @@ func _on_btn_ouverture_conteneur_pressed():
 			else:
 				child.get_node("pnl_skin/txtr_skin").texture = load(skin_choisi.skin.image_path)
 				child.get_node("pnl_infos_skin/color_rect_etat_skin").color = skin_choisi.skin.categorie.color
-				child.get_node("pnl_infos_skin/lbl_nom_arme").text = skin_choisi.skin.arme.nom
 				child.get_node("pnl_infos_skin/lbl_nom_skin").text = skin_choisi.skin.nom
+				
+				## Fait en sorte d'afficher statrack ou souvenir au skin choisi
+				if skin_choisi.stat_track == true:
+					child.get_node("pnl_infos_skin/lbl_nom_arme").text = "(StatTrack) " + skin_choisi.skin.arme.nom
+				elif skin_choisi.souvenir == true:
+					child.get_node("pnl_infos_skin/lbl_nom_arme").text = "(Souvenir) " + skin_choisi.skin.arme.nom
+				else:
+					child.get_node("pnl_infos_skin/lbl_nom_arme").text = skin_choisi.skin.arme.nom
 		## C'est ici qu'on affiche les infos des skins random
 		else:
+			
 			child.get_node("pnl_skin/txtr_skin").texture = load(skin_choisi.image_path)
 			child.get_node("pnl_infos_skin/color_rect_etat_skin").color = skin_choisi.categorie.color
-			child.get_node("pnl_infos_skin/lbl_nom_arme").text = skin_choisi.arme.nom
 			child.get_node("pnl_infos_skin/lbl_nom_skin").text = skin_choisi.nom
+			
+			## Fait en sorte d'afficher statrack ou souvenir aux skins random
+			if item_container.type_caisse == "souvenir":
+				child.get_node("pnl_infos_skin/lbl_nom_arme").text = "(Souvenir) " + skin_choisi.arme.nom
+			elif item_container.type_caisse == "collection":
+				child.get_node("pnl_infos_skin/lbl_nom_arme").text = skin_choisi.arme.nom
+			else:
+				var random = randf() * 100
+				if random >= 90:
+					child.get_node("pnl_infos_skin/lbl_nom_arme").text = "(StatTrack) " + skin_choisi.arme.nom
+				else:
+					child.get_node("pnl_infos_skin/lbl_nom_arme").text = skin_choisi.arme.nom
+	
 	
 	## On créer un timer, on lui donne un delta et ensuite on l'active. et on attend
 	var timer = Timer.new()
