@@ -14,7 +14,7 @@ func get_value_inventory():
 	
 	for objet in inventaire:
 		
-		if objet is SkinArmeObtenu:
+		if objet:
 			value += objet.prix
 	
 	return value
