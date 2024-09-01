@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b54ot33v8nvwl"]
 
-[ext_resource type="Texture2D" uid="uid://d0j342iorkii2" path="res://resources/images/default_package.png" id="1_g0ke3"]
+[ext_resource type="Texture2D" uid="uid://dga0me0r8d5eb" path="res://resources/images/Blst_large.png" id="1_1crk1"]
 [ext_resource type="Texture2D" uid="uid://dy5p6muyrsxbj" path="res://resources/images/conteneurs/mirage_2021/Set_mirage_2021.png" id="1_xu7ey"]
 [ext_resource type="Theme" uid="uid://djf20mcq8cebv" path="res://resources/themes/theme_bouton_normal_vert.tres" id="2_cpp6d"]
 [ext_resource type="FontFile" uid="uid://cmrght1dguc6e" path="res://resources/fonts/TT Lakes Neue Trial Bold.ttf" id="4_dxg6l"]
@@ -43,7 +43,7 @@ layout_mode = 0
 offset_left = -70.0
 offset_right = 530.0
 offset_bottom = 184.0
-texture = ExtResource("1_g0ke3")
+texture = ExtResource("1_1crk1")
 expand_mode = 3
 stretch_mode = 6
 

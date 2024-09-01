@@ -465,7 +465,6 @@ func _on_btn_inventaire_pressed():
 	$pnl_principal/pnl_inventaire.visible = true
 	# Remplit la grille de l'inventaire avec les skins du joueur
 	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0)
-	
 	# Initialise l'index du premier skin à charger
 	index_skin_a_charger_debut = 0
 	
@@ -477,6 +476,12 @@ func _on_btn_inventaire_pressed():
 	
 	## Cache le panel shoooooooooooop
 	$pnl_principal/pnl_shop.visible = false
+	
+	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage.visible = true
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse.visible = false
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key.visible = false
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key.visible = false
 
 
 
@@ -792,6 +797,10 @@ func _on_btn_quitter_caisse_panel_pressed():
 
 ## Action appelée quand on appuis sur le bouton "ouvrir" d'un conteneur
 func _on_btn_ouverture_conteneur_pressed():
+	
+	$pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_normal_container.disabled = true
+	$pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_collection_container.disabled = true
+	$pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_souvenir_container2.disabled = true
 	
 	var audio_anim = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_animation_principal/audio_player
 	audio_anim.play()

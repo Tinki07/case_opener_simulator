@@ -26,6 +26,7 @@ DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 Global="*res://scripts/Global.gd"
 Shop="res://scripts/shop.gd"
 JsonDataInventory="*res://scripts/jsonData.gd"
+Inventaire="*res://scripts/inventaire.gd"
 
 [display]
 

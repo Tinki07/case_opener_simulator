@@ -1,5 +1,7 @@
 extends Panel
 
+var type_container_show
+
 func clear_grid(grid):
 	for child in grid.get_children(): # On itère sur tous les enfants du nœud `grid`
 		grid.remove_child(child) # On supprime l'enfant de la grille
@@ -9,12 +11,16 @@ func _on_btn_shop_pressed():
 	get_node("%pnl_principal/pnl_inventaire").visible = false
 	get_node("%pnl_principal/pnl_shop").visible = true
 	load_scroll_panel_container("normal")
+	get_node("%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/ledit_filtre").text = ""
 
-func load_scroll_panel_container(type_container: String):
+func load_scroll_panel_container(type_container: String, filter_string: String = ""):
+	var items_filters
 	clear_grid($%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/scroll/marg/vbox_containers)
 	## Stock tout les containers du type que l'on veux
 	var type_wanted_containers : Array
 	
+	
+	type_container_show = type_container
 	## On parcours toutes les caisses
 	for i in Global.conteneurs:
 		
@@ -24,8 +30,9 @@ func load_scroll_panel_container(type_container: String):
 		## On regarde si le container actuel est du type que l'on veux
 		if container.type_caisse == type_container:
 			
-			## On ajoute le container à la liste des containers voulu
-			type_wanted_containers.append(container)
+			if filter_string == "" or container.nom.to_lower().find(filter_string.to_lower()) != -1:
+				## On ajoute le container à la liste des containers voulu
+				type_wanted_containers.append(container)
 	
 	## On va ajouter un panel pour chaque conteneur de la liste
 	for container in type_wanted_containers:
@@ -91,6 +98,11 @@ func load_scroll_panel_container(type_container: String):
 		btn_plus_key.pressed.connect(self._on_plus_key_container_scroll_button_pressed.bind(new_panel_container))
 		
 		$%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/scroll/marg/vbox_containers.add_child(new_panel_container)
+
+
+
+
+
 
 func _on_buy_container_scroll_button_pressed(panel):
 	
@@ -193,3 +205,11 @@ func _on_btn_shop_normal_container_pressed():
 
 func _on_btn_shop_souvenir_container_2_pressed():
 	load_scroll_panel_container("souvenir")
+
+
+func _on_btn_filter_pressed():
+
+	var string_filtre = $%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/ledit_filtre.get_text()
+	load_scroll_panel_container(type_container_show,string_filtre)
+	
+	pass # Replace with function body.

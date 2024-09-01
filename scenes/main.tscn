@@ -571,7 +571,6 @@ text = "Menu"
 vertical_alignment = 1
 
 [node name="pnl_inventaire" type="Panel" parent="pnl_principal"]
-visible = false
 layout_mode = 0
 offset_left = 552.0
 offset_top = 24.0
@@ -1543,14 +1542,14 @@ offset_right = 896.0
 offset_bottom = 824.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_xu48e")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll"]
+[node name="hbox_filters" type="HBoxContainer" parent="pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll"]
 layout_mode = 0
 offset_top = 7.0
 offset_right = 896.0
 offset_bottom = 47.0
 alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/HBoxContainer"]
+[node name="ledit_filtre" type="LineEdit" parent="pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters"]
 custom_minimum_size = Vector2(276, 40)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_vv063")
@@ -1559,7 +1558,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_y8j0g")
 placeholder_text = "NTM FIGO"
 alignment = 1
 
-[node name="Button" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/HBoxContainer"]
+[node name="btn_filter" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 theme_override_constants/icon_max_width = 21
@@ -1975,6 +1974,7 @@ libraries = {
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_normal_container" to="pnl_principal/pnl_shop" method="_on_btn_shop_normal_container_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_collection_container" to="pnl_principal/pnl_shop" method="_on_btn_shop_collection_container_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_souvenir_container2" to="pnl_principal/pnl_shop" method="_on_btn_shop_souvenir_container_2_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/btn_filter" to="pnl_principal/pnl_shop" method="_on_btn_filter_pressed"]
 [connection signal="mouse_entered" from="pnl_inspect_skin_grand/pnl_principal/TextureRect" to="." method="_on_texture_rect_mouse_entered"]
 [connection signal="mouse_exited" from="pnl_inspect_skin_grand/pnl_principal/TextureRect" to="." method="_on_texture_rect_mouse_exited"]
 [connection signal="pressed" from="pnl_inspect_skin_grand/btn_close_panel" to="." method="_on_btn_close_panel_pressed"]
