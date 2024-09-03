@@ -119,10 +119,16 @@ func _on_buy_container_scroll_button_pressed(panel):
 		for i in range(nbr_container):
 			Global.leJoueur.inventaire.insert(0,container)
 		
+		var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
+		style_box.bg_color = Color("#bcbcbc52")
 		get_node("%pnl_notification_buy/AnimationPlayer").stop()
+		get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Cash-134.png")
 		get_node("%pnl_notification_buy/lbl_infos").text = "$" + str(value) + " was withdrawn from your wallet."
 		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
 	else:
+		var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
+		style_box.bg_color = Color("#bcbcbc52")
+		get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Cash-134.png")
 		get_node("%pnl_notification_buy/AnimationPlayer").stop()
 		get_node("%pnl_notification_buy/lbl_infos").text = "You don't have enough to buy this!"
 		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
@@ -165,10 +171,16 @@ func _on_buy_key_container_scroll_button_pressed(panel):
 		for i in range(nbr_key):
 			Global.leJoueur.inventaire.insert(0,key)
 		
+		var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
+		style_box.bg_color = Color("#bcbcbc52")
+		get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Cash-134.png")
 		get_node("%pnl_notification_buy/AnimationPlayer").stop()
 		get_node("%pnl_notification_buy/lbl_infos").text = "$" + str(value) + " was withdrawn from your wallet."
 		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
 	else:
+		var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
+		style_box.bg_color = Color("#bcbcbc52")
+		get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Cash-134.png")
 		get_node("%pnl_notification_buy/AnimationPlayer").stop()
 		get_node("%pnl_notification_buy/lbl_infos").text = "You don't have enough to buy this!"
 		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")

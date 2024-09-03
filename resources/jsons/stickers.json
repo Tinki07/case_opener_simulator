@@ -220,6 +220,1137 @@
                 }
                 
             ],
+            "starladder_berlin_2019": [
+
+
+                {
+                    "nom": "device (Gold) | Berlin 2019",
+                    "id":"device (Gold)_berlin_2019",
+                    "equipe": "astralis",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_device_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Dupreeh (Gold) | Berlin 2019",
+                    "id":"Dupreeh (Gold)_berlin_2019",
+                    "equipe": "astralis",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_dupreeh_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "gla1ve (Gold) | Berlin 2019",
+                    "id":"gla1ve (Gold)_berlin_2019",
+                    "equipe": "astralis",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_gla1ve_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Magisk (Gold)",
+                    "id":"Magisk (Gold)_berlin_2019",
+                    "equipe": "astralis",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_magisk_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Xyp9x (Gold)",
+                    "id":"Xyp9x (Gold)_berlin_2019",
+                    "equipe": "astralis",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_xyp9x_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "Aleksib (Gold)",
+                    "id":"Aleksib (Gold)_berlin_2019",
+                    "equipe": "ence",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_aleksib_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Aerial (Gold)",
+                    "id":"Aerial (Gold)_berlin_2019",
+                    "equipe": "ence",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_aerial_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "allu (Gold)",
+                    "id":"allu (Gold)_berlin_2019",
+                    "equipe": "ence",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_allu_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "sergej (Gold)",
+                    "id":"sergej (Gold)_berlin_2019",
+                    "equipe": "ence",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_sergej_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "xseveN (Gold)",
+                    "id":"xseveN (Gold)_berlin_2019",
+                    "equipe": "ence",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_xseven_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "GuardiaN (Gold)",
+                    "id":"GuardiaN (Gold)_berlin_2019",
+                    "equipe": "faze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_guardian_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "NEO (Gold)",
+                    "id":"NEO (Gold)_berlin_2019",
+                    "equipe": "faze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_neo_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "NiKo (Gold)",
+                    "id":"NiKo (Gold)_berlin_2019",
+                    "equipe": "faze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_niko_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "olofmeister (Gold)",
+                    "id":"olofmeister (Gold)_berlin_2019",
+                    "equipe": "faze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_olofmeister_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "rain (Gold)",
+                    "id":"rain (Gold)_berlin_2019",
+                    "equipe": "faze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_rain_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "coldzera (Gold)",
+                    "id":"coldzera (Gold)_berlin_2019",
+                    "equipe": "mibr",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_coldzera_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "FalleN (Gold)",
+                    "id":"FalleN (Gold)_berlin_2019",
+                    "equipe": "mibr",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_fallen_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "fer (Gold)",
+                    "id":"fer (Gold)_berlin_2019",
+                    "equipe": "mibr",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_fer_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "LUCAS1 (Gold)",
+                    "id":"LUCAS1 (Gold)_berlin_2019",
+                    "equipe": "mibr",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_lucas1_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "TACO (Gold)",
+                    "id":"TACO (Gold)_berlin_2019",
+                    "equipe": "mibr",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_taco_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "boombl4 (Gold)",
+                    "id":"boombl4 (Gold)_berlin_2019",
+                    "equipe": "navi",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_boombl4_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "electronic (Gold)",
+                    "id":"electronic (Gold)_berlin_2019",
+                    "equipe": "navi",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_electronic_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "flamie (Gold)",
+                    "id":"flamie (Gold)_berlin_2019",
+                    "equipe": "navi",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_flamie_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "s1mple (Gold)",
+                    "id":"s1mple (Gold)_berlin_2019",
+                    "equipe": "navi",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_s1mple_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Zeus (Gold)",
+                    "id":"Zeus (Gold)_berlin_2019",
+                    "equipe": "navi",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_zeus_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "f0rest (Gold)",
+                    "id":"f0rest (Gold)_berlin_2019",
+                    "equipe": "nip",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_forest_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "GeT_RiGhT (Gold)",
+                    "id":"GeT_RiGhT (Gold)_berlin_2019",
+                    "equipe": "nip",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_getright_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Golden (Gold)",
+                    "id":"Golden (Gold)_berlin_2019",
+                    "equipe": "nip",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_golden_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Lekr0 (Gold)",
+                    "id":"Lekr0 (Gold)_berlin_2019",
+                    "equipe": "nip",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_lekro_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "REZ (Gold)",
+                    "id":"REZ (Gold)_berlin_2019",
+                    "equipe": "nip",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_rez_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "AZR (Gold)",
+                    "id":"AZR (Gold)_berlin_2019",
+                    "equipe": "renegades",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_azr_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Gratisfaction (Gold)",
+                    "id":"Gratisfaction (Gold)_berlin_2019",
+                    "equipe": "renegades",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_gratisfaction_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "jkaem (Gold)",
+                    "id":"jkaem (Gold)_berlin_2019",
+                    "equipe": "renegades",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_jkaem_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "jks (Gold)",
+                    "id":"jks (Gold)_berlin_2019",
+                    "equipe": "renegades",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_jks_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Liazz (Gold)",
+                    "id":"Liazz (Gold)_berlin_2019",
+                    "equipe": "renegades",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_liazz_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "EliGE (Gold)",
+                    "id":"EliGE (Gold)_berlin_2019",
+                    "equipe": "liquid",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_elige_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "NAF (Gold)",
+                    "id":"NAF (Gold)_berlin_2019",
+                    "equipe": "liquid",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_naf_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "nitr0 (Gold)",
+                    "id":"nitr0 (Gold)_berlin_2019",
+                    "equipe": "liquid",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_nitro_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Stewie2k (Gold)",
+                    "id":"Stewie2k (Gold)_berlin_2019",
+                    "equipe": "liquid",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_stewie2k_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Twistzz (Gold)",
+                    "id":"Twistzz (Gold)_berlin_2019",
+                    "equipe": "liquid",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_twistzz_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "AdreN (Gold)",
+                    "id":"AdreN (Gold)_berlin_2019",
+                    "equipe": "avangar",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_adrenkz_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "buster (Gold)",
+                    "id":"buster (Gold)_berlin_2019",
+                    "equipe": "avangar",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_buster_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Jame (Gold)",
+                    "id":"Jame (Gold)_berlin_2019",
+                    "equipe": "avangar",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_jame_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "qikert (Gold)",
+                    "id":"qikert (Gold)_berlin_2019",
+                    "equipe": "avangar",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_qikert_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "SANJI (Gold)",
+                    "id":"SANJI (Gold)_berlin_2019",
+                    "equipe": "avangar",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_sanji_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "dephh (Gold)",
+                    "id":"dephh (Gold)_berlin_2019",
+                    "equipe": "complexity",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_dephh_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "oBo (Gold)",
+                    "id":"oBo (Gold)_berlin_2019",
+                    "equipe": "complexity",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_obo_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Rickeh (Gold)",
+                    "id":"Rickeh (Gold)_berlin_2019",
+                    "equipe": "complexity",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_rickeh_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "ShahZaM (Gold)",
+                    "id":"ShahZaM (Gold)_berlin_2019",
+                    "equipe": "complexity",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_shahzam_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "SicK (Gold)",
+                    "id":"SicK (Gold)_berlin_2019",
+                    "equipe": "complexity",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_sick_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "AmaNEk (Gold)",
+                    "id":"AmaNEk (Gold)_berlin_2019",
+                    "equipe": "g2",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_amanek_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "JaCkz (Gold)",
+                    "id":"JaCkz (Gold)_berlin_2019",
+                    "equipe": "g2",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_jackz_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "kennyS (Gold)",
+                    "id":"kennyS (Gold)_berlin_2019",
+                    "equipe": "g2",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_kennys_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Lucky (Gold)",
+                    "id":"Lucky (Gold)_berlin_2019",
+                    "equipe": "g2",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_lucky_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "shox (Gold)",
+                    "id":"shox (Gold)_berlin_2019",
+                    "equipe": "g2",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_shox_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "ANGE1 (Gold)",
+                    "id":"ANGE1 (Gold)_berlin_2019",
+                    "equipe": "hellraisers",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_angel_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "DeadFox (Gold)",
+                    "id":"DeadFox (Gold)_berlin_2019",
+                    "equipe": "hellraisers",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_deadfox_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "loWel (Gold)",
+                    "id":"loWel (Gold)_berlin_2019",
+                    "equipe": "hellraisers",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_lowel_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Issaa (Gold)",
+                    "id":"Issaa (Gold)_berlin_2019",
+                    "equipe": "hellraisers",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_issaa_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "oskar (Gold)",
+                    "id":"oskar (Gold)_berlin_2019",
+                    "equipe": "hellraisers",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_oskar_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "ALEX (Gold)",
+                    "id":"ALEX (Gold)_berlin_2019",
+                    "equipe": "vitality",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_alex_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "apEX (Gold)",
+                    "id":"apEX (Gold)_berlin_2019",
+                    "equipe": "vitality",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_apex_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "NBK- (Gold)",
+                    "id":"NBK- (Gold)_berlin_2019",
+                    "equipe": "vitality",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_nbk_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "RpK (Gold)",
+                    "id":"RpK (Gold)_berlin_2019",
+                    "equipe": "vitality",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_rpk_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "ZywOo (Gold)",
+                    "id":"ZywOo (Gold)_berlin_2019",
+                    "equipe": "vitality",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_zywoo_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "EspiranTo (Gold)",
+                    "id":"EspiranTo (Gold)_berlin_2019",
+                    "equipe": "cr4zy",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_espiranto_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "huNter- (Gold)",
+                    "id":"huNter- (Gold)_berlin_2019",
+                    "equipe": "cr4zy",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_hunter_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "LETN1 (Gold)",
+                    "id":"LETN1 (Gold)_berlin_2019",
+                    "equipe": "cr4zy",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_letn1_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "nexa (Gold)",
+                    "id":"nexa (Gold)_berlin_2019",
+                    "equipe": "cr4zy",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_nexa_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "ottoNd (Gold)",
+                    "id":"ottoNd (Gold)_berlin_2019",
+                    "equipe": "cr4zy",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_ottond_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "Forester (Gold)",
+                    "id":"Forester (Gold)_berlin_2019",
+                    "equipe": "dreameaters",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_forester_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "kinqie (Gold)",
+                    "id":"kinqie (Gold)_berlin_2019",
+                    "equipe": "dreameaters",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_kinqie_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Krad (Gold)",
+                    "id":"Krad (Gold)_berlin_2019",
+                    "equipe": "dreameaters",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_krad_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "speed4k (Gold)",
+                    "id":"speed4k (Gold)_berlin_2019",
+                    "equipe": "dreameaters",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_speed4k_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "svyat (Gold)",
+                    "id":"svyat (Gold)_berlin_2019",
+                    "equipe": "dreameaters",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_svyat_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "almazer (Gold)",
+                    "id":"almazer (Gold)_berlin_2019",
+                    "equipe": "forze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_almazer_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "facecrack (Gold)",
+                    "id":"facecrack (Gold)_berlin_2019",
+                    "equipe": "forze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_facecrack_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "FL1T (Gold)",
+                    "id":"FL1T (Gold)_berlin_2019",
+                    "equipe": "forze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_fl1t_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Jerry (Gold)",
+                    "id":"Jerry (Gold)_berlin_2019",
+                    "equipe": "forze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_jerry_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "xsepower (Gold)",
+                    "id":"xsepower (Gold)_berlin_2019",
+                    "equipe": "forze",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_xsepower_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "ableJ (Gold)",
+                    "id":"ableJ (Gold)_berlin_2019",
+                    "equipe": "furia",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_ablej_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "arT (Gold)",
+                    "id":"arT (Gold)_berlin_2019",
+                    "equipe": "furia",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_art_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "KSCERATO (Gold)",
+                    "id":"KSCERATO (Gold)_berlin_2019",
+                    "equipe": "furia",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_kscerato_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "VINI (Gold)",
+                    "id":"VINI (Gold)_berlin_2019",
+                    "equipe": "furia",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_vini_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "yuurih (Gold)",
+                    "id":"yuurih (Gold)_berlin_2019",
+                    "equipe": "furia",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_yuurih_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "dexter (Gold)",
+                    "id":"dexter (Gold)_berlin_2019",
+                    "equipe": "grayhound",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_dexter_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "DickStacy (Gold)",
+                    "id":"DickStacy (Gold)_berlin_2019",
+                    "equipe": "grayhound",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_dickstacy_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "erkaSt (Gold)",
+                    "id":"erkaSt (Gold)_berlin_2019",
+                    "equipe": "grayhound",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_erkast_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "malta (Gold)",
+                    "id":"malta (Gold)_berlin_2019",
+                    "equipe": "grayhound",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_malta_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Sico (Gold)",
+                    "id":"Sico (Gold)_berlin_2019",
+                    "equipe": "grayhound",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_sico_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "chelo (Gold)",
+                    "id":"chelo (Gold)_berlin_2019",
+                    "equipe": "intz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_chelo_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "DeStiNy (Gold)",
+                    "id":"DeStiNy (Gold)_berlin_2019",
+                    "equipe": "intz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_destiny_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "kNgV- (Gold)",
+                    "id":"kNgV- (Gold)_berlin_2019",
+                    "equipe": "intz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_kngv_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "xand (Gold)",
+                    "id":"xand (Gold)_berlin_2019",
+                    "equipe": "intz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_xand_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "yel (Gold)",
+                    "id":"yel (Gold)_berlin_2019",
+                    "equipe": "intz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_yel_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "chrisJ (Gold)",
+                    "id":"chrisJ (Gold)_berlin_2019",
+                    "equipe": "mouz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_chrisj_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "frozen (Gold)",
+                    "id":"frozen (Gold)_berlin_2019",
+                    "equipe": "mouz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_frozen_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "karrigan (Gold)",
+                    "id":"karrigan (Gold)_berlin_2019",
+                    "equipe": "mouz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_karrigan_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "ropz (Gold)",
+                    "id":"ropz (Gold)_berlin_2019",
+                    "equipe": "mouz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_ropz_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "woxic (Gold)",
+                    "id":"woxic (Gold)_berlin_2019",
+                    "equipe": "mouz",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_woxic_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "aizy (Gold)",
+                    "id":"aizy (Gold)_berlin_2019",
+                    "equipe": "north",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_aizy_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "gade (Gold)",
+                    "id":"gade (Gold)_berlin_2019",
+                    "equipe": "north",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_gade_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "JUGi (Gold)",
+                    "id":"JUGi (Gold)_berlin_2019",
+                    "equipe": "north",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_jugi_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Kjaerbye (Gold)",
+                    "id":"Kjaerbye (Gold)_berlin_2019",
+                    "equipe": "north",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_kjaerbye_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "v4lde (Gold)",
+                    "id":"v4lde (Gold)_berlin_2019",
+                    "equipe": "north",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_v4lde_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "Brehze (Gold)",
+                    "id":"Brehze (Gold)_berlin_2019",
+                    "equipe": "nrg",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_brehze_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "CeRq (Gold)",
+                    "id":"CeRq (Gold)_berlin_2019",
+                    "equipe": "nrg",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_cerq_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Ethan (Gold)",
+                    "id":"Ethan (Gold)_berlin_2019",
+                    "equipe": "nrg",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_ethan_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "stanislaw (Gold)",
+                    "id":"stanislaw (Gold)_berlin_2019",
+                    "equipe": "nrg",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_stanislaw_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "tarik (Gold)",
+                    "id":"tarik (Gold)_berlin_2019",
+                    "equipe": "nrg",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_tarik_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "Keoz (Gold)",
+                    "id":"Keoz (Gold)_berlin_2019",
+                    "equipe": "syman",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_keoz_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "neaLaN (Gold)",
+                    "id":"neaLaN (Gold)_berlin_2019",
+                    "equipe": "syman",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_nealan_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Ramz1kBO$$ (Gold)",
+                    "id":"Ramz1kBO$$ (Gold)_berlin_2019",
+                    "equipe": "syman",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_ramz1kboss_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Perfecto (Gold)",
+                    "id":"Perfecto (Gold)_berlin_2019",
+                    "equipe": "syman",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_perfecto_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "t0rick (Gold)",
+                    "id":"t0rick (Gold)_berlin_2019",
+                    "equipe": "syman",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_t0rick_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "Attacker (Gold)",
+                    "id":"Attacker (Gold)_berlin_2019",
+                    "equipe": "tyloo",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_attacker_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "BnTeT (Gold)",
+                    "id":"BnTeT (Gold)_berlin_2019",
+                    "equipe": "tyloo",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_bntet_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Freeman (Gold)",
+                    "id":"Freeman (Gold)_berlin_2019",
+                    "equipe": "tyloo",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_freeman_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "somebody (Gold)",
+                    "id":"somebody (Gold)_berlin_2019",
+                    "equipe": "tyloo",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_somebody_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+                {
+                    "nom": "Summer (Gold)",
+                    "id":"Summer (Gold)_berlin_2019",
+                    "equipe": "tyloo",
+                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_summer_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                }
+
+            ],
             "maps": [
                 {
                     "nom": "Ancient (Gold)",

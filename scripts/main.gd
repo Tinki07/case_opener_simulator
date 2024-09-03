@@ -7,10 +7,11 @@ extends Node2D
 @onready var skins_par_page = 24  # Nombre de skins par page à afficher
 @onready var page_actuelle = 1
 
-
-
 var nbr_container_to_buy = 1
 
+var is_animation_playing = false
+var is_fast_opening = false
+var timer = Timer.new()
 
 func _process(delta):
 	$pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont/lbl_argent_joueur.text = str(snapped(Global.leJoueur.money,0.01))
@@ -35,8 +36,9 @@ func _ready():
 	Global.charger_keys_conteneurs_depuis_json()
 	
 	Global.leJoueur.money = 1000.00
-	
 	JsonDataInventory.load_all()
+	
+
 
 
 
@@ -619,7 +621,7 @@ func _on_ouvrir_objet_button_pressed(item_clicked):
 			var item = item_caisse[0]
 			
 			## Met les infos de l'objet en rapport avec le type - ici dans le cas ou c'est un SkinArme
-			if Global.skins[item] != null:
+			if Global. skins[item] != null:
 				
 				## On regarde si l'item est un couteau, si oui le drapeau devient true
 				if Global.skins[item].categorie == Global.categories["knive"] :
@@ -794,14 +796,41 @@ func _on_btn_quitter_caisse_panel_pressed():
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse.visible = false
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key.visible = false
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key.visible = false
+	
+	if is_animation_playing:
+		
+		get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = false
+		get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = false
+		
+		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_animation_principal/audio_player.stop()
+		
+		timer.stop()
+		
+		## On rend invisible le panel de l'animation
+		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur.visible = false
+		is_fast_opening = true
+		repopulation_grille_inventaire_sans_retoruner_page_1()
+		
+		get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_info_unlocking_container/animation").stop()
+		get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_animation_principal/animation").stop()
+		
+		var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
+		style_box.bg_color = Global.leJoueur.inventaire[0].get_color()
+		get_node("%pnl_notification_buy/AnimationPlayer").stop()
+		get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Box-106.png")
+		get_node("%pnl_notification_buy/lbl_infos").text = "You got a " + Global.leJoueur.inventaire[0].get_quality() +" item !"
+		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
 
 ## Action appelée quand on appuis sur le bouton "ouvrir" d'un conteneur
 func _on_btn_ouverture_conteneur_pressed():
+	is_fast_opening = false
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = true
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = true
+	## On rend visible le panel de l'animation
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur.visible = false
 	
-	$pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_normal_container.disabled = true
-	$pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_collection_container.disabled = true
-	$pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_souvenir_container2.disabled = true
-	
+	timer.stop()
+	## Fai en sorte que l'audio de l'animation sois joué
 	var audio_anim = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur/pnl_animation_principal/audio_player
 	audio_anim.play()
 	
@@ -920,42 +949,52 @@ func _on_btn_ouverture_conteneur_pressed():
 	
 	
 	## On créer un timer, on lui donne un delta et ensuite on l'active. et on attend
-	var timer = Timer.new()
-	timer.wait_time = 5 # 2 secondes
+	timer.wait_time = 2 # 2 secondes
 	timer.one_shot = true
 	add_child(timer)
+	timer.start()
+	await timer.timeout
+	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false
+	
+	timer.wait_time = 3 # 2 secondes
+	timer.one_shot = true
 	timer.start()
 	# Attendre 2 secondes de manière asynchrone
 	await timer.timeout
 	
-	if item_choisi_final is SkinArmeObtenu:
-		var anim_sound = load(item_choisi_final.skin.categorie.anim_drop_sound)
+	
+	if is_fast_opening == false:
 		
-		# Vérifier que anim_sound n'est pas nul et est bien un AudioStream
-		if anim_sound and anim_sound is AudioStreamMP3:
-			var audio_player = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/drop_anim_sound
-			audio_player.stream = anim_sound
-			audio_player.play()
-	
-	## Une fois le timer finis, on affiche le panel qui montre le skin obtenu
-	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_ombre_panneau_principal.visible = true
-	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand.visible = true
-	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/lbl_nom_item.text = Global.leJoueur.inventaire[0]._to_string()
-	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin.texture = load(Global.leJoueur.inventaire[0].skin.image_path)
-	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/color_objet.color = Global.leJoueur.inventaire[0].skin.categorie.color
-	## On lance l'animation qui change la position du skin, de haut en bas
-	get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/AnimationPlayer").play("skin_animation")
-	
-	## Gère les stickers, si présents pour l'objet/skin, si il y en a on parcours la hbox qui contient 5 stickers,
-	## pour chaque sticker on rend visible le sticker et on y met son image,sinon on les rends invisible
-	if Global.leJoueur.inventaire[0].stickers5.size() == 0:
-		for child in get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers").get_children():
-			child.visible = false
-	else:
-		for j in range(Global.leJoueur.inventaire[0].stickers5.size()):
-			var sticker_node = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
-			sticker_node.texture = load(Global.leJoueur.inventaire[0].stickers5[j].image_path)
-			get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
+		
+		
+		if item_choisi_final is SkinArmeObtenu:
+			var anim_sound = load(item_choisi_final.skin.categorie.anim_drop_sound)
+			
+			# Vérifier que anim_sound n'est pas nul et est bien un AudioStream
+			if anim_sound and anim_sound is AudioStreamMP3:
+				var audio_player = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/drop_anim_sound
+				audio_player.stream = anim_sound
+				audio_player.play()
+		
+		## Une fois le timer finis, on affiche le panel qui montre le skin obtenu
+		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_ombre_panneau_principal.visible = true
+		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand.visible = true
+		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/lbl_nom_item.text = Global.leJoueur.inventaire[0]._to_string()
+		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin.texture = load(Global.leJoueur.inventaire[0].skin.image_path)
+		$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/color_objet.color = Global.leJoueur.inventaire[0].skin.categorie.color
+		## On lance l'animation qui change la position du skin, de haut en bas
+		get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/AnimationPlayer").play("skin_animation")
+		
+		## Gère les stickers, si présents pour l'objet/skin, si il y en a on parcours la hbox qui contient 5 stickers,
+		## pour chaque sticker on rend visible le sticker et on y met son image,sinon on les rends invisible
+		if Global.leJoueur.inventaire[0].stickers5.size() == 0:
+			for child in get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers").get_children():
+				child.visible = false
+		else:
+			for j in range(Global.leJoueur.inventaire[0].stickers5.size()):
+				var sticker_node = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
+				sticker_node.texture = load(Global.leJoueur.inventaire[0].stickers5[j].image_path)
+				get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
 
 func _on_btn_continuer_pressed():
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_ombre_panneau_principal.visible = false
@@ -968,7 +1007,9 @@ func _on_btn_continuer_pressed():
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage.visible = true
 	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false
 	repopulation_grille_inventaire_sans_retoruner_page_1()
-
+	
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = false
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = false
 
 
 func _on_btn_close_panel_pressed():
@@ -992,3 +1033,15 @@ func _on_quit():
 	print("Le jeu est sur le point de se fermer. Sauvegarde des données...")
 	JsonDataInventory.save_all()
 	get_tree().quit()
+
+
+func _on_animation_opening_container_started(anim_name):
+	is_animation_playing = true
+
+
+func _on_animation_opening_container_finished(anim_name):
+	is_animation_playing = false
+	
+	
+
+

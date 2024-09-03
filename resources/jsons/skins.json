@@ -76,7 +76,7 @@
 						0.00,
 						0.00
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/usp.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_usp_orangeanolis.png"
 				},
 				{
 					"nom": "Purple DDPAT",
@@ -103,6 +103,83 @@
 						2.21
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_usp_purpleddpat.png"
+				},
+				{
+					"nom": "Check Engine",
+					"id": "Check Engine_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_usp_silencer_sp_mesh_safetyred_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						1.22,
+						0.77,
+						0.5,
+						0.61,
+						0.51,
+						19.32,
+						6.73,
+						3.8,
+						5.38,
+						4.8
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Ancient Visions",
+					"id": "Ancient Visions_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/USP_Ancient_Visions.png",
+					"categorie": "restricted",
+					"prix": [
+						65.26	,
+						62.58	,
+						58.51	,
+						56.18	,
+						0.00	,
+						16.44	,
+						10.86	,
+						7.02	,
+						7.43	,
+						0.00
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Road Rash",
+					"id": "Road Rash_usp_s",
+					"arme": "usp_s",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						73.55,
+						59.99,
+						35.59,
+						25.57,
+						25.32,
+						114.22,
+						28.00,
+						18.55,
+						16.21,
+						15.56
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/USP-S_Road_Rash.png"
 				}
 			],
 			"glock18": [
@@ -653,7 +730,7 @@
 						"ww",
 						"bs"
 					],
-					"image_path": "",
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_glock_am_nuclear_skulls_green_light_large.png",
 					"categorie": "restricted",
 					"prix": [
 						6.61,
@@ -1064,7 +1141,7 @@
 						"ww",
 						"bs"
 					],
-					"image_path": "",
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_glock_redtire.png",
 					"categorie": "industrial_grade",
 					"prix": [
 						4.54,
@@ -1087,7 +1164,7 @@
 						"fn",
 						"mw"
 					],
-					"image_path": "",
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_glock_aa_vertigo_blue_light_large.png",
 					"categorie": "industrial_grade",
 					"prix": [
 						0.12,
@@ -1113,7 +1190,7 @@
 						"ww",
 						"bs"
 					],
-					"image_path": "",
+					"image_path": "res://resources/images/conteneurs/overpass/Glock-18_Night.png",
 					"categorie": "industrial_grade",
 					"prix": [
 						54.51,
@@ -1257,7 +1334,59 @@
 						0.12,
 						0.10
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/fiveseven.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_fiveseven_witheredvine.png"
+				},
+				{
+					"nom": "Fall Hazard",
+					"id": "Fall Hazard_fiveseven",
+					"arme": "fiveseven",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						333.01,
+						282.51,
+						260.45,
+						226.12,
+						211.2,
+						127.94,
+						99.67,
+						52.99,
+						79.93,
+						85.71
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_fiveseven_fallhazard.png"
+				},
+				{
+					"nom": "Coolant",
+					"id": "Coolant_fiveseven",
+					"arme": "fiveseven",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.05,
+						0.04,
+						0.03,
+						0.03,
+						0.03,
+						0.39,
+						0.17,
+						0.06,
+						0.10,
+						0.09
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_fiveseven_hy_ducts_green_light_large.png"
 				}
 			],
 			"tec9": [
@@ -1309,9 +1438,61 @@
 						1.63,
 						0.74,
 						0.53,
-						0
+						0.42
 					],
 					"arme": "tec9"
+				},
+				{
+					"nom": "Blast From the Past",
+					"id": "Blast From the Past_tec9",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/Tec9_blast_from_the_past.png",
+					"categorie": "mil_spec",
+					"prix": [
+						19.98,
+						17.38,
+						17.38,
+						17.55,
+						18.86,
+						1.77,
+						0.62,
+						0.41,
+						0.58,
+						0.74	
+					],
+					"arme": "tec9"
+				},
+				{
+					"nom": "Remote Control",
+					"id": "Remote Control_tec9",
+					"arme": "tec9",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						5.00,
+						2.78,
+						1.63,
+						1.09,
+						1.17,
+						48.36,
+						43.06,
+						21.89,
+						13.46,
+						14.28
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_tec9_gs_tec9_envoy_light_large.png"
 				}
 			],
 			"dual_berettas": [
@@ -1392,6 +1573,58 @@
 						0.04
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_elite_driftwood.png"
+				},
+				{
+					"nom": "Twin Turbo",
+					"id": "Twin Turbo_dual_berettas",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_elite_cu_dual_elites_rally_light_large.png",
+					"categorie": "classified",
+					"prix": [
+						4.06,
+						2.51,
+						1.53,
+						0.75,
+						0.72,
+						267.18,
+						37.22,
+						12.74,
+						11.95,
+						7.22
+					],
+					"arme": "dual_berettas"
+				},
+				{
+					"nom": "Oil Change",
+					"id": "Oil Change_dual_berettas",
+					"arme": "dual_berettas",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.97,
+						0.80,
+						0.80,
+						0.76,
+						0.83,
+						0.07,
+						0.04,
+						0.04,
+						0.05,
+						0.07
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_elite_oilchange.png"
 				}
 			],
 			"p2000": [
@@ -1422,8 +1655,8 @@
 					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_p2000.png"
 				},
 				{
-					"nom": "Gnarled",
-					"id": "Gnarled_p2000",
+					"nom": "Panther Camo",
+					"id": "Panther Camo_p2000",
 					"etats_possible": [
 						"fn",
 						"mw",
@@ -1431,21 +1664,47 @@
 						"ww",
 						"bs"
 					],
-					"image_path": "res://resources/images/conteneurs/fracture/P2000gnarled.png",
-					"categorie": "mil_spec",
+					"image_path": "res://resources/images/conteneurs/ancient/P2000_Panther_Camo.png",
+					"categorie": "industrial_grade",
 					"prix": [
-						0.24,
-						0.09,
-						0.06,
+						4.48,
+						4.31,
+						3.99,
+						4.31,
+						3.77,
+						0.14,
+						0.08,
 						0.07,
-						0.06,
-						1.06,
-						0.24,
-						0.12,
-						0.11,
-						0.11
+						0.09,
+						0.12
 					],
 					"arme": "p2000"
+				},
+				{
+					"nom": "Grassland",
+					"id": "Grassland_p2000",
+					"arme": "p2000",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						25.18,
+						4.00,
+						4.30,
+						3.16,
+						3.57,
+						6.36,
+						0.70,
+						0.08,
+						0.14,
+						0.07
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/P2000_Grassland.png"
 				}
 			],
 			"p250": [
@@ -1473,7 +1732,7 @@
 						0.36,
 						0.27
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/db.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_p250_blackandtan.png"
 				},
 				{
 					"nom": "Drought",
@@ -1525,6 +1784,110 @@
 						0.11
 					],
 					"arme": "p250"
+				},
+				{
+					"nom": "Vino Primo",
+					"id": "Vino Primo_p250",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_p250_gs_p250_checker_light_large.png",
+					"categorie": "restricted",
+					"prix": [
+						6.99,
+						3.95,
+						1.33,
+						0.93,
+						0.63,
+						144.09,
+						15.21,
+						9.28,
+						7.96,
+						7.07
+					],
+					"arme": "p250"
+				},
+				{
+					"nom": "Digital Architect",
+					"id": "Digital Architect_p250",
+					"arme": "p250",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						57.09,
+						55.09,
+						55.51,
+						70.22,
+						115.00,
+						30.42,
+						15.27,
+						8.66,
+						6.63,
+						7.57
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_p250_digitalarchitect.png"
+				},
+				{
+					"nom": "Exchanger",
+					"id": "Exchanger_p250",
+					"arme": "p250",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.50,
+						0.36,
+						0.17,
+						0.12,
+						0.13,
+						1.34,
+						0.63,
+						0.30,
+						0.98,
+						1.86
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_p250_hy_ducts_blue_light_large.png"
+				},
+				{
+					"nom": "Facility Draft",
+					"id": "Facility Draft_p250",
+					"arme": "p250",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.05,
+						0.03,
+						0.03,
+						0.03,
+						0.03,
+						0.11,
+						0.07,
+						0.04,
+						0.07,
+						0.07
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/P250-_Facility_Draft.png"
 				}
 			],
 			"r8": [
@@ -1552,7 +1915,59 @@
 						0.04,
 						0.03
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/db.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_revolver_desertbrush.png"
+				},
+				{
+					"nom": "Nitro",
+					"id": "Nitro_r8",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_revolver_so_orange_accents3_light_large.png",
+					"categorie": "industrial_grade",
+					"prix": [
+						0.26,
+						0.09,
+						0.07,
+						0.07,
+						0.06,
+						9.38,
+						0.42,
+						0.07,
+						0.16,
+						0.06
+					],
+					"arme": "r8"
+				},
+				{
+					"nom": "Night",
+					"id": "Night_r8",
+					"arme": "r8",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						5.54	,
+						0.83	,
+						0.73	,
+						0.65	,
+						0.58	,
+						1.44	,
+						0.03,
+						0.03,
+						0.04,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/R8_Revolver_Night.png"
 				}
 			],
 			"deagle": [
@@ -1607,6 +2022,32 @@
 						58
 					],
 					"arme": "deagle"
+				},
+				{
+					"nom": "Urban DDPAT",
+					"id": "Urban DDPAT_deagle",
+					"arme": "deagle",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						19.62,
+						3.33,
+						2.69,
+						2.78,
+						2.81,
+						20.55,
+						2.44,
+						0.75,
+						1.30,
+						0.81
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/Desert_Eagle_Urban_DDPAT.png"
 				}
 			],
 			"cz75_auto": [
@@ -1635,6 +2076,81 @@
 						0.04
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_cz75a_midnightpalm.png"
+				},
+				{
+					"nom": "Silver",
+					"id": "Silver_cz75_auto",
+					"arme": "cz75_auto",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						4.68	,
+						5.98	,
+						0,
+						0,
+						0,
+						0.23	,
+						0.49	,
+						0,
+						0,
+						0
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/CZ75_Silver.png"
+				},
+				{
+					"nom": "Nitro",
+					"id": "Nitro_cz75_auto",
+					"arme": "cz75_auto",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						72.14,
+						11.50,
+						11.04,
+						15.03,
+						11.78,
+						20.75,
+						1.35,
+						0.32,
+						0.47,
+						0.27
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/CZ75-Auto_Nitro_%28Minimal_Wear%29.png"
+				},
+				{
+					"nom": "Framework",
+					"id": "Framework_cz75_auto",
+					"arme": "cz75_auto",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.29,
+						0.83,
+						0.77,
+						0.78,
+						0.87,
+						0.21,
+						0.06,
+						0.04,
+						0.11,
+						0.04
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_cz75a_framework.png"
 				}
 			]
 		},
@@ -1716,7 +2232,109 @@
 						0.03,
 						0.09
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/mp7.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_mp7_prey.png"
+				},
+				{
+					"nom": "Fade",
+					"id": "Fade_mp7",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_mp7_aa_fade_mp7_light_large.png",
+					"categorie": "restricted",
+					"prix": [
+						6.44,
+						4.66,
+						4.66,
+						0,
+						0,
+						40.65,
+						24.81,
+						21.29,
+						0,
+						0
+					],
+					"arme": "mp7"
+				},
+				{
+					"nom": "Tall Grass",
+					"id": "Tall Grass_mp7",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/Mp7_tall_grass.png",
+					"categorie": "industrial_grade",
+					"prix": [
+						4.73,
+						4.17,
+						4.00,
+						4.94,
+						4.83,
+						0.36,
+						0.15,
+						0.05,
+						0.20,
+						0.05
+					],
+					"arme": "mp7"
+				},
+				{
+					"nom": "Gunsmoke",
+					"id": "Gunsmoke_mp7",
+					"arme": "mp7",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						12.70,
+						4.05 ,
+						4.29,
+						3.11,
+						2.91,
+						7.17,
+						0.70,
+						0.11,
+						0.20,
+						0.06
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/MP7_Gunsmoke.png"
+				},
+				{
+					"nom": "Motherboard",
+					"id": "Motherboard_mp7",
+					"arme": "mp7",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.11,
+						0.07,
+						0.06,
+						0.06,
+						0.06,
+						0.36,
+						0.14,
+						0.07,
+						0.15,
+						0.20
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_mp7_am_circuitboard_green_light_large.png"
 				}
 			],
 			"mac10": [
@@ -1796,7 +2414,7 @@
 						10.40,
 						9.98
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/mac10.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_mac10_casehardened.png"
 				},
 				{
 					"nom": "Case Hardened [Blue Gem]",
@@ -1822,7 +2440,7 @@
 						20.80,
 						19.96
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/mac10.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_mac10_casehardened.png"
 				},
 				{
 					"nom": "Sienna Damask",
@@ -1875,6 +2493,84 @@
 						0.57
 					],
 					"arme": "mac10"
+				},
+				{
+					"nom": "Calf Skin",
+					"id": "Calf Skin_mac10",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_mac10_gs_mac10_checker_light_large.png",
+					"categorie": "industrial_grade",
+					"prix": [
+						0.18,
+						0.08,
+						0.07,
+						0.07,
+						0.07,
+						5.68,
+						0.98,
+						0.25,
+						0.1,
+						0.09
+					],
+					"arme": "mac10"
+				},
+				{
+					"nom": "Gold Brick",
+					"id": "Gold Brick_mac10",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/Mac10_Gold_Brick.png",
+					"categorie": "restricted",
+					"prix": [
+						70.00	,
+						68.16	,
+						48.21	,
+						76.76	,
+						46.50	,
+						66.75	,
+						29.00	,
+						15.46	,
+						13.04	,
+						12.82
+					],
+					"arme": "mac10"
+				},
+				{
+					"nom": "Strats",
+					"id": "Strats_mac10",
+					"arme": "mac10",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.94,
+						0.83,
+						0.75,
+						0.82,
+						0.83,
+						0.16,
+						0.07,
+						0.04,
+						0.13,
+						0.04
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_mac10_hy_vertigospray_blue_light_large.png"
 				}
 			],
 			"ump45": [
@@ -1925,7 +2621,111 @@
 						0.00,
 						0.00
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/ump.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_ump45_fade.png"
+				},
+				{
+					"nom": "Mudder",
+					"id": "Mudder_ump45",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_ump45_hy_mottled_sand_light_large.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						0.07,
+						0.03,
+						0.03,
+						0.03,
+						0.03,
+						0.78,
+						0.06,
+						0.03,
+						0.03,
+						0.03
+					],
+					"arme": "ump45"
+				},
+				{
+					"nom": "Scorched",
+					"id": "Scorched_ump45",
+					"arme": "ump45",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						12.00,
+						1.05,
+						0.63,
+						0.59,
+						0.62,
+						0.92,
+						0.04,
+						0.03,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/UMP-45_Scorched.png"
+				},
+				{
+					"nom": "Mechanism",
+					"id": "Mechanism_ump45",
+					"arme": "ump45",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						4.52,
+						4.56,
+						4.38,
+						5.49,
+						5.95,
+						0.17,
+						0.11,
+						0.06,
+						0.21,
+						0.48
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_ump45_mechanism.png"
+				},
+				{
+					"nom": "Facility Dark",
+					"id": "Facility Dark_ump45",
+					"arme": "ump45",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.05,
+						0.03,
+						0.03,
+						0.03,
+						0.03,
+						0.06,
+						0.04,
+						0.03,
+						0.05,
+						0.04
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_ump45_hy_blueprint_bluered_light_large.png"
 				}
 			],
 			"mp9": [
@@ -1979,7 +2779,7 @@
 						0.14,
 						0.11
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/ump.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_mp9_oldroots.png"
 				},
 				{
 					"nom": "Music Box",
@@ -2006,6 +2806,58 @@
 						0.12
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_mp9_musicbox.png"
+				},
+				{
+					"nom": "Slide",
+					"id": "Slide_mp9",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_mp9_hy_splatter3_light_large.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						0.08,
+						0.04,
+						0.03,
+						0.03,
+						0.03,
+						1.85,
+						0.12,
+						0.06,
+						0.07,
+						0.06
+					],
+					"arme": "mp9"
+				},
+				{
+					"nom": "Storm",
+					"id": "Storm_mp9",
+					"arme": "mp9",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						36.61,
+						4.50,
+						1.27,
+						1.10,
+						0.66,
+						14.18,
+						2.46,
+						0.42,
+						0.39,
+						0.17
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/MP9_Storm.png"
 				}
 			],
 			"bizon": [
@@ -2086,6 +2938,81 @@
 						0.11
 					],
 					"arme": "bizon"
+				},
+				{
+					"nom": "Candy Apple",
+					"id": "Candy Apple_bizon",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_bizon_so_red_light_large.png",
+					"categorie": "industrial_grade",
+					"prix": [
+						0.11,
+						0.09,
+						0.07,
+						0,
+						0,
+						2.23,
+						0.92,
+						0,
+						0,
+						0
+					],
+					"arme": "bizon"
+				},
+				{
+					"nom": "Breaker Box",
+					"id": "Breaker Box_bizon",
+					"arme": "bizon",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"prix": [
+						4.54,
+						4.51,
+						4.00,
+						6.81,
+						0,
+						0.39,
+						0.21,
+						0.08,
+						0.28,
+						0
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_bizon_breakerbox.png"
+				},
+				{
+					"nom": "Facility Sketch",
+					"id": "Facility Sketch_bizon",
+					"arme": "bizon",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.05,
+						0.04,
+						0.03,
+						0.03,
+						0.03,
+						1.75,
+						0.95,
+						0.21,
+						0.15,
+						0.12
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_bizon_hy_blueprint_white_light_large.png"
 				}
 			],
 			"mp5_sd": [
@@ -2166,6 +3093,58 @@
 						0.60	
 					],
 					"image_path": "res://resources/images/conteneurs/fracture/Mp5kitbash.png"
+				},
+				{
+					"nom": "Dirt Drop",
+					"id": "Dirt Drop_mp5_sd",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_mp5sd_sp_tape_short_rally_light_large.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						0.07,
+						0.03,
+						0.03,
+						0.03,
+						0.03,
+						1.66,
+						0.06,
+						0.06,
+						0.06,
+						0.06
+					],
+					"arme": "mp5_sd"
+				},
+				{
+					"nom": "Co-Processor",
+					"id": "Co-Processor_mp5_sd",
+					"arme": "mp5_sd",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.52,
+						0.34,
+						0.16,
+						0.13,
+						0.13,
+						2.73,
+						1.95,
+						1.10,
+						1.47,
+						2.31
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_mp5sd_am_circuitboard_aqua_light_large.png"
 				}
 			],
 			"p90": [
@@ -2193,7 +3172,7 @@
 						0.03,
 						0.03
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/ump.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_p90_desertddpat.png"
 				},
 				{
 					"nom": "Verdant Growth",
@@ -2246,7 +3225,112 @@
 						0.11
 					],
 					"arme": "p90"
+				},
+				{
+					"nom": "Run and Hide",
+					"id": "Run and Hide_p90",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/P90_Run_and_Hide.png",
+					"categorie": "classified",
+					"prix": [
+						391.30,
+						369.62,
+						215.00,
+						218.00,
+						193.10,
+						154.97,
+						31.75,
+						17.78,
+						14.41,
+						12.11
+					],
+					"arme": "p90"
+				},
+				{
+					"nom": "Ancient Earth",
+					"id": "Ancient Earth_p90",
+					"arme": "p90",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.93,
+						0.72,
+						0.69,
+						0.75,
+						1.16,
+						0.06,
+						0.04,
+						0.04,
+						0.05,
+						0.05
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/P90_ancient_earth.png"
+				},
+				{
+					"nom": "Schematic",
+					"id": "Schematic_p90",
+					"arme": "p90",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						19.73,
+						18.40,
+						17.32,
+						45.12,
+						31.99,
+						3.61,
+						2.34,
+						0.74,
+						1.53,
+						1.38
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_p90_schematic.png"
+				},
+				{
+					"nom": "Facility Negative",
+					"id": "Facility Negative_p90",
+					"arme": "p90",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.53,
+						0.36,
+						0.16,
+						0.13,
+						0.12,
+						2.27,
+						0.78,
+						0.34,
+						1.58,
+						1.29
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_p90_hy_blueprint_aqua_light_large.png"
 				}
+				
 			]
 		},
 		"rifle": {
@@ -2327,7 +3411,7 @@
 						1651.76,
 						1366.20
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/ak.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_ak47_goldarabesque.png"
 				},
 				{
 					"nom": "Legion of Anubis",
@@ -2354,6 +3438,83 @@
 						0
 					],
 					"arme": "ak47"
+				},
+				{
+					"nom": "Safety Net",
+					"id": "Safety Net_ak47",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_ak47_hy_mesh_safetyorange_light_large.png",
+					"categorie": "restricted",
+					"prix": [
+						7.02,
+						5.08,
+						3.01,
+						3.98,
+						2.99,
+						57.5,
+						27.19,
+						13.46,
+						58.09,
+						25.50
+					],
+					"arme": "ak47"
+				},
+				{
+					"nom": "Panthera onca",
+					"id": "Panthera onca_ak47",
+					"arme": "ak47",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						368.43,
+						328.47,
+						259.99,
+						325.84,
+						189.33,
+						1105.00,
+						274.43,
+						187.86,
+						150.38,
+						140.45
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/AK-47_Panthera_onca.png"
+				},
+				{
+					"nom": "Green Laminate",
+					"id": "Green Laminate_ak47",
+					"arme": "ak47",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"prix": [
+						23.98 ,
+						18.54,
+						15.98,
+						37.07,
+						0.00,
+						24.64,
+						16.90,
+						15.09,
+						28.79,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_ak47_greenlaminate.png"
 				}
 			],
 			"m4a1_s": [
@@ -2408,6 +3569,110 @@
 						4.99
 					],
 					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_m4a1s.png"
+				},
+				{
+					"nom": "Welcome to the Jungle",
+					"id": "Welcome to the Jungle_m4a1_s",
+					"arme": "m4a1_s",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2101.55,
+						1490.00,
+						945.12,
+						619.00,
+						592.17,
+						4850.00,
+						1473.31,
+						875.00,
+						596.83,
+						545.36
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/M4_Welcome_to_the_Jungle.png"
+				},
+				{
+					"nom": "Master Piece",
+					"id": "Master Piece_m4a1_s",
+					"arme": "m4a1_s",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						496.35,
+						332.15,
+						184.26,
+						110.76,
+						100.32,
+						651.34,
+						337.12,
+						212.54,
+						172.05,
+						113.00
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/M4A1-S_Master_Piece.png"
+				},
+				{
+					"nom": "Imminent Danger",
+					"id": "Imminent Danger_m4a1_s",
+					"arme": "m4a1_s",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1570.00,
+						1049.00,
+						633.06,
+						530.76,
+						554.33,
+						1276.63,
+						1084.00,
+						585.00,
+						552.00,
+						500.00
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_m4a1_imminentdanger.png"
+				},
+				{
+					"nom": "Control Panel",
+					"id": "Control Panel_m4a1_s",
+					"arme": "m4a1_s",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						56.31,
+						13.22,
+						6.15,
+						5.01,
+						4.38,
+						155.10,
+						144.95,
+						82.85,
+						49.50,
+						52.67
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_m4a1_silencer_gs_m4a1s_operator_light_large.png"
 				}
 			],
 			"m4a4": [
@@ -2461,7 +3726,7 @@
 						8.92,
 						15.64
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_m4a1_redddpat.png"
 				},
 				{
 					"nom": "Tooth Fairy",
@@ -2488,6 +3753,57 @@
 						5
 					],
 					"arme": "m4a4"
+				},
+				{
+					"nom": "Converter",
+					"id": "Converter_m4a4",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_m4a1_hy_red_hex_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.76,
+						0.57,
+						0.46,
+						0.48,
+						0,
+						7.63,
+						6.32,
+						3.96,
+						8.01,
+						0
+					],
+					"arme": "m4a4"
+				},
+				{
+					"nom": "Mainframe",
+					"id": "Mainframe_m4a4",
+					"arme": "m4a4",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.10,
+						0.08,
+						0.06,
+						0.06,
+						0.06,
+						2.03,
+						1.18,
+						0.77,
+						1.47,
+						1.52
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_m4a1_am_circuitboard_silver_light_large.png"
 				}
 			],
 			"famas": [
@@ -2542,6 +3858,55 @@
 						0.04
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_famas_calicamo.png"
+				},
+				{
+					"nom": "Dark Water",
+					"id": "Dark Water_famas",
+					"arme": "famas",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"mw",
+						"ft"
+					],
+					"prix": [
+						0.00,
+						17.78	,
+						15.03	,
+						0.00,
+						0.00,
+						0.00,
+						1.81	,
+						0.83	,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/Famas_dark_water.png"
+				},
+				{
+					"nom": "Faulty Wiring",
+					"id": "Faulty Wiring_famas",
+					"arme": "famas",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.03,
+						0.84,
+						0.80,
+						0.81,
+						0.84,
+						0.29,
+						0.15,
+						0.07,
+						0.13,
+						0.23
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_famas_faultywiring.png"
 				}
 			],
 			"galil_ar": [
@@ -2568,7 +3933,7 @@
 						3.70,
 						0.00
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_galilar_amberfade.png"
 				},
 				{
 					"nom": "Connexion",
@@ -2595,6 +3960,84 @@
 						0.65
 					],
 					"arme": "galil_ar"
+				},
+				{
+					"nom": "Dusk Ruins",
+					"id": "Dusk Ruins_galil_ar",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/Galil_dusk_ruins.png",
+					"categorie": "mil_spec",
+					"prix": [
+						19.25	,
+						18.10	,
+						15.29,
+						12.48,
+						47.12	,
+						11.87	,
+						8.08	,
+						3.69	,
+						4.04	,
+						3.34	
+					],
+					"arme": "galil_ar"
+				},
+				{
+					"nom": "CAUTION!",
+					"id": "CAUTION!_galil_ar",
+					"arme": "galil_ar",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						69.48,
+						63.05,
+						60.05,
+						57.85,
+						50.22,
+						50.02,
+						34.00,
+						14.00,
+						15.99,
+						15.42
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_galilar_caution.png"
+				},
+				{
+					"nom": "Cold Fusion",
+					"id": "Cold Fusion_galil_ar",
+					"arme": "galil_ar",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.30,
+						0.09,
+						0.06,
+						0.07,
+						0.06,
+						5.64,
+						1.98,
+						0.82,
+						1.53,
+						0.71
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_galilar_hy_nuclear_skulls_aqua_light_large.png"
 				}
 			],
 			"aug": [
@@ -2622,7 +4065,7 @@
 						0.07,
 						0.16
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_aug_splatedwood.png"
 				},
 				{
 					"nom": "Sand Storm",
@@ -2649,6 +4092,82 @@
 						2.47
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_aug_sandstorm.png"
+				},
+				{
+					"nom": "Sweeper",
+					"id": "Sweeper_aug",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_aug_sp_mesh_safetyblack_light_large.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						0.05,
+						0.03,
+						0.03,
+						0.03,
+						0.03,
+						0.18,
+						0.06,
+						0.04,
+						0.13,
+						0.05
+					],
+					"arme": "aug"
+				},
+				{
+					"nom": "Carved Jade",
+					"id": "Carved Jade_aug",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_aug_sp_mesh_safetyblack_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						18.35,
+						17.40,
+						16.96,
+						0,
+						0,
+						8.57,
+						4.49,
+						3.75,
+						0,
+						0
+					],
+					"arme": "aug"
+				},
+				{
+					"nom": "Random Access",
+					"id": "Random Access_aug",
+					"arme": "aug",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						4.19,
+						1.76,
+						0.88,
+						0.80,
+						0.72,
+						4.46,
+						2.87,
+						1.51,
+						8.20,
+						9.71
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_aug_am_circuitboard_orange_light_large.png"
 				}
 			],
 			"sg553": [
@@ -2677,7 +4196,7 @@
 						0.04
 
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/m4a4.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_sg556_bleached.png"
 				},
 				{
 					"nom": "Desert Blossom",
@@ -2731,6 +4250,84 @@
 						0.11
 					],
 					"arme": "sg553"
+				},
+				{
+					"nom": "Integrale",
+					"id": "Integrale_sg553",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_sg556_cu_sg553_rally_light_large.png",
+					"categorie": "classified",
+					"prix": [
+						69.93,
+						23.22,
+						8.45,
+						3.85,
+						3.26,
+						1253.15,
+						194.03,
+						70.42,
+						39.8,
+						37.97
+					],
+					"arme": "sg553"
+				},
+				{
+					"nom": "Lush Ruins",
+					"id": "Lush Ruins_sg553",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/Sg553_lush_ruins.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						1.07,
+						0.75,
+						0.70,
+						1.07,
+						0.69,
+						0.18,
+						0.05,
+						0.04,
+						0.05,
+						0.04
+					],
+					"arme": "sg553"
+				},
+				{
+					"nom": "Hazard Pay",
+					"id": "Hazard Pay_sg553",
+					"arme": "sg553",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						326.79,
+						367.71,
+						198.97,
+						299.99,
+						227.50,
+						207.06,
+						125.16,
+						87.66,
+						75.81,
+						70.1
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_sg556_hazardpay.png"
 				}
 			]
 		},
@@ -2787,6 +4384,58 @@
 						1101.99
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_awp_deserthydra.png"
+				},
+				{
+					"nom": "Pink DDPAT",
+					"id": "Pink DDPAT_awp",
+					"arme": "awp",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						175.09,
+						47.97,
+						30.07,
+						27.91,
+						30.43,
+						174.81,
+						50.04,
+						18.91,
+						18.55,
+						17.55
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/AWP_Pink_DDPAT.png"
+				},
+				{
+					"nom": "Acheron",
+					"id": "Acheron_awp",
+					"arme": "awp",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.76,
+						0.86,
+						0.28,
+						0.73,
+						0.24,
+						39.99,
+						12.00,
+						5.55,
+						12.0,
+						6.17
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_awp_hy_nuclear_skulls_redblue_light_large.png"
 				}
 			],
 			"scout": [
@@ -2840,7 +4489,7 @@
 						107.89,
 						152.03
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/scout.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_ssg08_deathstrike.png"
 				},
 				{
 					"nom": "Prey",
@@ -2893,6 +4542,106 @@
 						0
 					],
 					"arme": "scout"
+				},
+				{
+					"nom": "Hand Brake",
+					"id": "Hand Brake_scout",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_ssg08_gs_ssg08_checker_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						1,
+						0.57,
+						0.42,
+						0.38,
+						0.35,
+						34.79,
+						6.25,
+						2.61,
+						2.43,
+						2
+					],
+					"arme": "scout"
+				},
+				{
+					"nom": "Jungle Dashed",
+					"id": "Jungle Dashed_scout",
+					"arme": "scout",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						7.03,
+						0.78,
+						0.69,
+						0.71,
+						0.75,
+						1.91,
+						0.07,
+						0.03,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/Ssg08_jungle_dashed.png"
+				},
+				{
+					"nom": "Detour",
+					"id": "Detour_scout",
+					"arme": "scout",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"prix": [
+						19.98,
+						13.84,
+						15.33,
+						14.14,
+						0.00,
+						13.65,
+						8.88,
+						5.06,
+						4.40,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/SSG_08_Detour.png"
+				},
+				{
+					"nom": "Carbon Fiber",
+					"id": "Carbon Fiber_scout",
+					"arme": "scout",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						5.00,
+						4.69,
+						0,
+						0,
+						0,
+						1.32,
+						1.54,
+						0,
+						0,
+						0
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_ssg08_carbonfiber.png"
 				}
 			],
 			"g3sg1": [
@@ -2946,7 +4695,33 @@
 						0.23,
 						0.13
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/scout.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_g3sg1_newroots.png"
+				},
+				{
+					"nom": "Ancient Ritual",
+					"id": "Ancient Ritual_g3sg1",
+					"arme": "g3sg1",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						5.13,
+						4.21,
+						4.09,
+						7.27,
+						4.04,
+						0.37,
+						0.09,
+						0.05,
+						0.16,
+						0.05
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/G3sg1_ancient_ritual.png"
 				}
 			],
 			"scar20": [
@@ -3056,7 +4831,56 @@
 						0.03,
 						0.03                        
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/sawed.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_sawedoff_parched.png"
+				},
+				{
+					"nom": "Brake Light",
+					"id": "Brake Light_sawed_off",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_sawedoff_aa_vertigo_red_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.72,
+						0.64,
+						0,
+						0,
+						0,
+						0.41,
+						1.53,
+						0,
+						0,
+						0
+					],
+					"arme": "sawed_off"
+				},
+				{
+					"nom": "Sage Spray",
+					"id": "Sage Spray_sawed_off",
+					"arme": "sawed_off",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						13.00,
+						1.30,
+						0.62,
+						0.53,
+						0.52,
+						0.70,
+						0.04,
+						0.03,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/Sawed-Off_Sage_spray.png"
 				}
 			],
 			"xm1014": [
@@ -3161,6 +4985,84 @@
 						4.55
 					],
 					"arme": "xm1014"
+				},
+				{
+					"nom": "Ancient Lore",
+					"id": "Ancient Lore_xm101",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/XM1014_Ancient_Lore.png",
+					"categorie": "restricted",
+					"prix": [
+						65.55,
+						51.76,
+						57.76,
+						61.76,
+						67.70,
+						4.17,
+						2.04,
+						1.30,
+						1.79,
+						1.85
+					],
+					"arme": "xm1014"
+				},
+				{
+					"nom": "VariCamo Blue",
+					"id": "VariCamo Blue_xm1014",
+					"arme": "xm1014",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						15.57,
+						13.92,
+						14.11,
+						12.78,
+						14.50,
+						3.04,
+						1.24,
+						0.48,
+						1.05,
+						0.80
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/XM1014_VariCamo_Blue.png"
+				},
+				{
+					"nom": "Blue Tire",
+					"id": "Blue Tire_xm1014",
+					"arme": "xm1014",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.97,
+						0.82,
+						0.76,
+						0.85,
+						0.94,
+						0.17,
+						0.07,
+						0.04,
+						0.06,
+						0.06
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_xm1014_sp_tire_tread_blue_light_large.png"
 				}
 			],
 			"nova": [
@@ -3214,7 +5116,83 @@
 						0.29,
 						0.17                        
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/nova.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_nova_quicksand.png"
+				},
+				{
+					"nom": "Army Sheen",
+					"id": "Army Sheen_nova",
+					"arme": "nova",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"prix": [
+						0.97,
+						0.76,
+						0.72,
+						0.00,
+						0.00,
+						0.04,
+						0.03,
+						0.03,
+						0.00,
+						0.00                       
+					],
+					"image_path": "res://resources/images/conteneurs/ancient/Nova_army_sheen.png"
+				},
+				{
+					"nom": "Interlock",
+					"id": "Interlock_nova",
+					"arme": "nova",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						20.85,
+						17.65,
+						17.16,
+						19.05,
+						5.18,
+						4.45,
+						2.57,
+						0.70,
+						1.28,
+						1.99
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_nova_interlock.png"
+				},
+				{
+					"nom": "Mandrel",
+					"id": "Mandrel_nova",
+					"arme": "nova",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.05,
+						0.03,
+						0.03,
+						0.03,
+						0.03,
+						0.07,
+						0.05,
+						0.03,
+						0.05,
+						0.06
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_nova_hy_ducts_grey_light_large.png"
 				}
 			],
 			"mag7": [
@@ -3295,6 +5273,108 @@
 						0
 					],
 					"arme": "mag7"
+				},
+				{
+					"nom": "Rust Coat",
+					"id": "Rust Coat_mag7",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/inferno_2018/Weapon_mag7_aq_steel_inferno_light_large.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						0.07,
+						0.03,
+						0.03,
+						0.03,
+						0.03,
+						0.2,
+						0.05,
+						0.03,
+						0.03,
+						0.09
+					],
+					"arme": "mag7"
+				},
+				{
+					"nom": "Storm",
+					"id": "Storm_mag7",
+					"arme": "mag7",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						11.30,
+						1.57,
+						0.55,
+						1.09,
+						0.51,
+						3.27,
+						0.24,
+						0.04,
+						0.05,
+						0.04
+					],
+					"image_path": "res://resources/images/conteneurs/dreams_nightmares/D%26n_mag7.png"
+				},
+				{
+					"nom": "Prism Terrace",
+					"id": "Prism Terrace_mag7",
+					"arme": "mag7",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"prix": [
+						73.72,
+						65.00,
+						50.00,
+						0,
+						0,
+						21.05,
+						9.17,
+						3.30,
+						0,
+						0
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_mag7_prismterrace.png"
+				},
+				{
+					"nom": "Core Breach",
+					"id": "Core Breach_mag7",
+					"arme": "mag7",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						4.32,
+						1.90,
+						0.86,
+						0.54,
+						0.60,
+						31.00,
+						3.00,
+						0.94,
+						0.71,
+						1.62
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_mag7_hy_nuclear_hotorange_light_large.png"
 				}
 			]
 		},
@@ -3324,7 +5404,7 @@
 						0.05,
 						0.05
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/ump.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_m249_midnightpalm.png"
 				},
 				{
 					"nom": "Humidor",
@@ -3351,6 +5431,32 @@
 						0.08
 					],
 					"image_path": "res://resources/images/conteneurs/mirage_2021/Mirage2021_m249_humidor.png"
+				},
+				{
+					"nom": "Contrast Spray",
+					"id": "Contrast Spray_m249",
+					"arme": "m249",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						6.98,
+						1.10,
+						0.58,
+						0.52,
+						0.50,
+						0.89,
+						0.05,
+						0.03,
+						0.04,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/overpass/M249_Contrast_spray.png"
 				}
 			],
 			"negev" : [
@@ -3372,11 +5478,63 @@
 						0.06,
 						0.06,
 						0.06,
-						0,
+						0.34,
 						0.26,
 						0.11,
 						0.12,
 						0.11
+					],
+					"arme": "negev"
+				},
+				{
+					"nom": "Infrastructure",
+					"id": "Infrastructure_negev",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_negev_infrastructure.png",
+					"categorie": "mil_spec",
+					"prix": [
+						18.55,
+						16.12,
+						16.53,
+						21.20,
+						24.29,
+						2.42,
+						1.23,
+						0.80,
+						1.16,
+						1.19
+					],
+					"arme": "negev"
+				},
+				{
+					"nom": "Bulkhead",
+					"id": "Bulkhead_negev",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_negev_hy_ducts_yellow_light_large.png",
+					"categorie": "industrial_grade",
+					"prix": [
+						0.11,
+						0.08,
+						0.06,
+						0.06,
+						0.06,
+						2.78,
+						1.75,
+						0.82,
+						0.82,
+						0.76
 					],
 					"arme": "negev"
 				}
