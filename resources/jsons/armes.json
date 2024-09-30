@@ -20,7 +20,6 @@
         {"nom": "Galil AR", "categorie": "Rifle", "id": "galil_ar"},    
         {"nom": "FAMAS", "categorie": "Rifle", "id": "famas"},
         {"nom": "AK-47", "categorie": "Rifle", "id": "ak47"},
-        {"nom": "AK-47", "categorie": "Rifle", "id": "ak47"},
         {"nom": "M4A4", "categorie": "Rifle", "id": "m4a4"},
         {"nom": "M4A1-S", "categorie": "Rifle", "id": "m4a1_s"},
         {"nom": "AUG", "categorie": "Rifle", "id": "aug"},

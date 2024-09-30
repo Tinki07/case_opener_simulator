@@ -7,8 +7,9 @@
 [ext_resource type="FontFile" uid="uid://0mp1cwbuy8bw" path="res://resources/fonts/TT Lakes Neue Trial Regular.ttf" id="5_ewuap"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vt8i"]
+draw_center = false
 shadow_color = Color(0, 0, 0, 0.321569)
-shadow_size = 2
+shadow_size = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6ers"]
 border_color = Color(0, 0, 0, 1)
@@ -35,6 +36,7 @@ offset_bottom = 96.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_j6ers")
 
 [node name="Kindpng4298060" type="Sprite2D" parent="pnl_skin"]
+visible = false
 position = Vector2(70.0068, 20.0045)
 rotation = -3.14159
 scale = Vector2(0.085736, 0.127866)

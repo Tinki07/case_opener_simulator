@@ -20,6 +20,42 @@
 			"image_path": "res://resources/images/conteneurs/fracture/Fracture_Case_Key.png",
 			"conteneur_unlocker": "caisse_fracture",
 			"prix": 2.49
+		},
+		{
+			"nom": "Winter Offensive Weapon Case Key",
+			"id": "caisse_winter_offensive_key",
+			"image_path": "res://resources/images/conteneurs/winter_offensive/Winteroff-key.png",
+			"conteneur_unlocker": "caisse_winter_offensive",
+			"prix": 2.49
+		},
+		{
+			"nom": "CS:GO Weapon Case Key",
+			"id": "caisse_csgo_weapon_key",
+			"image_path": "res://resources/images/conteneurs/weapon_case/CsGOKey.png",
+			"conteneur_unlocker": "caisse_csgo_weapon",
+			"prix": 2.49
+		},
+		{
+			"nom": "Spectrum 2 Case Key",
+			"id": "caisse_spectrum2_key",
+			"image_path": "res://resources/images/conteneurs/spectrum2/Crate_key_community_18.png",
+			"conteneur_unlocker": "caisse_spectrum2",
+			"prix": 2.49
+		},
+		{
+			"nom": "Operation Phoenix Weapon Case Key",
+			"id": "caisse_phoenix_weapon_key",
+			"image_path": "res://resources/images/conteneurs/phoenix_weapon/Phoenix-Key.png",
+			"conteneur_unlocker": "caisse_phoenix_weapon",
+			"prix": 2.49
+		},
+		{
+			"nom": "Shadow Case Key",
+			"id": "caisse_shadow_key",
+			"image_path": "res://resources/images/conteneurs/shadow/Csgo-shadow-case-key.png",
+			"conteneur_unlocker": "caisse_shadow",
+			"prix": 2.49
 		}
+		
 	]
 }

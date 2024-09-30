@@ -37,6 +37,55 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://resources/images/conteneurs/alpha/": "red",
+"res://resources/images/conteneurs/ancient/": "green",
+"res://resources/images/conteneurs/anubis/": "green",
+"res://resources/images/conteneurs/assault/": "red",
+"res://resources/images/conteneurs/aztec/": "red",
+"res://resources/images/conteneurs/baggage/": "red",
+"res://resources/images/conteneurs/bank/": "red",
+"res://resources/images/conteneurs/blacksite/": "red",
+"res://resources/images/conteneurs/cache/": "red",
+"res://resources/images/conteneurs/canals/": "red",
+"res://resources/images/conteneurs/chop_shop/": "red",
+"res://resources/images/conteneurs/cobblestone/": "green",
+"res://resources/images/conteneurs/control/": "red",
+"res://resources/images/conteneurs/dreams_nightmares/": "red",
+"res://resources/images/conteneurs/dust2/": "red",
+"res://resources/images/conteneurs/dust2_2021/": "green",
+"res://resources/images/conteneurs/fracture/": "red",
+"res://resources/images/conteneurs/gods_and_monsters/": "red",
+"res://resources/images/conteneurs/havoc/": "red",
+"res://resources/images/conteneurs/inferno/": "red",
+"res://resources/images/conteneurs/inferno_2018/": "green",
+"res://resources/images/conteneurs/italy/": "red",
+"res://resources/images/conteneurs/kilo/": "red",
+"res://resources/images/conteneurs/lake/": "red",
+"res://resources/images/conteneurs/militia/": "red",
+"res://resources/images/conteneurs/mirage/": "red",
+"res://resources/images/conteneurs/mirage_2021/": "green",
+"res://resources/images/conteneurs/norse/": "red",
+"res://resources/images/conteneurs/nuke/": "green",
+"res://resources/images/conteneurs/nuke_2018/": "green",
+"res://resources/images/conteneurs/office/": "red",
+"res://resources/images/conteneurs/overpass/": "green",
+"res://resources/images/conteneurs/phoenix_weapon/": "green",
+"res://resources/images/conteneurs/rising_sun/": "red",
+"res://resources/images/conteneurs/safehouse/": "red",
+"res://resources/images/conteneurs/shadow/": "yellow",
+"res://resources/images/conteneurs/spectrum2/": "green",
+"res://resources/images/conteneurs/st_marc/": "red",
+"res://resources/images/conteneurs/train/": "red",
+"res://resources/images/conteneurs/train_2021/": "red",
+"res://resources/images/conteneurs/vertigo/": "red",
+"res://resources/images/conteneurs/vertigo_2021/": "green",
+"res://resources/images/conteneurs/weapon_case/": "green",
+"res://resources/images/conteneurs/winter_offensive/": "green"
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

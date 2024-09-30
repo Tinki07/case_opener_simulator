@@ -3,6 +3,29 @@
 		"pistols": {
 			"usp_s": [
 				{
+					"nom": "Dark Water",
+					"id": "Dark Water_usp_s",
+					"arme": "usp_s",
+					"categorie": "restricted",
+					"etats_possible": [
+						"mw",
+						"ft"
+					],
+					"prix": [
+						0.00,
+						103.69,
+						90.89,
+						0.00,
+						0.00,
+						0.00,
+						166.75,
+						174.26,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/weapon_case/USP-S_Dark_Water.png"
+				},
+				{
 					"nom": "Jawbreaker",
 					"id": "Jawbreaker_usp_s",
 					"arme": "usp_s",
@@ -180,7 +203,726 @@
 						15.56
 					],
 					"image_path": "res://resources/images/conteneurs/overpass/USP-S_Road_Rash.png"
-				}
+				},
+				{
+					"nom": "Desert Tactical",
+					"id": "Desert Tactical_usp_s",
+					"arme": "usp_s",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.87,
+						0.35,
+						0.23,
+						0.18,
+						0.19,
+						3.48,
+						1.11,
+						0.63,
+						0.63,
+						0.64
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_usp_silencer_gs_usps_tactical_camo.png"
+				},
+				{
+					"nom": "Printstream",
+					"id": "Printstream_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "covert",
+					"prix": [
+						140.72,
+						70,
+						40.5,
+						37.07,
+						27.26,
+						351.33,
+						141.68,
+						80.1,
+						74.75,
+						27.26
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "The Traitor",
+					"id": "The Traitor_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "covert",
+					"prix": [
+						61,
+						21.58,
+						12.25,
+						9.67,
+						8.68,
+						221.15,
+						64.34,
+						32.86,
+						25.91,
+						8.68
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Neo-Noir",
+					"id": "Neo-Noir_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "covert",
+					"prix": [
+						41.57,
+						22.59,
+						15.02,
+						17.65,
+						11.52,
+						152.83,
+						67,
+						38.14,
+						45.68,
+						33.89
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Kill Confirmed",
+					"id": "Kill Confirmed_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-usps-kill-confirmed-market.png",
+					"categorie": "covert",
+					"prix": [
+						189.95,
+						89.95,
+						52.85,
+						47.28,
+						45.89,
+						652.64,
+						309.99,
+						161.74,
+						121.95,
+						117.67
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Monster Mashup",
+					"id": "Monster Mashup_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						51.45,
+						35.03,
+						25.07,
+						24.28,
+						22.24,
+						127.65,
+						62.98,
+						34.5,
+						29.06,
+						25.76
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Cortex",
+					"id": "Cortex_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						11.5,
+						4.64,
+						2.49,
+						1.99,
+						1.95,
+						29.99,
+						11.1,
+						5.8,
+						4.68,
+						4.49
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Caiman",
+					"id": "Caiman_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						71.44,
+						60,
+						50.08,
+						49.15,
+						0,
+						151.15,
+						105,
+						82.83,
+						75.07,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Orion",
+					"id": "Orion_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						74.87,
+						63.2,
+						56.76,
+						119.88,
+						75.78,
+						158.94,
+						123.52,
+						117.03,
+						148.05,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Serum",
+					"id": "Serum_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						69.59,
+						46.78,
+						45.88,
+						0,
+						0,
+						62.23,
+						47,
+						46.82,
+						0,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Whiteout",
+					"id": "Whiteout_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						276.18,
+						62.58,
+						40.97,
+						37.65,
+						33.94,
+						0,
+						0,
+						0,
+						0,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Target Acquired",
+					"id": "Target Acquired_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "classified",
+					"prix": [
+						259.41,
+						212.69,
+						160,
+						216.24,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Flashback",
+					"id": "Flashback_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						1.51,
+						0.92,
+						0.66,
+						0.65,
+						0.69,
+						3.99,
+						2.23,
+						1.64,
+						2.58,
+						2.78
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Cyrex",
+					"id": "Cyrex_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						3.37,
+						2,
+						0.99,
+						1.72,
+						1.08,
+						13.2,
+						6.68,
+						3.23,
+						5.36,
+						3.16
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Guardian",
+					"id": "Guardian_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/USP_S_Guardian.png",
+					"categorie": "restricted",
+					"prix": [
+						7.01,
+						5.59,
+						3.39,
+						0,
+						0,
+						14.73,
+						10.86,
+						5.84,
+						0,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Overgrowth",
+					"id": "Overgrowth_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "restricted",
+					"prix": [
+						82.36,
+						33.5,
+						33.18,
+						31.01,
+						27.5,
+						299,
+						63.67,
+						45.65,
+						53.75,
+						46.82
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Black Lotus",
+					"id": "Black Lotus_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						9.67,
+						3.11,
+						1.57,
+						1.34,
+						1.08,
+						44.13,
+						8.39,
+						4.79,
+						3.83,
+						3.48
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Blueprint",
+					"id": "Blueprint_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						39.41,
+						10.98,
+						4.89,
+						5.46,
+						4.2,
+						149.38,
+						36.16,
+						11.53,
+						10.69,
+						7.63
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Lead Coduit",
+					"id": "Lead Coduit_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						5.23,
+						1.57,
+						1,
+						0.89,
+						0.8,
+						22.9,
+						5.82,
+						3.45,
+						2.94,
+						3.33
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Torque",
+					"id": "Torque_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						1.93,
+						1.44,
+						0.81,
+						0.85,
+						2.22,
+						5.2,
+						3.82,
+						2.31,
+						2.8,
+						2.96
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Blood Tiger",
+					"id": "Blood Tiger_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						9,
+						3.76,
+						3.41,
+						0,
+						0,
+						16.34,
+						5.49,
+						0,
+						0,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Stailess",
+					"id": "Stailess_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						23.28,
+						9.2,
+						4.55,
+						6.02,
+						4.21,
+						105.75,
+						35.96,
+						17.99,
+						28.94,
+						14.05
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Busiess Class",
+					"id": "Busiess Class_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						67.3,
+						49.05,
+						35.99,
+						40.33,
+						43.94,
+						0,
+						0,
+						0,
+						0,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Night Ops",
+					"id": "Night Ops_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "mil_spec",
+					"prix": [
+						0.61,
+						0.38,
+						0.23,
+						0.23,
+						0.2,
+						900,
+						316.04,
+						144.54,
+						250.14,
+						185.98
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Pathfider",
+					"id": "Pathfider_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "",
+					"categorie": "industrial_grade",
+					"prix": [
+						36.77,
+						33.46,
+						31.99,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Para Gree",
+					"id": "Para Gree_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "industrial_grade",
+					"prix": [
+						26.92,
+						15.27,
+						14.53,
+						13.22,
+						13,
+						0,
+						0,
+						0,
+						0,
+						0
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Royal Blue",
+					"id": "Royal Blue_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/USP-S-royal-blue-market.png",
+					"categorie": "industrial_grade",
+					"prix": [
+						80.65,
+						19.46,
+						19.35,
+						19.36,
+						17.63,
+						831.59,
+						43.02,
+						13.07,
+						13.77,
+						13.91
+					],
+					"arme": "usp_s"
+				},
+				{
+					"nom": "Forest Leaves",
+					"id": "Forest Leaves_usp_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "",
+					"categorie": "industrial_grade",
+					"prix": [
+						0.86,
+						0.1,
+						0.07,
+						0.08,
+						0.07,
+						166.45,
+						114.43,
+						83,
+						88,
+						98.63
+					],
+					"arme": "usp_s"
+				}   
 			],
 			"glock18": [
 				{
@@ -627,7 +1369,7 @@
 						"fn",
 						"mw"
 					],
-					"image_path": "",
+					"image_path": "res://resources/images/conteneurs/weapon_case/Glock-18_Dragon_Tattoo.png",
 					"categorie": "restricted",
 					"prix": [
 						115,
@@ -653,7 +1395,7 @@
 						"ww",
 						"bs"
 					],
-					"image_path": "",
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_glock_cu_glock_ramzes.png",
 					"categorie": "restricted",
 					"prix": [
 						16.47,
@@ -935,7 +1677,7 @@
 						"ww",
 						"bs"
 					],
-					"image_path": "",
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_glock_cu_glock_indigo_light_large.png",
 					"categorie": "mil_spec",
 					"prix": [
 						0.72,
@@ -987,7 +1729,7 @@
 						"ww",
 						"bs"
 					],
-					"image_path": "",
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-glock18-wraiths-market.png",
 					"categorie": "mil_spec",
 					"prix": [
 						1.2,
@@ -1259,6 +2001,30 @@
 			],
 			"fiveseven": [
 				{
+					"nom": "Kami",
+					"id": "Kami_fiveseven",
+					"arme": "fiveseven",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"prix": [
+						2.41,
+						1.61,
+						1.49,
+						0.00,
+						0.00,
+						4.04,
+						2.48,
+						2.12,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/Five-seven-kami.png"
+				},
+				{
 					"nom": "Hybrid",
 					"id": "Hybrid_fiveseven",
 					"arme": "fiveseven",
@@ -1391,6 +2157,83 @@
 			],
 			"tec9": [
 				{
+					"nom": "Sandstorm",
+					"id": "Sandstorm_tec9",
+					"etats_possible": [
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/Tec_9_Sandstorm.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0,
+						1.89,
+						0.59,
+						0.55,
+						0.53,
+						0,
+						3.69,
+						0.99,
+						1.43,
+						0.83
+					],
+					"arme": "tec9"
+				},
+				{
+					"nom": "Cracked Opal",
+					"id": "Cracked Opal_tec9",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_tec9_cu_tec9_cracked_opal_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.57,
+						0.18,
+						0.11,
+						0.07,
+						0.07,
+						2.55,
+						0.5,
+						0.23,
+						0.14,
+						0.14
+					],
+					"arme": "tec9"
+				},
+				{
+					"nom": "Nuclear Threat",
+					"id": "Nuclear Threat_tec9",
+					"arme": "tec9",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						885.52	,
+						130.78	,
+						43.39	,
+						50.00	,
+						35.48	,
+						1011.38,
+						980.79	,
+						1119.99,
+						1319.80,
+						1152.35
+					],
+					"image_path": "res://resources/images/conteneurs/nuke/Nuclearthreattec9.png"
+				},
+				{
 					"nom": "Slag",
 					"id": "Slag_tec9",
 					"arme": "tec9",
@@ -1493,9 +2336,111 @@
 						14.28
 					],
 					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_tec9_gs_tec9_envoy_light_large.png"
+				},
+				{
+					"nom": "Mummy's Rot",
+					"id": "Mummy's Rot_tec9",
+					"arme": "tec9",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2.62,
+						1.79,
+						1.24,
+						0.95,
+						0.87,
+						6.52,
+						2.09,
+						0.88,
+						0.72,
+						0.55
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_tec9_cu_tec9_mummy.png"
 				}
 			],
 			"dual_berettas": [
+				{
+					"nom": "Dualing Dragons",
+					"id": "Dualing Dragons_dual_berettas",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-dual-berettas-dualing-dragons-market.png",
+					"categorie": "mil_spec",
+					"prix": [
+						2.12,
+						0.5,
+						0.29,
+						0.18,
+						0.19,
+						9.03,
+						1.45,
+						0.62,
+						0.42,
+						0.42
+					],
+					"arme": "dual_berettas"
+				},
+				{
+					"nom": "Briar",
+					"id": "Briar_dual_berettas",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/Berettas-briar-market.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						6.64,
+						4.11,
+						3.8,
+						0,
+						0,
+						1.81,
+						1.47,
+						1.45,
+						0,
+						0
+					],
+					"arme": "dual_berettas"
+				},
+				{
+					"nom": "Marina",
+					"id": "Marina_dual_berettas",
+					"arme": "dual_berettas",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						17.51,
+						7.36,
+						5.76,
+						5.38,
+						6.90,
+						57.52,
+						13.63,
+						10.14,
+						11.90,
+						13.80
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/Dual_Berretas_Marina.png"
+				},
 				{
 					"nom": "Hideout",
 					"id": "Hideout_dual_berettas",
@@ -1629,6 +2574,30 @@
 			],
 			"p2000": [
 				{
+					"nom": "Chainmail",
+					"id": "Chainmail_p2000",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/P2000-chainmail-market.png",
+					"categorie": "mil_spec",
+					"prix": [
+						146.3,
+						144.12,
+						244.38,
+						0,
+						0,
+						13.66,
+						9.13,
+						11.9,
+						0,
+						0
+					],
+					"arme": "p2000"
+				},
+				{
 					"nom": "Lifted Spirits",
 					"id": "Lifted Spirits_p2000",
 					"arme": "p2000",
@@ -1705,9 +2674,139 @@
 						0.07
 					],
 					"image_path": "res://resources/images/conteneurs/overpass/P2000_Grassland.png"
+				},
+				{
+					"nom": "Gnarled",
+					"id": "Gnarled_p2000",
+					"arme": "p2000",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.24,
+						0.09,
+						0.07,
+						0.06,
+						0.06,
+						1.06,
+						0.24,
+						0.12,
+						0.11,
+						0.11
+					],
+					"image_path": "res://resources/images/conteneurs/fracture/P2000gnarled.png"
 				}
 			],
 			"p250": [
+				{
+					"nom": "Wingshot",
+					"id": "Wingshot_p250",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-p250-wingshot-market.png",
+					"categorie": "restricted",
+					"prix": [
+						5.13,
+						3.35,
+						1.77,
+						1.58,
+						1.47,
+						12.5,
+						6.8,
+						3.45,
+						3.82,
+						2.49
+					],
+					"arme": "p250"
+				},
+				{
+					"nom": "See Ya Later",
+					"id": "See Ya Later_p250",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_p250_cu_p250_cybercroc_light_large.png",
+					"categorie": "covert",
+					"prix": [
+						10.25,
+						5.17,
+						3.19,
+						4.37,
+						3.39,
+						51.79,
+						20.95,
+						8.25,
+						13.73,
+						7.7
+					],
+					"arme": "p250"
+				},
+				{
+					"nom": "Mehndi",
+					"id": "Mehndi_p250",
+					"arme": "p250",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						25.02,
+						16.81,
+						16.07,
+						17.34,
+						15.06,
+						92.65,
+						39.99,
+						31.33,
+						29.99,
+						23.72
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/P250-Mehndi.png"
+				},
+				{
+					"nom": "Nuclear Threat",
+					"id": "Nuclear Threat_p250",
+					"arme": "p250",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						677.85	,
+						108.98	,
+						26.36	,
+						33.81	,
+						26.50	,
+						543.72,
+						316.02	,
+						92.41	,
+						131.41,
+						122.57
+					],
+					"image_path": "res://resources/images/conteneurs/nuke/Nuclearthreat.png"
+				},
 				{
 					"nom": "Black & Tan",
 					"id": "Black & Tan_p250",
@@ -1888,9 +2987,87 @@
 						0.07
 					],
 					"image_path": "res://resources/images/conteneurs/nuke_2018/P250-_Facility_Draft.png"
+				},
+				{
+					"nom": "Apep's Curse",
+					"id": "Apep's Curse_p250",
+					"arme": "p250",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						108.47,
+						70.22,
+						37.75,
+						30.22,
+						27.48,
+						273.76,
+						44.00,
+						24.57,
+						27.10,
+						24.57
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_p250_gs_p250_apep.png"
 				}
 			],
 			"r8": [
+				{
+					"nom": "Llama Cannon",
+					"id": "Llama Cannon_r8",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_revolver_gs_r8_llamacannon_light_large.png",
+					"categorie": "classified",
+					"prix": [
+						14.77,
+						5.75,
+						3.33,
+						3.22,
+						2.84,
+						37.35,
+						12.5,
+						6.45,
+						7.04,
+						5.37
+					],
+					"arme": "r8"
+				},
+				{
+					"nom": "Inlay",
+					"id": "Inlay_r8",
+					"arme": "r8",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.14,
+						0.07,
+						0.05,
+						0.05,
+						0.05,
+						0.26,
+						0.05,
+						0.05,
+						0.05,
+						0.05
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_revolver_gs_revolver_acanthus_bronze.png"
+				},
 				{
 					"nom": "Desert Brush",
 					"id": "Desert Brush_r8",
@@ -1972,6 +3149,55 @@
 			],
 			"deagle": [
 				{
+					"nom": "hand Cannon",
+					"id": "Hand Cannon_deagle",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/Desert-Eagle-handcannon-market.png",
+					"categorie": "restricted",
+					"prix": [
+						621.17,
+						584.16,
+						555.93,
+						531.84,
+						544.9,
+						359.03,
+						439.5,
+						299,
+						300.93,
+						353.43
+					],
+					"arme": "deagle"
+				},
+				{
+					"nom": "Hypnotic",
+					"id": "Hypnotic_deagle",
+					"arme": "deagle",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						116.81	,
+						152.57	,
+						0.00,
+						0.00,
+						0.00,
+						194.13,
+						226.75,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/weapon_case/Desert_Eagle_Hypnotic.png"
+				},
+				{
 					"nom": "Fennec Fox",
 					"id": "Fennec Fox_deagle",
 					"arme": "deagle",
@@ -2051,6 +3277,55 @@
 				}
 			],
 			"cz75_auto": [
+				{
+					"nom": "Tacticat",
+					"id": "Tacticat_cz75_auto",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_cz75a_gs_cz75_tacticat_light_large.png",
+					"categorie": "restricted",
+					"prix": [
+						1.64,
+						0.94,
+						0.53,
+						0.5,
+						0.43,
+						4.51,
+						2.39,
+						1.04,
+						1.2,
+						0.99
+					],
+					"arme": "cz75_auto"
+				},
+				{
+					"nom": "Chalice",
+					"id": "Chalice_cz75_auto",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/CZ75-Auto-chalice-market.png",
+					"categorie": "restricted",
+					"prix": [
+						767.2,
+						683.64,
+						0,
+						0,
+						0,
+						149.22,
+						190.32,
+						0,
+						0,
+						0
+					],
+					"arme": "cz75_auto"
+				},
 				{
 					"nom": "Midnight Palm",
 					"id": "Midnight Palm_cz75_auto",
@@ -2156,6 +3431,81 @@
 		},
 		"smg": {
 			"mp7": [
+				{
+					"nom": "Special Delivery",
+					"id": "Special Delivery_mp7",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-mp7-special-delivery-market.png",
+					"categorie": "restricted",
+					"prix": [
+						5.31,
+						3.23,
+						1.72,
+						1.58,
+						1.38,
+						10,
+						6.32,
+						3.68,
+						3.85,
+						2.54
+					],
+					"arme": "mp7"
+				},
+				{
+					"nom": "Skulls",
+					"id": "Skulls_mp7",
+					"arme": "mp7",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"mw",
+						"ft"
+					],
+					"prix": [
+						0.00,
+						0.07,
+						0.06,
+						0.00,
+						0.00,
+						0.00,
+						0.04,
+						0.04,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/weapon_case/MP7_Skulls.png"
+				},
+				{
+					"nom": "Sunbaked",
+					"id": "Sunbaked_mp7",
+					"arme": "mp7",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.17,
+						0.07,
+						0.06,
+						0.05,
+						0.05,
+						0.40,
+						0.04,
+						0.04,
+						0.04,
+						0.05
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_mp7_gs_mp7_strone.png"
+				},
 				{
 					"nom": "Just Smile",
 					"id": "Just Smile_mp7",
@@ -2338,6 +3688,136 @@
 				}
 			],
 			"mac10": [
+				{
+					"nom": "Rangeen",
+					"id": "Rangeen_mac10",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-mac10-rangeen-market.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.65,
+						0.5,
+						0.26,
+						0.25,
+						0.28,
+						2,
+						1.21,
+						0.51,
+						1.07,
+						0.72
+					],
+					"arme": "mac10"
+				},
+				{
+					"nom": "Heat",
+					"id": "Heat_mac10",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/MAC_10_Heat.png",
+					"categorie": "restricted",
+					"prix": [
+						8.88,
+						7.7,
+						3.77,
+						3.33,
+						3.07,
+						21.12,
+						11,
+						6.64,
+						4.99,
+						5.17
+					],
+					"arme": "mac10"
+				},
+				{
+					"nom": "Oceanic",
+					"id": "Oceanic_mac10",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_mac10_am_mac10_oceani_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.27,
+						0.16,
+						0.1,
+						0.1,
+						0.1,
+						0.8,
+						0.42,
+						0.18,
+						0.24,
+						0.18
+					],
+					"arme": "mac10"
+				},
+				{
+					"nom": "Indigo",
+					"id": "Indigo_mac10",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/MAC-10-indigo-market.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						24.15,
+						4.9,
+						3.81,
+						3.49,
+						3.87,
+						69,
+						5.46,
+						1.7,
+						2.41,
+						1.16
+					],
+					"arme": "mac10"
+				},
+				{
+					"nom": "Echoing Sands",
+					"id": "Echoing Sands_mac10",
+					"arme": "mac10",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.69,
+						0.35,
+						0.23,
+						0.23,
+						0.18,
+						1.51,
+						0.17,
+						0.7	,
+						0.18,
+						0.07
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_mac10_cu_mac10_scarab.png"
+				},
 				{
 					"nom": "Light Box",
 					"id": "Light Box_mac10",
@@ -2575,6 +4055,110 @@
 			],
 			"ump45": [
 				{
+					"nom": "Corporal",
+					"id": "Corporal_ump45",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/UMP45_Corporal.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.99,
+						0.65,
+						0.57,
+						0.8,
+						0.59,
+						2.01,
+						1.15,
+						0.87,
+						0.88,
+						0.59
+					],
+					"arme": "ump45"
+				},
+				{
+					"nom": "Exposure",
+					"id": "Exposure_ump45",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_ump45_cu_ump45_x-ray_machine_light_large.png",
+					"categorie": "restricted",
+					"prix": [
+						1.64,
+						0.88,
+						0.52,
+						0.49,
+						0.47,
+						3.79,
+						1.85,
+						1.08,
+						0.89,
+						1.11
+					],
+					"arme": "ump45"
+				},
+				{
+					"nom": "Indigo",
+					"id": "Indigo_ump45",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/UMP-45-indigo-market.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						15.42,
+						4.3,
+						3.86,
+						3.73,
+						4.39,
+						35,
+						3.71,
+						1.12,
+						1.58,
+						1
+					],
+					"arme": "ump45"
+				},
+				{
+					"nom": "Fallout Warning",
+					"id": "Fallout Warning_ump45",
+					"arme": "ump45",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						227.24,
+						29.15,
+						9.20,
+						9.10,
+						9.40,
+						134.60,
+						10.96,
+						3.62,
+						3.72,
+						3.11
+					],
+					"image_path": "res://resources/images/conteneurs/nuke/Falloutwarningump.png"
+				},
+				{
 					"nom": "Motorized",
 					"id": "Motorized_ump45",
 					"arme": "ump45",
@@ -2730,6 +4314,80 @@
 			],
 			"mp9": [
 				{
+					"nom": "Goo",
+					"id": "Goo_mp9",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_mp9_cu_mp9_goo_light_large.png",
+					"categorie": "restricted",
+					"prix": [
+						1.8,
+						1.03,
+						0.59,
+						0.71,
+						0.57,
+						4.92,
+						2.46,
+						1.3,
+						1.77,
+						1.22
+					],
+					"arme": "mp9"
+				},
+				{
+					"nom": "Dark Age",
+					"id": "Dark Age_mp9",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/MP9-dark-age-market.png",
+					"categorie": "mil_spec",
+					"prix": [
+						163.09,
+						146.1,
+						174.38,
+						0,
+						0,
+						21.05,
+						14.5,
+						14.04,
+						0,
+						0
+					],
+					"arme": "mp9"
+				},
+				{
+					"nom": "Rose Iron",
+					"id": "Rose Iron_mp9",
+					"arme": "mp9",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"prix": [
+						8.10,
+						7.19,
+						7.08,
+						0.00,
+						0.00,
+						18.80,
+						15.79,
+						11.96,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/Mp9-rose-iron.png"
+				},
+				{
 					"nom": "Starlight Protector",
 					"id": "Starlight Protector_mp9",
 					"arme": "mp9",
@@ -2861,6 +4519,83 @@
 				}
 			],
 			"bizon": [
+				{
+					"nom": "High Roller",
+					"id": "High Roller_bizon",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_bizon_cu_bizon_all_in_light_large.png",
+					"categorie": "classified",
+					"prix": [
+						13.3,
+						6.69,
+						3.26,
+						2.73,
+						2.24,
+						40.51,
+						12.88,
+						6.72,
+						5.6,
+						4.49
+					],
+					"arme": "bizon"
+				},
+				{
+					"nom": "Irradiated Alert",
+					"id": "Irradiated Alert_bizon",
+					"arme": "bizon",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						19.05,
+						5.35,
+						4.00,
+						3.85,
+						3.27,
+						25.02,
+						1.54,
+						0.51,
+						1.06,
+						0.50
+					],
+					"image_path": "res://resources/images/conteneurs/nuke/Pp-bizon-irradiated-alert.png"
+				},
+				{
+					"nom": "Cobalt Halftone",
+					"id": "Cobalt Halftone_bizon",
+					"arme": "bizon",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"prix": [
+						2.73,
+						1.40,
+						1.40,
+						1.28,
+						0.00,
+						4.43,
+						1.81,
+						1.65,
+						1.62,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/Pp-bizon-cobalt-halftone.png"
+				},
 				{
 					"nom": "Space Cat",
 					"id": "Space Cat_bizon",
@@ -3149,6 +4884,57 @@
 			],
 			"p90": [
 				{
+					"nom": "Trigon",
+					"id": "Trigon_p90",
+					"etats_possible": [
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/P90-trigon.png",
+					"categorie": "classified",
+					"prix": [
+						0,
+						14,
+						11.86,
+						12.37,
+						14.31,
+						0,
+						22.48,
+						26.5,
+						19.45,
+						20.04
+					],
+					"arme": "p90"
+				},
+				{
+					"nom": "Storm",
+					"id": "Storm_p90",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/P90-storm-market.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						20.79,
+						4.38,
+						3.85,
+						3.76,
+						3.48,
+						35.11,
+						3.84,
+						1.1,
+						1.93,
+						0.51
+					],
+					"arme": "p90"
+				},
+				{
 					"nom": "Desert DDPAT",
 					"id": "Desert DDPAT_p90",
 					"arme": "p90",
@@ -3173,6 +4959,32 @@
 						0.03
 					],
 					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_p90_desertddpat.png"
+				},
+				{
+					"nom": "Fallout Warning",
+					"id": "Fallout Warning_p90",
+					"arme": "p90",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						195.00,
+						34.50,
+						10.66,
+						10.90,
+						11.43,
+						250.63,
+						11.99,
+						3.61,
+						4.31,
+						2.85
+					],
+					"image_path": "res://resources/images/conteneurs/nuke/Falloutwarning.png"
 				},
 				{
 					"nom": "Verdant Growth",
@@ -3329,12 +5141,167 @@
 						1.29
 					],
 					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_p90_hy_blueprint_aqua_light_large.png"
+				},
+				{
+					"nom": "ScaraB Rush",
+					"id": "ScaraB Rush_p90",
+					"arme": "p90",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						13.70,
+						10.37,
+						6.05,
+						5.20,
+						4.42,
+						72.16,
+						11.41,
+						5.00,
+						4.65,
+						3.94
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_p90_cu_p90_scarab_of_wisdom.png"
 				}
 				
 			]
 		},
 		"rifle": {
 			"ak47": [
+				{
+					"nom": "Frontside Misty",
+					"id": "Frontside Misty_ak47",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/AK-47_Frontside_Misty.png",
+					"categorie": "classified",
+					"prix": [
+						89.29,
+						30.5,
+						15.65,
+						14.69,
+						11.01,
+						168.32,
+						80.32,
+						33.15,
+						29.39,
+						24.44
+					],
+					"arme": "ak47"
+				},
+				{
+					"nom": "Redline",
+					"id": "Redline_ak47",
+					"etats_possible": [
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/AK-47_Redline.png",
+					"categorie": "classified",
+					"prix": [
+						0,
+						143,
+						27.56,
+						23.81,
+						14.5,
+						0,
+						309.75,
+						64.09,
+						48.5,
+						27.75
+					],
+					"arme": "ak47"
+				},
+				{
+					"nom": "The Empress",
+					"id": "The Empress_ak47",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/AK-47_The_Empress.png",
+					"categorie": "covert",
+					"prix": [
+						183.17,
+						80,
+						41.26,
+						33.71,
+						28,
+						399.99,
+						156.41,
+						104.21,
+						79.63,
+						70.88
+					],
+					"arme": "ak47"
+				},
+				{
+					"nom": "Case Hardened",
+					"id": "Case Hardened_ak47",
+					"arme": "ak47",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						483.00,
+						349.89,
+						360.18,
+						238.11,
+						201.97,
+						1070.00,
+						705.37,
+						583.07,
+						506.57,
+						400.00
+					],
+					"image_path": "res://resources/images/conteneurs/weapon_case/AK-47_Case_Hardened.png"
+				},
+				{
+					"nom": "Case Hardened [Blue Gem]",
+					"id": "Case Hardened [Blue Gem]_ak47",
+					"arme": "ak47",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						75000,
+						43000,
+						37230,
+						29900,
+						15700,
+						245000,
+						115000,
+						81000,
+						47000,
+						22000
+					],
+					"image_path": "res://resources/images/conteneurs/weapon_case/AK-47_Case_Hardened.png"
+				},
 				{
 					"nom": "Inheritance",
 					"id": "Inheritance_ak47",
@@ -3515,9 +5482,162 @@
 						0.00
 					],
 					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_ak47_greenlaminate.png"
+				},
+				{
+					"nom": "Steel Delta",
+					"id": "Steel Delta_ak47",
+					"arme": "ak47",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						3.00,
+						1.91,
+						1.39,
+						1.91,
+						1.64,
+						14.87,
+						6.85,
+						4.34,
+						9.43,
+						6.47
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_ak47_gs_ak47_strone.png"
 				}
 			],
 			"m4a1_s": [
+				{
+					"nom": "Golden Coil",
+					"id": "Golden Coil_m4a1_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-m4a1s-golden-coil-market.png",
+					"categorie": "covert",
+					"prix": [
+						190.68,
+						120.24,
+						71.43,
+						47.91,
+						39.91,
+						450.89,
+						227.25,
+						142.33,
+						99.99,
+						93.05
+					],
+					"arme": "m4a1_s"
+				},
+				{
+					"nom": "Leaded Glass",
+					"id": "Leaded Glass_m4a1_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_m4a1_silencer_gs_m4a1_shatter_light_large.png",
+					"categorie": "classified",
+					"prix": [
+						13.48,
+						7.59,
+						4.95,
+						6.8,
+						4.44,
+						34.96,
+						18.86,
+						13.59,
+						15.54,
+						13.46
+					],
+					"arme": "m4a1_s"
+				},
+				{
+					"nom": "Knight",
+					"id": "Knight_m4a1_s",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/M4A1-S-knight-market.png",
+					"categorie": "classified",
+					"prix": [
+						4000,
+						2800,
+						1800,
+						1300,
+						900,
+						7500,
+						4500,
+						3000,
+						2000,
+						1200
+					],
+					"arme": "m4a1_s"
+				},
+				{
+					"nom": "Dark Water",
+					"id": "Dark Water_m4a1_s",
+					"arme": "m4a1_s",
+					"categorie": "restricted",
+					"etats_possible": [
+						"mw",
+						"ft"
+					],
+					"prix": [
+						0.00,
+						105.27	,
+						91.05	,
+						0.00,
+						0.00,
+						0.00,
+						181.41	,
+						167.41	,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/M4a1-s-guardian.png"
+				},
+				{
+					"nom": "Guardian",
+					"id": "Guardian_m4a1_s",
+					"arme": "m4a1_s",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						35.00,
+						25.30,
+						20.85,
+						20.59,
+						23.35,
+						102.44,
+						81.73,
+						58.44,
+						53.84,
+						149.00
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/M4a1-s-guardian.png"
+				},
 				{
 					"nom": "Black Lotus",
 					"id": "Black Lotus_m4a1_s",
@@ -3673,9 +5793,85 @@
 						52.67
 					],
 					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_m4a1_silencer_gs_m4a1s_operator_light_large.png"
+				},
+				{
+					"nom": "Mud-Spec",
+					"id": "Mud-Spec_m4a1_s",
+					"arme": "m4a1_s",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.20,
+						0.38,
+						0.28,
+						0.39,
+						0.61,
+						9.04,
+						3.19,
+						1.70,
+						4.37,
+						3.39
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_m4a1_silencer_gs_m4a1s_milspec.png"
 				}
 			],
 			"m4a4": [
+				{
+					"nom": "Radiation Hazard",
+					"id": "Radiation Hazard_m4a4",
+					"arme": "m4a4",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						770.76,
+						144.02,
+						30.66,
+						26.92,
+						26.41,
+						231.67,
+						158.56,
+						45.65,
+						46.82,
+						31.41
+					],
+					"image_path": "res://resources/images/conteneurs/nuke/Radiationhazard.png"
+				},
+				{
+					"nom": "Asiimov",
+					"id": "Asiimov_m4a4",
+					"arme": "m4a4",
+					"categorie": "covert",
+					"etats_possible": [
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.00,
+						0.00,
+						184.96,
+						130.87,
+						80.00,
+						0.00,
+						0.00,
+						577.84,
+						338.99,
+						180.00
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/M4A4_Asiimov.png"
+				},
 				{
 					"nom": "Etch Lord",
 					"id": "Etch Lord_m4a4",
@@ -3804,9 +6000,111 @@
 						1.52
 					],
 					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_m4a1_am_circuitboard_silver_light_large.png"
+				},
+				{
+					"nom": "Eye of Horus",
+					"id": "Eye of Horus_m4a4",
+					"arme": "m4a4",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						898.76,
+						457.71,
+						253.32,
+						217.96,
+						143.86,
+						1542.73,
+						1228.00,
+						591.01,
+						632.50,
+						333.76
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_m4a1_gs_m4a4_ra.png"
 				}
 			],
 			"famas": [
+				{
+					"nom": "Survivor Z",
+					"id": "Survivor Z_famas",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-famas-survivor-z-market.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.7,
+						0.48,
+						0.28,
+						0.31,
+						0.23,
+						1.98,
+						1.32,
+						0.69,
+						1.35,
+						0.66
+					],
+					"arme": "famas"
+				},
+				{
+					"nom": "Sergeant",
+					"id": "Sergeant_famas",
+					"etats_possible": [
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/Famas_Sergeant.png",
+					"categorie": "restricted",
+					"prix": [
+						0,
+						6.86,
+						3.71,
+						3.13,
+						3.23,
+						0,
+						13.45,
+						6,
+						5.72,
+						4.18
+					],
+					"arme": "famas"
+				},
+				{
+					"nom": "Pulse",
+					"id": "Pulse_famas",
+					"arme": "famas",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"prix": [
+						8.54,
+						7.72,
+						7.63,
+						7.78,
+						0.00,
+						16.99,
+						13.46,
+						10.55,
+						16.30,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/FAMAS-pulse.png"
+				},
 				{
 					"nom": "Rapid Eye Movement",
 					"id": "Rapid Eye Movement_famas",
@@ -3907,9 +6205,86 @@
 						0.23
 					],
 					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_famas_faultywiring.png"
+				},
+				{
+					"nom": "Waters of Nephthys",
+					"id": "Waters of Nephthys_famas",
+					"arme": "famas",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						113.85,
+						75.10,
+						40.50,
+						43.70,
+						31.52,
+						361.57,
+						87.20,
+						43.13,
+						53.39,
+						32.38
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_famas_cu_famas_holo_ocean.png"
 				}
 			],
 			"galil_ar": [
+				{
+					"nom": "Stone Cold",
+					"id": "Stone Cold_galil_ar",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-galilar-stone-cold-market.png",
+					"categorie": "restricted",
+					"prix": [
+						7.98,
+						3.82,
+						1.86,
+						1.75,
+						1.49,
+						26.82,
+						9.72,
+						4.57,
+						4.53,
+						3.3
+					],
+					"arme": "galil_ar"
+				},
+				{
+					"nom": "Sandstorm",
+					"id": "Sandstorm_galil_ar",
+					"arme": "galil_ar",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.00,
+						4.19,
+						1.43,
+						2.49,
+						1.73,
+						0.00,
+						6.02,
+						2.00,
+						2.53,
+						2.22
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/Galil-ar-sandstorm-market.png"
+				},
 				{
 					"nom": "Amber Fade",
 					"id": "Amber Fade_galil_ar",
@@ -4042,6 +6417,107 @@
 			],
 			"aug": [
 				{
+					"nom": "Chameleon",
+					"id": "Chameleon_aug",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/AUG_Chameleon.png",
+					"categorie": "covert",
+					"prix": [
+						5.08,
+						3.3,
+						2.99,
+						3.22,
+						3.22,
+						22,
+						11.09,
+						9.04,
+						12.13,
+						8.91
+					],
+					"arme": "aug"
+				},
+				{
+					"nom": "Triqua",
+					"id": "Triqua_aug",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_aug_cu_aug_orange_triangle_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.41,
+						0.15,
+						0.09,
+						0.07,
+						0.07,
+						3.31,
+						0.49,
+						0.19,
+						0.13,
+						0.13
+					],
+					"arme": "aug"
+				},
+				{
+					"nom": "Wings",
+					"id": "Wings_aug",
+					"arme": "aug",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						0.14,
+						0.07,
+						0.00,
+						0.00,
+						0.00,
+						0.30,
+						0.11,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/weapon_case/AUG_Wings.png"
+				},
+				{
+					"nom": "Snake Pit",
+					"id": "Snake Pit_aug",
+					"arme": "aug",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.14,
+						0.07,
+						0.06,
+						0.05,
+						0.05,
+						0.30,
+						0.11,
+						0.05,
+						0.12,
+						0.06
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_aug_hy_dune_trap.png"
+				},
+				{
 					"nom": "Spalted Wood",
 					"id": "Spalted Wood_aug",
 					"arme": "aug",
@@ -4171,6 +6647,84 @@
 				}
 			],
 			"sg553": [
+				{
+					"nom": "Pulse",
+					"id": "Pulse_sg553",
+					"etats_possible": [
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/SG553-Pulse.png",
+					"categorie": "restricted",
+					"prix": [
+						0,
+						7.01,
+						3.73,
+						3.7,
+						3.51,
+						0,
+						11.38,
+						7.13,
+						6.37,
+						7.65
+					],
+					"arme": "sg553"
+				},
+				{
+					"nom": "Phantom",
+					"id": "Phantom_sg553",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_sg556_gs_sg553_phantom_light_large.png",
+					"categorie": "restricted",
+					"prix": [
+						1.64,
+						0.8,
+						0.49,
+						0.51,
+						0.41,
+						4.07,
+						1.88,
+						1.11,
+						0.98,
+						0.96
+					],
+					"arme": "sg553"
+				},
+				{
+					"nom": "Ultraviolet",
+					"id": "Ultraviolet_sg553",
+					"arme": "sg553",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						55.89,
+						29.99,
+						28.67,
+						28.81,
+						29.00,
+						139.06,
+						35.46,
+						29.44,
+						29.23,
+						26.10
+
+					],
+					"image_path": "res://resources/images/conteneurs/weapon_case/SG_553_Ultraviolet.png"
+				},
 				{
 					"nom": "Bleached",
 					"id": "Bleached_sg553",
@@ -4334,6 +6888,103 @@
 		"sniper": {
 			"awp": [
 				{
+					"nom": "Asiimov",
+					"id": "Asiimov_awp",
+					"etats_possible": [
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/AWP_asiimov_market.png",
+					"categorie": "covert",
+					"prix": [
+						0,
+						0,
+						184.84,
+						128.36,
+						90.75,
+						0,
+						0,
+						319.82,
+						235.29,
+						154.57
+					],
+					"arme": "awp"
+				},
+				{
+					"nom": "Dragon Lore",
+					"id": "Dragon Lore_awp",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/AWp-dragon-lore-market.png",
+					"categorie": "covert",
+					"prix": [
+						11144.02,
+						8550,
+						5797.25,
+						5000,
+						3975,
+						36738,
+						16354,
+						18700,
+						9277,
+						6300
+					],
+					"arme": "awp"
+				},
+				{
+					"nom": "Lightning Strike",
+					"id": "Lightning Strike_awp",
+					"arme": "awp",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"prix": [
+						735.61,
+						896.67,
+						0.00,
+						0.00,
+						0.00,
+						1281.83,
+						1330.10,
+						0.00,
+						0.00,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/weapon_case/AWP_Lightning_Strike.png"
+				},
+				{
+					"nom": "Redline",
+					"id": "Redline_awp",
+					"arme": "awp",
+					"categorie": "classified",
+					"etats_possible": [
+						"mw",
+						"ft",
+						"ww"
+					],
+					"prix": [
+						0.00,
+						87.60,
+						50.60,
+						51.45,
+						0.00,
+						0.00,
+						156.81,
+						83.83,
+						57.64,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/AWP_redline.png"
+				},
+				{
 					"nom": "Chrome Canon",
 					"id": "Chrome Canon_awp",
 					"arme": "awp",
@@ -4436,9 +7087,61 @@
 						6.17
 					],
 					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_awp_hy_nuclear_skulls_redblue_light_large.png"
+				},
+				{
+					"nom": "Black Nile",
+					"id": "Black Nile_awp",
+					"arme": "awp",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						4.83,
+						2.80,
+						1.90,
+						2.77,
+						2.18,
+						28.75,
+						12.11,
+						7.38,
+						14.39,
+						11.69
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_awp_gs_awp_strone.png"
 				}
 			],
 			"scout": [
+				{
+					"nom": "Big Iron",
+					"id": "Big Iron_scout",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-ssg08-big-iron-market.png",
+					"categorie": "classified",
+					"prix": [
+						24.8,
+						13.57,
+						9.79,
+						10.2,
+						8.21,
+						61.43,
+						36.8,
+						24.4,
+						20.78,
+						21.17
+					],
+					"arme": "scout"
+				},
 				{
 					"nom": "Dezastre",
 					"id": "Dezastre_scout",
@@ -4642,9 +7345,87 @@
 						0
 					],
 					"image_path": "res://resources/images/conteneurs/vertigo_2021/Vertigo2021_ssg08_carbonfiber.png"
+				},
+				{
+					"nom": "Azure Glyph",
+					"id": "Azure Glyph_scout",
+					"arme": "scout",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.74,
+						0.35,
+						0.24,
+						0.17,
+						0.16,
+						2.30,
+						0.48,
+						0.18,
+						0.13,
+						0.16
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_ssg08_gs_ssg08_anubis.png"
 				}
 			],
 			"g3sg1": [
+				{
+					"nom": "Flux",
+					"id": "Flux_g3sg1",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-g3sg1-flux-market.png",
+					"categorie": "classified",
+					"prix": [
+						25.89,
+						14.12,
+						9.15,
+						7.6,
+						6.6,
+						72.06,
+						38.11,
+						20.55,
+						22.55,
+						18.91
+					],
+					"arme": "g3sg1"
+				},
+				{
+					"nom": "Hunter",
+					"id": "Hunter_g3sg1",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_g3sg1_gs_g3sg1_cetme_redux_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.3,
+						0.14,
+						0.1,
+						0.08,
+						0.08,
+						2.57,
+						0.31,
+						0.16,
+						0.12,
+						0.12
+					],
+					"arme": "g3sg1"
+				},
 				{
 					"nom": "Dream Glade",
 					"id": "Dream Glade_g3sg1",
@@ -4726,6 +7507,84 @@
 			],
 			"scar20": [
 				{
+					"nom": "Green Marine",
+					"id": "Green Marine_scar20",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-scar20-green-marine-market.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.7,
+						0.47,
+						0.59,
+						0.34,
+						0.19,
+						2.02,
+						1.09,
+						0.38,
+						0.59,
+						0.36
+					],
+					"arme": "scar20"
+				},
+				{
+					"nom": "Jungle Slipstream",
+					"id": "Jungle Slipstream_scar20",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_scar20_hy_scar20_jungle_slipstream_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.25,
+						0.14,
+						0.1,
+						0.14,
+						0.08,
+						0.72,
+						0.32,
+						0.18,
+						0.18,
+						0.17
+					],
+					"arme": "scar20"
+				},
+				{
+					"nom": "Storm",
+					"id": "Storm_scar20",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/SCAR-20-storm-market.png",
+					"categorie": "consumer_grade",
+					"prix": [
+						14.77,
+						4.28,
+						3.75,
+						3.91,
+						3.7,
+						19.32,
+						2.73,
+						0.96,
+						0.69,
+						0.55
+					],
+					"arme": "scar20"
+				},
+				{
 					"nom": "Poultrygeist",
 					"id": "Poultrygeist_scar20",
 					"arme": "scar20",
@@ -4755,6 +7614,109 @@
 		},
 		"shootgun": {
 			"sawed_off": [
+				{
+					"nom": "Morris",
+					"id": "Morris_sawed_off",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_sawedoff_aq_sawed-off_flower_light_large.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.31,
+						0.13,
+						0.1,
+						0.07,
+						0.07,
+						1.09,
+						0.31,
+						0.16,
+						0.13,
+						0.13
+					],
+					"arme": "sawed_off"
+				},
+				{
+					"nom": "Rust Coat",
+					"id": "Rust Coat_sawed_off",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/Sawed-Off-rustcoat-market.png",
+					"categorie": "industrial_grade",
+					"prix": [
+						23.53,
+						19.61,
+						20.36,
+						24.23,
+						19.21,
+						4.22,
+						1.06,
+						0.92,
+						7.05,
+						0
+					],
+					"arme": "sawed_off"
+				},
+				{
+					"nom": "Irradiated Alert",
+					"id": "Irradiated Alert_sawed_off",
+					"arme": "sawed_off",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						26.87,
+						4.79,
+						3.94,
+						4.02,
+						3.27,
+						27.14,
+						0.87,
+						0.29,
+						0.71,
+						0.37
+					],
+					"image_path": "res://resources/images/conteneurs/nuke/Irridatedalertsawedoff.png"
+				},
+				{
+					"nom": "The Kraken",
+					"id": "The Kraken_sawed_off",
+					"arme": "sawed_off",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"prix": [
+						8.52,
+						4.85,
+						4.04,
+						8.54,
+						0.00,
+						49.05,
+						23.23,
+						14.45,
+						11.54,
+						0.00
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/Sawed_Off-kraken.png"
+				},
 				{
 					"nom": "Analog Input",
 					"id": "Analog Input_sawed_off",
@@ -4884,6 +7846,110 @@
 				}
 			],
 			"xm1014": [
+				{
+					"nom": "Scumbria",
+					"id": "Scumbria_xm1014",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-xm1014-scumbria-market.png",
+					"categorie": "mil_spec",
+					"prix": [
+						1.4,
+						0.75,
+						0.27,
+						0.2,
+						0.16,
+						2.49,
+						1.52,
+						0.48,
+						0.37,
+						0.28
+					],
+					"arme": "xm1014"
+				},
+				{
+					"nom": "Ziggy",
+					"id": "Ziggy_xm1014",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/spectrum2/Weapon_xm1014_aq_xm1014_ziggy_anarchy_light_large.png",
+					"categorie": "restricted",
+					"prix": [
+						1.9,
+						0.84,
+						0.49,
+						0.53,
+						0.42,
+						4.21,
+						2.22,
+						1.01,
+						1.56,
+						1
+					],
+					"arme": "xm1014"
+				},
+				{
+					"nom": "Fallout Warning",
+					"id": "Fallout Warning_xm1014",
+					"arme": "xm1014",
+					"categorie": "industrial_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						212.53,
+						27.79,
+						9.84,
+						10.15,
+						8.70,
+						1036.29,
+						13.48,
+						5.22,
+						5.79,
+						4.31
+					],
+					"image_path": "res://resources/images/conteneurs/nuke/Falloutwarningxm.png"
+				},
+				{
+					"nom": "Hieroglyph",
+					"id": "Hieroglyph_xm1014",
+					"arme": "xm1014",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.17,
+						0.07,
+						0.07,
+						0.05,
+						0.05,
+						0.61,
+						0.06,
+						0.04,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-xm1014.png"
+				},
 				{
 					"nom": "Irezumi",
 					"id": "Irezumi_xm1014",
@@ -5067,6 +8133,80 @@
 			],
 			"nova": [
 				{
+					"nom": "Antique",
+					"id": "Antique_nova",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/Nova_Antique.png",
+					"categorie": "classified",
+					"prix": [
+						15.53,
+						13.36,
+						12,
+						0,
+						0,
+						31.93,
+						19.94,
+						17.74,
+						0,
+						0
+					],
+					"arme": "nova"
+				},
+				{
+					"nom": "Green Apple",
+					"id": "Green Apple_nova",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/Nova-green-apple-market.png",
+					"categorie": "industrial_grade",
+					"prix": [
+						21.94,
+						19.7,
+						21.23,
+						0,
+						0,
+						11.79,
+						5.26,
+						5.84,
+						0,
+						0
+					],
+					"arme": "nova"
+				},
+				{
+					"nom": "Rising Skull",
+					"id": "Rising Skull_nova",
+					"arme": "nova",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						8.77,
+						6.93,
+						6.07,
+						5.83,
+						5.49,
+						15.99,
+						13.43,
+						11.33,
+						13.19,
+						10.82
+					],
+					"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-nova.png"
+				},
+				{
 					"nom": "Dark Sigil",
 					"id": "Dark Sigil_nova",
 					"arme": "nova",
@@ -5193,9 +8333,135 @@
 						0.06
 					],
 					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_nova_hy_ducts_grey_light_large.png"
+				},
+				{
+					"nom": "Sobek's Bite",
+					"id": "Sobek's Bite_nova",
+					"arme": "nova",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						13.53,
+						9.51,
+						6.25,
+						5.24,
+						4.55,
+						57.00,
+						8.90,
+						6.73,
+						4.28,
+						4.07
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_nova_gs_nova_sobek.png"
 				}
 			],
 			"mag7": [
+				{
+					"nom": "Cobalt Core",
+					"id": "Cobalt Core_mag7",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-mag7-cobalt-core-market.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.72,
+						0.46,
+						0.26,
+						0.24,
+						0.24,
+						2.2,
+						1.73,
+						0.47,
+						0.49,
+						0.36
+					],
+					"arme": "mag7"
+				},
+				{
+					"nom": "Heaven Guard",
+					"id": "Heaven Guard_mag7",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/MAG_7_Heaven_Guard.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.89,
+						0.7,
+						0.65,
+						0.6,
+						0,
+						1.73,
+						1.16,
+						0.96,
+						0.75,
+						0
+					],
+					"arme": "mag7"
+				},
+				{
+					"nom": "Silver",
+					"id": "Silver_mag7",
+					"etats_possible": [
+						"fn",
+						"mw"
+					],
+					"image_path": "res://resources/images/conteneurs/cobblestone/MAG-7-silver-market.png",
+					"categorie": "industrial_grade",
+					"prix": [
+						25.02,
+						24.65,
+						0,
+						0,
+						0,
+						14.53,
+						13.75,
+						0,
+						0,
+						0
+					],
+					"arme": "mag7"
+				},
+				{
+					"nom": "Irradiated Alert",
+					"id": "Irradiated Alert_mag7",
+					"arme": "mag7",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						34.52,
+						5.78,
+						4.44,
+						3.52,
+						3.25,
+						17.18,
+						1.50,
+						0.31,
+						0.48,
+						0.38
+					],
+					"image_path": "res://resources/images/conteneurs/nuke/Irridatedalertmag7.png"
+				},
 				{
 					"nom": "Foresight",
 					"id": "Foresight_mag7",
@@ -5375,11 +8641,115 @@
 						1.62
 					],
 					"image_path": "res://resources/images/conteneurs/nuke_2018/Weapon_mag7_hy_nuclear_hotorange_light_large.png"
+				},
+				{
+					"nom": "Copper Coated",
+					"id": "Copper Coated_mag7",
+					"arme": "mag7",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2.21,
+						1.75,
+						1.23,
+						0.93,
+						0.85,
+						4.94,
+						0.70,
+						0.19,
+						0.15,
+						0.20
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_mag7_gs_mag7_goold.png"
 				}
 			]
 		},
 		"lmg": {
 			"m249": [
+				{
+					"nom": "Nebula Crusader",
+					"id": "Nebula Crusader_m249",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/Csgo-m249-nebula-crusader-market.png",
+					"categorie": "restricted",
+					"prix": [
+						4.84,
+						3.13,
+						1.68,
+						1.38,
+						1.27,
+						12.57,
+						6.21,
+						3.62,
+						2.95,
+						2.81
+					],
+					"arme": "m249"
+				},
+				{
+					"nom": "Magma",
+					"id": "Magma_m249",
+					"arme": "m249",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						1.85,
+						1.43,
+						1.34,
+						1.35,
+						1.55,
+						2.85,
+						1.97,
+						1.49,
+						2.36,
+						1.41
+					],
+					"image_path": "res://resources/images/conteneurs/winter_offensive/M249-magma-market.png"
+				},
+				{
+					"nom": "Submerged",
+					"id": "Submerged_m249",
+					"arme": "m249",
+					"categorie": "consumer_grade",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.14,
+						0.06,
+						0.05,
+						0.05,
+						0.05,
+						0.08,
+						0.03,
+						0.03,
+						0.03,
+						0.03
+					],
+					"image_path": "res://resources/images/conteneurs/anubis/Csgo_anubis_m249_cu_m249_scarab.png"
+				},
 				{
 					"nom": "Midnight Palm",
 					"id": "Midnight Palm_m249",
@@ -5460,6 +8830,31 @@
 				}
 			],
 			"negev" : [
+				{
+					"nom": "Terrain",
+					"id": "Terrain_negev",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww"
+					],
+					"image_path": "res://resources/images/conteneurs/phoenix_weapon/Negev_Terrain.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.88,
+						0.75,
+						0.57,
+						0.42,
+						0,
+						2.34,
+						1.42,
+						1.04,
+						1.1,
+						0
+					],
+					"arme": "negev"
+				},
 				{
 					"nom": "Ultralight",
 					"id": "Ultralight_negev",

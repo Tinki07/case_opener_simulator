@@ -37,7 +37,7 @@ func _ready():
 	
 	Global.leJoueur.money = 1000.00
 	JsonDataInventory.load_all()
-	
+	add_child(timer)
 
 
 
@@ -251,10 +251,13 @@ func _add_stickers_to_souvenir_package(caisse: Conteneur,skin: SkinArmeObtenu):
 	if stickers_signatures != [] and sticker_map == "": 
 		for sticker in stickers_signatures:
 			var sticker_name = sticker[0]  # Nom du sticker
-			var equipe = sticker[2]
+			var equipe = sticker[1]
+			var signatures_from_equipe_2: Array
+			
 			if equipe == stickers_teams[random1][1]:
 				lesStickersDeLaTeam1.append(sticker_name)
-		var random = randi_range(0,lesStickersDeLaTeam1.size() - 1)
+		var random = randi_range(0,(lesStickersDeLaTeam1.size() - 1))  
+		print(str(lesStickersDeLaTeam1.size()))
 		sticker_signature_choisi = lesStickersDeLaTeam1[random]
 		les_stickers_selectiones.append(sticker_signature_choisi)
 	elif stickers_signatures == [] and sticker_map != "":
@@ -587,7 +590,7 @@ func _on_inspect_objet_button_pressed(objet):
 
 ## Actions faites quand le bouton ouvrir d'un item est clické
 func _on_ouvrir_objet_button_pressed(item_clicked):
-	
+	is_animation_playing = false
 	var panel_item_cliked = $pnl_objet_cliked
 	var btn_exit = $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel
 	var lbl_container_name_top = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/hbox_nom_caisse/lbl_nom_caisse
@@ -788,6 +791,9 @@ func _input(event):
 			return
 		## Si le clic est en dehors du panneau, on rend le panneau invisible.
 		$pnl_objet_cliked.visible = false
+	if is_animation_playing and $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible:
+		if event is InputEventKey and event.keycode == KEY_ENTER:
+			_on_btn_quitter_caisse_panel_pressed()
 
 ## Action appelée quand on appuis sur la croix en haut a droite
 func _on_btn_quitter_caisse_panel_pressed():
@@ -820,6 +826,15 @@ func _on_btn_quitter_caisse_panel_pressed():
 		get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Box-106.png")
 		get_node("%pnl_notification_buy/lbl_infos").text = "You got a " + Global.leJoueur.inventaire[0].get_quality() +" item !"
 		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
+		
+		if Global.leJoueur.inventaire[0] is SkinArmeObtenu:
+			var anim_sound = load(Global.leJoueur.inventaire[0].skin.categorie.anim_drop_sound)
+			
+			# Vérifier que anim_sound n'est pas nul et est bien un AudioStream
+			if anim_sound and anim_sound is AudioStreamMP3:
+				var audio_player = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/drop_anim_sound
+				audio_player.stream = anim_sound
+				audio_player.play()
 
 ## Action appelée quand on appuis sur le bouton "ouvrir" d'un conteneur
 func _on_btn_ouverture_conteneur_pressed():
@@ -951,7 +966,7 @@ func _on_btn_ouverture_conteneur_pressed():
 	## On créer un timer, on lui donne un delta et ensuite on l'active. et on attend
 	timer.wait_time = 2 # 2 secondes
 	timer.one_shot = true
-	add_child(timer)
+	
 	timer.start()
 	await timer.timeout
 	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false

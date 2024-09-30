@@ -337,7 +337,7 @@
 
                 {
                     "nom": "FaZe Clan (Gold) | Berlin 2019",
-                    "id":"GuardiaN (Gold)_berlin_2019",
+                    "id":"FaZe Clan (Gold)_berlin_2019",
                     "equipe": "faze",
                     "image": "res://resources/images/stickers/berlin_2019/teams/Berlin_2019_faze_gold_large.png",
                     "categorie": "extraordinary",
@@ -1291,7 +1291,7 @@
                     "nom": "mousesports (Gold) | Berlin 2019",
                     "id":"mousesports (Gold)_berlin_2019",
                     "equipe": "mouz",
-                    "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_chrisj_gold_large.png",
+                    "image": "res://resources/images/stickers/berlin_2019/teams/Berlin_2019_mss_gold_large.png",
                     "categorie": "extraordinary",
                     "type": "sticker_gold",
                     "prix": 0
@@ -1561,6 +1561,17 @@
                     "id":"Summer (Gold)_berlin_2019",
                     "equipe": "tyloo",
                     "image": "res://resources/images/stickers/berlin_2019/signatures/Berlin_2019_sig_summer_gold_large.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_gold",
+                    "prix": 0
+                },
+
+
+                {
+                    "nom": "StarLadder (Gold) | Berlin 2019",
+                    "id":"StarLadder (Gold)_berlin_2019",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/berlin_2019/Berlin_2019_star_gold_large.webp",
                     "categorie": "extraordinary",
                     "type": "sticker_gold",
                     "prix": 0
