@@ -315,6 +315,45 @@ func charger_caisses_souvenirs_depuis_json():
 		print(" ")
 	else:
 		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
+		
+
+func charger_caisses_capsules_depuis_json(): 
+	
+	var fichier = "res://resources/jsons/conteneurs.json"
+	var file = FileAccess.open(fichier, FileAccess.READ)
+	
+	if file:
+		
+		var json_as_text = FileAccess.get_file_as_string(fichier)
+		var json_as_dict = JSON.parse_string(json_as_text)
+		
+		if json_as_dict:
+			print("----------------------------------------------------")
+			print("-- Chargement des caisses capsules--")
+			var data = json_as_dict["capsules"]
+			for caisse in data.keys():
+				var caisse_data = data[caisse]
+				var newCaisse = Conteneur.new(
+					caisse_data["nom"],
+					caisse_data["id"],
+					caisse_data["image"],
+					caisse_data["image_collection"],
+					caisse_data["type_caisse"],
+					caisse_data["prix"],
+					caisse_data["need_key"],
+					caisse_data["stickers"],
+					caisse_data.get("drop_rates", {})
+				)
+				conteneurs[caisse_data["id"]] = newCaisse
+				print("Caisse capsule créée : ", newCaisse.nom)
+		else:
+			print("Erreur de parsing JSON")
+		file.close()
+		print("-- caisses capsules chargées avec succés --")
+		print("----------------------------------------------------")
+		print(" ")
+	else:
+		print("Erreur lors de l'ouverture du fichier: %s" % fichier)
 
 func charger_etats_skins_depuis_json(): 
 	

@@ -1655,6 +1655,146 @@
                     "prix": 0
                 }
             ]
+        },
+        "regular":{
+            "enfu":[
+                {
+                    "nom": "Bombsquad (Foil)",
+                    "id":"Bombsquad (Foil)_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-bombsquad-foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 1.51
+                },
+                {
+                    "nom": "Silent Ninja (Foil)",
+                    "id":"Silent Ninja (Foil)_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-slient-ninja-foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 0.63
+                },
+                {
+                    "nom": "Unicorn (Holo)",
+                    "id":"Unicorn (Holo)_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-unicorn-holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 3.14
+                },
+                {
+                    "nom": "Unicorn",
+                    "id":"Unicorn_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-unicorn.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.93
+                },
+                {
+                    "nom": "Skull Lil Boney",
+                    "id":"Skull Lil Boney_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-skull-lil-boney.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.86
+                },
+                {
+                    "nom": "Chabo",
+                    "id":"Chabo_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-chabo.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.85
+                },
+                {
+                    "nom": "Skulltorgeist",
+                    "id":"Skulltorgeist_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-skulltorgeist.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.81
+                },
+                {
+                    "nom": "The Zombie",
+                    "id":"The Zombie_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-the-zombie.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.26
+                },
+                {
+                    "nom": "The Samurai",
+                    "id":"The Samurai_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-the-samurai.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.25
+                },
+                {
+                    "nom": "The Guru",
+                    "id":"The Guru_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-the-guru.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.24
+                },
+                {
+                    "nom": "The Spartan",
+                    "id":"The Spartan_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-the-spartan.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.24
+                },
+                {
+                    "nom": "Silent Ninja",
+                    "id":"Silent Ninja_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-slient-ninja.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.18
+                },
+                {
+                    "nom": "Salute!",
+                    "id":"Salute!_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-salute.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.15
+                },
+                {
+                    "nom": "Skull Troop",
+                    "id":"Skull Troop_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-skull-troop.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.11
+                },
+                {
+                    "nom": "Bombsquad",
+                    "id":"Bombsquad_enfu",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/enfu/Csgo-enfu-bombsquad.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.10
+                }
+
+            ]
         }
     }
 }

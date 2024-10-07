@@ -66,7 +66,7 @@
             "exotic": {
                 "nom": "Exotic",
                 "id": "exotic",
-                "color": "8847ff",
+                "color": "d32ee6",
                 "drop_anim_sound" : "res://resources/mp3/Case_reveal_legendary_01.mp3"
             },
             "extraordinary": {

@@ -33,6 +33,9 @@ func load_player_inventory(file_path: String):
 							new_skin.stickers5.append(Global.stickers[sticker_id])
 						Global.leJoueur.inventaire.append(new_skin)
 						
+					elif skin_data['type_item'] == "sticker":
+						Global.leJoueur.inventaire.append(Global.stickers[skin_data['sticker_id']])
+					
 					elif skin_data['type_item'] == "container":
 						Global.leJoueur.inventaire.append(Global.conteneurs[skin_data['container_id']])
 					
@@ -76,6 +79,12 @@ func set_player_inventory_string():
 			}
 			for sticker in item.stickers5:
 				item_string["stickers"].append(sticker.id)
+			inventory_data["inventaire"]["items"].append(item_string)
+		elif item is Sticker:
+			var item_string = {
+				"type_item": "sticker",
+				"sticker_id": item.id
+			}
 			inventory_data["inventaire"]["items"].append(item_string)
 		elif item is Conteneur:
 			var item_string = {

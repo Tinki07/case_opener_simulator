@@ -1262,7 +1262,39 @@
 			]
 		}
 	},
-	"capsules": {},
+	"capsules": {
+		"enfu_sticker_capsule": {
+			"nom": "Enfu Sticker Capsule",
+			"id": "enfu_sticker_capsule",
+			"image": "res://resources/images/stickers/regular/enfu/Csgo-sticker-capsule-enfu.png",
+			"image_collection": "res://resources/images/default_package.png",
+			"type_caisse": "capsule",
+			"need_key": false,
+			"prix": 1.04,
+			"drop_rates": {
+				"high_grade": 75,
+				"remarkable": 20,
+				"exotic": 5
+			},
+			"stickers": [
+				["Bombsquad_enfu","high_grade",[""]],
+				["Skull Troop_enfu","high_grade",[""]],
+				["Salute!_enfu","high_grade",[""]],
+				["Silent Ninja_enfu","high_grade",[""]],
+				["The Spartan_enfu","high_grade",[""]],
+				["The Guru_enfu","high_grade",[""]],
+				["The Samurai_enfu","high_grade",[""]],
+				["The Zombie_enfu","high_grade",[""]],
+				["Skulltorgeist_enfu","high_grade",[""]],
+				["Chabo_enfu","high_grade",[""]],
+				["Skull Lil Boney_enfu","high_grade",[""]],
+				["Unicorn_enfu","high_grade",[""]],
+				["Unicorn (Holo)_enfu","remarkable",[""]],
+				["Silent Ninja (Foil)_enfu","exotic",[""]],
+				["Bombsquad (Foil)_enfu","exotic",[""]]
+			]
+		}
+	},
 	"collections": {
 		"collection_mirage_2021": {
 			"nom": "Mirage 2021 Collection Package",

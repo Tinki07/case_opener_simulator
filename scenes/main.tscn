@@ -1509,7 +1509,6 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 text = "Souvenirs"
 
 [node name="btn_capsule_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
@@ -1558,7 +1557,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("6_vv063")
 theme_override_styles/normal = SubResource("StyleBoxFlat_14bmx")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_y8j0g")
-placeholder_text = "NTM FIGO"
+placeholder_text = "Search"
 alignment = 1
 
 [node name="btn_filter" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters"]
@@ -1610,6 +1609,7 @@ offset_right = 2232.0
 offset_bottom = 344.0
 
 [node name="LineEdit" type="LineEdit" parent="."]
+visible = false
 offset_left = 1088.0
 offset_right = 1600.0
 offset_bottom = 31.0
@@ -1982,6 +1982,7 @@ libraries = {
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_normal_container" to="pnl_principal/pnl_shop" method="_on_btn_shop_normal_container_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_collection_container" to="pnl_principal/pnl_shop" method="_on_btn_shop_collection_container_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_souvenir_container2" to="pnl_principal/pnl_shop" method="_on_btn_shop_souvenir_container_2_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer/btn_capsule_container" to="pnl_principal/pnl_shop" method="_on_btn_capsule_container_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/btn_filter" to="pnl_principal/pnl_shop" method="_on_btn_filter_pressed"]
 [connection signal="mouse_entered" from="pnl_inspect_skin_grand/pnl_principal/TextureRect" to="." method="_on_texture_rect_mouse_entered"]
 [connection signal="mouse_exited" from="pnl_inspect_skin_grand/pnl_principal/TextureRect" to="." method="_on_texture_rect_mouse_exited"]

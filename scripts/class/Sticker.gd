@@ -19,3 +19,15 @@ func _init(nom,id,equipe,categorie,type,image_path,prix):
 	self.image_path = image_path
 	self.prix = prix
 	
+
+func get_quality():
+	return self.categorie.nom
+
+func get_color():
+	return self.categorie.color
+
+func get_image():
+	return self.image_path
+
+func get_price():
+	return self.prix

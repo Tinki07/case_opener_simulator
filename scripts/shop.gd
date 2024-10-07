@@ -13,6 +13,7 @@ func _on_btn_shop_pressed():
 	load_scroll_panel_container("normal")
 	get_node("%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/ledit_filtre").text = ""
 
+## Remplis la liste des conteneurs dans le shop
 func load_scroll_panel_container(type_container: String, filter_string: String = ""):
 	var items_filters
 	clear_grid($%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/scroll/marg/vbox_containers)
@@ -209,14 +210,17 @@ func _on_plus_key_container_scroll_button_pressed(panel):
 
 func _on_btn_shop_collection_container_pressed():
 	load_scroll_panel_container("collection")
+	get_node("%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/ledit_filtre").text = ""
 
 
 func _on_btn_shop_normal_container_pressed():
 	load_scroll_panel_container("normal")
-	
+	get_node("%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/ledit_filtre").text = ""
 
 func _on_btn_shop_souvenir_container_2_pressed():
 	load_scroll_panel_container("souvenir")
+	get_node("%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/ledit_filtre").text = ""
+
 
 
 func _on_btn_filter_pressed():
@@ -225,3 +229,8 @@ func _on_btn_filter_pressed():
 	load_scroll_panel_container(type_container_show,string_filtre)
 	
 	pass # Replace with function body.
+
+
+func _on_btn_capsule_container_pressed():
+	load_scroll_panel_container("capsule")
+	get_node("%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/ledit_filtre").text = ""
