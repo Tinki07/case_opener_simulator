@@ -1272,8 +1272,8 @@
 			"need_key": false,
 			"prix": 1.04,
 			"drop_rates": {
-				"high_grade": 75,
-				"remarkable": 20,
+				"high_grade": 85,
+				"remarkable": 10,
 				"exotic": 5
 			},
 			"stickers": [

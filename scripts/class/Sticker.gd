@@ -31,3 +31,6 @@ func get_image():
 
 func get_price():
 	return self.prix
+
+func _to_string():
+	return "Sticker | " + self.nom

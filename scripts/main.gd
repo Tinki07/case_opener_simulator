@@ -13,6 +13,7 @@ var is_animation_playing = false
 var is_fast_opening = false
 var timer = Timer.new()
 
+## Variable qui stocke l'item fianl obtenu lors de l'ouverture d'une capsule
 var item_choisi_final
 
 func _process(delta):
@@ -401,6 +402,7 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 				sticker_node.texture = load(objet.stickers5[j].image_path)
 			
 			
+			
 		# Dans le cas où l'objet est une caisse
 		elif objet is Conteneur:
 			
@@ -418,9 +420,8 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 			image_objet.texture = load(objet.image_path) # On modifie l'image
 		elif objet is Sticker:
 			lalbel_principal_objet.text = objet.nom # On modifie le label
-			label_secondaire_objet.text = "" # On modifie le label
+			label_secondaire_objet.text = "Sticker" # On modifie le label
 			color_categorie_objet.color = objet.categorie.color # On modifie la couleur
-			lalbel_principal_objet.autowrap_mode  = TextServer.AUTOWRAP_WORD # Permet au label de pouvoir prendre 2 lignes au lieu de 1
 			image_objet.texture = load(objet.image_path) # On modifie l'image
 		
 		# Associer l'objet "skin - SkinArmeObtenu" au bouton du panel
@@ -530,18 +531,27 @@ func _on_objet_inventory_button_pressed(button):
 	var btn_inspect: Button = $pnl_objet_cliked/VBoxContainer/btn_inspect
 	var btn_delete: Button = $pnl_objet_cliked/VBoxContainer/btn_delete_objet
 	var btn_open: Button = $pnl_objet_cliked/VBoxContainer/btn_ouvrir
+	var btn_gestion_sticker: Button = $pnl_objet_cliked/VBoxContainer/btn_gestion_sticker
 	
 	## On vérifie quel est le type de l'objet associé au panneau et on vois quels boutons on active ou non
 	if item_clicked is SkinArmeObtenu:
 		btn_inspect.visible = true
+		btn_gestion_sticker.visible = true
 		btn_delete.visible = true
 		btn_open.visible = false
 	elif item_clicked is Conteneur:
 		btn_inspect.visible = false
+		btn_gestion_sticker.visible = false
 		btn_delete.visible = true
 		btn_open.visible = true
+	elif item_clicked is Sticker:
+		btn_inspect.visible = true
+		btn_gestion_sticker.visible = false
+		btn_delete.visible = true
+		btn_open.visible = false
 	else:
 		btn_inspect.visible = false
+		btn_gestion_sticker.visible = false
 		btn_delete.visible = true
 		btn_open.visible = false
 	
@@ -597,14 +607,20 @@ func _on_inspect_objet_button_pressed(objet):
 		panel.get_node("Panel/VBoxContainer/pnl_wear").visible = true
 		panel.get_node("Panel/VBoxContainer/pnl_wear/lbl_info").text = objet.etat.nom
 		
-	if objet.stickers5.size() == 0:
+		if objet.stickers5.size() == 0:
+			for child in get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers").get_children():
+				child.visible = false
+		else:
+			for j in range(objet.stickers5.size()):
+				var sticker_node = get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
+				sticker_node.texture = load(objet.stickers5[j].image_path)
+				get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
+	elif objet is Sticker:
+		
+		panel.get_node("Panel/VBoxContainer/pnl_wear").visible = false
+		
 		for child in get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers").get_children():
-			child.visible = false
-	else:
-		for j in range(objet.stickers5.size()):
-			var sticker_node = get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
-			sticker_node.texture = load(objet.stickers5[j].image_path)
-			get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
+				child.visible = false
 
 ## Actions faites quand le bouton ouvrir d'un item est clické
 func _on_ouvrir_objet_button_pressed(item_clicked):
@@ -1005,9 +1021,8 @@ func _on_btn_ouverture_conteneur_pressed():
 				
 				child.get_node("pnl_skin/txtr_skin").texture = load(item_choisi.image_path)
 				child.get_node("pnl_infos_skin/color_rect_etat_skin").color = item_choisi.categorie.color
-				child.get_node("pnl_infos_skin/lbl_nom_arme").autowrap_mode  = TextServer.AUTOWRAP_WORD
 				child.get_node("pnl_infos_skin/lbl_nom_arme").text = item_choisi.nom
-				child.get_node("pnl_infos_skin/lbl_nom_skin").text  = ""
+				child.get_node("pnl_infos_skin/lbl_nom_skin").text  = "Sticker"
 			
 		## C'est ici qu'on affiche les infos des skins random
 		else:
@@ -1033,9 +1048,9 @@ func _on_btn_ouverture_conteneur_pressed():
 				
 				child.get_node("pnl_skin/txtr_skin").texture = load(item_choisi.image_path)
 				child.get_node("pnl_infos_skin/color_rect_etat_skin").color = item_choisi.categorie.color
-				child.get_node("pnl_infos_skin/lbl_nom_arme").autowrap_mode  = TextServer.AUTOWRAP_WORD
+				
 				child.get_node("pnl_infos_skin/lbl_nom_arme").text = item_choisi.nom
-				child.get_node("pnl_infos_skin/lbl_nom_skin").text  = ""
+				child.get_node("pnl_infos_skin/lbl_nom_skin").text  = "Sticker"
 	## On créer un timer, on lui donne un delta et ensuite on l'active. et on attend
 	timer.wait_time = 2 # 2 secondes
 	timer.one_shot = true
@@ -1072,6 +1087,7 @@ func _on_btn_ouverture_conteneur_pressed():
 		get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/AnimationPlayer").play("skin_animation")
 		
 		if item_choisi_final is SkinArmeObtenu:
+			
 			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin.texture = load(Global.leJoueur.inventaire[0].skin.image_path)
 			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/color_objet.color = Global.leJoueur.inventaire[0].skin.categorie.color
 			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/lbl_nom_item.text = Global.leJoueur.inventaire[0]._to_string()
@@ -1086,6 +1102,7 @@ func _on_btn_ouverture_conteneur_pressed():
 					var sticker_node = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
 					sticker_node.texture = load(Global.leJoueur.inventaire[0].stickers5[j].image_path)
 					get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
+			
 		elif item_choisi_final is Sticker:
 			
 			## Si jamais on a ouvert une caisse souvenir juste avant où il y a de base des stickers, cela permet de les cacher pour les stickers
@@ -1094,7 +1111,7 @@ func _on_btn_ouverture_conteneur_pressed():
 			
 			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin.texture = load(Global.leJoueur.inventaire[0].image_path)
 			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/color_objet.color = Global.leJoueur.inventaire[0].categorie.color
-			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/lbl_nom_item.text = Global.leJoueur.inventaire[0].nom
+			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/lbl_nom_item.text = Global.leJoueur.inventaire[0]._to_string()
 
 
 func _on_btn_continuer_pressed():
