@@ -56,6 +56,14 @@
 			"conteneur_unlocker": "caisse_shadow",
 			"prix": 2.49
 		}
+		,
+		{
+			"nom": "Sticker Capsule 2 Key",
+			"id": "sticker_capsule_2_key",
+			"image_path": "res://resources/images/stickers/regular/sticker_capsule_2/Csgo-capsule-key.png",
+			"conteneur_unlocker": "sticker_capsule_2",
+			"prix": 2.49
+		}
 		
 	]
 }

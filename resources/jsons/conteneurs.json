@@ -1293,6 +1293,38 @@
 				["Silent Ninja (Foil)_enfu","exotic",[""]],
 				["Bombsquad (Foil)_enfu","exotic",[""]]
 			]
+		},
+		"sticker_capsule_2": {
+			"nom": "Sticker Capsule 2",
+			"id": "sticker_capsule_2",
+			"image": "res://resources/images/stickers/regular/sticker_capsule_2/Sticker-capsule-2.png",
+			"image_collection": "res://resources/images/default_package.png",
+			"type_caisse": "capsule",
+			"need_key": true,
+			"prix": 19.56,
+			"drop_rates": {
+				"high_grade": 18,
+				"remarkable": 80,
+				"exotic": 2
+			},
+			"stickers": [
+				["Banana_sticker_capsule_2","high_grade",[""]],
+				["Bomb Code_sticker_capsule_2","high_grade",[""]],
+				["Chicken Lover_sticker_capsule_2","high_grade",[""]],
+				["Good Game_sticker_capsule_2","high_grade",[""]],
+				["Good Luck_sticker_capsule_2","high_grade",[""]],
+				["Have Fun_sticker_capsule_2","high_grade",[""]],
+				["Let's Roll-oll_sticker_capsule_2","high_grade",[""]],
+				["Metal_sticker_capsule_2","high_grade",[""]],
+				["Nice Shot_sticker_capsule_2","high_grade",[""]],
+				["Welcome to the Clutch_sticker_capsule_2","high_grade",[""]],
+				["Bish (Holo)_sticker_capsule_2","remarkable",[""]],
+				["Bash (Holo)_sticker_capsule_2","remarkable",[""]],
+				["Bosh (Holo)_sticker_capsule_2","remarkable",[""]],
+				["Let's Roll-oll (Holo)_sticker_capsule_2","remarkable",[""]],
+				["Crown (Foil)_sticker_capsule_2","exotic",[""]],
+				["Stupid Banana (Foil)_sticker_capsule_2","exotic",[""]]
+			]
 		}
 	},
 	"collections": {

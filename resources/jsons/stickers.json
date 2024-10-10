@@ -1794,7 +1794,154 @@
                     "prix": 0.10
                 }
 
+            ],
+            "sticker_capsule_2":[
+                {
+                    "nom": "Crown (Foil)",
+                    "id":"Crown (Foil)_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Crown_Foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 651.78
+                },
+                {
+                    "nom": "Stupid Banana (Foil)",
+                    "id":"Stupid Banana (Foil)_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Stupid_Banana_Foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 36.22
+                },
+                {
+                    "nom": "Bish (Holo)",
+                    "id":"Bish (Holo)_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Bish_Holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 4.03
+                },
+                {
+                    "nom": "Bash (Holo)",
+                    "id":"Bash (Holo)_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Bash_Holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 4.26
+                },
+                {
+                    "nom": "Bosh (Holo)",
+                    "id":"Bosh (Holo)_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Bosh_Holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 3.62
+                },
+                {
+                    "nom": "Let's Roll-oll (Holo)",
+                    "id":"Let's Roll-oll (Holo)_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Let%27s_Roll-oll_Holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 1.38
+                },
+                {
+                    "nom": "Good Game",
+                    "id":"Good Game_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Good_Game.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 5.19
+                },
+                {
+                    "nom": "Nice Shot",
+                    "id":"Nice Shot_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Nice_Shot.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 1.97
+                },
+                {
+                    "nom": "Banana",
+                    "id":"Banana_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Banana.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 1.31
+                },
+                {
+                    "nom": "Welcome to the Clutch",
+                    "id":"Welcome to the Clutch_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Welcome_to_the_Clutch.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 1.20
+                },
+                {
+                    "nom": "Good Luck",
+                    "id":"Good Luck_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Good_Luck.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 1.15
+                },
+                {
+                    "nom": "Bomb Code",
+                    "id":"Bomb Code_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Bomb_Code.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.94
+                },
+                {
+                    "nom": "Have Fun",
+                    "id":"Have Fun_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Have_Fun.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.75
+                },
+                {
+                    "nom": "Chicken Lover",
+                    "id":"Chicken Lover_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Chicken_Lover.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.36
+                },
+                {
+                    "nom": "Metal",
+                    "id":"Metal_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Metal.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.36
+                },
+                {
+                    "nom": "Let's Roll-oll",
+                    "id":"Let's Roll-oll_sticker_capsule_2",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule_2/Let%27s_Roll-oll.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.24
+                } 
             ]
         }
+        
     }
 }

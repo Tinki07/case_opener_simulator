@@ -16,6 +16,10 @@ var timer = Timer.new()
 ## Variable qui stocke l'item fianl obtenu lors de l'ouverture d'une capsule
 var item_choisi_final
 
+
+
+
+
 func _process(delta):
 	$pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont/lbl_argent_joueur.text = str(snapped(Global.leJoueur.money,0.01))
 
@@ -99,10 +103,8 @@ func ouvrir_caisse_v2(caisse: Conteneur):
 			# Si c'est un souvenir, ajoute des stickers au package associé
 			_add_stickers_to_souvenir_package(caisse,skin_arme_obtenu_final)
 		
-		print(skin_arme_obtenu_final.skin.nom)
 	elif item_choosed_object is Sticker:
 		skin_arme_obtenu_final = item_choosed_object
-		print(skin_arme_obtenu_final.nom)
 	
 	
 	return skin_arme_obtenu_final
@@ -146,7 +148,6 @@ func return_objet_dropable_from_container(container: Conteneur):
 	elif Global.stickers.has(item_choosed_string):
 		item_choosed_object = Global.stickers[item_choosed_string]
 	
-	print(item_choosed_object.nom)
 	return item_choosed_object
 
 
@@ -271,7 +272,7 @@ func _add_stickers_to_souvenir_package(caisse: Conteneur,skin: SkinArmeObtenu):
 			if equipe == stickers_teams[random1][1]:
 				lesStickersDeLaTeam1.append(sticker_name)
 		var random = randi_range(0,(lesStickersDeLaTeam1.size() - 1))  
-		print(str(lesStickersDeLaTeam1.size()))
+		#print(str(lesStickersDeLaTeam1.size()))
 		sticker_signature_choisi = lesStickersDeLaTeam1[random]
 		les_stickers_selectiones.append(sticker_signature_choisi)
 	elif stickers_signatures == [] and sticker_map != "":
@@ -375,7 +376,7 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 	
 	# On parcourt l'inventaire du joueur et on crée un élément pour chaque skin
 	for i in range(skin_index_debut, min(skin_index_fin + 1, Global.leJoueur.inventaire.size())):
-
+	
 		# Met en variable l'objet qui sera attribué au pannel
 		var objet = Global.leJoueur.inventaire[i]
 		
@@ -429,6 +430,7 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 		
  		# Connecter le signal "pressed" du bouton à une fonction de gestion
 		btn_panel_objet.pressed.connect(self._on_objet_inventory_button_pressed.bind(new_panel_objet))
+		btn_panel_objet.mouse_entered.connect(self._on_objet_inventory_button_mouse_entered.bind(new_panel_objet))
 		
 		# Ajoute le panneau configuré à la grille
 		grid.add_child(new_panel_objet) # On ajoute le panneau à la grille
@@ -483,6 +485,11 @@ func calculer_nombre_page():
 
 # Elle gère l'affichage et la mise à jour de l'inventaire du joueur.
 func _on_btn_inventaire_pressed():
+	
+	var audio_player2 = $pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire/AudioStreamPlayer2D
+	audio_player2.play()
+	
+	
 	# Affiche ou cache le panneau de l'inventaire
 	page_actuelle = 1
 	changer_valeur_page_actuelle_storage()
@@ -511,17 +518,38 @@ func _on_btn_inventaire_pressed():
 
 # Permet l'affichage des skins suivants dans l'inventaire.
 func _on_btn_page_storage_suivant_pressed():
+	
+	var audio_player = $pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant/AudioStreamPlayer2D
+	audio_player.play()
+	
 	afficher_skins_suivant()
 
 # Permet l'affichage des skins précédents dans l'inventaire.
 func _on_btn_page_storage_precedent_pressed():
+	
+	var audio_player = $pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_precedent/AudioStreamPlayer2D
+	audio_player.play()
+	
 	afficher_skins_precedent()
+
+func _on_objet_inventory_button_mouse_entered(button):
+	
+	## Récupérer les informations sur l'objet clické à partir du metadata
+	var item_clicked = button.get_meta("skin_data")
+	
+	var audio_player = get_node(str(button.get_path()) + "/btn_skin/audio_anim_survole")
+	audio_player.play()
+	
+	
 
 
 ## Une fois un item clické dans l'inventaire, ca nous ouvre un petit panel qui contient des boutons
 ## qui permettend de faire des actions différentes.
 ## C'est ici qu'est la première étape.
 func _on_objet_inventory_button_pressed(button):
+	
+	var audio_player = $pnl_objet_cliked/audio_anim_select
+	audio_player.play()
 	
 	## Récupérer les informations sur l'objet clické à partir du metadata
 	var item_clicked = button.get_meta("skin_data")
@@ -531,27 +559,22 @@ func _on_objet_inventory_button_pressed(button):
 	var btn_inspect: Button = $pnl_objet_cliked/VBoxContainer/btn_inspect
 	var btn_delete: Button = $pnl_objet_cliked/VBoxContainer/btn_delete_objet
 	var btn_open: Button = $pnl_objet_cliked/VBoxContainer/btn_ouvrir
-	var btn_gestion_sticker: Button = $pnl_objet_cliked/VBoxContainer/btn_gestion_sticker
 	
 	## On vérifie quel est le type de l'objet associé au panneau et on vois quels boutons on active ou non
 	if item_clicked is SkinArmeObtenu:
 		btn_inspect.visible = true
-		btn_gestion_sticker.visible = true
 		btn_delete.visible = true
 		btn_open.visible = false
 	elif item_clicked is Conteneur:
 		btn_inspect.visible = false
-		btn_gestion_sticker.visible = false
 		btn_delete.visible = true
 		btn_open.visible = true
 	elif item_clicked is Sticker:
 		btn_inspect.visible = true
-		btn_gestion_sticker.visible = false
 		btn_delete.visible = true
 		btn_open.visible = false
 	else:
 		btn_inspect.visible = false
-		btn_gestion_sticker.visible = false
 		btn_delete.visible = true
 		btn_open.visible = false
 	
@@ -583,6 +606,9 @@ func _on_objet_inventory_button_pressed(button):
 ## Actions faites quand le bouton delete d'un item est clické
 func _on_delete_objet_button_pressed(objet):
 	
+	var audio_player = $pnl_objet_cliked/audio_anim_vendre
+	audio_player.play()
+	
 	Global.leJoueur.money += objet.prix
 	Global.leJoueur.inventaire.erase(objet)
 	$pnl_objet_cliked.visible = false
@@ -592,9 +618,14 @@ func _on_delete_objet_button_pressed(objet):
 ## Actions faites quand le bouton inspect d'un item est clické
 func _on_inspect_objet_button_pressed(objet):
 	
+	var audio_player = $pnl_objet_cliked/audio_anim_select
+	audio_player.play()
+	
 	$pnl_objet_cliked.visible = false
 	$pnl_ombre_panneau_principal.visible = true
 	$pnl_inspect_skin_grand.visible = true
+	
+	$pnl_choose_sticker.set_meta("item", objet)
 	
 	var panel = $pnl_inspect_skin_grand
 	panel.get_node("color_objet").color = objet.get_color()
@@ -607,23 +638,29 @@ func _on_inspect_objet_button_pressed(objet):
 		panel.get_node("Panel/VBoxContainer/pnl_wear").visible = true
 		panel.get_node("Panel/VBoxContainer/pnl_wear/lbl_info").text = objet.etat.nom
 		
-		if objet.stickers5.size() == 0:
-			for child in get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers").get_children():
+		for child in get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers").get_children():
 				child.visible = false
-		else:
+		get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker").visible = true
+		
+		if objet.stickers5.size() != 0:
+			get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker").visible = true
 			for j in range(objet.stickers5.size()):
 				var sticker_node = get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
 				sticker_node.texture = load(objet.stickers5[j].image_path)
 				get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
+			if objet.stickers5.size() == 5:
+				get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker").visible = false
 	elif objet is Sticker:
-		
 		panel.get_node("Panel/VBoxContainer/pnl_wear").visible = false
-		
 		for child in get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers").get_children():
 				child.visible = false
 
 ## Actions faites quand le bouton ouvrir d'un item est clické
 func _on_ouvrir_objet_button_pressed(item_clicked):
+	
+	var audio_player = $pnl_objet_cliked/audio_anim_select
+	audio_player.play()
+	
 	is_animation_playing = false
 	var panel_item_cliked = $pnl_objet_cliked
 	var btn_exit = $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel
@@ -846,6 +883,9 @@ func _on_btn_quitter_caisse_panel_pressed():
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key.visible = false
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key.visible = false
 	
+	var audio_player2 = $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel/AudioStreamPlayer2D
+	audio_player2.play()
+	
 	repopulation_grille_inventaire_sans_retoruner_page_1()
 	
 	# Réinitialisation de la sélection
@@ -897,6 +937,9 @@ func _on_btn_quitter_caisse_panel_pressed():
 				audio_player.play()
 
 func _on_btn_ouverture_conteneur_pressed():
+	
+	var audio_player2 = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur/AudioStreamPlayer2D
+	audio_player2.play()
 	
 	# Remet la valeur du fast opening à 0
 	is_fast_opening = false
@@ -1131,11 +1174,19 @@ func _on_btn_continuer_pressed():
 
 
 func _on_btn_close_panel_pressed():
+	
+	var audio_player = $pnl_inspect_skin_grand/btn_close_panel/AudioStreamPlayer2D
+	audio_player.play()
+	
 	$pnl_inspect_skin_grand.visible = false
 	$pnl_ombre_panneau_principal.visible = false
 
 
 func _on_texture_rect_mouse_entered():
+	
+	var audio_player = $pnl_inspect_skin_grand/pnl_principal/TextureRect/AudioStreamPlayer2D
+	audio_player.play()
+	
 	get_node("pnl_inspect_skin_grand/Panel").visible = true
 
 
@@ -1163,3 +1214,81 @@ func _on_animation_opening_container_finished(anim_name):
 	
 
 
+func _on_btn_add_sticker_pressed():
+	
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = true
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = true
+	
+	var item = $pnl_choose_sticker.get_meta("item")
+	
+	clear_grid(get_node("pnl_choose_sticker/panel/ScrollContainer/MarginContainer/GridContainer"))
+	get_node("pnl_choose_sticker/panel/ScrollContainer").set_v_scroll(0)
+	
+	for inv_item in Global.leJoueur.inventaire:
+		if inv_item is Sticker:
+			var new_panel_objet = Global.pnl_prefab_skin_arme.instantiate()
+			
+			var lalbel_principal_objet = new_panel_objet.get_node("pnl_infos_skin/lbl_nom_arme") # On récupère son label
+			var label_secondaire_objet = new_panel_objet.get_node("pnl_infos_skin/lbl_nom_skin") # On récupère son label
+			var image_objet = new_panel_objet.get_node("pnl_skin/txtr_skin") # On récupère son image
+			var color_categorie_objet = new_panel_objet.get_node("pnl_infos_skin/color_rect_etat_skin")
+			var btn_panel_objet = new_panel_objet.get_node("btn_skin")
+			
+			lalbel_principal_objet.text = inv_item.nom
+			label_secondaire_objet.text = "Sticker"
+			image_objet.texture = load(inv_item.image_path)
+			color_categorie_objet.color = inv_item.categorie.color
+			
+			new_panel_objet.set_meta("sticker_data", inv_item)
+			btn_panel_objet.pressed.connect(self._on_sticker_apply_button_pressed.bind(new_panel_objet))
+			
+			get_node("pnl_choose_sticker/panel/ScrollContainer/MarginContainer/GridContainer").add_child(new_panel_objet)
+	
+	get_node("pnl_choose_sticker").visible = true
+
+
+func _on_button_pressed():
+	
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = false
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = false
+	
+	get_node("pnl_choose_sticker").visible = false
+
+func _on_sticker_apply_button_pressed(panel):
+	
+	var item = $pnl_choose_sticker.get_meta("item")
+	var sticker_to_be_applied = panel.get_meta("sticker_data")
+	
+	get_node("pnl_confirmation").set_meta("sticker_data", sticker_to_be_applied)
+	
+	get_node("pnl_confirmation/panel/lbl_infos").text = "[center]You really wan to apply the sticker [b]'" + sticker_to_be_applied.nom + "'[/b] on your [b]'" + item._to_string() + "'[/b] ?[/center]"
+	
+	get_node("pnl_confirmation").visible = true
+
+
+func _on_btn_confirmation_add_sticker_pressed():
+	
+	var item = $pnl_choose_sticker.get_meta("item")
+	var sticker = $pnl_confirmation.get_meta("sticker_data")
+	
+	var new_item = item
+	new_item.stickers5.append(sticker)
+	
+	Global.leJoueur.inventaire.erase(item)
+	Global.leJoueur.inventaire.erase(sticker)
+	Global.leJoueur.inventaire.insert(0,new_item)
+	
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = false
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = false
+	
+	get_node("pnl_confirmation").visible = false
+	get_node("pnl_choose_sticker").visible = false
+	get_node("pnl_ombre_panneau_principal").visible = false
+	get_node("pnl_inspect_skin_grand").visible = false
+	
+	repopulation_grille_inventaire_sans_retoruner_page_1()
+	
+
+
+func _on_btn_cancel_add_sticker_pressed():
+	get_node("pnl_confirmation").visible = false

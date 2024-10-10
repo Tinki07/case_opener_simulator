@@ -83,7 +83,8 @@ folder_colors={
 "res://resources/images/conteneurs/vertigo/": "red",
 "res://resources/images/conteneurs/vertigo_2021/": "green",
 "res://resources/images/conteneurs/weapon_case/": "green",
-"res://resources/images/conteneurs/winter_offensive/": "green"
+"res://resources/images/conteneurs/winter_offensive/": "green",
+"res://resources/images/stickers/regular/enfu/": "green"
 }
 
 [rendering]

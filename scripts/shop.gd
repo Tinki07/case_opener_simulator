@@ -8,6 +8,10 @@ func clear_grid(grid):
 		child.queue_free() # On marque l'enfant pour destruction lors du prochain cycle
 
 func _on_btn_shop_pressed():
+	
+	var audio_player2 = $%pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop/AudioStreamPlayer2D
+	audio_player2.play()
+	
 	get_node("%pnl_principal/pnl_inventaire").visible = false
 	get_node("%pnl_principal/pnl_shop").visible = true
 	load_scroll_panel_container("normal")
