@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://cqckho3b1h1no"]
+[gd_scene load_steps=102 format=3 uid="uid://cqckho3b1h1no"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
 [ext_resource type="Texture2D" uid="uid://bwb2ekoix1sfo" path="res://resources/images/wallpaperflare.com_wallpaper.jpg" id="2_jylf6"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://sqgbsmfu2fnx" path="res://resources/images/stickers/regular/sticker_capsule_2/Bosh_Holo.png" id="32_civge"]
 [ext_resource type="Texture2D" uid="uid://dws4b7fcfiovb" path="res://resources/images/stickers/regular/sticker_capsule_2/Chicken_Lover.png" id="33_h1ukc"]
 [ext_resource type="Texture2D" uid="uid://draihus3rpr3r" path="res://resources/images/icons8-plus-100.png" id="37_0g1j8"]
+[ext_resource type="Texture2D" uid="uid://bb36uvxww5kh7" path="res://resources/images/etoile (2).png" id="37_vr8wv"]
 [ext_resource type="Theme" uid="uid://bcvalpw2o387q" path="res://resources/themes/theme_bouton_normal_rouge.tres" id="37_wbf3f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mwkwp"]
@@ -244,6 +245,16 @@ bg_color = Color(0.164706, 0.196078, 0.235294, 0.607843)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7pfb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lgl7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwtlk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dg4f3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iulyu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kq453"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1rie"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dli0b"]
 
@@ -629,7 +640,6 @@ text = "Menu"
 vertical_alignment = 1
 
 [node name="pnl_inventaire" type="Panel" parent="pnl_principal"]
-visible = false
 layout_mode = 0
 offset_left = 552.0
 offset_top = 24.0
@@ -644,11 +654,6 @@ offset_top = 24.0
 offset_right = 896.0
 offset_bottom = 848.0
 theme_override_styles/panel = ExtResource("3_j236n")
-
-[node name="Kindpng4298060" type="Sprite2D" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
-position = Vector2(448, 636)
-scale = Vector2(1, 1.74917)
-texture = ExtResource("8_nx3p8")
 
 [node name="Button" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
 visible = false
@@ -1695,6 +1700,7 @@ offset_bottom = 31.0
 clear_button_enabled = true
 
 [node name="pnl_objet_cliked" type="Panel" parent="."]
+visible = false
 offset_left = 2232.0
 offset_top = 488.0
 offset_right = 2360.0
@@ -1708,6 +1714,7 @@ offset_bottom = 69.0
 theme_override_constants/separation = 0
 
 [node name="btn_inspect" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
+custom_minimum_size = Vector2(0, 33)
 layout_mode = 2
 theme = ExtResource("13_eml8t")
 theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
@@ -1725,6 +1732,7 @@ theme_override_font_sizes/font_size = 13
 text = "Gestion Stickers"
 
 [node name="btn_ouvrir" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
+custom_minimum_size = Vector2(0, 33)
 layout_mode = 2
 theme = ExtResource("13_eml8t")
 theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
@@ -1734,7 +1742,7 @@ text = "Ouvrir"
 
 [node name="btn_delete_objet" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("13_eml8t")
+theme = ExtResource("37_wbf3f")
 theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
 theme_override_fonts/font = ExtResource("14_nx57u")
 theme_override_font_sizes/font_size = 13
@@ -1880,6 +1888,27 @@ expand_mode = 1
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="pnl_inspect_skin_grand/pnl_principal/TextureRect"]
 stream = ExtResource("30_lcb5w")
 volume_db = 6.5
+
+[node name="txtr_favori" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 6.0
+offset_right = 629.0
+offset_bottom = 41.0
+texture = ExtResource("37_vr8wv")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="btn_item_fav" type="Button" parent="pnl_inspect_skin_grand/pnl_principal/txtr_favori"]
+layout_mode = 0
+offset_right = 35.0
+offset_bottom = 35.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iwtlk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dg4f3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_iulyu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kq453")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e1rie")
+flat = true
 
 [node name="lbl_nom_item" type="Label" parent="pnl_inspect_skin_grand"]
 layout_mode = 0
@@ -2251,6 +2280,13 @@ theme_override_fonts/bold_font = ExtResource("14_nx57u")
 bbcode_enabled = true
 text = "[center]You really wan to apply the sticker \"Bomb Calisse\" on your \"M4A1-S Test\"[b]important[/b][/center]\""
 
+[node name="pnl_ombre_panneau_principal2" type="Panel" parent="."]
+visible = false
+offset_left = 552.0
+offset_top = 80.0
+offset_right = 1448.0
+offset_bottom = 872.0
+
 [connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire" to="." method="_on_btn_inventaire_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop" to="pnl_principal/pnl_shop" method="_on_btn_shop_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant" to="." method="_on_btn_page_storage_suivant_pressed"]
@@ -2268,6 +2304,7 @@ text = "[center]You really wan to apply the sticker \"Bomb Calisse\" on your \"M
 [connection signal="pressed" from="pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker" to="." method="_on_btn_add_sticker_pressed"]
 [connection signal="mouse_entered" from="pnl_inspect_skin_grand/pnl_principal/TextureRect" to="." method="_on_texture_rect_mouse_entered"]
 [connection signal="mouse_exited" from="pnl_inspect_skin_grand/pnl_principal/TextureRect" to="." method="_on_texture_rect_mouse_exited"]
+[connection signal="pressed" from="pnl_inspect_skin_grand/pnl_principal/txtr_favori/btn_item_fav" to="." method="_on_btn_item_fav_pressed"]
 [connection signal="pressed" from="pnl_inspect_skin_grand/btn_close_panel" to="." method="_on_btn_close_panel_pressed"]
 [connection signal="pressed" from="pnl_choose_sticker/panel/Panel2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="pnl_confirmation/panel/HBoxContainer/btn_cancel_add_sticker" to="." method="_on_btn_cancel_add_sticker_pressed"]

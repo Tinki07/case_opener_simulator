@@ -1578,6 +1578,161 @@
                 }
 
             ],
+            "ems_katowice_2014":[
+                {
+                    "nom": "ESL Skull (Foil)",
+                    "id": "ESL Skull (Foil)_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-esl-skull-foil.png",
+                    "prix": 381.3,
+                    "categorie": "exotic",
+                    "type": "sticker_foil"
+                },
+                {
+                    "nom": "compLexity Gaming (Holo)",
+                    "id": "compLexity Gaming (Holo)_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-complexity-holo.png",
+                    "prix": 1317.5,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Team Dignitas (Holo)",
+                    "id": "Team Dignitas (Holo)_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-dignitas-holo.png",
+                    "prix": 24597,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Fnatic (Holo)",
+                    "id": "Fnatic (Holo)_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-fnatic-holo.png",
+                    "prix": 1135,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "HellRaisers (Holo)",
+                    "id": "HellRaisers (Holo)_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-hellraisers-holo.png",
+                    "prix": 10500,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Team LDLC.com (Holo)",
+                    "id": "Team LDLC.com (Holo)_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-ldlc-holo.png",
+                    "prix": 20290,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "LGB eSports (Holo)",
+                    "id": "LGB eSports (Holo)_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-lgb-holo.png",
+                    "prix": 6668.5,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Ninjas in Pyjamas (Holo)",
+                    "id": "Ninjas in Pyjamas (Holo)_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-nip-holo.png",
+                    "prix": 2733,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Titan (Holo)",
+                    "id": "Titan (Holo)_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-titan-holo.png",
+                    "prix": 65000,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Team LDLC.com",
+                    "id": "Team LDLC.com_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-ldlc.png",
+                    "prix": 1311.4,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "LGB eSports",
+                    "id": "LGB eSports_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-lgb.png",
+                    "prix": 601.3,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Team Dignitas",
+                    "id": "Team Dignitas_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-dignitas.png",
+                    "prix": 847.4,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "HellRaisers",
+                    "id": "HellRaisers_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-hellraisers.png",
+                    "prix": 396.9,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Ninjas in Pyjamas",
+                    "id": "Ninjas in Pyjamas_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-nip.png",
+                    "prix": 413.4,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Fnatic",
+                    "id": "Fnatic_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-fnatic.png",
+                    "prix": 586.8,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "compLexity Gaming",
+                    "id": "compLexity Gaming_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-complexity.png",
+                    "prix": 535.5,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Titan",
+                    "id": "Titan_ems_katowice_2014_legends",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-titan.png",
+                    "prix": 2515.6,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                }
+            ],
             "maps": [
                 {
                     "nom": "Ancient (Gold)",
@@ -1940,6 +2095,1078 @@
                     "type": "sticker_paper",
                     "prix": 0.24
                 } 
+            ],
+            "sticker_capsule":[
+                {
+                    "nom": "Lucky 13 (Foil)",
+                    "id":"Lucky 13 (Foil)_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Lucky_13_Foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 11.05
+                },
+                {
+                    "nom": "Luck Skill (Foil)",
+                    "id":"Luck Skill (Foil)_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Luck_Skill_Foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 4.22
+                },
+                {
+                    "nom": "Aces High (Holo)",
+                    "id":"Aces High (Holo)_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Aces_High_Holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 3.50
+                },
+                {
+                    "nom": "Vigilance (Holo)",
+                    "id":"Vigilance (Holo)_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Vigilance_Holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 2.25
+                },
+                {
+                    "nom": "Fearsome (Holo)",
+                    "id":"Fearsome (Holo)_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Fearsome_%28Holo%29.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 1.03
+                },
+                {
+                    "nom": "Seek & Destroy",
+                    "id":"Seek & Destroy_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Seek_%26_Destroy.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.89
+                },
+                {
+                    "nom": "Aces High",
+                    "id":"Aces High_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Aces_High.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.89
+                },
+                {
+                    "nom": "Easy Peasy",
+                    "id":"Easy Peasy_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Easy_Peasy.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.60
+                },
+                {
+                    "nom": "Fearsome",
+                    "id":"Fearsome_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Fearsome.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.54
+                },
+                {
+                    "nom": "Black Dog",
+                    "id":"Black Dog_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Black_Dog.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.49
+                },
+                {
+                    "nom": "Cerberus",
+                    "id":"Cerberus_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Cerberus.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.46
+                },
+                {
+                    "nom": "Lucky 13",
+                    "id":"Lucky 13_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Lucky_13.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.40
+                },
+                {
+                    "nom": "I Conquered",
+                    "id":"I Conquered_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/I_Conquered.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.35
+                },
+                {
+                    "nom": "Luck Skill",
+                    "id":"Luck Skill_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Luck_Skill.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.32
+                },
+                {
+                    "nom": "Vigilance",
+                    "id":"Vigilance_sticker_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/sticker_capsule/Vigilance.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.28
+                }
+            ],
+            "pinups_capsule":[
+                {
+                    "nom": "Tamara (Holo)",
+                    "id":"Tamara (Holo)_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-tamara_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 6.67
+                },
+                {
+                    "nom": "Sherry (Holo)",
+                    "id":"Sherry (Holo)_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-scherry_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 2.36
+                },
+                {
+                    "nom": "Ivette (Holo)",
+                    "id":"Ivette (Holo)_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-ivette_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 2.08
+                },
+                {
+                    "nom": "Kimberly (Holo)",
+                    "id":"Kimberly (Holo)_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-kimberly_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 1.56
+                },
+                {
+                    "nom": "Martha (Holo)",
+                    "id":"Martha (Holo)_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-martha_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 1.06
+                },
+                {
+                    "nom": "Merietta (Holo)",
+                    "id":"Merietta (Holo)_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-merietta_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 1.03
+                },
+                {
+                    "nom": "Tamara",
+                    "id":"Tamara_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-tamara.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 2.44
+                },
+                {
+                    "nom": "Sherry",
+                    "id":"Sherry_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-scherry.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.65
+                },
+                {
+                    "nom": "Ivette",
+                    "id":"Ivette_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-ivette.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.55
+                },
+                {
+                    "nom": "Kimberly",
+                    "id":"Kimberly_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-kimberly.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.53
+                },
+                {
+                    "nom": "Martha",
+                    "id":"Martha_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-martha.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.08
+                },
+                {
+                    "nom": "Merietta",
+                    "id":"Merietta_pinups_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/pinups_capsule/Csgo-stickers-pinups_capsule-merietta.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.18
+                }
+            ],
+            "slid3_capsule":[
+                {
+                    "nom": "Move It (Foil)",
+                    "id":"Move It (Foil)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-moveit_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 17.51
+                },
+                {
+                    "nom": "Countdown (Foil)",
+                    "id":"Countdown (Foil)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-countdown_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 6.78
+                },
+                {
+                    "nom": "Boom (Foil)",
+                    "id":"Boom (Foil)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-boom_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 4.08
+                },
+                {
+                    "nom": "Don't Worry (Foil)",
+                    "id":"Don't Worry (Foil)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-dontworryigotcha_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 1.65
+                },
+                {
+                    "nom": "Hard Cluck Life (Foil)",
+                    "id":"Hard Cluck Life (Foil)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-hardclucklife_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 1.65
+                },
+                {
+                    "nom": "Move It (Holo)",
+                    "id":"Move It (Holo)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-moveit_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 2.60
+                },
+                {
+                    "nom": "Countdown (Holo)",
+                    "id":"Countdown (Holo)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-countdown_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 1.15
+                },
+                {
+                    "nom": "Boom (Holo)",
+                    "id":"Boom (Holo)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-boom_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 1.09
+                },
+                {
+                    "nom": "Hard Cluck Life (Holo)",
+                    "id":"Hard Cluck Life (Holo)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-hardclucklife_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 1.05
+                },
+                {
+                    "nom": "Don't Worry (Holo)",
+                    "id":"Don't Worry (Holo)_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-dontworryigotcha_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 0.48
+                },
+                {
+                    "nom": "Move It",
+                    "id":"Move It_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-moveit.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.48
+                },
+                {
+                    "nom": "Countdown",
+                    "id":"Countdown_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-countdown.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.48
+                },
+                {
+                    "nom": "Boom",
+                    "id":"Boom_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-boom.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.29
+                },
+                {
+                    "nom": "Hard Cluck Life",
+                    "id":"Hard Cluck Life_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-hardclucklife.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.08
+                },
+                {
+                    "nom": "Don't Worry",
+                    "id":"Don't Worry_slid3_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/slid3_capsule/Csgo-stickers-slid3_capsule-dontworryigotcha.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.07
+                }
+            ],
+            "team_roles_capsule":[
+                {
+                    "nom": "The Pro (Foil)",
+                    "id":"The Pro (Foil)_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-pro_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 4.79
+                },
+                {
+                    "nom": "The Ninja",
+                    "id":"The Ninja_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-ninja.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.96
+                },
+                {
+                    "nom": "The Fragger",
+                    "id":"The Fragger_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-fragger.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.94
+                },
+                {
+                    "nom": "Support",
+                    "id":"Support_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-support.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.85
+                },
+                {
+                    "nom": "The Bot",
+                    "id":"The Bot_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-bot.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.83
+                },
+                {
+                    "nom": "The Awper",
+                    "id":"The Awper_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-awper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.80
+                },
+                {
+                    "nom": "The Baiter",
+                    "id":"The Baiter_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-baiter.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.76
+                },
+                {
+                    "nom": "The Leader",
+                    "id":"The Leader_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-leader.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.73
+                },
+                {
+                    "nom": "The Lurker",
+                    "id":"The Lurker_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-lurker.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.69
+                },
+                {
+                    "nom": "The 'Nader",
+                    "id":"The 'Nader_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-nader.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.31
+                },
+                {
+                    "nom": "The Bomber",
+                    "id":"The Bomber_team_roles_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/team_roles_capsule/Csgo-stickers-team_roles_capsule-bomber.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.30
+                }
+            ],
+            "10_year_birthday_capsule":[
+                {
+                    "nom": "Magic Rush Ball (Lenticular)",
+                    "id":"Magic Rush Ball (Lenticular)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_magic_rush_ball_lenticular.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_lenticular",
+                    "prix": 20.30
+                },
+                {
+                    "nom": "Global TV (Lenticular)",
+                    "id":"Global TV (Lenticular)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_gotv_lenticular.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_lenticular",
+                    "prix": 4.22
+                },
+                {
+                    "nom": "TV Installation (Lenticular)",
+                    "id":"TV Installation (Lenticular)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_tv_installation_lenticular.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_lenticular",
+                    "prix": 3.76
+                },
+                {
+                    "nom": "DJ Safecracker (Lenticular)",
+                    "id":"DJ Safecracker (Lenticular)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_music_kits_lenticular.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_lenticular",
+                    "prix": 3.35
+                },
+                {
+                    "nom": "Freeze (Lenticular)",
+                    "id":"Freeze (Lenticular)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_freeze_lenticular.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_lenticular",
+                    "prix": 1.63
+                },
+                {
+                    "nom": "Skin Lover (Lenticular)",
+                    "id":"Skin Lover (Lenticular)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_skin_lover_lenticular.png",
+                    "categorie": "extraordinary",
+                    "type": "sticker_lenticular",
+                    "prix": 1.43
+                },
+                {
+                    "nom": "Showdown (Foil)",
+                    "id":"Showdown (Foil)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_showdown_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 5.49
+                },
+                {
+                    "nom": "Dust FA (Foil)",
+                    "id":"Dust FA (Foil)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_dust_fa_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 2.61
+                },
+                {
+                    "nom": "Approaching Site (Foil)",
+                    "id":"Approaching Site (Foil)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_jojo_csgo_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 2.50
+                },
+                {
+                    "nom": "Romanov's Fire (Foil)",
+                    "id":"Romanov's Fire (Foil)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_wildfire_genie_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 0.97
+                },
+                {
+                    "nom": "In The Fire (Foil)",
+                    "id":"In The Fire (Foil)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_in_the_fire_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 0.70
+                },
+                {
+                    "nom": "Ten Years (Foil)",
+                    "id":"Ten Years (Foil)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_ten_years_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 0.55
+                },
+                {
+                    "nom": "Pure Malt (Foil)",
+                    "id":"Pure Malt (Foil)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_pure_malt_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 0.55
+                },
+                {
+                    "nom": "Overpass Diorama (Foil)",
+                    "id":"Overpass Diorama (Foil)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_overpass_b_foil.png",
+                    "categorie": "exotic",
+                    "type": "sticker_foil",
+                    "prix": 0.23
+                },
+                {
+                    "nom": "Kawaii T (Holo)",
+                    "id":"Kawaii T (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_kawaii_t_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 7.20
+                },
+                {
+                    "nom": "Leaving The Station (Holo)",
+                    "id":"Leaving The Station (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_train_heart_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 6.64
+                },
+                {
+                    "nom": "Kawaii CT (Holo)",
+                    "id":"Kawaii CT (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_kawaii_ct_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 5.38
+                },
+                {
+                    "nom": "Blue Gem (Glitter)",
+                    "id":"Blue Gem (Glitter)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_blue_gem_glitter.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_glitter",
+                    "prix": 4.39
+                },
+                {
+                    "nom": "Cbbl (Holo)",
+                    "id":"Cbbl (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_cbbl_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 1.20
+                },
+                {
+                    "nom": "Get Smoked (Holo)",
+                    "id":"Get Smoked (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_get_smoked_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 0.97
+                },
+                {
+                    "nom": "Zeusception (Holo)",
+                    "id":"Zeusception (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_zeusception_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 0.81
+                },
+                {
+                    "nom": "Ace Clutch Co. (Holo)",
+                    "id":"Ace Clutch Co. (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_ace_clutch_co_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 0.77
+                },
+                {
+                    "nom": "Conspiracy Club (Holo)",
+                    "id":"Conspiracy Club (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_conspiracy_club_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 0.55
+                },
+                {
+                    "nom": "Vertigo's Hero (Holo)",
+                    "id":"Vertigo's Hero (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_vertigos_hero_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 0.53
+                },
+                {
+                    "nom": "Go Boom (Glitter)",
+                    "id":"Go Boom (Glitter)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_boom_glitter.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 0.53
+                },
+                {
+                    "nom": "Pain Train (Holo)",
+                    "id":"Pain Train (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_pain_train_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 0.32
+                },
+                {
+                    "nom": "Defuse It (Holo)",
+                    "id":"Defuse It (Holo)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_defuse_it_holo.png",
+                    "categorie": "remarkable",
+                    "type": "sticker_holo",
+                    "prix": 0.28
+                },
+                {
+                    "nom": "Baby Howl",
+                    "id":"Baby Howl_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_baby_howl_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 1.41
+                },
+                {
+                    "nom": "Baby Medusa",
+                    "id":"Baby Medusa_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_baby_medusa_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.83
+                },
+                {
+                    "nom": "Co Co Co",
+                    "id":"Co Co Co_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_co_co_cs_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.74
+                },
+                {
+                    "nom": "Shifty Tactics",
+                    "id":"Shifty Tactics_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_rush_b_csgo10_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.60
+                },
+                {
+                    "nom": "GO",
+                    "id":"GO_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_go_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.52
+                },
+                {
+                    "nom": "Zeused",
+                    "id":"Zeused_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_zeused_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.35
+                },
+                {
+                    "nom": "Good Versus Evil",
+                    "id":"Good Versus Evil_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_good_versus_evil_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.34
+                },
+                {
+                    "nom": "Baby Lore",
+                    "id":"Baby Lore_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_baby_lore_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.26
+                },
+                {
+                    "nom": "Green's Problem",
+                    "id":"Green's Problem_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_green_problem_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.21
+                },
+                {
+                    "nom": "Call Your Flashes",
+                    "id":"Call Your Flashes_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_call_your_flashes_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.19
+                },
+                {
+                    "nom": "Baby Cerberus",
+                    "id":"Baby Cerberus_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_baby_cerberus_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.17
+                },
+                {
+                    "nom": "Baby Fire Serpent",
+                    "id":"Baby Fire Serpent_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_baby_fire_serpent_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.15
+                },
+                {
+                    "nom": "Beaky Decade",
+                    "id":"Beaky Decade_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_beaky_decade_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.14
+                },
+                {
+                    "nom": "Rush More",
+                    "id":"Rush More_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_rush_more_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.13
+                },
+                {
+                    "nom": "Good Sports",
+                    "id":"Good Sports_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_glhf_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.12
+                },
+                {
+                    "nom": "Dragon Tale",
+                    "id":"Dragon Tale_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_dragon_tale_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.10
+                },
+                {
+                    "nom": "Choose Wisely",
+                    "id":"Choose Wisely_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_roshambo_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.10
+                },
+                {
+                    "nom": "Laser Beam",
+                    "id":"Laser Beam_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_laser_beam_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.09
+                },
+                {
+                    "nom": "Clicking Heads",
+                    "id":"Clicking Heads_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_clicking_heads_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.09
+                },
+                {
+                    "nom": "Monster",
+                    "id":"Monster_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_monster_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.09
+                },
+                {
+                    "nom": "B-Day",
+                    "id":"B-Day_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_b_day_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.07
+                },
+                {
+                    "nom": "Not For Resale",
+                    "id":"Not For Resale_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_not_for_resale_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.07
+                },
+                {
+                    "nom": "This Is Fine (H)",
+                    "id":"This Is Fine (H)_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_this_is_fine_h_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.07
+                },
+                {
+                    "nom": "Press Start",
+                    "id":"Press Start_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_press_start_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.06
+                },
+                {
+                    "nom": "Agent Select",
+                    "id":"Agent Select_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_select_agent_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.06
+                },
+                {
+                    "nom": "Arms Race",
+                    "id":"Arms Race_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_arms_race_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.06
+                },
+                {
+                    "nom": "Dreams And Mimics",
+                    "id":"Dreams And Mimics_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_dreams_and_mimics_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.06
+                },
+                {
+                    "nom": "Cursed Penmanship",
+                    "id":"Cursed Penmanship_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_cursed_penmanship_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.05
+                },
+                {
+                    "nom": "C-S On The Go",
+                    "id":"C-S On The Go_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_cs_on_the_go_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.05
+                },
+                {
+                    "nom": "TV On Mirage",
+                    "id":"TV On Mirage_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_tv_on_mirage_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.05
+                },
+                {
+                    "nom": "Endless Cycle",
+                    "id":"Endless Cycle_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_endless_cycle_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.05
+                },
+                {
+                    "nom": "Booth",
+                    "id":"Booth_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_booth_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.05
+                },
+                {
+                    "nom": "Save Me",
+                    "id":"Save Me_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_save_me_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.05
+                },
+                {
+                    "nom": "Noble Steed",
+                    "id":"Noble Steed_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_noble_steed_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.04
+                },
+                {
+                    "nom": "Free Range",
+                    "id":"Free Range_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_free_range_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.04
+                },
+                {
+                    "nom": "Exo Jumper",
+                    "id":"Exo Jumper_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_exo_jumper_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.04
+                },
+                {
+                    "nom": "Dragon's Keep",
+                    "id":"Dragon's Keep_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_dragons_keep_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_paper",
+                    "prix": 0.04
+                },
+                {
+                    "nom": "Chicken Whisperer",
+                    "id":"Chicken Whisperer_10_year_birthday_capsule",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/regular/10_year_birthday_capsule/Csgo_sticker_chicken_whisperer_paper.png",
+                    "categorie": "high_grade",
+                    "type": "sticker_lenticular",
+                    "prix": 0.04
+                }
             ]
         }
         

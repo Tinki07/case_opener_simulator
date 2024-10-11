@@ -46,7 +46,7 @@ func _ready():
 	Global.leJoueur.money = 1000.00
 	JsonDataInventory.load_all()
 	add_child(timer)
-
+	_on_btn_inventaire_pressed()
 
 
 
@@ -113,7 +113,7 @@ func return_objet_dropable_from_container(container: Conteneur):
 	
 	var random_num = randf() * 100 # Permet de donner une valeur float entre 0 et 100 en rapport avec le taux de drop
 	var drop_rates # Déterminer les taux de drop à utiliser en fonction du type de caisse
-	var cumulative_drop_rate = 0.0 # permet de cumuler les taux de drops afin de voir quand, randomNum est > 
+	var cumulative_drop_rate = 0.0 # permet de cumuler les taux de drops afin de voir quand, randomNum est >
 	var final_quality = "" # Permet de stocker la qualité du skin qui est choisi
 	var selected_category_items = [] # Stocke les skins de la catégorie choisi
 	var item_choosed_string: String # Nom du skin en valeur string qui est choisi
@@ -263,7 +263,7 @@ func _add_stickers_to_souvenir_package(caisse: Conteneur,skin: SkinArmeObtenu):
 	
 	les_stickers_selectiones.append_array([sticker_team1,sticker_team2,sticker_orga])
 	
-	if stickers_signatures != [] and sticker_map == "": 
+	if stickers_signatures != [] and sticker_map == "":
 		for sticker in stickers_signatures:
 			var sticker_name = sticker[0]  # Nom du sticker
 			var equipe = sticker[1]
@@ -271,7 +271,7 @@ func _add_stickers_to_souvenir_package(caisse: Conteneur,skin: SkinArmeObtenu):
 			
 			if equipe == stickers_teams[random1][1]:
 				lesStickersDeLaTeam1.append(sticker_name)
-		var random = randi_range(0,(lesStickersDeLaTeam1.size() - 1))  
+		var random = randi_range(0,(lesStickersDeLaTeam1.size() - 1))
 		#print(str(lesStickersDeLaTeam1.size()))
 		sticker_signature_choisi = lesStickersDeLaTeam1[random]
 		les_stickers_selectiones.append(sticker_signature_choisi)
@@ -367,7 +367,7 @@ func clear_grid(grid):
 func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 	
 	# On vide la grille pour éviter les doublons
-	clear_grid(grid) 
+	clear_grid(grid)
 	
 	#s'occupe de charger toutes les infos nécessaire pour la création des skins
 	var skin_index_debut = index_skin_a_charger_debut
@@ -396,6 +396,12 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 			label_secondaire_objet.text = objet.skin.nom # On modifie le label
 			color_categorie_objet.color = objet.skin.categorie.color # On modifie la couleur
 			image_objet.texture = load(objet.skin.image_path) # On modifie l'image
+			
+			if objet.favori:
+				new_panel_objet.get_node("Icons8-étoilé-remplie-96").visible = true
+			else:
+				new_panel_objet.get_node("Icons8-étoilé-remplie-96").visible = false
+			
 			
 			# Gère les stickers si présents pour l'objet/skin
 			for j in range(objet.stickers5.size()):
@@ -562,8 +568,13 @@ func _on_objet_inventory_button_pressed(button):
 	
 	## On vérifie quel est le type de l'objet associé au panneau et on vois quels boutons on active ou non
 	if item_clicked is SkinArmeObtenu:
+		
+		if item_clicked.favori:
+			btn_delete.visible = false
+		else:
+			btn_delete.visible = true
 		btn_inspect.visible = true
-		btn_delete.visible = true
+		
 		btn_open.visible = false
 	elif item_clicked is Conteneur:
 		btn_inspect.visible = false
@@ -621,6 +632,7 @@ func _on_inspect_objet_button_pressed(objet):
 	var audio_player = $pnl_objet_cliked/audio_anim_select
 	audio_player.play()
 	
+	$pnl_inspect_skin_grand/pnl_principal/txtr_favori.visible = false
 	$pnl_objet_cliked.visible = false
 	$pnl_ombre_panneau_principal.visible = true
 	$pnl_inspect_skin_grand.visible = true
@@ -635,11 +647,18 @@ func _on_inspect_objet_button_pressed(objet):
 	panel.get_node("Panel/VBoxContainer/pnl_price/lbl_info").text = "$" + str(objet.get_price())
 	
 	if objet is SkinArmeObtenu:
+		
+		if objet.favori:
+			$pnl_inspect_skin_grand/pnl_principal/txtr_favori.texture = load("res://resources/images/etoile (3).png")
+		elif !objet.favori:
+			$pnl_inspect_skin_grand/pnl_principal/txtr_favori.texture = load("res://resources/images/etoile (2).png")
+		$pnl_inspect_skin_grand/pnl_principal/txtr_favori.visible = true
+		
 		panel.get_node("Panel/VBoxContainer/pnl_wear").visible = true
 		panel.get_node("Panel/VBoxContainer/pnl_wear/lbl_info").text = objet.etat.nom
 		
 		for child in get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers").get_children():
-				child.visible = false
+			child.visible = false
 		get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker").visible = true
 		
 		if objet.stickers5.size() != 0:
@@ -653,7 +672,7 @@ func _on_inspect_objet_button_pressed(objet):
 	elif objet is Sticker:
 		panel.get_node("Panel/VBoxContainer/pnl_wear").visible = false
 		for child in get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers").get_children():
-				child.visible = false
+			child.visible = false
 
 ## Actions faites quand le bouton ouvrir d'un item est clické
 func _on_ouvrir_objet_button_pressed(item_clicked):
@@ -786,7 +805,7 @@ func _on_ouvrir_objet_button_pressed(item_clicked):
 		elif  item_clicked.need_key == false: # Sinon :
 			
 			## On récupère les infos du pnneau du container
-			var panel_conteneur = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key/pnl_infos_conteneurs/pnl_visualisation_conteneur")	
+			var panel_conteneur = get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key/pnl_infos_conteneurs/pnl_visualisation_conteneur")
 			var label_principal_conteneur = panel_conteneur.get_node("pnl_infos_skin/lbl_nom_arme") # On récupère son label
 			var label_secondaire_conteneur = panel_conteneur.get_node("pnl_infos_skin/lbl_nom_skin") # On récupère son label
 			var image_conteneur = panel_conteneur.get_node("pnl_skin/txtr_skin") # On récupère son image
@@ -808,7 +827,7 @@ func _on_ouvrir_objet_button_pressed(item_clicked):
 		pnl_ouverture_caisse.visible = true
 
 ## Permet de créer et de configurer un panel pour la visualisation d'un objet
-func return_new_pnl_prefab_skin_arme_configurated(infos_lbl_1_item: String, infos_lbl_2_item: String, 
+func return_new_pnl_prefab_skin_arme_configurated(infos_lbl_1_item: String, infos_lbl_2_item: String,
 	infos_image_path_item: String, infos_color_item: String):
 	
 	var new_panel_item = Global.pnl_prefab_skin_arme.instantiate() # On crée un bouton
@@ -869,6 +888,8 @@ func _input(event):
 		if rect.has_point(mouse_position):
 			## Si le clic est à l'intérieur du panneau, on ne fait rien et on sort de la fonction.
 			return
+		
+		
 		## Si le clic est en dehors du panneau, on rend le panneau invisible.
 		$pnl_objet_cliked.visible = false
 	if is_animation_playing and $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible:
@@ -916,7 +937,7 @@ func _on_btn_quitter_caisse_panel_pressed():
 		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
 		
 		
-		if Global.leJoueur.inventaire[0] is SkinArmeObtenu:	
+		if Global.leJoueur.inventaire[0] is SkinArmeObtenu:
 			
 			var anim_sound = load(Global.leJoueur.inventaire[0].skin.categorie.anim_drop_sound)
 			
@@ -1000,7 +1021,7 @@ func _on_btn_ouverture_conteneur_pressed():
 	for child in panel_animation.get_children():
 		
 		var randomNum = randf() * 100 ## Permet de donner une valeur float entre 0 et 100 en rapport avec le taux de drop
-		var cumulative_drop_rate = 0.0 ## Permet de cumuler les taux de drops afin de voir quand, randomNum est > 
+		var cumulative_drop_rate = 0.0 ## Permet de cumuler les taux de drops afin de voir quand, randomNum est >
 		var category_finale = "" ## Permet de stocker la qualité du skin qui est choisi
 		var items_cat_choisi = [] ## Stocke les skins de la catégorie choisi
 		var item_choisi_string: String ## Nom du skin en valeur string qui est choisi
@@ -1150,7 +1171,7 @@ func _on_btn_ouverture_conteneur_pressed():
 			
 			## Si jamais on a ouvert une caisse souvenir juste avant où il y a de base des stickers, cela permet de les cacher pour les stickers
 			for child in get_node("pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/hbox_stickers").get_children():
-					child.visible = false
+				child.visible = false
 			
 			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin.texture = load(Global.leJoueur.inventaire[0].image_path)
 			$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/color_objet.color = Global.leJoueur.inventaire[0].categorie.color
@@ -1292,3 +1313,25 @@ func _on_btn_confirmation_add_sticker_pressed():
 
 func _on_btn_cancel_add_sticker_pressed():
 	get_node("pnl_confirmation").visible = false
+
+
+func _on_btn_item_fav_pressed():
+	var item = $pnl_choose_sticker.get_meta("item")
+	
+	if item is SkinArmeObtenu:
+		
+		if item.favori:
+			get_node("pnl_inspect_skin_grand/pnl_principal/txtr_favori").texture = load("res://resources/images/etoile (2).png")
+			item.favori = false
+		elif !item.favori:
+			get_node("pnl_inspect_skin_grand/pnl_principal/txtr_favori").texture = load("res://resources/images/etoile (3).png")
+			item.favori = true
+	
+	repopulation_grille_inventaire_sans_retoruner_page_1()
+
+
+
+
+
+
+

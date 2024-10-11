@@ -84,7 +84,20 @@ folder_colors={
 "res://resources/images/conteneurs/vertigo_2021/": "green",
 "res://resources/images/conteneurs/weapon_case/": "green",
 "res://resources/images/conteneurs/winter_offensive/": "green",
-"res://resources/images/stickers/regular/enfu/": "green"
+"res://resources/images/stickers/dreamhack_2014/": "yellow",
+"res://resources/images/stickers/dreamhack_cluj_napoca_2015/": "yellow",
+"res://resources/images/stickers/ems_katowice_2014/": "yellow",
+"res://resources/images/stickers/esl_one_cologne_2014/": "yellow",
+"res://resources/images/stickers/esl_one_cologne_2015/": "yellow",
+"res://resources/images/stickers/esl_one_katowice_2015/": "yellow",
+"res://resources/images/stickers/mlg_columbus_2016/": "yellow",
+"res://resources/images/stickers/regular/10_year_birthday_capsule/": "green",
+"res://resources/images/stickers/regular/enfu/": "green",
+"res://resources/images/stickers/regular/pinups_capsule/": "green",
+"res://resources/images/stickers/regular/slid3_capsule/": "green",
+"res://resources/images/stickers/regular/sticker_capsule/": "green",
+"res://resources/images/stickers/regular/sticker_capsule_2/": "green",
+"res://resources/images/stickers/regular/team_roles_capsule/": "green"
 }
 
 [rendering]

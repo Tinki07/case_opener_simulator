@@ -8,6 +8,7 @@ var stat_track: bool
 var souvenir: bool
 var prix: float
 var stickers5: Array
+var favori: bool
 
 func _init(skin,etat,stat_track,souvenir):
 	self.skin = skin

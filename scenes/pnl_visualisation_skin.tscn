@@ -176,6 +176,6 @@ volume_db = 4.407
 [node name="Icons8-étoilé-remplie-96" type="Sprite2D" parent="."]
 visible = false
 self_modulate = Color(1, 1, 1, 0.796078)
-position = Vector2(126, 8)
+position = Vector2(125, 9)
 scale = Vector2(0.145833, 0.145833)
 texture = ExtResource("6_6xyg8")

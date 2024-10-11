@@ -3920,7 +3920,7 @@
 						20.80,
 						19.96
 					],
-					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_mac10_casehardened.png"
+					"image_path": "res://resources/images/conteneurs/dust2_2021/Dust22021_mac10_casehardened_blue_gem.png"
 				},
 				{
 					"nom": "Sienna Damask",
@@ -5300,7 +5300,7 @@
 						47000,
 						22000
 					],
-					"image_path": "res://resources/images/conteneurs/weapon_case/AK-47_Case_Hardened.png"
+					"image_path": "res://resources/images/conteneurs/weapon_case/AK-47_Case_Hardened_blue_gem.png"
 				},
 				{
 					"nom": "Inheritance",
@@ -9064,7 +9064,7 @@
 						4000.00,
 						3000.00
 					],
-					"image_path": "res://resources/images/conteneurs/kilo/Kukri-caseh.png"
+					"image_path": "res://resources/images/conteneurs/kilo/Kukri-caseh_blue_gem.png"
 				},
 				{
 					"nom": "Crimson Web",
