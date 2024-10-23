@@ -9,6 +9,7 @@ var categorie: CategorieSticker
 var type: TypeSticker
 var prix: float
 var image_path: String
+var sell_selected: bool
 
 func _init(nom,id,equipe,categorie,type,image_path,prix):
 	self.nom = nom
@@ -34,3 +35,6 @@ func get_price():
 
 func _to_string():
 	return "Sticker | " + self.nom
+
+func set_sell_selected(state:bool):
+	self.sell_selected = state

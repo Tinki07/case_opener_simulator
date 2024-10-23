@@ -10,6 +10,8 @@ var prix: float
 var stickers5: Array
 var favori: bool
 
+var sell_selected: bool
+
 func _init(skin,etat,stat_track,souvenir):
 	self.skin = skin
 	self.etat = etat
@@ -76,3 +78,6 @@ func get_price():
 
 func get_quality():
 	return self.skin.categorie.nom
+
+func set_sell_selected(state:bool):
+	self.sell_selected = state

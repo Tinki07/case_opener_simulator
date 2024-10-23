@@ -16,12 +16,19 @@ var timer = Timer.new()
 ## Variable qui stocke l'item fianl obtenu lors de l'ouverture d'une capsule
 var item_choisi_final
 
+var items_to_show_inventaire: Array
 
+var multi_sell_mode: bool = false
+
+var items_selected_multi_sell_mode: Array
+var mode_selection_items_inventaire: String = "default"
+var mode_selection_items_inventaire_old: String = "default"
 
 
 
 func _process(delta):
 	$pnl_principal/pnl_infos_joueur/pnl_infos_1/pnl_money_joueur/hcont/lbl_argent_joueur.text = str(snapped(Global.leJoueur.money,0.01))
+	print(str(items_to_show_inventaire.size()))
 
 func _ready():
 	
@@ -280,8 +287,7 @@ func _add_stickers_to_souvenir_package(caisse: Conteneur,skin: SkinArmeObtenu):
 	
 	#print(les_stickers_selectiones)
 	skin._add_array_sticker(les_stickers_selectiones,Global.stickers)
-	
-	
+
 
 
 # -----------------------------------------------------------------------
@@ -354,8 +360,6 @@ func test():
 # -----------------------------------------------------------------------
 
 
-
-
 # Fonction pour effacer tous les enfants d'une grille - est utilisé pour afficher les items mis a jour
 func clear_grid(grid):
 	for child in grid.get_children(): # On itère sur tous les enfants du nœud `grid`
@@ -364,7 +368,7 @@ func clear_grid(grid):
 
 
 # permet de peupler la grille des skins avec les éléments de l'inventaire du joueur
-func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
+func populate_grid_skin2(grid : GridContainer,index_skin_a_charger_debut: int):
 	
 	# On vide la grille pour éviter les doublons
 	clear_grid(grid)
@@ -431,6 +435,11 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 			color_categorie_objet.color = objet.categorie.color # On modifie la couleur
 			image_objet.texture = load(objet.image_path) # On modifie l'image
 		
+		if objet.sell_selected == true:
+			new_panel_objet.get_node("Icons8-vendre-96").visible = true
+		else:
+			new_panel_objet.get_node("Icons8-vendre-96").visible = false
+		
 		# Associer l'objet "skin - SkinArmeObtenu" au bouton du panel
 		new_panel_objet.set_meta("skin_data", objet)
 		
@@ -455,10 +464,143 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int):
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_precedent.visible = false
 	calculer_nombre_page()
 
+# permet de peupler la grille des skins avec les éléments de l'inventaire du joueur
+func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int, string_item_to_show: String = "default"):
+	
+	# On vide la grille pour éviter les doublons
+	clear_grid(grid)
+	
+	#s'occupe de charger toutes les infos nécessaire pour la création des skins
+	var skin_index_debut = index_skin_a_charger_debut
+	var skin_index_fin = skin_index_debut + 23
+	var skins_loaded = 0  # Compteur pour les skins chargés
+	
+	var items_to_show: Array
+	
+	if string_item_to_show == "skins":
+		for item in Global.leJoueur.inventaire:
+			if item is SkinArmeObtenu:
+				items_to_show.append(item)
+		
+	if string_item_to_show == "skins_non_favoris":
+		for item in Global.leJoueur.inventaire:
+			if item is SkinArmeObtenu:
+				if !item.favori:
+					items_to_show.append(item)
+		
+	elif string_item_to_show == "stickers":
+		for item in Global.leJoueur.inventaire:
+			if item is Sticker:
+				items_to_show.append(item)
+		
+	elif string_item_to_show == "containers":
+		for item in Global.leJoueur.inventaire:
+			if item is Conteneur or item is KeyConteneur:
+				items_to_show.append(item)
+		
+	elif string_item_to_show == "favoris":
+		for item in Global.leJoueur.inventaire:
+			if item is SkinArmeObtenu:
+				if item.favori:
+					items_to_show.append(item)
+		
+	elif string_item_to_show == "default":
+		items_to_show = Global.leJoueur.inventaire
+	
+	items_to_show_inventaire = items_to_show
+	
+	# On parcourt l'inventaire du joueur et on crée un élément pour chaque skin
+	for i in range(skin_index_debut, min(skin_index_fin + 1, items_to_show.size())):
+	
+		# Met en variable l'objet qui sera attribué au pannel
+		var objet = items_to_show[i]
+		
+		# Récupère les infos du nouveau panel
+		var new_panel_objet = Global.pnl_prefab_skin_arme.instantiate() # On crée un bouton
+		var lalbel_principal_objet = new_panel_objet.get_node("pnl_infos_skin/lbl_nom_arme") # On récupère son label
+		var label_secondaire_objet = new_panel_objet.get_node("pnl_infos_skin/lbl_nom_skin") # On récupère son label
+		var image_objet = new_panel_objet.get_node("pnl_skin/txtr_skin") # On récupère son image
+		var color_categorie_objet = new_panel_objet.get_node("pnl_infos_skin/color_rect_etat_skin")
+		var btn_panel_objet = new_panel_objet.get_node("btn_skin")
+		
+		# Dans le cas où l'objet est un skin :
+		if objet is SkinArmeObtenu:
+			
+			# Modifie les infos du panel de l'objet
+			lalbel_principal_objet.text = objet._to_string_arme() # On modifie le label
+			label_secondaire_objet.text = objet.skin.nom # On modifie le label
+			color_categorie_objet.color = objet.skin.categorie.color # On modifie la couleur
+			image_objet.texture = load(objet.skin.image_path) # On modifie l'image
+			
+			if objet.favori:
+				new_panel_objet.get_node("Icons8-étoilé-remplie-96").visible = true
+			else:
+				new_panel_objet.get_node("Icons8-étoilé-remplie-96").visible = false
+			
+			
+			# Gère les stickers si présents pour l'objet/skin
+			for j in range(objet.stickers5.size()):
+				var sticker_node = new_panel_objet.get_node("pnl_skin/txtr_sticker%d" % (j + 1))
+				sticker_node.texture = load(objet.stickers5[j].image_path)
+			
+			
+			
+		# Dans le cas où l'objet est une caisse
+		elif objet is Conteneur:
+			
+			# Modifie les infos du panel de l'objet
+			lalbel_principal_objet.text = objet.nom # On modifie le label
+			label_secondaire_objet.text = "" # On modifie le label
+			lalbel_principal_objet.autowrap_mode  = TextServer.AUTOWRAP_WORD # Permet au label de pouvoir prendre 2 lignes au lieu de 1
+			image_objet.texture = load(objet.image_path) # On modifie l'image
+			
+		elif objet is KeyConteneur:
+			# Modifie les infos du panel de l'objet
+			lalbel_principal_objet.text = objet.nom # On modifie le label
+			label_secondaire_objet.text = "" # On modifie le label
+			lalbel_principal_objet.autowrap_mode  = TextServer.AUTOWRAP_WORD # Permet au label de pouvoir prendre 2 lignes au lieu de 1
+			image_objet.texture = load(objet.image_path) # On modifie l'image
+		elif objet is Sticker:
+			lalbel_principal_objet.text = objet.nom # On modifie le label
+			label_secondaire_objet.text = "Sticker" # On modifie le label
+			color_categorie_objet.color = objet.categorie.color # On modifie la couleur
+			image_objet.texture = load(objet.image_path) # On modifie l'image
+		
+		if objet.sell_selected == true:
+			new_panel_objet.get_node("Icons8-vendre-96").visible = true
+		else:
+			new_panel_objet.get_node("Icons8-vendre-96").visible = false
+		
+		# Associer l'objet "skin - SkinArmeObtenu" au bouton du panel
+		new_panel_objet.set_meta("skin_data", objet)
+		
+ 		# Connecter le signal "pressed" du bouton à une fonction de gestion
+		btn_panel_objet.pressed.connect(self._on_objet_inventory_button_pressed.bind(new_panel_objet))
+		btn_panel_objet.mouse_entered.connect(self._on_objet_inventory_button_mouse_entered.bind(new_panel_objet))
+		
+		# Ajoute le panneau configuré à la grille
+		grid.add_child(new_panel_objet) # On ajoute le panneau à la grille
+		
+	# On met à jour la visibilité des boutons de navigation (Suivant/Précédent)
+	# Activer/Désactiver le bouton suivant
+	if skin_index_fin < items_to_show.size() - 1:
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant.visible = true
+	else:
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant.visible = false
+		
+	# Activer/Désactiver le bouton précédent
+	if index_skin_a_charger_debut > 0:
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_precedent.visible = true
+	else:
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_precedent.visible = false
+	calculer_nombre_page()
+
+
+
 # Affiche la page suivante de skins dans l'inventaire
 func afficher_skins_suivant():
 	# Vérifie s'il y a encore des skins à afficher
-	if index_skin_a_charger_debut + skins_par_page < Global.leJoueur.inventaire.size():
+	if index_skin_a_charger_debut + skins_par_page < items_to_show_inventaire.size():
 		
 		# Met à jour l'index de départ pour la prochaine page
 		index_skin_a_charger_debut += skins_par_page
@@ -467,7 +609,8 @@ func afficher_skins_suivant():
 		changer_valeur_page_actuelle_storage()
 		
 		# Remplit la grille avec les skins de la nouvelle page
-		populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, index_skin_a_charger_debut)
+		#repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
+		populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, index_skin_a_charger_debut, mode_selection_items_inventaire)
 
 
 # Affiche la page précédente de skins dans l'inventaire
@@ -482,11 +625,12 @@ func afficher_skins_precedent():
 		changer_valeur_page_actuelle_storage()
 		
 		# Remplit la grille avec les skins de la nouvelle page
-		populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, index_skin_a_charger_debut)
+		#repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
+		populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, index_skin_a_charger_debut, mode_selection_items_inventaire)
 
 func calculer_nombre_page():
-	var nbr_pages = Global.leJoueur.inventaire.size() / skins_par_page
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire2/lbl_nbr_page.text = "/" + str( ceil((Global.leJoueur.inventaire.size() - 1)/ skins_par_page) + 1)
+	var nbr_pages = items_to_show_inventaire.size() / skins_par_page
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire2/lbl_nbr_page.text = "/" + str( ceil((items_to_show_inventaire.size() - 1)/ skins_par_page) + 1)
 
 
 # Elle gère l'affichage et la mise à jour de l'inventaire du joueur.
@@ -494,19 +638,19 @@ func _on_btn_inventaire_pressed():
 	
 	var audio_player2 = $pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire/AudioStreamPlayer2D
 	audio_player2.play()
-	
-	
-	# Affiche ou cache le panneau de l'inventaire
-	page_actuelle = 1
-	changer_valeur_page_actuelle_storage()
 	$pnl_principal/pnl_inventaire.visible = true
-	# Remplit la grille de l'inventaire avec les skins du joueur
-	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0)
-	# Initialise l'index du premier skin à charger
+	
+	## Repopule la grid de l'inventaire avec les items de l'inventaire du joueur
+	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0, mode_selection_items_inventaire)	
+	## Remet l'index du skin à charger dans l'inventaire, ici 0 car on veux revenir au début
 	index_skin_a_charger_debut = 0
+	## Remet la varible de la page actuelle à 0
+	page_actuelle = 1
+	## Actualise la page affichée dans l'inventaire
+	changer_valeur_page_actuelle_storage()
 	
 	# Met à jour le nombre d'items dans l'inventaire
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(Global.leJoueur.inventaire.size())
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(items_to_show_inventaire.size())
 	
 	# Met à jour la valeur totale de l'inventaire
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
@@ -566,53 +710,83 @@ func _on_objet_inventory_button_pressed(button):
 	var btn_delete: Button = $pnl_objet_cliked/VBoxContainer/btn_delete_objet
 	var btn_open: Button = $pnl_objet_cliked/VBoxContainer/btn_ouvrir
 	
-	## On vérifie quel est le type de l'objet associé au panneau et on vois quels boutons on active ou non
-	if item_clicked is SkinArmeObtenu:
+	## Regarde si le multi sell mode est activé ou pas
+	if multi_sell_mode == true:
 		
-		if item_clicked.favori:
-			btn_delete.visible = false
+		## Regarde si le bouton préssé est déjà noté comme en vente
+		if item_clicked.sell_selected == false:
+			
+			## Set le mode vente à true
+			item_clicked.set_sell_selected(true)
+			## Ajoute l'item à la liste des items à vendre
+			items_selected_multi_sell_mode.append(item_clicked)
 		else:
-			btn_delete.visible = true
-		btn_inspect.visible = true
+			
+			## Set le mode vente à false
+			item_clicked.set_sell_selected(false)
+			## Retire l'item de la liste des items à vendre
+			items_selected_multi_sell_mode.erase(item_clicked)
 		
-		btn_open.visible = false
-	elif item_clicked is Conteneur:
-		btn_inspect.visible = false
-		btn_delete.visible = true
-		btn_open.visible = true
-	elif item_clicked is Sticker:
-		btn_inspect.visible = true
-		btn_delete.visible = true
-		btn_open.visible = false
+		## Repopule la grille avec le mode de sélection des skins seulement 'mode_selection_items_inventaire'
+		repopulation_grille_inventaire_sans_retoruner_page_1("skins_non_favoris")
+		## Actualise le label contenant la size de la liste des items à vendre
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation/Panel/HBoxContainer/lbl_nombre_items.text = str(items_selected_multi_sell_mode.size())
+		
+		## Si il y a un item dans la liste des skins à vendre, le bouton n'est plus disable sinon il est disable
+		if items_selected_multi_sell_mode.size() > 0:
+			$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = false
+		if items_selected_multi_sell_mode.size() == 0:
+			$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = true
+		
 	else:
-		btn_inspect.visible = false
-		btn_delete.visible = true
-		btn_open.visible = false
-	
-	## Après avoir déterminé quels boutons seront visible, on rend le panel visible
-	panel_item_cliked.visible = !panel_item_cliked.visible
-	panel_item_cliked.position = get_global_mouse_position()
-	
-	
-	## On gère les boutons -------------------------------------------------------------------------
-	
-	## Gestion du bouton inspect de l'objet
-	if btn_inspect.pressed.is_connected(self._on_inspect_objet_button_pressed):
-		btn_inspect.pressed.disconnect(self._on_inspect_objet_button_pressed)
-	# Connecter le signal "pressed" du bouton inspect à une fonction de gestion
-	btn_inspect.pressed.connect(self._on_inspect_objet_button_pressed.bind(item_clicked))
-	
-	## Gestion du bouton delete de l'objet
-	if btn_delete.pressed.is_connected(self._on_delete_objet_button_pressed):
-		btn_delete.pressed.disconnect(self._on_delete_objet_button_pressed)
-	btn_delete.pressed.connect(self._on_delete_objet_button_pressed.bind(item_clicked))
-	
-	## Gestion du bouton open de l'objet
-	if btn_open.pressed.is_connected(self._on_ouvrir_objet_button_pressed):
-		btn_open.pressed.disconnect(self._on_ouvrir_objet_button_pressed)
-	btn_open.pressed.connect(self._on_ouvrir_objet_button_pressed.bind(item_clicked))
-	
-	## ---------------------------------------------------------------------------------------------
+		
+		## On vérifie quel est le type de l'objet associé au panneau et on vois quels boutons on active ou non
+		if item_clicked is SkinArmeObtenu:
+			
+			if item_clicked.favori:
+				btn_delete.visible = false
+			else:
+				btn_delete.visible = true
+			btn_inspect.visible = true
+			
+			btn_open.visible = false
+		elif item_clicked is Conteneur:
+			btn_inspect.visible = false
+			btn_delete.visible = true
+			btn_open.visible = true
+		elif item_clicked is Sticker:
+			btn_inspect.visible = true
+			btn_delete.visible = true
+			btn_open.visible = false
+		else:
+			btn_inspect.visible = false
+			btn_delete.visible = true
+			btn_open.visible = false
+		
+		## Après avoir déterminé quels boutons seront visible, on rend le panel visible
+		panel_item_cliked.visible = !panel_item_cliked.visible
+		panel_item_cliked.position = get_global_mouse_position()
+		
+		
+		## On gère les boutons -------------------------------------------------------------------------
+		
+		## Gestion du bouton inspect de l'objet
+		if btn_inspect.pressed.is_connected(self._on_inspect_objet_button_pressed):
+			btn_inspect.pressed.disconnect(self._on_inspect_objet_button_pressed)
+		# Connecter le signal "pressed" du bouton inspect à une fonction de gestion
+		btn_inspect.pressed.connect(self._on_inspect_objet_button_pressed.bind(item_clicked))
+		
+		## Gestion du bouton delete de l'objet
+		if btn_delete.pressed.is_connected(self._on_delete_objet_button_pressed):
+			btn_delete.pressed.disconnect(self._on_delete_objet_button_pressed)
+		btn_delete.pressed.connect(self._on_delete_objet_button_pressed.bind(item_clicked))
+		
+		## Gestion du bouton open de l'objet
+		if btn_open.pressed.is_connected(self._on_ouvrir_objet_button_pressed):
+			btn_open.pressed.disconnect(self._on_ouvrir_objet_button_pressed)
+		btn_open.pressed.connect(self._on_ouvrir_objet_button_pressed.bind(item_clicked))
+		
+		## ---------------------------------------------------------------------------------------------
 
 ## Actions faites quand le bouton delete d'un item est clické
 func _on_delete_objet_button_pressed(objet):
@@ -624,7 +798,7 @@ func _on_delete_objet_button_pressed(objet):
 	Global.leJoueur.inventaire.erase(objet)
 	$pnl_objet_cliked.visible = false
 	
-	repopulation_grille_inventaire_sans_retoruner_page_1()
+	repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
 
 ## Actions faites quand le bouton inspect d'un item est clické
 func _on_inspect_objet_button_pressed(objet):
@@ -850,22 +1024,23 @@ func return_new_pnl_prefab_skin_arme_configurated(infos_lbl_1_item: String, info
 	return new_panel_item
 
 ## Permet de mettre a jouer l'inventaire du joueur mais aussi la grill de l'inventaire sans revenir à la page 1
-func repopulation_grille_inventaire_sans_retoruner_page_1():
+func repopulation_grille_inventaire_sans_retoruner_page_1(string_item_to_show: String = "default"):
 	
 	var inventory_grid = $pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer
 	var lbl_nbr_items_inventory = $pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items
 	var lbl_price_inventory = $pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix
 	
 	## On repopue la grille a partir de index_skin_a_charger_debut
-	populate_grid_skin(inventory_grid, index_skin_a_charger_debut)
+	populate_grid_skin(inventory_grid, index_skin_a_charger_debut,string_item_to_show)
 	
+	print(index_skin_a_charger_debut)
 	## Ca permet de faire en sorte que si on est sur la page 2 et que qu'il reste qu'un objet et que je viens a le
 	## delete, le jeu comprendra qu'il faudra revenir a la page d'avant au lieu que ca me laisse sur une page vide
-	if index_skin_a_charger_debut >= Global.leJoueur.inventaire.size():
+	if index_skin_a_charger_debut >= items_to_show_inventaire.size():
 		afficher_skins_precedent()
 	
 	# Met à jour le nombre d'items dans l'inventaire
-	lbl_nbr_items_inventory.text = str(Global.leJoueur.inventaire.size())
+	lbl_nbr_items_inventory.text = str(items_to_show_inventaire.size())
 	
 	# Met à jour la valeur totale de l'inventaire
 	lbl_price_inventory.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
@@ -907,7 +1082,7 @@ func _on_btn_quitter_caisse_panel_pressed():
 	var audio_player2 = $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel/AudioStreamPlayer2D
 	audio_player2.play()
 	
-	repopulation_grille_inventaire_sans_retoruner_page_1()
+	repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
 	
 	# Réinitialisation de la sélection
 	item_choisi_final = null
@@ -1188,7 +1363,7 @@ func _on_btn_continuer_pressed():
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur.visible = false
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage.visible = true
 	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false
-	repopulation_grille_inventaire_sans_retoruner_page_1()
+	repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
 	
 	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = false
 	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = false
@@ -1307,7 +1482,7 @@ func _on_btn_confirmation_add_sticker_pressed():
 	get_node("pnl_ombre_panneau_principal").visible = false
 	get_node("pnl_inspect_skin_grand").visible = false
 	
-	repopulation_grille_inventaire_sans_retoruner_page_1()
+	repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
 	
 
 
@@ -1327,11 +1502,186 @@ func _on_btn_item_fav_pressed():
 			get_node("pnl_inspect_skin_grand/pnl_principal/txtr_favori").texture = load("res://resources/images/etoile (3).png")
 			item.favori = true
 	
-	repopulation_grille_inventaire_sans_retoruner_page_1()
+	repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
 
 
+## Quand le bouton de vente du multi sell mode est préssé
+func _on_btn_multi_sell_pressed():
+	
+	if mode_selection_items_inventaire_old != mode_selection_items_inventaire and mode_selection_items_inventaire != "skins_non_favoris":
+		mode_selection_items_inventaire_old = mode_selection_items_inventaire
+	
+	
+	
+	
+	var mode_selection_items_inventaire_temp
+	
+	## Regarde si le le mode multi sell est activé ou pas
+	if multi_sell_mode == false:
+		
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters.visible = false
+		
+		## On met le mode multi sell a true
+		multi_sell_mode = true
+		
+		## Disable des boutons principaux
+		get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = true
+		get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = true
+		
+		## Met le mode de sélection des skins uniquement pour l'inventaire
+		mode_selection_items_inventaire = "skins_non_favoris"
+		
+		## Affiche le bouton de confirmation
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.visible = true
+		
+		## Créer une notification avec toutes les infos qu'il faut
+		var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
+		style_box.bg_color = "30ac1f"
+		get_node("%pnl_notification_buy/AnimationPlayer").stop()
+		get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Information_grey.svg.png")
+		get_node("%pnl_notification_buy/lbl_infos").text = "Multi sell mode is active !"
+		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
+		
+	elif multi_sell_mode == true:
+		
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters.visible = true
+		
+		## On met le mode multi sell a false
+		multi_sell_mode = false
+		
+		## Enleve le disable des boutons principaux
+		get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = false
+		get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = false
+		
+		## Remet le mode de sélection des items par défaut pour l'inventaire
+		mode_selection_items_inventaire = mode_selection_items_inventaire_old
+		
+		## Cache le bouton de confirmation
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.visible = false
+		
+		## Créer une notification avec toutes les infos qu'il faut
+		var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
+		style_box.bg_color = "ac1f1f"
+		get_node("%pnl_notification_buy/AnimationPlayer").stop()
+		get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Information_grey.svg.png")
+		get_node("%pnl_notification_buy/lbl_infos").text = "Multi sell mode is unactive !"
+		get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
+		
+		## Parcours tout les items sélec et on fait en sorte de ne plus les marquer comme en vente
+		for item in items_selected_multi_sell_mode:
+			item.set_sell_selected(false)
+		## Remet la liste vide
+		items_selected_multi_sell_mode = []
+	
+	## Repopule la grid de l'inventaire avec les items de l'inventaire du joueur
+	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0, mode_selection_items_inventaire)
+	## Remet l'index du skin à charger dans l'inventaire, ici 0 car on veux revenir au début
+	index_skin_a_charger_debut = 0
+	## Remet la varible de la page actuelle à 0
+	page_actuelle = 1
+	## Actualise la page affichée dans l'inventaire
+	changer_valeur_page_actuelle_storage()
+	
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(items_to_show_inventaire.size())
 
 
+## Qaund le bouton de confirmation du multi sell mode est préssé
+func _on_btn_sell_confirmation_pressed():
+	
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters.visible = true
+	
+	## nbre total d'items à delete
+	var nb_items_deleted = items_selected_multi_sell_mode.size()
+	## MOntant total de la vente
+	var montant_vente = 0
+	
+	## Pour chaque item sélectionné on compt ele montant total, on ajoute l'argent au joueur et on supprime l'item de l'inventaire
+	for item in items_selected_multi_sell_mode:
+		montant_vente += item.get_price()
+		Global.leJoueur.money += item.get_price()
+		Global.leJoueur.inventaire.erase(item)
+	
+	## Enleve le mode multi sell
+	multi_sell_mode = false
+	
+	## Enleve le disable des boutons principaux
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = false
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = false
+	
+	## Remet le mode de sélection des items par défaut pour l'inventaire
+	mode_selection_items_inventaire = mode_selection_items_inventaire_old
+	
+	## Cache le bouton de confirmation
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.visible = false
+	
+	## Créer une notification avec toutes les infos qu'il faut
+	var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
+	style_box.bg_color = "ac1f1f"
+	get_node("%pnl_notification_buy/AnimationPlayer").stop()
+	get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Information_grey.svg.png")
+	get_node("%pnl_notification_buy/lbl_infos").text = "You sold " + str(nb_items_deleted) + " items, for a total cost of : $" + str(montant_vente)
+	get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
+	
+	## Repopule la grid de l'inventaire avec les items de l'inventaire du joueur
+	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0, mode_selection_items_inventaire)	
+	
+	## Remet l'index du skin à charger dans l'inventaire, ici 0 car on veux revenir au début
+	index_skin_a_charger_debut = 0
+	## Remet la varible de la page actuelle à 0
+	page_actuelle = 1
+	## Actualise la page affichée dans l'inventaire
+	changer_valeur_page_actuelle_storage()
+	
+	## Met à jour le nombre d'items dans l'inventaire
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(items_to_show_inventaire.size())
+	## Met à jour la valeur totale de l'inventaire
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
+	## Disable le bouton de confirmation
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = true
+	## Remet le nbr d'item selec à 0
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation/Panel/HBoxContainer/lbl_nombre_items.text = "0"
 
 
+func _on_btn_filters_pressed():
+	
+	## Disable des boutons principaux
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = true
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = true
+	
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_filter.visible = true
+
+
+func _on_btn_filters_confirmation_pressed():
+	
+	var option_button: OptionButton = get_node("pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_filter/Panel/VBoxContainer/OptionButton")
+	
+	if option_button.get_selected_id() == 0:
+		mode_selection_items_inventaire = "default"
+	elif option_button.get_selected_id() == 1:
+		mode_selection_items_inventaire = "containers"
+	elif option_button.get_selected_id() == 2:
+		mode_selection_items_inventaire = "skins"
+	elif option_button.get_selected_id() == 3:
+		mode_selection_items_inventaire = "stickers"
+	elif option_button.get_selected_id() == 4:
+		mode_selection_items_inventaire = "favoris"
+	
+	
+	## Disable des boutons principaux
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire").disabled = false
+	get_node("pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop").disabled = false
+	
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_filter.visible = false
+	
+	## Repopule la grid de l'inventaire avec les items de l'inventaire du joueur
+	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0, mode_selection_items_inventaire)	
+	
+	## Remet l'index du skin à charger dans l'inventaire, ici 0 car on veux revenir au début
+	index_skin_a_charger_debut = 0
+	## Remet la varible de la page actuelle à 0
+	page_actuelle = 1
+	## Actualise la page affichée dans l'inventaire
+	changer_valeur_page_actuelle_storage()
+	# Met à jour le nombre d'items dans l'inventaire
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/lbl_items_inventaire_joueur/lbl_nombre_items.text = str(items_to_show_inventaire.size())
 

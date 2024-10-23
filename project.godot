@@ -18,7 +18,7 @@ config/quit_on_go_back=false
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0.443137, 0.443137, 0.443137, 1)
 boot_splash/show_image=false
-config/icon="res://resources/images/icon.svg"
+config/icon="res://resources/images/COS_NOS.png"
 
 [autoload]
 

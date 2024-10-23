@@ -29,6 +29,8 @@ func load_player_inventory(file_path: String):
 						)
 						new_skin.prix = skin_data['prix']
 						
+						new_skin.favori = skin_data['favori']
+						
 						for sticker_id in skin_data['stickers']:
 							new_skin.stickers5.append(Global.stickers[sticker_id])
 						Global.leJoueur.inventaire.append(new_skin)
@@ -75,7 +77,8 @@ func set_player_inventory_string():
 				"stat_track": item.stat_track,
 				"souvenir": item.souvenir,
 				"prix": item.prix,
-				"stickers" : []
+				"stickers" : [],
+				"favori" : item.favori
 			}
 			for sticker in item.stickers5:
 				item_string["stickers"].append(sticker.id)

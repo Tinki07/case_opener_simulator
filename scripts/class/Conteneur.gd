@@ -12,6 +12,7 @@ var type_caisse: String
 var souvenir_stickers: Array
 var prix: float
 var need_key: bool
+var sell_selected: bool
 
 func _init(nom,id_conteneur, image_path, image_collection_path, type_caisse,prix_conteneur,need_key_caisse, objets_dropable=[],drop_rates={}):
 	self.nom = nom
@@ -24,4 +25,5 @@ func _init(nom,id_conteneur, image_path, image_collection_path, type_caisse,prix
 	self.need_key = need_key_caisse
 	self.image_collection_path = image_collection_path
 
-
+func set_sell_selected(state:bool):
+	self.sell_selected = state
