@@ -10,6 +10,8 @@ var type: TypeSticker
 var prix: float
 var image_path: String
 var sell_selected: bool
+var date: String
+var favori: bool
 
 func _init(nom,id,equipe,categorie,type,image_path,prix):
 	self.nom = nom

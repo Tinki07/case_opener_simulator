@@ -18,3 +18,6 @@ func _init(nom_key,id_key,image_path_key,conteneur_unlocker_key,prix_key):
 
 func set_sell_selected(state:bool):
 	self.sell_selected = state
+
+func get_price():
+	return self.prix

@@ -27,3 +27,6 @@ func _init(nom,id_conteneur, image_path, image_collection_path, type_caisse,prix
 
 func set_sell_selected(state:bool):
 	self.sell_selected = state
+
+func get_price():
+	return self.prix

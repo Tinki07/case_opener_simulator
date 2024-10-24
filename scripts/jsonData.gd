@@ -28,7 +28,6 @@ func load_player_inventory(file_path: String):
 							skin_data['souvenir'],
 						)
 						new_skin.prix = skin_data['prix']
-						
 						new_skin.favori = skin_data['favori']
 						
 						for sticker_id in skin_data['stickers']:
@@ -36,13 +35,86 @@ func load_player_inventory(file_path: String):
 						Global.leJoueur.inventaire.append(new_skin)
 						
 					elif skin_data['type_item'] == "sticker":
-						Global.leJoueur.inventaire.append(Global.stickers[skin_data['sticker_id']])
-					
+						var le_sticker = Global.stickers[skin_data['sticker_id']]
+						var new_sticker = Sticker.new(
+								le_sticker.nom,
+								le_sticker.id,
+								le_sticker.equipe,
+								le_sticker.categorie,
+								le_sticker.type,
+								le_sticker.image_path,
+								le_sticker.prix
+						)
+						new_sticker.favori = skin_data['favori']
+						Global.leJoueur.inventaire.append(new_sticker)
+						
 					elif skin_data['type_item'] == "container":
-						Global.leJoueur.inventaire.append(Global.conteneurs[skin_data['container_id']])
+						var container = Global.conteneurs[skin_data['container_id']]
+						var new_container
+						if container.type_caisse == "normal":
+							new_container = Conteneur.new(
+								container.nom,
+								container.id,
+								container.image_path,
+								container.image_collection_path,
+								container.type_caisse,
+								container.prix,
+								container.need_key,
+								container.objets_dropable
+							)
+							
+						elif container.type_caisse == "collection":
+							new_container = Conteneur.new(
+								container.nom,
+								container.id,
+								container.image_path,
+								container.image_collection_path,
+								container.type_caisse,
+								container.prix,
+								container.need_key,
+								container.objets_dropable,
+								container.drop_rates
+							)
+							
+						elif container.type_caisse == "souvenir":
+							new_container = Conteneur.new(
+								container.nom,
+								container.id,
+								container.image_path,
+								container.image_collection_path,
+								container.type_caisse,
+								container.prix,
+								container.need_key,
+								container.objets_dropable,
+								container.drop_rates
+							)
+							new_container.souvenir_stickers = container.souvenir_stickers
+							
+						elif container.type_caisse == "capsule":
+							new_container = Conteneur.new(
+								container.nom,
+								container.id,
+								container.image_path,
+								container.image_collection_path,
+								container.type_caisse,
+								container.prix,
+								container.need_key,
+								container.objets_dropable,
+								container.drop_rates
+							)
+						Global.leJoueur.inventaire.append(new_container)
 					
 					elif skin_data['type_item'] == "key":
-						Global.leJoueur.inventaire.append(Global.keys_conteneurs[skin_data['key_id']])
+						
+						var key = Global.keys_conteneurs[skin_data['key_id']]
+						var new_key = KeyConteneur.new(
+							key.nom,
+							key.id,
+							key.image_path,
+							key.conteneur_unlocker,
+							key.prix
+						)
+						Global.leJoueur.inventaire.append(new_key)
 					
 			else:
 				print("Error: Missing data fields in JSON.")
@@ -86,7 +158,8 @@ func set_player_inventory_string():
 		elif item is Sticker:
 			var item_string = {
 				"type_item": "sticker",
-				"sticker_id": item.id
+				"sticker_id": item.id,
+				"favori" : item.favori
 			}
 			inventory_data["inventaire"]["items"].append(item_string)
 		elif item is Conteneur:

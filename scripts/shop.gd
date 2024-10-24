@@ -122,7 +122,61 @@ func _on_buy_container_scroll_button_pressed(panel):
 		Global.leJoueur.money -= value
 		
 		for i in range(nbr_container):
-			Global.leJoueur.inventaire.insert(0,container)
+			
+			if container is Conteneur:
+				var new_container
+				if container.type_caisse == "normal":
+					new_container = Conteneur.new(
+						container.nom,
+						container.id,
+						container.image_path,
+						container.image_collection_path,
+						container.type_caisse,
+						container.prix,
+						container.need_key,
+						container.objets_dropable
+					)
+					
+				elif container.type_caisse == "collection":
+					new_container = Conteneur.new(
+						container.nom,
+						container.id,
+						container.image_path,
+						container.image_collection_path,
+						container.type_caisse,
+						container.prix,
+						container.need_key,
+						container.objets_dropable,
+						container.drop_rates
+					)
+					
+				elif container.type_caisse == "souvenir":
+					new_container = Conteneur.new(
+						container.nom,
+						container.id,
+						container.image_path,
+						container.image_collection_path,
+						container.type_caisse,
+						container.prix,
+						container.need_key,
+						container.objets_dropable,
+						container.drop_rates
+					)
+					new_container.souvenir_stickers = container.souvenir_stickers
+					
+				elif container.type_caisse == "capsule":
+					new_container = Conteneur.new(
+						container.nom,
+						container.id,
+						container.image_path,
+						container.image_collection_path,
+						container.type_caisse,
+						container.prix,
+						container.need_key,
+						container.objets_dropable,
+						container.drop_rates
+					)
+				Global.leJoueur.inventaire.insert(0,new_container)
 		
 		var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
 		style_box.bg_color = Color("#bcbcbc52")
@@ -174,7 +228,17 @@ func _on_buy_key_container_scroll_button_pressed(panel):
 		Global.leJoueur.money -= value
 		
 		for i in range(nbr_key):
-			Global.leJoueur.inventaire.insert(0,key)
+			
+			var new_key
+			if key is KeyConteneur:
+				new_key = KeyConteneur.new(
+					key.nom,
+					key.id,
+					key.image_path,
+					key.conteneur_unlocker,
+					key.prix
+				)
+			Global.leJoueur.inventaire.insert(0,new_key)
 		
 		var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
 		style_box.bg_color = Color("#bcbcbc52")

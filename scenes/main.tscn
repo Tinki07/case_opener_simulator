@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://cqckho3b1h1no"]
+[gd_scene load_steps=102 format=3 uid="uid://cqckho3b1h1no"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
 [ext_resource type="Texture2D" uid="uid://bwb2ekoix1sfo" path="res://resources/images/wallpaperflare.com_wallpaper.jpg" id="2_jylf6"]
@@ -33,6 +33,7 @@
 [ext_resource type="AudioStream" uid="uid://bwh1felg1mpnn" path="res://resources/mp3/bruitage_survole1.mp3" id="30_lcb5w"]
 [ext_resource type="Texture2D" uid="uid://ddof3uyt3irtp" path="res://resources/images/stickers/regular/sticker_capsule_2/Banana.png" id="30_n5oxr"]
 [ext_resource type="Texture2D" uid="uid://dfvj7y3esoued" path="res://resources/images/stickers/regular/sticker_capsule_2/Bish_Holo.png" id="31_0bo18"]
+[ext_resource type="Texture2D" uid="uid://cqtkkwbb35x1i" path="res://resources/images/pngegg (4).png" id="31_1m082"]
 [ext_resource type="Texture2D" uid="uid://sqgbsmfu2fnx" path="res://resources/images/stickers/regular/sticker_capsule_2/Bosh_Holo.png" id="32_civge"]
 [ext_resource type="Texture2D" uid="uid://dws4b7fcfiovb" path="res://resources/images/stickers/regular/sticker_capsule_2/Chicken_Lover.png" id="33_h1ukc"]
 [ext_resource type="Texture2D" uid="uid://draihus3rpr3r" path="res://resources/images/icons8-plus-100.png" id="37_0g1j8"]
@@ -763,17 +764,6 @@ theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
 theme_override_fonts/font = ExtResource("5_jfgsi")
 theme_override_font_sizes/font_size = 16
 text = " Items"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="lbl_nombre_items" type="Label" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
-layout_mode = 0
-offset_right = 58.0
-offset_bottom = 32.0
-theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
-theme_override_fonts/font = ExtResource("5_jfgsi")
-theme_override_font_sizes/font_size = 16
-text = "0"
 horizontal_alignment = 2
 vertical_alignment = 1
 
@@ -1885,6 +1875,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_daxyu")
 
 [node name="txtr_skin" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal"]
 modulate = Color(0.858824, 0.858824, 0.858824, 1)
+clip_children = 2
 texture_filter = 6
 layout_mode = 1
 offset_left = 112.0
@@ -1895,6 +1886,52 @@ pivot_offset = Vector2(-0.0184326, 0.0367279)
 texture = ExtResource("18_avuge")
 expand_mode = 2
 stretch_mode = 5
+
+[node name="txtr_bs" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
+visible = false
+modulate = Color(1, 1, 1, 0.862745)
+texture_filter = 4
+offset_top = -2.0
+offset_right = 386.0
+offset_bottom = 336.0
+texture = ExtResource("31_1m082")
+expand_mode = 2
+
+[node name="txtr_ww" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
+visible = false
+modulate = Color(1, 1, 1, 0.627451)
+offset_top = -2.0
+offset_right = 386.0
+offset_bottom = 336.0
+texture = ExtResource("31_1m082")
+expand_mode = 2
+
+[node name="txtr_ft" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
+visible = false
+modulate = Color(1, 1, 1, 0.352941)
+offset_top = -2.0
+offset_right = 386.0
+offset_bottom = 336.0
+texture = ExtResource("31_1m082")
+expand_mode = 2
+
+[node name="txtr_mw" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
+visible = false
+modulate = Color(1, 1, 1, 0.196078)
+offset_top = -2.0
+offset_right = 386.0
+offset_bottom = 336.0
+texture = ExtResource("31_1m082")
+expand_mode = 2
+
+[node name="txtr_fn" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
+visible = false
+modulate = Color(1, 1, 1, 0.00784314)
+offset_top = -2.0
+offset_right = 386.0
+offset_bottom = 336.0
+texture = ExtResource("31_1m082")
+expand_mode = 2
 
 [node name="Pngfind_com-vignette-png-1920x1080-2550838" type="Sprite2D" parent="pnl_inspect_skin_grand/pnl_principal"]
 position = Vector2(317, 206)
