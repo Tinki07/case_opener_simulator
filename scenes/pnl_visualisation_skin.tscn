@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://ct7awgkfavfmc"]
 
 [ext_resource type="Texture2D" uid="uid://b7b8trd2ae7x0" path="res://resources/images/kindpng_3155574.png" id="1_1f1d8"]
+[ext_resource type="Script" path="res://scripts/node_scripts/pnl_scripts/pnl_hovered_grow.gd" id="1_kdfbr"]
 [ext_resource type="Texture2D" uid="uid://co1scyjum5bi" path="res://resources/images/pngfind.com-vignette-png-1920x1080-2550838.png" id="2_lp7jk"]
-[ext_resource type="Texture2D" uid="uid://rag6mj0i0ums" path="res://resources/images/conteneurs/weapon_case/Glock-18_Dragon_Tattoo.png" id="3_fkda7"]
 [ext_resource type="Texture2D" uid="uid://cqtkkwbb35x1i" path="res://resources/images/pngegg (4).png" id="4_grh68"]
 [ext_resource type="FontFile" uid="uid://cyy4gibc1fnxt" path="res://resources/fonts/TT Lakes Neue Trial Medium.ttf" id="4_mxohg"]
 [ext_resource type="Texture2D" uid="uid://wa83py6jqx3x" path="res://resources/images/kindpng_4298060.png" id="4_xfy2y"]
@@ -32,6 +32,8 @@ offset_top = 272.0
 offset_right = 1896.0
 offset_bottom = 408.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8vt8i")
+script = ExtResource("1_kdfbr")
+tween_intensity = 1.02
 
 [node name="pnl_skin" type="Panel" parent="."]
 clip_contents = true
@@ -63,7 +65,6 @@ layout_mode = 0
 offset_top = 2.0
 offset_right = 136.0
 offset_bottom = 96.0
-texture = ExtResource("3_fkda7")
 expand_mode = 2
 stretch_mode = 6
 
@@ -81,6 +82,7 @@ stretch_mode = 5
 [node name="txtr_ww" type="TextureRect" parent="pnl_skin/txtr_skin"]
 visible = false
 modulate = Color(1, 1, 1, 0.647059)
+layout_mode = 0
 offset_top = -2.0
 offset_right = 136.0
 offset_bottom = 94.0
@@ -91,6 +93,7 @@ stretch_mode = 5
 [node name="txtr_ft" type="TextureRect" parent="pnl_skin/txtr_skin"]
 visible = false
 modulate = Color(1, 1, 1, 0.352941)
+layout_mode = 0
 offset_top = -2.0
 offset_right = 136.0
 offset_bottom = 94.0
@@ -101,6 +104,7 @@ stretch_mode = 5
 [node name="txtr_mw" type="TextureRect" parent="pnl_skin/txtr_skin"]
 visible = false
 modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 0
 offset_top = -2.0
 offset_right = 136.0
 offset_bottom = 94.0
@@ -111,6 +115,7 @@ stretch_mode = 5
 [node name="txtr_fn" type="TextureRect" parent="pnl_skin/txtr_skin"]
 visible = false
 modulate = Color(1, 1, 1, 0.00784314)
+layout_mode = 0
 offset_top = -2.0
 offset_right = 136.0
 offset_bottom = 94.0

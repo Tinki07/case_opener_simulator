@@ -432,7 +432,6 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int, st
 			for child in image_objet.get_children():
 				child.visible = false
 			
-			
 			if objet.etat.id == "bs":
 				image_objet.get_node("txtr_bs").visible = true
 			elif objet.etat.id == "ww":
@@ -714,6 +713,8 @@ func _on_delete_objet_button_pressed(objet):
 # Actions faites quand le bouton inspect d'un item est clické
 func _on_inspect_objet_button_pressed(objet):
 	
+	get_node("pnl_inspect_skin_grand/pnl_principal/txtr_skin/AnimationPlayer").play("skin_animation")
+	
 	var audio_player = $pnl_objet_cliked/audio_anim_select
 	audio_player.play()
 	
@@ -732,7 +733,8 @@ func _on_inspect_objet_button_pressed(objet):
 	panel.get_node("Panel/VBoxContainer/pnl_price/lbl_info").text = "$" + str(objet.get_price())
 	
 	for child in panel.get_node("pnl_principal/txtr_skin").get_children():
-		child.visible = false
+		if not child is AnimationPlayer:
+			child.visible = false
 	
 	if objet is SkinArmeObtenu:
 		
@@ -747,15 +749,21 @@ func _on_inspect_objet_button_pressed(objet):
 		
 		for child in get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers").get_children():
 			child.visible = false
-		get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker").visible = true
+		
+		
+		
+		if objet.skin.categorie.nom == "★ Rare Special Item":
+			get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker").visible = false
+		else:
+			get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker").visible = true
+		
 		
 		if objet.stickers5.size() != 0:
-			get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker").visible = true
 			for j in range(objet.stickers5.size()):
 				var sticker_node = get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1))
 				sticker_node.texture = load(objet.stickers5[j].image_path)
 				get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker%d" % (j + 1)).visible = true
-			if objet.stickers5.size() == 5:
+			if objet.stickers5.size() == 5 :
 				get_node("pnl_inspect_skin_grand/pnl_principal/hbox_stickers/btn_add_sticker").visible = false
 		
 		if objet.etat.id == "bs":
@@ -1362,23 +1370,24 @@ func _on_btn_add_sticker_pressed():
 	
 	for inv_item in Global.leJoueur.inventaire:
 		if inv_item is Sticker:
-			var new_panel_objet = Global.pnl_prefab_skin_arme.instantiate()
-			
-			var lalbel_principal_objet = new_panel_objet.get_node("pnl_infos_skin/lbl_nom_arme") # On récupère son label
-			var label_secondaire_objet = new_panel_objet.get_node("pnl_infos_skin/lbl_nom_skin") # On récupère son label
-			var image_objet = new_panel_objet.get_node("pnl_skin/txtr_skin") # On récupère son image
-			var color_categorie_objet = new_panel_objet.get_node("pnl_infos_skin/color_rect_etat_skin")
-			var btn_panel_objet = new_panel_objet.get_node("btn_skin")
-			
-			lalbel_principal_objet.text = inv_item.nom
-			label_secondaire_objet.text = "Sticker"
-			image_objet.texture = load(inv_item.image_path)
-			color_categorie_objet.color = inv_item.categorie.color
-			
-			new_panel_objet.set_meta("sticker_data", inv_item)
-			btn_panel_objet.pressed.connect(self._on_sticker_apply_button_pressed.bind(new_panel_objet))
-			
-			get_node("pnl_choose_sticker/panel/ScrollContainer/MarginContainer/GridContainer").add_child(new_panel_objet)
+			if !inv_item.favori:
+				var new_panel_objet = Global.pnl_prefab_skin_arme.instantiate()
+				
+				var lalbel_principal_objet = new_panel_objet.get_node("pnl_infos_skin/lbl_nom_arme") # On récupère son label
+				var label_secondaire_objet = new_panel_objet.get_node("pnl_infos_skin/lbl_nom_skin") # On récupère son label
+				var image_objet = new_panel_objet.get_node("pnl_skin/txtr_skin") # On récupère son image
+				var color_categorie_objet = new_panel_objet.get_node("pnl_infos_skin/color_rect_etat_skin")
+				var btn_panel_objet = new_panel_objet.get_node("btn_skin")
+				
+				lalbel_principal_objet.text = inv_item.nom
+				label_secondaire_objet.text = "Sticker"
+				image_objet.texture = load(inv_item.image_path)
+				color_categorie_objet.color = inv_item.categorie.color
+				
+				new_panel_objet.set_meta("sticker_data", inv_item)
+				btn_panel_objet.pressed.connect(self._on_sticker_apply_button_pressed.bind(new_panel_objet))
+				
+				get_node("pnl_choose_sticker/panel/ScrollContainer/MarginContainer/GridContainer").add_child(new_panel_objet)
 	
 	get_node("pnl_choose_sticker").visible = true
 
@@ -1625,3 +1634,6 @@ func _on_btn_filters_confirmation_pressed():
 	# Met à jour le nombre d'items dans l'inventaire
 	lbl_nombre_items_inventaire.text = str(items_to_show_inventaire.size())
 
+
+func test():
+	$pnl_inspect_skin_grand.open_panel()

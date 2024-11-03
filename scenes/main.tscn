@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://cqckho3b1h1no"]
+[gd_scene load_steps=105 format=3 uid="uid://cqckho3b1h1no"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
 [ext_resource type="Texture2D" uid="uid://bwb2ekoix1sfo" path="res://resources/images/wallpaperflare.com_wallpaper.jpg" id="2_jylf6"]
@@ -37,8 +37,11 @@
 [ext_resource type="Texture2D" uid="uid://sqgbsmfu2fnx" path="res://resources/images/stickers/regular/sticker_capsule_2/Bosh_Holo.png" id="32_civge"]
 [ext_resource type="Texture2D" uid="uid://dws4b7fcfiovb" path="res://resources/images/stickers/regular/sticker_capsule_2/Chicken_Lover.png" id="33_h1ukc"]
 [ext_resource type="Texture2D" uid="uid://draihus3rpr3r" path="res://resources/images/icons8-plus-100.png" id="37_0g1j8"]
+[ext_resource type="Script" path="res://scripts/node_scripts/btn_scripts/btn_hovered_grow.gd" id="37_3x0v3"]
 [ext_resource type="Texture2D" uid="uid://bb36uvxww5kh7" path="res://resources/images/etoile (2).png" id="37_vr8wv"]
 [ext_resource type="Theme" uid="uid://bcvalpw2o387q" path="res://resources/themes/theme_bouton_normal_rouge.tres" id="37_wbf3f"]
+[ext_resource type="Texture2D" uid="uid://dks3eqn31xfj5" path="res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-3dmax-holo.png" id="38_grvwg"]
+[ext_resource type="Script" path="res://scripts/node_scripts/txtr_scripts/txtr_hovered_grow.gd" id="40_h85ef"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mwkwp"]
 
@@ -529,6 +532,9 @@ theme = ExtResource("6_i0jf0")
 theme_override_fonts/font = ExtResource("6_vv063")
 theme_override_font_sizes/font_size = 24
 text = "Inventory"
+script = ExtResource("37_3x0v3")
+tween_intensity = 1.02
+tween_duration = 0.3
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire"]
 stream = ExtResource("26_bu1vo")
@@ -544,6 +550,9 @@ theme = ExtResource("6_i0jf0")
 theme_override_fonts/font = ExtResource("6_vv063")
 theme_override_font_sizes/font_size = 24
 text = "Shop"
+script = ExtResource("37_3x0v3")
+tween_intensity = 1.02
+tween_duration = 0.3
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_shop"]
 stream = ExtResource("26_bu1vo")
@@ -944,7 +953,7 @@ popup/item_2/text = "Skins"
 popup/item_2/id = 2
 popup/item_3/text = "Stickers"
 popup/item_3/id = 3
-popup/item_4/text = "Fav. Skins"
+popup/item_4/text = "Items Fav."
 popup/item_4/id = 4
 
 [node name="pnl_inventaire_loadout" type="Panel" parent="pnl_principal/pnl_inventaire"]
@@ -1222,6 +1231,9 @@ theme = ExtResource("9_g145b")
 theme_override_fonts/font = ExtResource("14_nx57u")
 theme_override_font_sizes/font_size = 18
 text = "Use Key"
+script = ExtResource("37_3x0v3")
+tween_intensity = 1.05
+tween_duration = 0.3
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/btn_ouverture_conteneur"]
 stream = ExtResource("16_lmgrb")
@@ -1401,6 +1413,14 @@ libraries = {
 stream = ExtResource("18_caokh")
 volume_db = 12.542
 
+[node name="pnl_cacher" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_animation_ouverture_conteneur"]
+visible = false
+layout_mode = 0
+offset_left = 176.0
+offset_top = 24.0
+offset_right = 776.0
+offset_bottom = 257.0
+
 [node name="pnl_ombre_panneau_principal" type="Panel" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse"]
 visible = false
 layout_mode = 0
@@ -1529,6 +1549,9 @@ theme = ExtResource("9_g145b")
 theme_override_fonts/font = ExtResource("6_vv063")
 theme_override_font_sizes/font_size = 17
 text = "Continue"
+script = ExtResource("37_3x0v3")
+tween_intensity = 1.2
+tween_duration = 0.3
 
 [node name="Label" type="Label" parent="pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_informations"]
 layout_mode = 0
@@ -1836,6 +1859,7 @@ stream = ExtResource("27_khw1h")
 volume_db = 0.929
 
 [node name="pnl_ombre_panneau_principal" type="Panel" parent="."]
+unique_name_in_owner = true
 visible = false
 offset_left = 552.0
 offset_top = 80.0
@@ -1843,6 +1867,7 @@ offset_right = 1448.0
 offset_bottom = 872.0
 
 [node name="pnl_inspect_skin_grand" type="Panel" parent="."]
+unique_name_in_owner = true
 visible = false
 clip_contents = true
 offset_left = 660.0
@@ -1891,6 +1916,7 @@ stretch_mode = 5
 visible = false
 modulate = Color(1, 1, 1, 0.862745)
 texture_filter = 4
+layout_mode = 0
 offset_top = -2.0
 offset_right = 386.0
 offset_bottom = 336.0
@@ -1900,6 +1926,7 @@ expand_mode = 2
 [node name="txtr_ww" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
 visible = false
 modulate = Color(1, 1, 1, 0.627451)
+layout_mode = 0
 offset_top = -2.0
 offset_right = 386.0
 offset_bottom = 336.0
@@ -1909,6 +1936,7 @@ expand_mode = 2
 [node name="txtr_ft" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
 visible = false
 modulate = Color(1, 1, 1, 0.352941)
+layout_mode = 0
 offset_top = -2.0
 offset_right = 386.0
 offset_bottom = 336.0
@@ -1918,6 +1946,7 @@ expand_mode = 2
 [node name="txtr_mw" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
 visible = false
 modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 0
 offset_top = -2.0
 offset_right = 386.0
 offset_bottom = 336.0
@@ -1927,11 +1956,17 @@ expand_mode = 2
 [node name="txtr_fn" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
 visible = false
 modulate = Color(1, 1, 1, 0.00784314)
+layout_mode = 0
 offset_top = -2.0
 offset_right = 386.0
 offset_bottom = 336.0
 texture = ExtResource("31_1m082")
 expand_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="pnl_inspect_skin_grand/pnl_principal/txtr_skin"]
+libraries = {
+"": SubResource("AnimationLibrary_3aw8e")
+}
 
 [node name="Pngfind_com-vignette-png-1920x1080-2550838" type="Sprite2D" parent="pnl_inspect_skin_grand/pnl_principal"]
 position = Vector2(317, 206)
@@ -1957,6 +1992,15 @@ layout_mode = 2
 texture = ExtResource("30_n5oxr")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("40_h85ef")
+
+[node name="Button" type="Button" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker1"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 79.0
+offset_bottom = 80.0
 
 [node name="txtr_sticker2" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 visible = false
@@ -1965,6 +2009,15 @@ layout_mode = 2
 texture = ExtResource("31_0bo18")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("40_h85ef")
+
+[node name="Button" type="Button" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker2"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 79.0
+offset_bottom = 80.0
 
 [node name="txtr_sticker3" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 visible = false
@@ -1973,6 +2026,15 @@ layout_mode = 2
 texture = ExtResource("32_civge")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("40_h85ef")
+
+[node name="Button" type="Button" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker3"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 79.0
+offset_bottom = 80.0
 
 [node name="txtr_sticker4" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 visible = false
@@ -1981,13 +2043,32 @@ layout_mode = 2
 texture = ExtResource("33_h1ukc")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("40_h85ef")
+
+[node name="Button" type="Button" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker4"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 79.0
+offset_bottom = 80.0
 
 [node name="txtr_sticker5" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 visible = false
 custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
+texture = ExtResource("38_grvwg")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("40_h85ef")
+
+[node name="Button" type="Button" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers/txtr_sticker5"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 79.0
+offset_bottom = 80.0
 
 [node name="btn_add_sticker" type="Button" parent="pnl_inspect_skin_grand/pnl_principal/hbox_stickers"]
 self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
@@ -2001,6 +2082,9 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_d7pfb")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0lgl7")
 icon = ExtResource("37_0g1j8")
 icon_alignment = 1
+script = ExtResource("37_3x0v3")
+tween_intensity = 1.2
+tween_duration = 0.5
 
 [node name="TextureRect" type="TextureRect" parent="pnl_inspect_skin_grand/pnl_principal"]
 layout_mode = 0
@@ -2010,6 +2094,8 @@ offset_right = 628.0
 offset_bottom = 443.0
 texture = ExtResource("17_x166t")
 expand_mode = 1
+script = ExtResource("40_h85ef")
+tween_duration = 0.3
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="pnl_inspect_skin_grand/pnl_principal/TextureRect"]
 stream = ExtResource("30_lcb5w")
@@ -2024,6 +2110,8 @@ offset_bottom = 41.0
 texture = ExtResource("37_vr8wv")
 expand_mode = 3
 stretch_mode = 5
+script = ExtResource("40_h85ef")
+tween_duration = 0.3
 
 [node name="btn_item_fav" type="Button" parent="pnl_inspect_skin_grand/pnl_principal/txtr_favori"]
 layout_mode = 0
@@ -2065,6 +2153,9 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_ougoo")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6l2vr")
 icon = ExtResource("25_v8k33")
 icon_alignment = 1
+script = ExtResource("37_3x0v3")
+tween_intensity = 1.1
+tween_duration = 0.3
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="pnl_inspect_skin_grand/btn_close_panel"]
 stream = ExtResource("16_lmgrb")

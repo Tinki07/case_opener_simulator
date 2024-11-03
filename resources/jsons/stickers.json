@@ -1731,7 +1731,473 @@
                     "prix": 2515.6,
                     "categorie": "high_grade",
                     "type": "sticker_paper"
+                },
+                {
+                    "nom": "iBUYPOWER",
+                    "id": "iBUYPOWER_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-ibuypower.png",
+                    "prix": 432.74,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Reason Gaming",
+                    "id": "Reason Gaming_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-reason.png",
+                    "prix": 1639.77,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "3DMAX",
+                    "id": "3DMAX_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-3dmax.png",
+                    "prix": 602.21,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "mousesports",
+                    "id": "mousesports_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-mouz.png",
+                    "prix": 603.45,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Clan-Mystik",
+                    "id": "Clan-Mystik_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-mystik.png",
+                    "prix": 641.27,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Virtus.Pro",
+                    "id": "Virtus.Pro_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-vp.png",
+                    "prix": 743.74,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Natus Vincere",
+                    "id": "Natus Vincere_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-navi.png",
+                    "prix": 771.39,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Vox Eminor",
+                    "id": "Vox Eminor_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-vox.png",
+                    "prix": 1036.90,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "iBUYPOWER (Holo)",
+                    "id": "iBUYPOWER (Holo)_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-ibuypower-holo.png",
+                    "prix": 432.74,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Reason Gaming (Holo)",
+                    "id": "Reason Gaming (Holo)_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-reason-holo.png",
+                    "prix": 1639.77,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "3DMAX (Holo)",
+                    "id": "3DMAX (Holo)_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-3dmax-holo.png",
+                    "prix": 602.21,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "mousesports (Holo)",
+                    "id": "mousesports (Holo)_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-mouz-holo.png",
+                    "prix": 603.45,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Clan-Mystik (Holo)",
+                    "id": "Clan-Mystik (Holo)_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-mystik-holo.png",
+                    "prix": 641.27,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Virtus.Pro (Holo)",
+                    "id": "Virtus.Pro (Holo)_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-vp-holo.png",
+                    "prix": 743.74,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Natus Vincere (Holo)",
+                    "id": "Natus Vincere (Holo)_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-navi-holo.png",
+                    "prix": 771.39,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Vox Eminor (Holo)",
+                    "id": "Vox Eminor (Holo)_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-vox-holo.png",
+                    "prix": 1036.90,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "ESL Wolf (Foil)",
+                    "id": "ESL Wolf (Foil)_ems_katowice_2014_challengers",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-esl-wolf-Foil.png",
+                    "prix": 546.33,
+                    "categorie": "exotic",
+                    "type": "sticker_foil"
                 }
+            ],
+            "esl_one_cologne_2014":[
+                {
+                    "nom": "ESL One Red (Foil)",
+                    "id": "ESL One Red (Foil)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-esl-one-red-market.png",
+                    "prix": 89.48,
+                    "categorie": "exotic",
+                    "type": "sticker_foil"
+                },
+                {
+                    "nom": "iBUYPOWER (Holo)",
+                    "id": "iBUYPOWER (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-iBUYPOWER-holo-market.png",
+                    "prix": 342.10,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "dAT team (Holo)",
+                    "id": "dAT team (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-dAT-holo-market.png",
+                    "prix": 179.00,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Titan (Holo)",
+                    "id": "Titan (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-titan-holo-market.png",
+                    "prix": 173.22,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "London Conspiracy (Holo)",
+                    "id": "London Conspiracy (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-London-Conspiracy-holo-market.png",
+                    "prix": 157.86,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Vox Eminor (Holo)",
+                    "id": "Vox Eminor (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-vox-holo-market.png",
+                    "prix": 150.00,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Copenhagen Wolves (Holo)",
+                    "id": "Copenhagen Wolves (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-copenhagen-wolves-holo-market.png",
+                    "prix": 104.35,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Natus Vincere (Holo)",
+                    "id": "Natus Vincere (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-NaVi-holo-market.png",
+                    "prix": 81.20,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "MTS GameGod Wolf (Holo)",
+                    "id": "MTS GameGod Wolf (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-mts-holo-new-market.png",
+                    "prix": 78.92,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Epsilon eSports (Holo)",
+                    "id": "Epsilon eSports (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-epsilon-holo-market.png",
+                    "prix": 63.25,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+
+                {
+                    "nom": "iBUYPOWER",
+                    "id": "iBUYPOWER_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-iBUYPOWER-market.png",
+                    "prix": 93.64,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "dAT team",
+                    "id": "dAT team_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-dAT-market.png",
+                    "prix": 179.00,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Titan",
+                    "id": "Titan_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-titan-market.png",
+                    "prix": 173.22,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "London Conspiracy",
+                    "id": "London Conspiracy_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-London-Conspiracy-market.png",
+                    "prix": 157.86,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Vox Eminor",
+                    "id": "Vox Eminor_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-vox-market.png",
+                    "prix": 150.00,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Copenhagen Wolves",
+                    "id": "Copenhagen Wolves_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-copenhagen-wolves-market.png",
+                    "prix": 104.35,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Natus Vincere",
+                    "id": "Natus Vincere_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-NaVi-market.png",
+                    "prix": 81.20,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "MTS GameGod Wolf",
+                    "id": "MTS GameGod Wolf_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-mts-new-market.png",
+                    "prix": 78.92,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Epsilon eSports",
+                    "id": "Epsilon eSports_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-epsilon-market.png",
+                    "prix": 63.25,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                }
+                
+                ,
+                {
+                    "nom": "ESL One Blue (Foil)",
+                    "id": "ESL One Blue (Foil)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-ESL-One-Blue-market.png",
+                    "prix": 17.29,
+                    "categorie": "exotic",
+                    "type": "sticker_foil"
+                },
+                {
+                    "nom": "Team Dignitas (Holo)",
+                    "id": "Team Dignitas (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-dignitas-holo-market.png",
+                    "prix": 1028.45,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Team LDLC.com (Holo)",
+                    "id": "Team LDLC.com (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-LDLC-holo-market.png",
+                    "prix": 161.00,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Cloud9 (Holo)",
+                    "id": "Cloud9 (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-LDLC-holo-market.png",
+                    "prix": 80.12,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "HellRaiser (Holo)",
+                    "id": "HellRaiser (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-hellraisers-holo-market.png",
+                    "prix": 51.40,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Virtus.Pro (Holo)",
+                    "id": "Virtus.Pro (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-VirtusPro-holo-market.png",
+                    "prix": 35.38,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Fnatic (Holo)",
+                    "id": "Fnatic (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-fnatic-holo-market.png",
+                    "prix": 33.58,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Ninjas in Pyjamas (Holo)",
+                    "id": "Ninjas in Pyjamas (Holo)_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-nip-holo-market.png",
+                    "prix": 32.83,
+                    "categorie": "remarkable",
+                    "type": "sticker_holo"
+                },
+                {
+                    "nom": "Team Dignitas",
+                    "id": "Team Dignitas_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-dignitas-market.png",
+                    "prix": 58.00,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Team LDLC.com",
+                    "id": "Team LDLC.com_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-LDLC-market.png",
+                    "prix": 22.40,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Cloud9",
+                    "id": "Cloud9_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-LDLC-market.png",
+                    "prix": 11.15,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "HellRaiser",
+                    "id": "HellRaiser_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-hellraisers-market.png",
+                    "prix": 10.77,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Virtus.Pro",
+                    "id": "Virtus.Pro_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-VirtusPro-market.png",
+                    "prix": 7.59,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Fnatic",
+                    "id": "Fnatic_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-fnatic-market.png",
+                    "prix": 6.23,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                },
+                {
+                    "nom": "Ninjas in Pyjamas",
+                    "id": "Ninjas in Pyjamas_esl_one_cologne_2014",
+                    "equipe": "",
+                    "image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-nip-market.png",
+                    "prix": 6.03,
+                    "categorie": "high_grade",
+                    "type": "sticker_paper"
+                }
+
+
             ],
             "maps": [
                 {

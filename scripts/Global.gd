@@ -88,6 +88,8 @@ func charger_skins_depuis_json():
 							skins_data["prix"],
 							skins_data["image_path"]
 						)
+						if skins.has(skins_data["id"]):
+							print("Duplication! Skin déjà présent avec l'ID :", skins_data["id"])
 						skins[skins_data["id"]] = skin
 						print("Skin créée : " , skin.toTstring(), " ", skin.etats_possible.size())
 		else:

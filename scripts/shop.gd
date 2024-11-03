@@ -16,6 +16,9 @@ func _on_btn_shop_pressed():
 	get_node("%pnl_principal/pnl_shop").visible = true
 	load_scroll_panel_container("normal")
 	get_node("%pnl_principal/pnl_shop/pnl_principal/pnl_containers_scroll/hbox_filters/ledit_filtre").text = ""
+	
+	get_node("%pnl_inspect_skin_grand").visible = false
+	get_node("%pnl_ombre_panneau_principal").visible = false
 
 ## Remplis la liste des conteneurs dans le shop
 func load_scroll_panel_container(type_container: String, filter_string: String = ""):

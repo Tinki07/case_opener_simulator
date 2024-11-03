@@ -24,7 +24,7 @@
 				["Jawbreaker_usp_s","classified",[""]],
 				["Olympus_zeus","classified",[""]],
 				["Black Lotus_m4a1_s","classified",[""]],
-				["Chrome Canon_awp","covert",[""]],
+				["Chrome Cannon_awp","covert",[""]],
 				["Inheritance_ak47","covert",[""]],
 				["Fade_kukri","knive",[""]],
 				["Slaughter_kukri","knive",[""]],
@@ -1528,7 +1528,7 @@
 			"nom": "EMS Katowice 2014 Legends Stickers",
 			"id": "ems_katowice_2014_legends",
 			"image": "res://resources/images/stickers/ems_katowice_2014/legends/EMS-Katowice-2014-Legends.png",
-			"image_collection": "res://resources/images/stickers/ems_katowice_2014/legends/EMS-Katowice-2014-Legends.png",
+			"image_collection": "res://resources/images/stickers/ems_katowice_2014/legends/Sticker-katowice-2014-esl-skull-foil.png",
 			"type_caisse": "capsule",
 			"need_key": false,
 			"prix": 4,
@@ -1556,6 +1556,105 @@
 				["Titan (Holo)_ems_katowice_2014_legends","remarkable",[""]],
 				["ESL Skull (Foil)_ems_katowice_2014_legends","exotic",[""]]
 				
+			]
+		},
+		"ems_katowice_2014_challengers": {
+			"nom": "EMS Katowice 2014 Challengers Stickers",
+			"id": "ems_katowice_2014_challengers",
+			"image": "res://resources/images/stickers/ems_katowice_2014/challengers/EMS-Katowice-2014-Challengers.png",
+			"image_collection": "res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-esl-wolf-Foil.png",
+			"type_caisse": "capsule",
+			"need_key": false,
+			"prix": 4,
+			"drop_rates": {
+				"high_grade": 68,
+				"remarkable": 30,
+				"exotic": 2
+			},
+			"stickers": [
+				["3DMAX_ems_katowice_2014_challengers","high_grade",[""]],
+				["iBUYPOWER_ems_katowice_2014_challengers","high_grade",[""]],
+				["mousesports_ems_katowice_2014_challengers","high_grade",[""]],
+				["Clan-Mystik_ems_katowice_2014_challengers","high_grade",[""]],
+				["Natus Vincere_ems_katowice_2014_challengers","high_grade",[""]],
+				["Reason Gaming_ems_katowice_2014_challengers","high_grade",[""]],
+				["Virtus.Pro_ems_katowice_2014_challengers","high_grade",[""]],
+				["Vox Eminor_ems_katowice_2014_challengers","high_grade",[""]],
+				["3DMAX (Holo)_ems_katowice_2014_challengers","remarkable",[""]],
+				["iBUYPOWER (Holo)_ems_katowice_2014_challengers","remarkable",[""]],
+				["mousesports (Holo)_ems_katowice_2014_challengers","remarkable",[""]],
+				["Clan-Mystik (Holo)_ems_katowice_2014_challengers","remarkable",[""]],
+				["Natus Vincere (Holo)_ems_katowice_2014_challengers","remarkable",[""]],
+				["Reason Gaming (Holo)_ems_katowice_2014_challengers","remarkable",[""]],
+				["Virtus.Pro (Holo)_ems_katowice_2014_challengers","remarkable",[""]],
+				["Vox Eminor (Holo)_ems_katowice_2014_challengers","remarkable",[""]],
+				["ESL Wolf (Foil)_ems_katowice_2014_challengers","exotic",[""]]
+			]
+		},
+		"esl_one_cologne_2014_challengers": {
+			"nom": "ESL One Cologne 2014 Challengers Stickers",
+			"id": "esl_one_cologne_2014_challengers",
+			"image": "res://resources/images/stickers/esl_one_cologne_2014/challengers/Sticker-cologne-2014-challengers-market.png",
+			"image_collection": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-ESL-One-Blue-market.png",
+			"type_caisse": "capsule",
+			"need_key": false,
+			"prix": 79.72,
+			"drop_rates": {
+				"high_grade": 68,
+				"remarkable": 30,
+				"exotic": 2
+			},
+			"stickers": [
+				["Copenhagen Wolves_esl_one_cologne_2014","high_grade",[""]],
+				["dAT team_esl_one_cologne_2014","high_grade",[""]],
+				["Epsilon eSports_esl_one_cologne_2014","high_grade",[""]],
+				["iBUYPOWER_esl_one_cologne_2014","high_grade",[""]],
+				["London Conspiracy_esl_one_cologne_2014","high_grade",[""]],
+				["Natus Vincere_esl_one_cologne_2014","high_grade",[""]],
+				["Titan_esl_one_cologne_2014","high_grade",[""]],
+				["Vox Eminor_esl_one_cologne_2014","high_grade",[""]],
+				["MTS GameGod Wolf_esl_one_cologne_2014","high_grade",[""]],
+				["Copenhagen Wolves (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["dAT team (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["Epsilon eSports (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["iBUYPOWER (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["London Conspiracy (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["Natus Vincere (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["Titan (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["Vox Eminor (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["MTS GameGod Wolf (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["ESL One Red (Foil)_esl_one_cologne_2014","exotic",[""]]
+			]
+		},
+		"esl_one_cologne_2014_legends": {
+			"nom": "ESL One Cologne 2014 Legends Stickers",
+			"id": "esl_one_cologne_2014_legends",
+			"image": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-legends-market.png",
+			"image_collection": "res://resources/images/stickers/esl_one_cologne_2014/legends/Sticker-cologne-2014-ESL-One-Blue-market.png",
+			"type_caisse": "capsule",
+			"need_key": false,
+			"prix":  102.75,
+			"drop_rates": {
+				"high_grade": 68,
+				"remarkable": 30,
+				"exotic": 2
+			},
+			"stickers": [
+				["Cloud9_esl_one_cologne_2014","high_grade",[""]],
+				["Fnatic_esl_one_cologne_2014","high_grade",[""]],
+				["HellRaiser_esl_one_cologne_2014","high_grade",[""]],
+				["Ninjas in Pyjamas_esl_one_cologne_2014","high_grade",[""]],
+				["Team Dignitas_esl_one_cologne_2014","high_grade",[""]],
+				["Team LDLC.com_esl_one_cologne_2014","high_grade",[""]],
+				["Virtus.Pro_esl_one_cologne_2014","high_grade",[""]],
+				["Cloud9 (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["Fnatic (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["HellRaiser (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["Ninjas in Pyjamas (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["Team Dignitas (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["Team LDLC.com (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["Virtus.Pro (Holo)_esl_one_cologne_2014","remarkable",[""]],
+				["ESL One Blue (Foil)_esl_one_cologne_2014","exotic",[""]]
 			]
 		}
 	},
