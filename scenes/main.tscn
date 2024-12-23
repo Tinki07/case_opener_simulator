@@ -1,6 +1,7 @@
-[gd_scene load_steps=105 format=3 uid="uid://cqckho3b1h1no"]
+[gd_scene load_steps=107 format=3 uid="uid://cqckho3b1h1no"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
+[ext_resource type="Shader" path="res://shaders/fog.gdshader" id="2_8b6kg"]
 [ext_resource type="Texture2D" uid="uid://bwb2ekoix1sfo" path="res://resources/images/wallpaperflare.com_wallpaper.jpg" id="2_jylf6"]
 [ext_resource type="StyleBox" uid="uid://cen4iu82xlype" path="res://resources/themes/theme_panel_principal.tres" id="3_j236n"]
 [ext_resource type="Texture2D" uid="uid://7jnjvqegvgh7" path="res://resources/images/81UohWY3LZL.png" id="4_t08hi"]
@@ -42,6 +43,16 @@
 [ext_resource type="Theme" uid="uid://bcvalpw2o387q" path="res://resources/themes/theme_bouton_normal_rouge.tres" id="37_wbf3f"]
 [ext_resource type="Texture2D" uid="uid://dks3eqn31xfj5" path="res://resources/images/stickers/ems_katowice_2014/challengers/Sticker-katowice-2014-3dmax-holo.png" id="38_grvwg"]
 [ext_resource type="Script" path="res://scripts/node_scripts/txtr_scripts/txtr_hovered_grow.gd" id="40_h85ef"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3360j"]
+shader = ExtResource("2_8b6kg")
+shader_parameter/color = null
+shader_parameter/OCTAVES = 1
+shader_parameter/enable_pixelation = false
+shader_parameter/pixelation_amount = 150
+shader_parameter/fog_direction = Vector2(1, 1)
+shader_parameter/scroll_noise_tex = false
+shader_parameter/noise_scroll_direction = Vector2(1, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mwkwp"]
 
@@ -189,72 +200,72 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.0235294, 0.0235294, 0.027451, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5ohg"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_agcnt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gx2ol"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3dgw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdso6"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gx2ol"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_agcnt"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5ohg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1py1n"]
 bg_color = Color(0.164706, 0.196078, 0.235294, 0.607843)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ju0lp"]
-bg_color = Color(0.196078, 0.231373, 0.270588, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jja0s"]
+bg_color = Color(0.278431, 0.376471, 0.556863, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5pf6f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0toxq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jja0s"]
-bg_color = Color(0.278431, 0.376471, 0.556863, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ju0lp"]
+bg_color = Color(0.196078, 0.231373, 0.270588, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xu48e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y8j0g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14bmx"]
 bg_color = Color(0.164706, 0.196078, 0.235294, 0.607843)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y8j0g"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bs82r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3kv3"]
 bg_color = Color(0.164706, 0.196078, 0.235294, 0.607843)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bs82r"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55c2m"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0vdxy"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lgl7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7pfb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_280w2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_78pdm"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7pfb"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0vdxy"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lgl7"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1rie"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwtlk"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kq453"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dg4f3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iulyu"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kq453"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iwtlk"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1rie"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2vr"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dli0b"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ougoo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0x8we"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70osj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ougoo"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l2vr"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dli0b"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_410gj"]
 
@@ -337,15 +348,15 @@ border_color = Color(0.192157, 0.223529, 0.254902, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_joi7u"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rprxh"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ylt7e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2bcih"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lpuol"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xkbf8"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2bcih"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ylt7e"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rprxh"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_jd32n")
@@ -369,6 +380,12 @@ offset_right = 1600.0
 offset_bottom = 904.0
 texture = ExtResource("2_jylf6")
 expand_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect"]
+material = SubResource("ShaderMaterial_3360j")
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 904.0
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect"]
 visible = false
@@ -943,10 +960,9 @@ text = "Choose a filter mode."
 
 [node name="OptionButton" type="OptionButton" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_filter/Panel/VBoxContainer"]
 layout_mode = 2
-item_count = 5
 selected = 0
+item_count = 5
 popup/item_0/text = "All"
-popup/item_0/id = 0
 popup/item_1/text = "Containers + Keys"
 popup/item_1/id = 1
 popup/item_2/text = "Skins"
@@ -1604,11 +1620,11 @@ offset_right = 896.0
 offset_bottom = 56.0
 theme_override_constants/icon_max_width = 23
 theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxEmpty_a5ohg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_agcnt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gx2ol")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_p3dgw")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_qdso6")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_gx2ol")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_agcnt")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a5ohg")
 icon = ExtResource("25_v8k33")
 flat = true
 icon_alignment = 1
@@ -1655,72 +1671,72 @@ alignment = 1
 [node name="btn_normal_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
-theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_hover_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_focus_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
 theme_override_fonts/font = ExtResource("6_vv063")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
-theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
 text = "Cases"
 
 [node name="btn_collection_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
-theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_hover_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_focus_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
 theme_override_fonts/font = ExtResource("6_vv063")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
-theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
 text = "Collections"
 
 [node name="btn_souvenir_container2" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
-theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_hover_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_focus_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
 theme_override_fonts/font = ExtResource("6_vv063")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
-theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
 text = "Souvenirs"
 
 [node name="btn_capsule_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
-theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_hover_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_focus_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
 theme_override_fonts/font = ExtResource("6_vv063")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
-theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
 text = "Capsules"
 
 [node name="btn_custom_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
 visible = false
 custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
-theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_hover_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_pressed_color = Color(0.623529, 0.72549, 0.835294, 1)
 theme_override_colors/font_focus_color = Color(0.623529, 0.72549, 0.835294, 1)
+theme_override_colors/font_color = Color(0.52549, 0.643137, 0.776471, 1)
 theme_override_fonts/font = ExtResource("6_vv063")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
-theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
 text = "Customs"
 
 [node name="pnl_containers_scroll" type="Panel" parent="pnl_principal/pnl_shop/pnl_principal"]
@@ -1741,8 +1757,8 @@ alignment = 1
 custom_minimum_size = Vector2(276, 40)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_vv063")
-theme_override_styles/normal = SubResource("StyleBoxFlat_14bmx")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_y8j0g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_14bmx")
 placeholder_text = "Search"
 alignment = 1
 
@@ -1750,8 +1766,8 @@ alignment = 1
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 theme_override_constants/icon_max_width = 21
-theme_override_styles/normal = SubResource("StyleBoxFlat_l3kv3")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bs82r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l3kv3")
 icon = ExtResource("22_wopff")
 icon_alignment = 1
 
@@ -2075,11 +2091,11 @@ self_modulate = Color(0.803922, 0.803922, 0.803922, 1)
 custom_minimum_size = Vector2(88, 88)
 layout_mode = 2
 theme_override_constants/icon_max_width = 50
-theme_override_styles/normal = SubResource("StyleBoxEmpty_0vdxy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0lgl7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_d7pfb")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_280w2")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_78pdm")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_d7pfb")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_0lgl7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0vdxy")
 icon = ExtResource("37_0g1j8")
 icon_alignment = 1
 script = ExtResource("37_3x0v3")
@@ -2117,11 +2133,11 @@ tween_duration = 0.3
 layout_mode = 0
 offset_right = 35.0
 offset_bottom = 35.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_iwtlk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e1rie")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kq453")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dg4f3")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_iulyu")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_kq453")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_e1rie")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iwtlk")
 flat = true
 
 [node name="lbl_nom_item" type="Label" parent="pnl_inspect_skin_grand"]
@@ -2146,11 +2162,11 @@ offset_bottom = 40.0
 theme_override_constants/icon_max_width = 28
 theme_override_fonts/font = ExtResource("5_jfgsi")
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxEmpty_dli0b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6l2vr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ougoo")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_0x8we")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_70osj")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ougoo")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6l2vr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dli0b")
 icon = ExtResource("25_v8k33")
 icon_alignment = 1
 script = ExtResource("37_3x0v3")
@@ -2390,11 +2406,11 @@ offset_right = 700.0
 offset_bottom = 35.0
 scale = Vector2(0.876324, 0.937772)
 theme_override_constants/icon_max_width = 29
-theme_override_styles/normal = SubResource("StyleBoxEmpty_rprxh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ylt7e")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2bcih")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_lpuol")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xkbf8")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_2bcih")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ylt7e")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rprxh")
 icon = ExtResource("25_v8k33")
 flat = true
 icon_alignment = 1

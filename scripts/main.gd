@@ -49,7 +49,7 @@ func _ready():
 	Engine.max_fps = 60
 	
 	# Permet de faire le focus sur la zone de text
-	line_edit_console.grab_focus() 
+	#line_edit_console.grab_focus() 
 	
 	# Connecte le signal text_submitted du LineEdit à la méthode _on_line_edit_text_submitted
 	line_edit_console.text_submitted.connect(self._on_line_edit_text_submitted) 

@@ -49,6 +49,7 @@ expand_mode = 3
 stretch_mode = 6
 
 [node name="txtr_container_image" type="TextureRect" parent="."]
+clip_contents = true
 layout_mode = 0
 offset_left = 4.0
 offset_right = 212.0
