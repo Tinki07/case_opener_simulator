@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://cqckho3b1h1no"]
+[gd_scene load_steps=112 format=3 uid="uid://cqckho3b1h1no"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_jd32n"]
 [ext_resource type="Shader" path="res://shaders/fog.gdshader" id="2_8b6kg"]
@@ -6,6 +6,7 @@
 [ext_resource type="StyleBox" uid="uid://cen4iu82xlype" path="res://resources/themes/theme_panel_principal.tres" id="3_j236n"]
 [ext_resource type="Texture2D" uid="uid://7jnjvqegvgh7" path="res://resources/images/81UohWY3LZL.png" id="4_t08hi"]
 [ext_resource type="FontFile" uid="uid://0mp1cwbuy8bw" path="res://resources/fonts/TT Lakes Neue Trial Regular.ttf" id="5_jfgsi"]
+[ext_resource type="Shader" path="res://shaders/dots_grid.gdshader" id="5_se0l1"]
 [ext_resource type="Theme" uid="uid://brto2txftglw6" path="res://resources/themes/theme_bouton_normal.tres" id="6_i0jf0"]
 [ext_resource type="FontFile" uid="uid://cyy4gibc1fnxt" path="res://resources/fonts/TT Lakes Neue Trial Medium.ttf" id="6_vv063"]
 [ext_resource type="Texture2D" uid="uid://buapdirvd6o7v" path="res://resources/images/settings.png" id="7_vacqq"]
@@ -36,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://dfvj7y3esoued" path="res://resources/images/stickers/regular/sticker_capsule_2/Bish_Holo.png" id="31_0bo18"]
 [ext_resource type="Texture2D" uid="uid://cqtkkwbb35x1i" path="res://resources/images/pngegg (4).png" id="31_1m082"]
 [ext_resource type="Texture2D" uid="uid://sqgbsmfu2fnx" path="res://resources/images/stickers/regular/sticker_capsule_2/Bosh_Holo.png" id="32_civge"]
+[ext_resource type="Script" path="res://scripts/clicker.gd" id="32_s5w3o"]
 [ext_resource type="Texture2D" uid="uid://dws4b7fcfiovb" path="res://resources/images/stickers/regular/sticker_capsule_2/Chicken_Lover.png" id="33_h1ukc"]
 [ext_resource type="Texture2D" uid="uid://draihus3rpr3r" path="res://resources/images/icons8-plus-100.png" id="37_0g1j8"]
 [ext_resource type="Script" path="res://scripts/node_scripts/btn_scripts/btn_hovered_grow.gd" id="37_3x0v3"]
@@ -60,6 +62,13 @@ shader_parameter/noise_scroll_direction = Vector2(1, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 shadow_color = Color(0, 0, 0, 0.243137)
 shadow_size = 7
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5fiw5"]
+shader = ExtResource("5_se0l1")
+shader_parameter/background_color = Color(0, 0, 0, 0)
+shader_parameter/foreground_color = Color(0.301961, 0.321569, 0.345098, 0.243137)
+shader_parameter/grid_size = 426.7
+shader_parameter/dot_size = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52vmd"]
 bg_color = Color(0.0901961, 0.0901961, 0.0901961, 0.443137)
@@ -223,6 +232,8 @@ bg_color = Color(0.278431, 0.376471, 0.556863, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ju0lp"]
 bg_color = Color(0.196078, 0.231373, 0.270588, 0)
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_yqrig"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xu48e"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y8j0g"]
@@ -236,6 +247,13 @@ bg_color = Color(0.164706, 0.196078, 0.235294, 0.607843)
 bg_color = Color(0.164706, 0.196078, 0.235294, 0.607843)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55c2m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rctn2"]
+shader = ExtResource("5_se0l1")
+shader_parameter/background_color = Color(0, 0, 0, 0)
+shader_parameter/foreground_color = Color(0.0745098, 0.0745098, 0.0745098, 0.356863)
+shader_parameter/grid_size = 443.3
+shader_parameter/dot_size = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0lgl7"]
 
@@ -434,6 +452,12 @@ offset_right = 376.0
 offset_bottom = 112.0
 theme_override_styles/panel = ExtResource("3_j236n")
 
+[node name="shader_dots" type="ColorRect" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1"]
+material = SubResource("ShaderMaterial_5fiw5")
+layout_mode = 0
+offset_right = 376.0
+offset_bottom = 112.0
+
 [node name="Kindpng4298060" type="Sprite2D" parent="pnl_principal/pnl_infos_joueur/pnl_infos_1"]
 position = Vector2(200, 200)
 scale = Vector2(0.520822, 0.475028)
@@ -539,6 +563,13 @@ offset_right = 376.0
 offset_bottom = 656.0
 theme_override_styles/panel = ExtResource("3_j236n")
 
+[node name="shader_dots" type="ColorRect" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
+material = SubResource("ShaderMaterial_5fiw5")
+layout_mode = 0
+offset_top = 7.0
+offset_right = 376.0
+offset_bottom = 632.0
+
 [node name="btn_inventaire" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
 layout_mode = 0
 offset_left = 8.0
@@ -585,7 +616,7 @@ offset_bottom = 272.0
 theme = ExtResource("6_i0jf0")
 theme_override_fonts/font = ExtResource("6_vv063")
 theme_override_font_sizes/font_size = 24
-text = "Evenements"
+text = "Clicker"
 
 [node name="Button4" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
 visible = false
@@ -653,6 +684,7 @@ text = "Menu"
 vertical_alignment = 1
 
 [node name="pnl_inventaire" type="Panel" parent="pnl_principal"]
+visible = false
 layout_mode = 0
 offset_left = 552.0
 offset_top = 24.0
@@ -667,6 +699,13 @@ offset_top = 24.0
 offset_right = 896.0
 offset_bottom = 848.0
 theme_override_styles/panel = ExtResource("3_j236n")
+
+[node name="shader_dots" type="ColorRect" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
+material = SubResource("ShaderMaterial_5fiw5")
+layout_mode = 0
+offset_top = 7.0
+offset_right = 896.0
+offset_bottom = 824.0
 
 [node name="btn_page_storage_suivant" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage"]
 visible = false
@@ -850,6 +889,14 @@ layout_mode = 2
 theme = ExtResource("6_i0jf0")
 theme_override_fonts/font = ExtResource("5_jfgsi")
 text = "Filters"
+
+[node name="btn_multi_sell_sell_all_blue" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(130, 28)
+layout_mode = 2
+theme = ExtResource("6_i0jf0")
+theme_override_fonts/font = ExtResource("5_jfgsi")
+text = "Sel. all Mil-Spec"
 
 [node name="btn_multi_sell" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer"]
 custom_minimum_size = Vector2(130, 28)
@@ -1657,6 +1704,13 @@ offset_right = 896.0
 offset_bottom = 64.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1py1n")
 
+[node name="shader_dots" type="ColorRect" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu"]
+material = SubResource("ShaderMaterial_5fiw5")
+layout_mode = 0
+offset_top = -25.0
+offset_right = 896.0
+offset_bottom = 792.0
+
 [node name="MarginContainer" type="MarginContainer" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu"]
 layout_mode = 2
 offset_right = 896.0
@@ -1680,6 +1734,8 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_yqrig")
 text = "Cases"
 
 [node name="btn_collection_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
@@ -1694,6 +1750,8 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_yqrig")
 text = "Collections"
 
 [node name="btn_souvenir_container2" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
@@ -1708,6 +1766,8 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_yqrig")
 text = "Souvenirs"
 
 [node name="btn_capsule_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
@@ -1722,6 +1782,8 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_yqrig")
 text = "Capsules"
 
 [node name="btn_custom_container" type="Button" parent="pnl_principal/pnl_shop/pnl_principal/pnl_sub_menu/MarginContainer/HBoxContainer"]
@@ -1737,6 +1799,8 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_jja0s")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pf6f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0toxq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ju0lp")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_yqrig")
 text = "Customs"
 
 [node name="pnl_containers_scroll" type="Panel" parent="pnl_principal/pnl_shop/pnl_principal"]
@@ -1804,6 +1868,56 @@ theme_override_font_sizes/font_size = 20
 text = "Shop"
 vertical_alignment = 1
 
+[node name="pnl_clicker" type="Panel" parent="pnl_principal"]
+visible = false
+layout_mode = 0
+offset_left = 552.0
+offset_top = 24.0
+offset_right = 1448.0
+offset_bottom = 872.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2a1b2")
+script = ExtResource("32_s5w3o")
+
+[node name="pnl_principal" type="Panel" parent="pnl_principal/pnl_clicker"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 896.0
+offset_bottom = 848.0
+theme_override_styles/panel = ExtResource("3_j236n")
+
+[node name="shader_dots" type="ColorRect" parent="pnl_principal/pnl_clicker/pnl_principal"]
+material = SubResource("ShaderMaterial_5fiw5")
+layout_mode = 0
+offset_top = 7.0
+offset_right = 896.0
+offset_bottom = 824.0
+
+[node name="Button" type="Button" parent="pnl_principal/pnl_clicker/pnl_principal"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 536.0
+offset_right = 760.0
+offset_bottom = 748.0
+theme = ExtResource("9_g145b")
+text = "CLICK"
+
+[node name="pnl_header" type="Panel" parent="pnl_principal/pnl_clicker"]
+layout_mode = 0
+offset_right = 896.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsoi")
+
+[node name="Label" type="Label" parent="pnl_principal/pnl_clicker/pnl_header"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 152.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.537255, 0.639216, 0.764706, 1)
+theme_override_fonts/font = ExtResource("6_vv063")
+theme_override_font_sizes/font_size = 20
+text = "Clicker"
+vertical_alignment = 1
+
 [node name="pnl_visualisation_skin" parent="." instance=ExtResource("8_tl2mx")]
 offset_left = 2096.0
 offset_top = 208.0
@@ -1811,7 +1925,6 @@ offset_right = 2232.0
 offset_bottom = 344.0
 
 [node name="LineEdit" type="LineEdit" parent="."]
-visible = false
 offset_left = 1088.0
 offset_right = 1600.0
 offset_bottom = 31.0
@@ -1899,6 +2012,12 @@ offset_top = 2.0
 offset_right = 678.0
 offset_bottom = 517.0
 color = Color(0.745098, 0.298039, 0.298039, 1)
+
+[node name="shader_dots" type="ColorRect" parent="pnl_inspect_skin_grand/color_objet"]
+material = SubResource("ShaderMaterial_rctn2")
+layout_mode = 0
+offset_right = 678.0
+offset_bottom = 517.0
 
 [node name="Kindpng4298060" type="Sprite2D" parent="pnl_inspect_skin_grand"]
 position = Vector2(344, -162)
@@ -2525,6 +2644,7 @@ offset_bottom = 872.0
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant" to="." method="_on_btn_page_storage_suivant_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_precedent" to="." method="_on_btn_page_storage_precedent_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters" to="." method="_on_btn_filters_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_all_blue" to="." method="_on_btn_multi_sell_sell_all_blue_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell" to="." method="_on_btn_multi_sell_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation" to="." method="_on_btn_sell_confirmation_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_filter/Panel/btn_filters_confirmation" to="." method="_on_btn_filters_confirmation_pressed"]

@@ -1,5 +1,5 @@
 {
-    "categories": {
+	"categories": {
 	   "skins_normal": {
 		  "consumer_grade": {
 			 "nom": "Consumer Grade",
@@ -82,5 +82,5 @@
 			 "drop_anim_sound" : "res://resources/mp3/Case_reveal_ancient_01.mp3"
 		  }
 	   }
-    }
+	}
 }

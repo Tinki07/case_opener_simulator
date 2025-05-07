@@ -35,7 +35,7 @@ var mode_selection_items_inventaire_old: String = "default"
 @onready var lbl_prix_total_inventaire: Label = $pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix
 
 
-
+var is_left_button_clicked = false
 
 
 
@@ -93,7 +93,23 @@ func _on_line_edit_text_submitted(new_text: String):
 	else:
 		print("La fonction '%s' n'existe pas." % new_text)
 
-
+func ouvrir():
+	Global.leJoueur.inventaire.insert(0,ouvrir_caisse_v2(Global.conteneurs["caisse_csgo_weapon"]))
+	
+	# Repopule la grid de l'inventaire avec les items de l'inventaire du joueur
+	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0, mode_selection_items_inventaire)	
+	
+	# Remet l'index du skin à charger dans l'inventaire, ici 0 car on veux revenir au début
+	index_skin_a_charger_debut = 0
+	# Remet la varible de la page actuelle à 0
+	page_actuelle = 1
+	# Actualise la page affichée dans l'inventaire
+	changer_valeur_page_actuelle_storage()
+	
+	# Met à jour le nombre d'items dans l'inventaire
+	lbl_nombre_items_inventaire.text = str(items_to_show_inventaire.size())
+	# Met à jour la valeur totale de l'inventaire
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
 
 # Peermet de retourner un objet SkinArmeObtenu, d'une caisse donnéee
 func ouvrir_caisse_v2(caisse: Conteneur):
@@ -482,6 +498,7 @@ func populate_grid_skin(grid : GridContainer,index_skin_a_charger_debut: int, st
 		btn_panel_objet.pressed.connect(self._on_objet_inventory_button_pressed.bind(new_panel_objet))
 		btn_panel_objet.mouse_entered.connect(self._on_objet_inventory_button_mouse_entered.bind(new_panel_objet))
 		
+		
 		# Ajoute le panneau configuré à la grille
 		grid.add_child(new_panel_objet) # On ajoute le panneau à la grille
 		
@@ -595,7 +612,26 @@ func _on_objet_inventory_button_mouse_entered(button):
 	var audio_player = get_node(str(button.get_path()) + "/btn_skin/audio_anim_survole")
 	audio_player.play()
 	
-	
+	if multi_sell_mode:
+		if is_left_button_clicked:
+			if item_clicked.sell_selected == false:
+			
+				# Set le mode vente à true
+				item_clicked.set_sell_selected(true)
+				# Ajoute l'item à la liste des items à vendre
+				items_selected_multi_sell_mode.append(item_clicked)
+				
+				# Repopule la grille avec le mode de sélection des skins seulement 'mode_selection_items_inventaire'
+				repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
+				# Actualise le label contenant la size de la liste des items à vendre
+				$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation/Panel/HBoxContainer/lbl_nombre_items.text = str(items_selected_multi_sell_mode.size())
+				
+				# Si il y a un item dans la liste des skins à vendre, le bouton n'est plus disable sinon il est disable
+				if items_selected_multi_sell_mode.size() > 0:
+					$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = false
+				if items_selected_multi_sell_mode.size() == 0:
+					$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = true
+
 
 
 # Une fois un item clické dans l'inventaire, ca nous ouvre un petit panel qui contient des boutons
@@ -996,7 +1032,7 @@ func changer_valeur_page_actuelle_storage():
  # Ici, nous nous intéressons uniquement aux événements de clic de souris.
 func _input(event):
 	# Si l'événement est bien un clic de souris et que le bouton est pressé :
-	if event is InputEventMouseButton and event.pressed:
+	if event is InputEventMouseButton:
 		
 		# Vérifiez si le clic est à l'intérieur des limites du panneau, on regarde le vbox container
 		var rect = Rect2(Vector2.ZERO, $pnl_objet_cliked/VBoxContainer.size)
@@ -1005,10 +1041,15 @@ func _input(event):
 		if rect.has_point(mouse_position):
 			# Si le clic est à l'intérieur du panneau, on ne fait rien et on sort de la fonction.
 			return
+		else:
+			# Si le clic est en dehors du panneau, on rend le panneau invisible.
+			$pnl_objet_cliked.visible = false
 		
+		if event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
+			is_left_button_clicked = true
+		elif not event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
+			is_left_button_clicked = false
 		
-		# Si le clic est en dehors du panneau, on rend le panneau invisible.
-		$pnl_objet_cliked.visible = false
 	if is_animation_playing and $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible:
 		if event is InputEventKey and event.keycode == KEY_ENTER:
 			_on_btn_quitter_caisse_panel_pressed()
@@ -1467,6 +1508,7 @@ func _on_btn_multi_sell_pressed():
 	if multi_sell_mode == false:
 		
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters.visible = false
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_all_blue.visible = true
 		
 		# On met le mode multi sell a true
 		multi_sell_mode = true
@@ -1492,6 +1534,7 @@ func _on_btn_multi_sell_pressed():
 	elif multi_sell_mode == true:
 		
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters.visible = true
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_all_blue.visible = false
 		
 		# On met le mode multi sell a false
 		multi_sell_mode = false
@@ -1536,6 +1579,7 @@ func _on_btn_multi_sell_pressed():
 func _on_btn_sell_confirmation_pressed():
 	
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters.visible = true
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_all_blue.visible = false
 	
 	# nbre total d'items à delete
 	var nb_items_deleted = items_selected_multi_sell_mode.size()
@@ -1635,5 +1679,40 @@ func _on_btn_filters_confirmation_pressed():
 	lbl_nombre_items_inventaire.text = str(items_to_show_inventaire.size())
 
 
-func test():
-	$pnl_inspect_skin_grand.open_panel()
+
+func _on_btn_multi_sell_sell_all_blue_pressed() -> void:
+	var item_selected
+	var total_skins = Global.leJoueur.inventaire.size()
+	var index = 0
+	for i in range(total_skins):  
+		index = index_skin_a_charger_debut + i
+		if index >= total_skins:
+			break # Sort de la boucle si on dépasse la taille de l'inventaire
+		
+		item_selected = Global.leJoueur.inventaire[index]
+		
+		if !item_selected.favori:
+			
+			if item_selected is SkinArmeObtenu:
+				if item_selected.skin.categorie.nom == "Mil-Spec":
+					
+					# Regarde si le bouton préssé est déjà noté comme en vente
+					if item_selected.sell_selected == false:
+						
+						# Set le mode vente à true
+						item_selected.set_sell_selected(true)
+						# Ajoute l'item à la liste des items à vendre
+						items_selected_multi_sell_mode.append(item_selected)
+		
+		
+		
+	# Repopule la grille avec le mode de sélection des skins seulement 'mode_selection_items_inventaire'
+	repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
+	# Actualise le label contenant la size de la liste des items à vendre
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation/Panel/HBoxContainer/lbl_nombre_items.text = str(items_selected_multi_sell_mode.size())
+	
+	# Si il y a un item dans la liste des skins à vendre, le bouton n'est plus disable sinon il est disable
+	if items_selected_multi_sell_mode.size() > 0:
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = false
+	if items_selected_multi_sell_mode.size() == 0:
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = true
