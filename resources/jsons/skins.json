@@ -926,6 +926,32 @@
 			],
 			"glock18": [
 				{
+					"nom": "Shinobu",
+					"id": "Shinobu_glock18",
+					"arme": "glock18",
+					"categorie": "classified",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						24.42,
+						10.10,
+						5.32,
+						4.60,
+						4.80,
+						60.44,
+						24.36,
+						11.62,
+						11.05,
+						11.53
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (6).png"
+				},
+				{
 					"nom": "Block-18",
 					"id": "Block-18_glock18",
 					"arme": "glock18",
@@ -9114,6 +9140,32 @@
 		"rifle": {
 			"ak47": [
 				{
+					"nom": "Searing Rage",
+					"id": "Searing Rage_ak47",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/shadow/AK-47_Frontside_Misty.png",
+					"categorie": "classified",
+					"prix": [
+						21.29,
+						7.5,
+						3.65,
+						4.69,
+						11.01,
+						168.32,
+						80.32,
+						33.15,
+						29.39,
+						24.44
+					],
+					"arme": "ak47"
+				},
+				{
 					"nom": "Frontside Misty",
 					"id": "Frontside Misty_ak47",
 					"etats_possible": [
@@ -11613,6 +11665,32 @@
 			],
 			"famas": [
 				{
+					"nom": "Bad Trip",
+					"id": "Bad Trip_famas",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (7).png",
+					"categorie": "covert",
+					"prix": [
+						13.62,
+						5.33,
+						2.74,
+						1.90,
+						1.90,
+						43.66,
+						12.88,
+						7.00,
+						6.98,
+						7.24
+					],
+					"arme": "famas"
+				},
+				{
 					"nom": "Survivor Z",
 					"id": "Survivor Z_famas",
 					"etats_possible": [
@@ -12542,6 +12620,32 @@
 						0.00
 					],
 					"image_path": "res://resources/images/conteneurs/weapon_case/AWP_Lightning_Strike.png"
+				},
+				{
+					"nom": "Printstream",
+					"id": "Printstream_awp",
+					"arme": "awp",
+					"categorie": "covert",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						377.00,
+						140.13,
+						75.44,
+						54.55,
+						51.89,
+						778.09,
+						263.10,
+						137.16,
+						90.60,
+						84.75
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (10).png"
 				},
 				{
 					"nom": "Redline",
