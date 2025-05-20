@@ -3,6 +3,32 @@
 		"pistols": {
 			"usp_s": [
 				{
+					"nom": "PC-GRN",
+					"id": "PC-GRN_usp_s",
+					"arme": "usp_s",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.52,
+						0.11,
+						0.04,
+						0.04,
+						0.03,
+						3.42,
+						0.79,
+						0.28,
+						0.32,
+						0.23
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (14).png"
+				},
+				{
 					"nom": "Dark Water",
 					"id": "Dark Water_usp_s",
 					"arme": "usp_s",
@@ -4978,6 +5004,32 @@
 			],
 			"p2000": [
 				{
+					"nom": "Sure Grip",
+					"id": "Sure Grip_p2000",
+					"arme": "p2000",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.24,
+						0.09,
+						0.06,
+						0.06,
+						0.06,
+						0.80,
+						0.27,
+						0.12,
+						0.12,
+						0.13
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (13).png"
+				},
+				{
 					"nom": "Chainmail",
 					"id": "Chainmail_p2000",
 					"etats_possible": [
@@ -5552,6 +5604,32 @@
 				}
 			],
 			"deagle": [
+				{
+					"nom": "Serpent Strike",
+					"id": "Serpent Strike_deagle",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (16).png",
+					"categorie": "restricted",
+					"prix": [
+						1.99,
+						0.89,
+						0.43,
+						0.44,
+						0.29,
+						5.32,
+						2.56,
+						0.89,
+						1.24,
+						0.89
+					],
+					"arme": "deagle"
+				},
 				{
 					"nom": "hand Cannon",
 					"id": "Hand Cannon_deagle",
@@ -8021,6 +8099,32 @@
 			],
 			"ump45": [
 				{
+					"nom": "K.O. Factory",
+					"id": "K.O. Factory_ump45",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (9).png",
+					"categorie": "classified",
+					"prix": [
+						19.23,
+						7.57,
+						4.45,
+						3.64,
+						2.39,
+						39.14,
+						12.90,
+						6.71,
+						5.80,
+						4.66
+					],
+					"arme": "ump45"
+				},
+				{
 					"nom": "Corporal",
 					"id": "Corporal_ump45",
 					"etats_possible": [
@@ -8279,6 +8383,32 @@
 				}
 			],
 			"mp9": [
+				{
+					"nom": "Nexus",
+					"id": "Nexus_mp9",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (15).png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.29,
+						0.08,
+						0.03,
+						0.03,
+						0.03,
+						1.39,
+						0.26,
+						0.09,
+						0.08,
+						0.08
+					],
+					"arme": "mp9"
+				},
 				{
 					"nom": "Goo",
 					"id": "Goo_mp9",
@@ -8850,6 +8980,32 @@
 			],
 			"p90": [
 				{
+					"nom": "Wave Breaker",
+					"id": "Wave Breaker_p90",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (4).png",
+					"categorie": "restricted",
+					"prix": [
+						2.35,
+						0.85,
+						0.40,
+						0.35,
+						0.24,
+						6.12,
+						1.93,
+						0.77,
+						0.75,
+						0.63
+					],
+					"arme": "p90"
+				},
+				{
 					"nom": "Trigon",
 					"id": "Trigon_p90",
 					"etats_possible": [
@@ -9149,7 +9305,7 @@
 						"ww",
 						"bs"
 					],
-					"image_path": "res://resources/images/conteneurs/shadow/AK-47_Frontside_Misty.png",
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (12).png",
 					"categorie": "classified",
 					"prix": [
 						21.29,
@@ -11458,6 +11614,32 @@
 			],
 			"m4a4": [
 				{
+					"nom": "Choppa",
+					"id": "Choppa_m4a4",
+					"arme": "m4a4",
+					"categorie": "mil_spec",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						0.40,
+						0.07,
+						0.04,
+						0.03,
+						0.03,
+						2.29,
+						0.39,
+						0.11,
+						0.08,
+						0.05
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (11).png"
+				},
+				{
 					"nom": "Radiation Hazard",
 					"id": "Radiation Hazard_m4a4",
 					"arme": "m4a4",
@@ -11895,6 +12077,32 @@
 				}
 			],
 			"galil_ar": [
+				{
+					"nom": "Control",
+					"id": "Control_galil_ar",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (3).png",
+					"categorie": "restricted",
+					"prix": [
+						2.06,
+						0.89,
+						0.40,
+						0.41,
+						0.27,
+						4.91,
+						1.67,
+						0.76,
+						0.75,
+						0.67
+					],
+					"arme": "galil_ar"
+				},
 				{
 					"nom": "Stone Cold",
 					"id": "Stone Cold_galil_ar",
@@ -13647,6 +13855,32 @@
 			],
 			"scout": [
 				{
+					"nom": "Memorial",
+					"id": "Memorial_scout",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (1).png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.31,
+						0.08,
+						0.04,
+						0.03,
+						0.03,
+						1.92,
+						0.27,
+						0.10,
+						0.09,
+						0.08
+					],
+					"arme": "scout"
+				},
+				{
 					"nom": "Big Iron",
 					"id": "Big Iron_scout",
 					"etats_possible": [
@@ -14377,6 +14611,32 @@
 			],
 			"xm1014": [
 				{
+					"nom": "Mockingbird",
+					"id": "Mockingbird_xm1014",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (2).png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.27,
+						0.07,
+						0.06,
+						0.04,
+						0.04,
+						0.78,
+						0.20,
+						0.09,
+						0.08,
+						0.07
+					],
+					"arme": "xm1014"
+				},
+				{
 					"nom": "Scumbria",
 					"id": "Scumbria_xm1014",
 					"etats_possible": [
@@ -14662,6 +14922,33 @@
 				}
 			],
 			"nova": [
+				
+				{
+					"nom": "Rising Sun",
+					"id": "Rising Sun_nova",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (5).png",
+					"categorie": "restricted",
+					"prix": [
+						2.39,
+						0.78,
+						0.43,
+						0.31,
+						0.25,
+						6.10,
+						1.83,
+						0.73,
+						0.73,
+						0.65
+					],
+					"arme": "nova"
+				},
 				{
 					"nom": "Antique",
 					"id": "Antique_nova",
@@ -14892,6 +15179,32 @@
 				}
 			],
 			"mag7": [
+				{
+					"nom": "Resupply",
+					"id": "Resupply_mag7",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f.png",
+					"categorie": "mil_spec",
+					"prix": [
+						0.27,
+						0.07,
+						0.06,
+						0.04,
+						0.04,
+						0.78,
+						0.20,
+						0.09,
+						0.08,
+						0.07
+					],
+					"arme": "mag7"
+				},
 				{
 					"nom": "Cobalt Core",
 					"id": "Cobalt Core_mag7",
@@ -15467,6 +15780,32 @@
 		},
 		"equipment": {
 			"zeus": [
+				{
+					"nom": "Tosai",
+					"id": "Tosai_zeus",
+					"arme": "zeus",
+					"categorie": "restricted",
+					"etats_possible": [
+						"fn",
+						"mw",
+						"ft",
+						"ww",
+						"bs"
+					],
+					"prix": [
+						2.01,
+						0.84,
+						0.4,
+						0.49,
+						0.28,
+						5.34,
+						2.60,
+						0.99,
+						1.22,
+						1.07
+					],
+					"image_path": "res://resources/images/conteneurs/fever_case/512fx384f (8).png"
+				},
 				{
 					"nom": "Olympus",
 					"id": "Olympus_zeus",

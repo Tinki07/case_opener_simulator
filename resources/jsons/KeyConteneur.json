@@ -1,6 +1,13 @@
 {
 	"keys": [
 		{
+			"nom": "Fever Case Key",
+			"id": "caisse_fever_key",
+			"image_path": "res://resources/images/conteneurs/fever_case/3f8aa1a1d1cc08c0fc04a68f679e049c.webp",
+			"conteneur_unlocker": "caisse_fever",
+			"prix": 2.49
+		},
+		{
 			"nom": "Kilowatt Case Key",
 			"id": "caisse_kilowatt_key",
 			"image_path": "res://resources/images/conteneurs/kilo/Kilowatt-key.png",
