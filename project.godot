@@ -88,6 +88,18 @@ folder_colors={
 "res://resources/images/conteneurs/winter_offensive/": "green",
 "res://resources/images/skins/assault-rifles/ak47/": "green",
 "res://resources/images/skins/assault-rifles/ak47/small/": "green",
+"res://resources/images/skins/knifes/bayonet/": "green",
+"res://resources/images/skins/knifes/bowie/": "green",
+"res://resources/images/skins/knifes/butterfly/": "green",
+"res://resources/images/skins/knifes/classic/": "green",
+"res://resources/images/skins/knifes/falchion/": "green",
+"res://resources/images/skins/knifes/flip/": "green",
+"res://resources/images/skins/knifes/gut/": "green",
+"res://resources/images/skins/knifes/huntsman/": "green",
+"res://resources/images/skins/knifes/karambit/": "green",
+"res://resources/images/skins/knifes/kukri/": "green",
+"res://resources/images/skins/knifes/m9/": "green",
+"res://resources/images/skins/knifes/navaja/": "green",
 "res://resources/images/stickers/dreamhack_2014/": "yellow",
 "res://resources/images/stickers/dreamhack_cluj_napoca_2015/": "yellow",
 "res://resources/images/stickers/ems_katowice_2014/": "green",
@@ -110,5 +122,4 @@ common/snap_controls_to_pixels=false
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
