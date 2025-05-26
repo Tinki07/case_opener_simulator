@@ -37,7 +37,7 @@ var mode_selection_items_inventaire_old: String = "default"
 
 var is_left_button_clicked = false
 
-
+var ITEM_INVENTORY_CLICKED
 
 
 func _process(delta):
@@ -701,7 +701,7 @@ func _on_objet_inventory_button_pressed(button):
 			
 			if item_clicked.need_key == true:
 				
-				var key_container = Global.keys_conteneurs[item_clicked.id + "_key"]
+				var key_container = Global .keys_conteneurs[item_clicked.id + "_key"]
 				
 				var item_found = false  # Variable pour suivre si l'item KEY est trouvé ou non
 				for item in Global.leJoueur.inventaire:
@@ -712,12 +712,9 @@ func _on_objet_inventory_button_pressed(button):
 				# Si il y a une clé dans l'inventaire du joueur correspondant au conteneur cliké alors :
 				if not item_found:
 					btn_fast_open.visible = false
-					print("pas de clé")
 				else: # Sinon :
 					btn_fast_open.visible = true
-					print("Il y a une clé letsgooo")
 			elif  item_clicked.need_key == false: # Sinon :
-				print("pas besoin de clé chef")
 				btn_fast_open.visible = true
 			
 		elif item_clicked is Sticker:	
@@ -740,6 +737,7 @@ func _on_objet_inventory_button_pressed(button):
 		panel_item_cliked.visible = !panel_item_cliked.visible
 		panel_item_cliked.position = get_global_mouse_position()
 		
+		ITEM_INVENTORY_CLICKED = item_clicked
 		
 		# On gère les boutons -------------------------------------------------------------------------
 		
@@ -765,6 +763,8 @@ func _on_objet_inventory_button_pressed(button):
 		btn_fast_open.pressed.connect(self._on_fast_ouvrir_objet_button_pressed.bind(item_clicked))
 		
 		# ---------------------------------------------------------------------------------------------
+		
+
 
 func _on_fast_ouvrir_objet_button_pressed(objet : Conteneur):
 	
@@ -1131,6 +1131,11 @@ func _input(event):
 			is_left_button_clicked = true
 		elif not event.pressed and event.button_index == MOUSE_BUTTON_RIGHT:
 			is_left_button_clicked = false
+		
+	if $pnl_objet_cliked.visible == true and $pnl_objet_cliked/VBoxContainer/btn_fast_ouvrir.visible == true:
+		if event is InputEventKey and event.keycode == KEY_ENTER:
+			_on_fast_ouvrir_objet_button_pressed(ITEM_INVENTORY_CLICKED)
+			
 		
 	if is_animation_playing and $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible:
 		if event is InputEventKey and event.keycode == KEY_ENTER:
@@ -1798,3 +1803,7 @@ func _on_btn_multi_sell_sell_all_blue_pressed() -> void:
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = false
 	if items_selected_multi_sell_mode.size() == 0:
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = true
+
+
+func _on_btn_multi_sell_sell_page_pressed() -> void:
+	pass # Replace with function body.

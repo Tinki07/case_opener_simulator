@@ -607,7 +607,6 @@ stream = ExtResource("26_bu1vo")
 volume_db = 13.921
 
 [node name="Button3" type="Button" parent="pnl_principal/pnl_menu_principal/pnl_menu_principal"]
-visible = false
 layout_mode = 0
 offset_left = 8.0
 offset_top = 192.0
