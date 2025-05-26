@@ -1595,7 +1595,7 @@ func _on_btn_multi_sell_pressed():
 	if multi_sell_mode == false:
 		
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters.visible = false
-		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_all_blue.visible = true
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_page.visible = true
 		
 		# On met le mode multi sell a true
 		multi_sell_mode = true
@@ -1621,7 +1621,7 @@ func _on_btn_multi_sell_pressed():
 	elif multi_sell_mode == true:
 		
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters.visible = true
-		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_all_blue.visible = false
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_page.visible = false
 		
 		# On met le mode multi sell a false
 		multi_sell_mode = false
@@ -1666,7 +1666,7 @@ func _on_btn_multi_sell_pressed():
 func _on_btn_sell_confirmation_pressed():
 	
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters.visible = true
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_all_blue.visible = false
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_page.visible = false
 	
 	# nbre total d'items à delete
 	var nb_items_deleted = items_selected_multi_sell_mode.size()
@@ -1771,6 +1771,7 @@ func _on_btn_multi_sell_sell_all_blue_pressed() -> void:
 	var item_selected
 	var total_skins = Global.leJoueur.inventaire.size()
 	var index = 0
+	
 	for i in range(total_skins):  
 		index = index_skin_a_charger_debut + i
 		if index >= total_skins:
@@ -1806,4 +1807,45 @@ func _on_btn_multi_sell_sell_all_blue_pressed() -> void:
 
 
 func _on_btn_multi_sell_sell_page_pressed() -> void:
-	pass # Replace with function body.
+	
+	var item_selected
+	var total_skins = items_to_show_inventaire.size()
+	var index = index_skin_a_charger_debut - 1
+	
+	for i in range(index_skin_a_charger_debut,index_skin_a_charger_debut + skins_par_page):
+		print(index)
+		index = index + 1
+		
+		if index >= total_skins:
+			break # Sort de la boucle si on dépasse la taille de l'inventaire
+		
+		item_selected = items_to_show_inventaire[index]
+		
+		if item_selected is SkinArmeObtenu or item_selected is Sticker:
+			
+			if !item_selected.favori :
+			
+				# Regarde si le bouton préssé est déjà noté comme en vente
+				if item_selected.sell_selected == false:
+					
+					# Set le mode vente à true
+					item_selected.set_sell_selected(true)
+					# Ajoute l'item à la liste des items à vendre
+					items_selected_multi_sell_mode.append(item_selected)
+		else:
+			# Set le mode vente à true
+			item_selected.set_sell_selected(true)
+			# Ajoute l'item à la liste des items à vendre
+			items_selected_multi_sell_mode.append(item_selected)
+		
+		
+	# Repopule la grille avec le mode de sélection des skins seulement 'mode_selection_items_inventaire'
+	repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
+	# Actualise le label contenant la size de la liste des items à vendre
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation/Panel/HBoxContainer/lbl_nombre_items.text = str(items_selected_multi_sell_mode.size())
+	
+	# Si il y a un item dans la liste des skins à vendre, le bouton n'est plus disable sinon il est disable
+	if items_selected_multi_sell_mode.size() > 0:
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = false
+	if items_selected_multi_sell_mode.size() == 0:
+		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = true

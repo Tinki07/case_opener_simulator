@@ -889,13 +889,13 @@ theme = ExtResource("6_i0jf0")
 theme_override_fonts/font = ExtResource("5_jfgsi")
 text = "Filters"
 
-[node name="btn_multi_sell_sell_all_blue" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer"]
+[node name="btn_multi_sell_sell_page" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer"]
 visible = false
 custom_minimum_size = Vector2(130, 28)
 layout_mode = 2
 theme = ExtResource("6_i0jf0")
 theme_override_fonts/font = ExtResource("5_jfgsi")
-text = "Sel. all Mil-Spec"
+text = "Sel. page"
 
 [node name="btn_multi_sell" type="Button" parent="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer"]
 custom_minimum_size = Vector2(130, 28)
@@ -1977,7 +1977,7 @@ theme = ExtResource("13_eml8t")
 theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
 theme_override_fonts/font = ExtResource("14_nx57u")
 theme_override_font_sizes/font_size = 13
-text = "Fast Open"
+text = "Fast open"
 
 [node name="btn_delete_objet" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
 layout_mode = 2
@@ -2652,7 +2652,7 @@ offset_bottom = 872.0
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_suivant" to="." method="_on_btn_page_storage_suivant_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_page_storage_precedent" to="." method="_on_btn_page_storage_precedent_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_filters" to="." method="_on_btn_filters_pressed"]
-[connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_all_blue" to="." method="_on_btn_multi_sell_sell_all_blue_pressed"]
+[connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell_sell_page" to="." method="_on_btn_multi_sell_sell_page_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/HBoxContainer/btn_multi_sell" to="." method="_on_btn_multi_sell_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation" to="." method="_on_btn_sell_confirmation_pressed"]
 [connection signal="pressed" from="pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_filter/Panel/btn_filters_confirmation" to="." method="_on_btn_filters_confirmation_pressed"]
