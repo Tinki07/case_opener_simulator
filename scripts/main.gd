@@ -776,22 +776,12 @@ func _on_fast_ouvrir_objet_button_pressed(objet : Conteneur):
 			if item is KeyConteneur:
 				if item.id == objet.id + "_key": 
 					Global.leJoueur.inventaire.erase(item)
+					break
 	
 	# On ouvre la caisse et on ajoute l'item trouvé dans l'inventaire du joueur
 	Global.leJoueur.inventaire.insert(0,ouvrir_caisse_v2(Global.conteneurs[objet.id]))
 	
-	# Repopule la grid de l'inventaire avec les items de l'inventaire du joueur
-	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0, mode_selection_items_inventaire)	
-	# Remet l'index du skin à charger dans l'inventaire, ici 0 car on veux revenir au début
-	index_skin_a_charger_debut = 0
-	# Remet la varible de la page actuelle à 0
-	page_actuelle = 1
-	# Actualise la page affichée dans l'inventaire
-	changer_valeur_page_actuelle_storage()
-	# Met à jour le nombre d'items dans l'inventaire
-	lbl_nombre_items_inventaire.text = str(items_to_show_inventaire.size())
-	# Met à jour la valeur totale de l'inventaire
-	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
+	repopulation_grille_inventaire_sans_retoruner_page_1(mode_selection_items_inventaire)
 	
 	# On cache le menu des boutons du panel clické dans l'inventaire
 	var panel_item_cliked = $pnl_objet_cliked
@@ -801,9 +791,29 @@ func _on_fast_ouvrir_objet_button_pressed(objet : Conteneur):
 	var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
 	style_box.bg_color = Global.leJoueur.inventaire[0].get_color()
 	get_node("%pnl_notification_buy/AnimationPlayer").stop()
-	get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Box-106.png")
-	get_node("%pnl_notification_buy/lbl_infos").text = "You got a " + Global.leJoueur.inventaire[0].get_quality() +" item !"
+	get_node("%pnl_notification_buy/txtr_dollar").texture = load(Global.leJoueur.inventaire[0].get_image())
+	get_node("%pnl_notification_buy/lbl_infos").text = "You got a " + Global.leJoueur.inventaire[0]._to_string() +" !"
 	get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
+	
+	if Global.leJoueur.inventaire[0] is SkinArmeObtenu:
+			
+		var anim_sound = load(Global.leJoueur.inventaire[0].skin.categorie.anim_drop_sound)
+		
+		# Vérifier que anim_sound n'est pas nul et est bien un AudioStream
+		if anim_sound is AudioStreamMP3:
+			var audio_player = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/drop_anim_sound
+			audio_player.stream = anim_sound
+			audio_player.play()
+		
+	elif Global.leJoueur.inventaire[0] is Sticker:
+			
+		var anim_sound = load(Global.leJoueur.inventaire[0].categorie.anim_drop_sound)
+		
+		# Vérifier que anim_sound n'est pas nul et est bien un AudioStream
+		if anim_sound is AudioStreamMP3:
+			var audio_player = $pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_visualisation_new_skin_grand/pnl_principal/txtr_skin/drop_anim_sound
+			audio_player.stream = anim_sound
+			audio_player.play()
 	
 
 # Actions faites quand le bouton delete d'un item est clické
