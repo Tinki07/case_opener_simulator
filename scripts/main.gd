@@ -93,8 +93,8 @@ func _on_line_edit_text_submitted(new_text: String):
 	else:
 		print("La fonction '%s' n'existe pas." % new_text)
 
-func ouvrir():
-	Global.leJoueur.inventaire.insert(0,ouvrir_caisse_v2(Global.conteneurs["caisse_csgo_weapon"]))
+func fast_open(id_caisse: String):
+	Global.leJoueur.inventaire.insert(0,ouvrir_caisse_v2(Global.conteneurs[id_caisse]))
 	
 	# Repopule la grid de l'inventaire avec les items de l'inventaire du joueur
 	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0, mode_selection_items_inventaire)	
@@ -110,6 +110,8 @@ func ouvrir():
 	lbl_nombre_items_inventaire.text = str(items_to_show_inventaire.size())
 	# Met à jour la valeur totale de l'inventaire
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
+	
+	
 
 # Peermet de retourner un objet SkinArmeObtenu, d'une caisse donnéee
 func ouvrir_caisse_v2(caisse: Conteneur):
@@ -650,6 +652,7 @@ func _on_objet_inventory_button_pressed(button):
 	var btn_inspect: Button = $pnl_objet_cliked/VBoxContainer/btn_inspect
 	var btn_delete: Button = $pnl_objet_cliked/VBoxContainer/btn_delete_objet
 	var btn_open: Button = $pnl_objet_cliked/VBoxContainer/btn_ouvrir
+	var btn_fast_open: Button = $pnl_objet_cliked/VBoxContainer/btn_fast_ouvrir
 	
 	# Regarde si le multi sell mode est activé ou pas
 	if multi_sell_mode == true:
@@ -689,11 +692,33 @@ func _on_objet_inventory_button_pressed(button):
 				btn_delete.visible = true
 			btn_inspect.visible = true
 			btn_open.visible = false
+			btn_fast_open.visible = false
 			
 		elif item_clicked is Conteneur:
 			btn_inspect.visible = false
 			btn_delete.visible = true
 			btn_open.visible = true
+			
+			if item_clicked.need_key == true:
+				
+				var key_container = Global.keys_conteneurs[item_clicked.id + "_key"]
+				
+				var item_found = false  # Variable pour suivre si l'item KEY est trouvé ou non
+				for item in Global.leJoueur.inventaire:
+					if item is KeyConteneur:
+						if item.id == key_container.id:
+							item_found = true
+							break
+				# Si il y a une clé dans l'inventaire du joueur correspondant au conteneur cliké alors :
+				if not item_found:
+					btn_fast_open.visible = false
+					print("pas de clé")
+				else: # Sinon :
+					btn_fast_open.visible = true
+					print("Il y a une clé letsgooo")
+			elif  item_clicked.need_key == false: # Sinon :
+				print("pas besoin de clé chef")
+				btn_fast_open.visible = true
 			
 		elif item_clicked is Sticker:	
 			if item_clicked.favori:
@@ -702,11 +727,13 @@ func _on_objet_inventory_button_pressed(button):
 				btn_delete.visible = true
 			btn_inspect.visible = true
 			btn_open.visible = false
+			btn_fast_open.visible = false
 			
 		else:
 			btn_inspect.visible = false
 			btn_delete.visible = true
 			btn_open.visible = false
+			btn_fast_open.visible = false
 			
 		
 		# Après avoir déterminé quels boutons seront visible, on rend le panel visible
@@ -732,7 +759,52 @@ func _on_objet_inventory_button_pressed(button):
 			btn_open.pressed.disconnect(self._on_ouvrir_objet_button_pressed)
 		btn_open.pressed.connect(self._on_ouvrir_objet_button_pressed.bind(item_clicked))
 		
+		# Gestion du bouton fast_open de l'objet
+		if btn_fast_open.pressed.is_connected(self._on_fast_ouvrir_objet_button_pressed):
+			btn_fast_open.pressed.disconnect(self._on_fast_ouvrir_objet_button_pressed)
+		btn_fast_open.pressed.connect(self._on_fast_ouvrir_objet_button_pressed.bind(item_clicked))
+		
 		# ---------------------------------------------------------------------------------------------
+
+func _on_fast_ouvrir_objet_button_pressed(objet : Conteneur):
+	
+	# On supprime la caisse et le conteneur et la clé si il y en a une
+	Global.leJoueur.inventaire.erase(objet)
+	
+	if objet.need_key:
+		for item in Global.leJoueur.inventaire:
+			if item is KeyConteneur:
+				if item.id == objet.id + "_key": 
+					Global.leJoueur.inventaire.erase(item)
+	
+	# On ouvre la caisse et on ajoute l'item trouvé dans l'inventaire du joueur
+	Global.leJoueur.inventaire.insert(0,ouvrir_caisse_v2(Global.conteneurs[objet.id]))
+	
+	# Repopule la grid de l'inventaire avec les items de l'inventaire du joueur
+	populate_grid_skin($pnl_principal/pnl_inventaire/pnl_inventaire_storage/MarginContainer/GridContainer, 0, mode_selection_items_inventaire)	
+	# Remet l'index du skin à charger dans l'inventaire, ici 0 car on veux revenir au début
+	index_skin_a_charger_debut = 0
+	# Remet la varible de la page actuelle à 0
+	page_actuelle = 1
+	# Actualise la page affichée dans l'inventaire
+	changer_valeur_page_actuelle_storage()
+	# Met à jour le nombre d'items dans l'inventaire
+	lbl_nombre_items_inventaire.text = str(items_to_show_inventaire.size())
+	# Met à jour la valeur totale de l'inventaire
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage/pnl_prix_inventaire/lbl_prix.text = str(snapped(Global.leJoueur.get_value_inventory(),0.01))
+	
+	# On cache le menu des boutons du panel clické dans l'inventaire
+	var panel_item_cliked = $pnl_objet_cliked
+	panel_item_cliked.visible = false
+	
+	# On envoi une notif pour montrer quel skin on a eu
+	var style_box = get_node("%pnl_notification_buy").get_theme_stylebox("panel")
+	style_box.bg_color = Global.leJoueur.inventaire[0].get_color()
+	get_node("%pnl_notification_buy/AnimationPlayer").stop()
+	get_node("%pnl_notification_buy/txtr_dollar").texture = load("res://resources/images/Box-106.png")
+	get_node("%pnl_notification_buy/lbl_infos").text = "You got a " + Global.leJoueur.inventaire[0].get_quality() +" item !"
+	get_node("%pnl_notification_buy/AnimationPlayer").play("notification_anim")
+	
 
 # Actions faites quand le bouton delete d'un item est clické
 func _on_delete_objet_button_pressed(objet):

@@ -1931,7 +1931,6 @@ offset_bottom = 31.0
 clear_button_enabled = true
 
 [node name="pnl_objet_cliked" type="Panel" parent="."]
-visible = false
 offset_left = 2232.0
 offset_top = 488.0
 offset_right = 2360.0
@@ -1940,8 +1939,8 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_55c2m")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="pnl_objet_cliked"]
 layout_mode = 0
-offset_right = 128.0
-offset_bottom = 69.0
+offset_right = 152.0
+offset_bottom = 128.0
 theme_override_constants/separation = 0
 
 [node name="btn_inspect" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
@@ -1951,7 +1950,7 @@ theme = ExtResource("13_eml8t")
 theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
 theme_override_fonts/font = ExtResource("14_nx57u")
 theme_override_font_sizes/font_size = 13
-text = "Inspecter"
+text = "Inspect"
 
 [node name="btn_gestion_sticker" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
 visible = false
@@ -1969,7 +1968,17 @@ theme = ExtResource("13_eml8t")
 theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
 theme_override_fonts/font = ExtResource("14_nx57u")
 theme_override_font_sizes/font_size = 13
-text = "Ouvrir"
+text = "Open"
+
+[node name="btn_fast_ouvrir" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+theme = ExtResource("13_eml8t")
+theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
+theme_override_fonts/font = ExtResource("14_nx57u")
+theme_override_font_sizes/font_size = 13
+text = "Fast Open"
 
 [node name="btn_delete_objet" type="Button" parent="pnl_objet_cliked/VBoxContainer"]
 layout_mode = 2
@@ -1977,7 +1986,7 @@ theme = ExtResource("37_wbf3f")
 theme_override_colors/font_color = Color(0.709804, 0.709804, 0.709804, 1)
 theme_override_fonts/font = ExtResource("14_nx57u")
 theme_override_font_sizes/font_size = 13
-text = "Vendre"
+text = "Sell"
 
 [node name="audio_anim_select" type="AudioStreamPlayer2D" parent="pnl_objet_cliked"]
 stream = ExtResource("26_bu1vo")
