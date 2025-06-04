@@ -228,7 +228,7 @@ func is_the_skin_stattrack():
 	var randomNum = randi_range(0,100) # Génère un nombre aléatoire entre 0 et 99
 	
 	# Si le nombre aléatoire est inférieur ou égal à 20, le skin est un stattrack
-	if randomNum <= 15:
+	if randomNum <= 30:
 		return true
 	else:
 		return false
@@ -582,6 +582,7 @@ func _on_btn_inventaire_pressed():
 	$pnl_principal/pnl_shop.visible = false
 	
 	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false
+	$pnl_principal/pnl_inventaire/pnl_inventaire_loadout.visible = false
 	$pnl_principal/pnl_inventaire/pnl_inventaire_storage.visible = true
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse.visible = false
 	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key.visible = false
@@ -1135,7 +1136,6 @@ func _input(event):
 	if $pnl_objet_cliked.visible == true and $pnl_objet_cliked/VBoxContainer/btn_fast_ouvrir.visible == true:
 		if event is InputEventKey and event.keycode == KEY_ENTER:
 			_on_fast_ouvrir_objet_button_pressed(ITEM_INVENTORY_CLICKED)
-			
 		
 	if is_animation_playing and $pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible:
 		if event is InputEventKey and event.keycode == KEY_ENTER:
@@ -1849,3 +1849,25 @@ func _on_btn_multi_sell_sell_page_pressed() -> void:
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = false
 	if items_selected_multi_sell_mode.size() == 0:
 		$pnl_principal/pnl_inventaire/pnl_inventaire_storage/btn_sell_confirmation.disabled = true
+
+func _on_btn_sub_inventaire_pressed() -> void:
+	_on_btn_inventaire_pressed()
+
+
+func _on_btn_sub_loadout_pressed() -> void:
+	
+	# Joue le son du clic
+	var audio_player2 = $pnl_principal/pnl_menu_principal/pnl_menu_principal/btn_inventaire/AudioStreamPlayer2D
+	audio_player2.play()
+	$pnl_principal/pnl_inventaire.visible = true
+	
+	# Cache le panel shoooooooooooop
+	$pnl_principal/pnl_shop.visible = false
+	
+	
+	$pnl_principal/pnl_inventaire/pnl_titre/btn_quitter_caisse_panel.visible = false
+	$pnl_principal/pnl_inventaire/pnl_inventaire_loadout.visible = true
+	$pnl_principal/pnl_inventaire/pnl_inventaire_storage.visible = false
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse.visible = false
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_no_key.visible = false
+	$pnl_principal/pnl_inventaire/pnl_ouverture_caisse/pnl_conteneur_with_key.visible = false

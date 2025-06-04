@@ -22,8 +22,8 @@ var prefab_container_buy_scene = preload("res://scenes/container_buy_scene.tscn"
 func _ready():
 	default_drop_rates = {
 		"mil_spec": 71.0,
-		"restricted": 21.00,
-		"classified": 6.0,
+		"restricted": 20.25,
+		"classified": 6.75,
 		"covert": 1.55,
 		"knive": 0.45
 	}

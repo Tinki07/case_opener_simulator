@@ -36,11 +36,25 @@
         {"nom": "Negev", "categorie": "LMG", "id": "negev"},
         {"nom": "Zeus x27", "categorie": "Equipment", "id": "zeus"},
         {"nom": "★ Kukri", "categorie": "Melee", "id": "kukri"},
+        {"nom": "★ Nomad", "categorie": "Melee", "id": "nomad"},
+        {"nom": "★ Bayonet", "categorie": "Melee", "id": "bayonet"},
+        {"nom": "★ M9 Bayonet", "categorie": "Melee", "id": "m9"},
+        {"nom": "★ Navaja", "categorie": "Melee", "id": "navaja"},
+        {"nom": "★ Paracord", "categorie": "Melee", "id": "paracord"},
+        {"nom": "★ Skeleton", "categorie": "Melee", "id": "skeleton"},
+        {"nom": "★ Stiletto", "categorie": "Melee", "id": "stiletto"},
+        {"nom": "★ Talon", "categorie": "Melee", "id": "talon"},
+        {"nom": "★ Ursus", "categorie": "Melee", "id": "Ursus"},
+        {"nom": "★ Survival", "categorie": "Melee", "id": "survival"},
+        {"nom": "★ Flip", "categorie": "Melee", "id": "flip"},
+        {"nom": "★ Gut", "categorie": "Melee", "id": "gut"},
+        {"nom": "★ Karambit", "categorie": "Melee", "id": "karambit"},
         {"nom": "★ Bowie", "categorie": "Melee", "id": "bowie"},
         {"nom": "★ Butterfly", "categorie": "Melee", "id": "butterfly"},
         {"nom": "★ Falchion", "categorie": "Melee", "id": "falchion"},
         {"nom": "★ Huntsman", "categorie": "Melee", "id": "huntsman"},
         {"nom": "★ Shadow Daggers", "categorie": "Melee", "id": "shadow_daggers"},
-        {"nom": "Classic", "categorie": "Melee", "id": "classic"}
+        {"nom": "★ Classic", "categorie": "Melee", "id": "classic"}
+
     ]
 }
